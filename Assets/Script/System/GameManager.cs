@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     public State state;//게임 상태 값이 저장되는 변수
 
+
+    public GameObject[] PlatformList;//플랫폼 리스트
+
     private void Awake()
     {
         state = State.start;//게임 시작 시 start상태값으로 초기화
@@ -20,6 +23,8 @@ public class GameManager : MonoBehaviour
         if(instance == null)
             instance = this;
     }
+
+
 
     //게임 매니저 인스턴스에 접근할 수 있는 프로퍼티
     public static GameManager Instance
