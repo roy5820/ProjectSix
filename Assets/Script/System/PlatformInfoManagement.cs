@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +20,7 @@ public class PlatformInfoManagement : MonoBehaviour
     }
 
     //standingObj의 위치값 프로퍼티
-    public Vector2 StandingPos
+    public Vector3 StandingPos
     {
         get
         {
@@ -29,19 +30,28 @@ public class PlatformInfoManagement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         //캐릭터가 플렛폼에 들어올때 처리
         if (((1 << collision.gameObject.layer) & characterLayer) != 0 ){
-            onPlatformCharacter.transform.SetParent(transform);//onPlatformCharacter를 해당 플렛폼의 자식으로 귀속
+            Debug.Log("플렛폼에 들어옴");
             onPlatformCharacter = collision.gameObject;//onPlatformCharacter에 들어온 캐릭터 obj값 저장
+            onPlatformCharacter.transform.SetParent(transform);//onPlatformCharacter를 해당 플렛폼의 자식으로 귀속
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        
         //캐릭터가 플렛폼에 나갈때 처리
         if (((1 << collision.gameObject.layer) & characterLayer) != 0)
         {
+            Debug.Log("플렛폼에 나감");
             onPlatformCharacter = null;//onPlatformCharacter 값 null로 초기화
         }
+    }
+
+    public static implicit operator PlatformInfoManagement(GameObject v)
+    {
+        throw new NotImplementedException();
     }
 }

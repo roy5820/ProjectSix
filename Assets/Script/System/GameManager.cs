@@ -45,12 +45,12 @@ public class GameManager : MonoBehaviour
         {
             returnObj = PlatformList[indexNum].GetComponent<PlatformInfoManagement>().OnPlatformCharacter;
         }
-
+        
         return returnObj;
     }
 
     //특정 위치의 플렛폼안에  정보 반환 함수
-    public Vector2 GetStandingPosj(int indexNum)
+    public Vector3 GetStandingPosj(int indexNum)
     {
         Vector2 returnPos = Vector2.zero;//반환할 위치 값
 
