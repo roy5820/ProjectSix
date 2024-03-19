@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState
-{
-    start, playerTurn, eneyTurn, lose, win, rest
-}
+
 
 public class GameManager : MonoBehaviour
 {
@@ -50,7 +47,7 @@ public class GameManager : MonoBehaviour
     }
 
     //특정 위치의 플렛폼안에  정보 반환 함수
-    public Vector3 GetStandingPosj(int indexNum)
+    public Vector3 GetStandingPos(int indexNum)
     {
         Vector2 returnPos = Vector2.zero;//반환할 위치 값
 
