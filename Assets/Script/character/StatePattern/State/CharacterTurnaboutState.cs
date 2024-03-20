@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CharacterTurnState : StateBase
+public class CharacterTurnaboutState : StateBase
 {
     public override void Handle(CharacterController characterController)
     {

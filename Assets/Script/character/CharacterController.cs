@@ -23,12 +23,14 @@ public class CharacterController : MonoBehaviour
     {
         gameManager = GameManager.Instance;//게임 매니저 값 초기화
 
-        characterStateContext = new CharacterStateContext(this);
+        characterStateContext = new CharacterStateContext(this);//상태콘택스트 초기화
+        nowHp = maxHp;//현재 체력 초기화
+        nowShild = maxShild;//현재 보호막 초기화
 
         //각 상태들의 기능을 구현한 컴포넌트를 추가하는 부분
         appearsState = gameObject.GetComponent<CharacterAppearsState>();
         forwardState = gameObject.GetComponent<CharacterForwardState>();
-        turnState = gameObject.GetComponent<CharacterTurnState>();
+        turnState = gameObject.GetComponent<CharacterTurnaboutState>();
         hitState = gameObject.GetComponent<CharacterHitState>();
         dieState = gameObject.GetComponent<CharacterDieState>();
     }

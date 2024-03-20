@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance = null;//게임 메니저 인스턴스화를 위한 변수 값
@@ -16,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        state = GameState.start;//게임 시작 시 start상태값으로 초기화
+        state = GameState.Start;//게임 시작 시 start상태값으로 초기화
 
         //인스턴스 초기화
         if(instance == null)

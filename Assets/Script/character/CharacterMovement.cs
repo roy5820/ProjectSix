@@ -22,15 +22,14 @@ public class CharacterMovement : MonoBehaviour
     private void Update()
     {
         //이동 테스트를 위한 키입력
-
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) && moveCoroutine == null)
             moveCoroutine = StartCoroutine(StraightLineMovement(-1, 10, 1));
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) && moveCoroutine == null)
             moveCoroutine = StartCoroutine(StraightLineMovement(1, 10, 1));
     }
 
-    //이동 구현 코루틴
+    //타일 간 이동 구현 코루틴 moveDirX: 이동방향, movePower: 이동속도, moveSpaceDistance:이동거리(칸)
     public IEnumerator StraightLineMovement(int moveDirX, float movePower, int moveSpaceDistance)
     {
         PlatformInfoManagement onPlatformInfo = null;//플렛폼 정보값을 가져올 변수
@@ -57,14 +56,13 @@ public class CharacterMovement : MonoBehaviour
                     yield return null;
                 }
                 characterRbody.velocity = Vector3.zero;//이동 종료시 이동 값 zero로 초기화
-                transform.position = new Vector3(targetPlatformPos.x, transform.position.y, transform.position.z);
+                transform.position = new Vector3(targetPlatformPos.x, transform.position.y, transform.position.z);// 이동 후 위치값 조정
             }
             //이동 불가 시 반복문 강제 종료
             else
-                break;
+                break; 
         }
         
         moveCoroutine = null;//코루틴 종료
-        yield return null;
     }
 }
