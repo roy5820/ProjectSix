@@ -104,6 +104,7 @@ MonoBehaviour:
   characterLayer:
     serializedVersion: 2
     m_Bits: 192
+  onPlatformCharacter: {fileID: 0}
   standingObj: {fileID: 8477969476020566995}
 --- !u!61 &2474369678709863775
 BoxCollider2D:
