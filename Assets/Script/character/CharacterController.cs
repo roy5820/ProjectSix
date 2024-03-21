@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    GameManager gameManager = null;//게임 매니저를 가져와 저장할 변수
-    GameState gameState;//현재 게임 상태를 저장 하는 변수
+    private GameManager gameManager = null;//게임 매니저를 가져와 저장할 변수
+    private GameState gameState;//현재 게임 상태를 게임 매니저에서 가져와 저장 하는 변수
+
+    public CharacterTurnState turnState;
 
     public int maxHp = 100;//최대체력
     public int nowHp { get; set; }//현재체력
@@ -16,7 +18,7 @@ public class CharacterController : MonoBehaviour
     public CharacterDirection direction { get; set; }//캐릭터가 바라보는 방향
 
     //캐릭터 각 상태들을 답을 변수(appearsState: 등장, forwardState: 전진, turnState: 방향 전환, hitState: 피격, dieState: 죽음 처리
-    private CharacterState appearsState, forwardState, turnState, hitState, dieState;
+    private CharacterState appearsState, forwardState, turnaboutState, hitState, dieState;
     private CharacterStateContext characterStateContext;//캐릭터 상태 콘텍스트
 
     protected virtual void Start()
@@ -30,7 +32,7 @@ public class CharacterController : MonoBehaviour
         //각 상태들의 기능을 구현한 컴포넌트를 추가하는 부분
         appearsState = gameObject.GetComponent<CharacterAppearsState>();
         forwardState = gameObject.GetComponent<CharacterForwardState>();
-        turnState = gameObject.GetComponent<CharacterTurnaboutState>();
+        turnaboutState = gameObject.GetComponent<CharacterTurnaboutState>();
         hitState = gameObject.GetComponent<CharacterHitState>();
         dieState = gameObject.GetComponent<CharacterDieState>();
     }
@@ -54,9 +56,9 @@ public class CharacterController : MonoBehaviour
     }
 
     //방향 전환 상태 호출 함수
-    public void TurnState()
+    public void TurnaboutState()
     {
-        characterStateContext.Transition(turnState);
+        characterStateContext.Transition(turnaboutState);
     }
 
     //피격 상태 호출 함수

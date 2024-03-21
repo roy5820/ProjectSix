@@ -1,4 +1,5 @@
-public enum CharacterTurnStatus
+public enum CharacterTurnState
 {
-    
+    TurnReady = 0,
+    TurnOver = 1
 }
