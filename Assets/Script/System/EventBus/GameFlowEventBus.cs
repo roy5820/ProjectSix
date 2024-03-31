@@ -5,9 +5,9 @@ using UnityEngine.Events;
 
 public class GameFlowEventBus : MonoBehaviour
 {
-    private static readonly IDictionary<TurnEventType, UnityEvent> Events = new Dictionary<TurnEventType, UnityEvent>();
+    private static readonly IDictionary<GameFlowType, UnityEvent> Events = new Dictionary<GameFlowType, UnityEvent>();
 
-    public static void Subscribe(TurnEventType eventType, UnityAction listener)
+    public static void Subscribe(GameFlowType eventType, UnityAction listener)
     {
         UnityEvent thisEvent;
 
@@ -23,7 +23,7 @@ public class GameFlowEventBus : MonoBehaviour
         }
     }
 
-    public static void Unsubscribe(TurnEventType type, UnityAction listener)
+    public static void Unsubscribe(GameFlowType type, UnityAction listener)
     {
         UnityEvent thisEvent;
 
@@ -33,7 +33,7 @@ public class GameFlowEventBus : MonoBehaviour
         }
     }
 
-    public static void Publish(TurnEventType type)
+    public static void Publish(GameFlowType type)
     {
         UnityEvent thisEvent;
 

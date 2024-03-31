@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    public GameState state;//게임 상태 값이 저장되는 변수
-
-
     public GameObject[] PlatformList;//플랫폼 리스트
+
+    //활성화시 이벤트 설정
+    private void OnEnable()
+    {
+        
+    }
+
+    //비활성화시 이벤트 제거
+    private void OnDisable()
+    {
+        
+    }
 
     //특정 위치의 플렛폼안에 캐릭터obj의 정보 반환 함수
     public GameObject GetOnPlatformObj(int indexNum)

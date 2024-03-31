@@ -5,7 +5,6 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     private GameManager gameManager = null;//게임 매니저를 가져와 저장할 변수
-    private GameState gameState;//현재 게임 상태를 게임 매니저에서 가져와 저장 하는 변수
 
     public int maxHp = 100;//최대체력
     public int nowHp { get; set; }//현재체력
@@ -37,7 +36,7 @@ public class CharacterController : MonoBehaviour
 
     protected virtual void Update()
     {
-        gameState = gameManager.state;//게임 상태값 갱신
+        
     }
 
     //각 상태별로 호출하는 함수
@@ -69,5 +68,16 @@ public class CharacterController : MonoBehaviour
     public void DieState()
     {
         characterStateContext.Transition(dieState);
+    }
+
+    //상태 호출 함수 stateName: 호출할 상태 함수 명
+    public void OnNameToState(string stateName)
+    {
+        // stateName과 일치하는 함수를 찾아 실행
+        System.Reflection.MethodInfo method = GetType().GetMethod(stateName);
+        if (method != null)
+        {
+            method.Invoke(this, null);
+        }
     }
 }
