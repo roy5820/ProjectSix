@@ -7,8 +7,6 @@ public class CharacterController : MonoBehaviour
     private GameManager gameManager = null;//게임 매니저를 가져와 저장할 변수
     private GameState gameState;//현재 게임 상태를 게임 매니저에서 가져와 저장 하는 변수
 
-    public CharacterTurnState turnState;
-
     public int maxHp = 100;//최대체력
     public int nowHp { get; set; }//현재체력
 
