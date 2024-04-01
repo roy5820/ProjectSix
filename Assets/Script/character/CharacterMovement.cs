@@ -19,16 +19,6 @@ public class CharacterMovement : MonoBehaviour
         getGameManager = GameManager.Instance;//게임 메니저 값 초기화
     }
 
-    private void Update()
-    {
-        //이동 테스트를 위한 키입력
-        if (Input.GetKeyDown(KeyCode.A) && moveCoroutine == null)
-            moveCoroutine = StartCoroutine(StraightLineMovement(-1, 10, 1));
-
-        if (Input.GetKeyDown(KeyCode.D) && moveCoroutine == null)
-            moveCoroutine = StartCoroutine(StraightLineMovement(1, 10, 1));
-    }
-
     //타일 간 이동 구현 코루틴 moveDirX: 이동방향, movePower: 이동속도, moveSpaceDistance:이동거리(칸)
     public IEnumerator StraightLineMovement(int moveDirX, float movePower, int moveSpaceDistance)
     {
@@ -41,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
             onPlatformInfo = onPlatform.collider.gameObject.GetComponent<PlatformInfoManagement>();//자신이 서있는 플렛폼의 정보 컴포넌트를 가져오기
             onPlatformIndex = onPlatformInfo.indexNum;//자신이 속한 플렛폼 인덱스 값
             int moveIndex = onPlatformIndex + moveDirX;//이동 할 플렛폼의 인데스 값
-
+            
             Vector3 targetPlatformPos = getGameManager.GetStandingPos(moveIndex);//이동할 플렛폼 오브젝트 값
             
             GameObject targetPlatformOnObj = getGameManager.GetOnPlatformObj(moveIndex);//플렛폼 정보값 초기화
