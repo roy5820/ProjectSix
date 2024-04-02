@@ -6,11 +6,9 @@ public class CharacterController : MonoBehaviour
 {
     private GameManager gameManager = null;//게임 매니저를 가져와 저장할 변수
 
+    [Header("Player Status")]
     public int maxHp = 100;//최대체력
     public int nowHp { get; set; }//현재체력
-
-    public int maxShild = 20;//최대 보호막 량
-    public int nowShild { get; set; }//현재 보호막 량
 
     public CharacterDirection direction { get; set; }//캐릭터가 바라보는 방향
 
@@ -24,7 +22,6 @@ public class CharacterController : MonoBehaviour
 
         characterStateContext = new CharacterStateContext(this);//상태콘택스트 초기화
         nowHp = maxHp;//현재 체력 초기화
-        nowShild = maxShild;//현재 보호막 초기화
 
         //각 상태들의 기능을 구현한 컴포넌트를 추가하는 부분
         appearsState = gameObject.GetComponent<CharacterAppearsState>();

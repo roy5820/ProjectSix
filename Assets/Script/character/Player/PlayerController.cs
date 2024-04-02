@@ -4,5 +4,15 @@ using UnityEngine;
 
 public class PlayerController : CharacterController
 {
-    
+
+
+    //
+    private void OnGUI()
+    {
+        //
+        if(GUI.Button(new Rect(), ""))
+        {
+
+        }
+    }
 }
