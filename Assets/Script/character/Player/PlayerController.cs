@@ -28,22 +28,22 @@ public class PlayerController : CharacterController
         }
 
         //이동 오른쪽
-        if (GUI.Button(new Rect(20, 100, 200, 30), "MoveRight"))
+        if (GUI.Button(new Rect(20, 120, 200, 30), "MoveRight"))
         {
             MoveState(CharacterDirection.Right);
         }
 
-        if (GUI.Button(new Rect(20, 140, 200, 30), "TurnaboutState"))
+        if (GUI.Button(new Rect(20, 160, 200, 30), "TurnaboutState"))
         {
             TurnaboutState();
         }
 
-        if (GUI.Button(new Rect(20, 180, 200, 30), "HitState"))
+        if (GUI.Button(new Rect(20, 200, 200, 30), "HitState"))
         {
-            HitState();
+            HitState(50);
         }
 
-        if (GUI.Button(new Rect(20, 220, 200, 30), "DieState"))
+        if (GUI.Button(new Rect(20, 240, 200, 30), "DieState"))
         {
             DieState();
         }

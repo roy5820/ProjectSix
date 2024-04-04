@@ -80,7 +80,6 @@ public class BattleManager : MonoBehaviour
                 //스폰 위치에 따른 스폰 위치 탐색
                 for (int i = (enemy.spawnPos < 0 ? 0 : platformSIze - 1); (enemy.spawnPos < 0 ? i < platformSIze : i >= 0); i+= (enemy.spawnPos < 0 ? 1 : -1))
                 {
-                    Debug.Log(i);
                     //해당 위치에 몬스터 스폰 여부 확인
                     if(gameManager.GetOnPlatformObj(i) == null)
                     {
@@ -89,7 +88,6 @@ public class BattleManager : MonoBehaviour
                         break;  
                     }
                 }
-                Debug.Log("break");
             }
         }
 

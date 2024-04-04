@@ -8,7 +8,23 @@ public class CharacterController : MonoBehaviour
 
     [Header("Player Status")]
     public int maxHp = 100;//최대체력
-    public int nowHp { get; set; }//현재체력
+    private int nowHp;//현재 체력
+    //현재체력 프로퍼티
+    public int NowHp 
+    {
+        get
+        {
+            return nowHp;
+        }
+        set
+        {
+            nowHp += value;
+            //최대체력보다 높아지거나 0보다 작아지면 조정
+            if (nowHp > maxHp) nowHp = maxHp;
+            else if(nowHp < 0) nowHp = 0;
+
+        }
+    }
     
     public CharacterDirection direction { get; set; }//캐릭터가 바라보는 방향
 
@@ -42,18 +58,20 @@ public class CharacterController : MonoBehaviour
     //전진 상태 호출 함수
     public void MoveState(CharacterDirection direction)
     {
+        this.GetComponent<MoveState>().moveDirection = direction;//이동 방향값 설정
         characterStateContext.Transition(moveState);
     }
 
     //방향 전환 상태 호출 함수
     public void TurnaboutState()
     {
-        characterStateContext.Transition(turnaboutState);
+        characterStateContext.Transition(turnaboutState );
     }
 
     //피격 상태 호출 함수
-    public void HitState()
+    public void HitState(int damage)
     {
+        this.GetComponent<HitState>().hitDamage = damage;//데미지값 설정
         characterStateContext.Transition(hitState);
     }
 
