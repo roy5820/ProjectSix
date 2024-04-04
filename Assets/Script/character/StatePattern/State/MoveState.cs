@@ -10,7 +10,7 @@ public class MoveState : StateBase
     protected override IEnumerator SateFuntion()
     {
         StartCoroutine(this.GetComponent<CharacterMovement>().StraightLineMovement((int)moveDirection, movePower, 1));//캐릭터 무브먼트를 사용하여 이동 구현
-        yield return null;
+        yield return base.SateFuntion();
     }
 }
 

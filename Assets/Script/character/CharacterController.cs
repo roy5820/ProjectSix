@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public abstract class CharacterController : MonoBehaviour
 {
     private GameManager gameManager = null;//게임 매니저를 가져와 저장할 변수
 
@@ -91,4 +91,7 @@ public class CharacterController : MonoBehaviour
             method.Invoke(this, null);
         }
     }
+
+    //캐릭터 행동후 턴종료 처리
+    public abstract void TurnEnd();
 }

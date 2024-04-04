@@ -6,8 +6,8 @@ public class PlayerController : CharacterController
 {
 
 
-    //플레이어 턴 종료 및 적 턴으로 전환 하는 이벤트를 발생 시키는 함수
-    public void PlayerTurnEnd()
+    //플레이어 턴 종료 처리
+    public override void TurnEnd()
     {
         TurnEventBus.Publish(TurnEventType.EnemyTurn);
     }
@@ -33,19 +33,28 @@ public class PlayerController : CharacterController
             MoveState(CharacterDirection.Right);
         }
 
+        //방량 전환
         if (GUI.Button(new Rect(20, 160, 200, 30), "TurnaboutState"))
         {
             TurnaboutState();
         }
 
+        //피격
         if (GUI.Button(new Rect(20, 200, 200, 30), "HitState"))
         {
             HitState(50);
         }
 
+        //죽음
         if (GUI.Button(new Rect(20, 240, 200, 30), "DieState"))
         {
             DieState();
+        }
+
+        //적 턴 강제 종료
+        if(GUI.Button(new Rect(20, 280, 200, 30), "Enemy TUrnEnd"))
+        {
+            TurnEventBus.Publish(TurnEventType.TurnEnd);
         }
     }
 }

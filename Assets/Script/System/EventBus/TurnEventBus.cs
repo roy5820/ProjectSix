@@ -40,6 +40,7 @@ public class TurnEventBus : MonoBehaviour
         if (Events.TryGetValue(type, out thisEvent))
         {
             thisEvent.Invoke();
+            
         }
     }
 }

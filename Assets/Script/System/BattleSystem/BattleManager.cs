@@ -67,7 +67,8 @@ public class BattleManager : MonoBehaviour
     public void TurnStart()
     {
         turnState = "TurnStart";
-        
+        Debug.Log(turnState);
+
         //nowStage의 몬스터 스폰 턴마다 몬스터 소환, 필드에 몬스터가 없으면 다음 웨이브 소환
         if(nowTurnCnt == nowStage[nowTurnCnt].thisTurn)
         {
@@ -90,7 +91,6 @@ public class BattleManager : MonoBehaviour
                 }
             }
         }
-
         TurnEventBus.Publish(TurnEventType.PlayerTurn);//PlayerTurn 이벤트 발생
     }
 
@@ -98,6 +98,7 @@ public class BattleManager : MonoBehaviour
     public void PlayerTurn()
     {
         turnState = "PlayerTurn";
+        Debug.Log(turnState);
     }
 
 
@@ -106,6 +107,7 @@ public class BattleManager : MonoBehaviour
     {
         isEnemyTurn = true;//적턴 여부 활성화
         turnState = "EnemyTurn";
+        Debug.Log(turnState);
     }
 
     //턴 종료 시 이벤트 처리
@@ -113,6 +115,7 @@ public class BattleManager : MonoBehaviour
     {
         isEnemyTurn = false;//적턴 여부 비활성화
         turnState = "TurnEnd";
+        Debug.Log(turnState);
 
         nowTurnCnt++;//턴 종료 시 경과 턴 +1
         TurnEventBus.Publish(TurnEventType.TurnStart);//TurnStart 이벤트 발생
