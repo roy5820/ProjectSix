@@ -199,7 +199,7 @@ MonoBehaviour:
       spawnPos: -1
     - enemyPre: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       spawnPos: 1
-  - thisTurn: 5
+  - thisTurn: 2
     enemyInfoList:
     - enemyPre: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       spawnPos: 1

@@ -4,11 +4,29 @@ using UnityEngine;
 
 public class PlayerController : CharacterController
 {
+    //이벤트 등록
+    private void OnEnable()
+    {
+        TurnEventBus.Subscribe(TurnEventType.PlayerTurn, TurnStart);
+    }
 
+    //이벤트 해제
+    private void OnDisable()
+    {
+        TurnEventBus.Unsubscribe(TurnEventType.PlayerTurn, TurnStart);
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+
+        //상태 추가 부분
+    }
 
     //플레이어 턴 종료 처리
     public override void TurnEnd()
     {
+        base.TurnEnd();
         TurnEventBus.Publish(TurnEventType.EnemyTurn);
     }
 
@@ -52,7 +70,7 @@ public class PlayerController : CharacterController
         }
 
         //적 턴 강제 종료
-        if(GUI.Button(new Rect(20, 280, 200, 30), "Enemy TUrnEnd"))
+        if(GUI.Button(new Rect(20, 280, 200, 30), "TurnEnd"))
         {
             TurnEventBus.Publish(TurnEventType.TurnEnd);
         }

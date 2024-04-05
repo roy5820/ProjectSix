@@ -27,6 +27,7 @@ public abstract class CharacterController : MonoBehaviour
     }
     
     public CharacterDirection direction { get; set; }//캐릭터가 바라보는 방향
+    protected bool isTurnReady = false;//턴 준비 여부
 
     //캐릭터 각 상태들을 답을 변수(appearsState: 등장, forwardState: 전진, turnState: 방향 전환, hitState: 피격, dieState: 죽음 처리
     private CharacterState appearsState, moveState, turnaboutState, hitState, dieState;
@@ -47,6 +48,19 @@ public abstract class CharacterController : MonoBehaviour
         hitState = gameObject.AddComponent<HitState>();
         dieState = gameObject.AddComponent<DieState>();
     }
+    //캐릭터 턴 시작 처리
+    protected virtual void TurnStart()
+    {
+        isTurnReady = true;
+    }
+
+    //캐릭터 턴 종료 처리
+    public virtual void TurnEnd()
+    {
+        isTurnReady = false;//턴 오버 처리
+    }
+
+   
 
     //각 상태별로 호출하는 함수
     //등장 상태 호출 함수
@@ -91,7 +105,4 @@ public abstract class CharacterController : MonoBehaviour
             method.Invoke(this, null);
         }
     }
-
-    //캐릭터 행동후 턴종료 처리
-    public abstract void TurnEnd();
 }

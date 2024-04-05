@@ -7,7 +7,7 @@ public class DieState : StateBase
     {
         //캐릭터 죽음 기능 구현
         Debug.Log(gameObject.name + " is Die");
-        yield return base.SateFuntion();
+        yield return null;
     }
 }
 

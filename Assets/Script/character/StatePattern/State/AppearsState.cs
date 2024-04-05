@@ -7,6 +7,6 @@ public class AppearsState : StateBase
     {
         //캐릭터 스폰 시 애니메이션 기능 구현
         Debug.Log(gameObject.name + " is Appears");
-        yield return base.SateFuntion();
+        yield return null;
     }
 }

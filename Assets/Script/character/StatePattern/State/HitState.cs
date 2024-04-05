@@ -12,7 +12,7 @@ public class HitState : StateBase
         Debug.Log(gameObject.name + " is Hit, nowHp: " + characterController.NowHp);
         if (characterController.NowHp == 0)
             gameObject.GetComponent<CharacterController>().DieState();
-        yield return base.SateFuntion();
+        yield return null;
     }
 }
 
