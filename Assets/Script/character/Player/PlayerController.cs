@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : CharacterController
 {
+
     //이벤트 등록
     private void OnEnable()
     {
@@ -20,7 +21,14 @@ public class PlayerController : CharacterController
     {
         base.Start();
 
-        //상태 추가 부분
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            TurnEventBus.Publish(TurnEventType.TurnEnd);
+        }
     }
 
     //플레이어 턴 종료 처리
@@ -28,51 +36,5 @@ public class PlayerController : CharacterController
     {
         base.TurnEnd();
         TurnEventBus.Publish(TurnEventType.EnemyTurn);
-    }
-
-    //
-    private void OnGUI()
-    {
-        //등장
-        if(GUI.Button(new Rect(20, 40, 200, 30), "AppearsState"))
-        {
-            AppearsState();
-        }
-
-        //이동 왼쪽
-        if (GUI.Button(new Rect(20, 80, 200, 30), "MoveLeft"))
-        {
-            MoveState(CharacterDirection.Left);
-        }
-
-        //이동 오른쪽
-        if (GUI.Button(new Rect(20, 120, 200, 30), "MoveRight"))
-        {
-            MoveState(CharacterDirection.Right);
-        }
-
-        //방량 전환
-        if (GUI.Button(new Rect(20, 160, 200, 30), "TurnaboutState"))
-        {
-            TurnaboutState();
-        }
-
-        //피격
-        if (GUI.Button(new Rect(20, 200, 200, 30), "HitState"))
-        {
-            HitState(50);
-        }
-
-        //죽음
-        if (GUI.Button(new Rect(20, 240, 200, 30), "DieState"))
-        {
-            DieState();
-        }
-
-        //적 턴 강제 종료
-        if(GUI.Button(new Rect(20, 280, 200, 30), "TurnEnd"))
-        {
-            TurnEventBus.Publish(TurnEventType.TurnEnd);
-        }
     }
 }

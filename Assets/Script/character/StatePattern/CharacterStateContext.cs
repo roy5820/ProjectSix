@@ -21,9 +21,9 @@ public class CharacterStateContext
     }
 
     //상태 전환
-    public void Transition(CharacterState state)
+    public void Transition(CharacterState state, params object[] datas)
     {
         CurrentState = state;
-        CurrentState.Handle(characterController);
+        CurrentState.Handle(characterController, datas);
     }
 }

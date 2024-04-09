@@ -25,13 +25,14 @@ public abstract class CharacterController : MonoBehaviour
 
         }
     }
-    
-    public CharacterDirection direction { get; set; }//캐릭터가 바라보는 방향
-    protected bool isTurnReady = false;//턴 준비 여부
+    public int offensePower = 50;//공격력
 
-    //캐릭터 각 상태들을 답을 변수(appearsState: 등장, forwardState: 전진, turnState: 방향 전환, hitState: 피격, dieState: 죽음 처리
-    private CharacterState appearsState, moveState, turnaboutState, hitState, dieState;
-    private CharacterStateContext characterStateContext;//캐릭터 상태 콘텍스트
+    public CharacterDirection direction { get; set; }//캐릭터가 바라보는 방향
+    public bool isTurnReady = false;//턴 준비 여부
+
+    //캐릭터 각 상태들을 답을 변수(appearsState: 등장, forwardState: 전진, turnState: 방향 전환, hitState: 피격, dieState: 죽음 처리, attackState: 공격 처리
+    private CharacterState appearsState, moveState, turnaboutState, hitState, dieState, normalAttackState;
+    protected CharacterStateContext characterStateContext;//캐릭터 상태 콘텍스트
 
     protected virtual void Start()
     {
@@ -47,6 +48,7 @@ public abstract class CharacterController : MonoBehaviour
         turnaboutState = gameObject.AddComponent<TurnaboutState>();
         hitState = gameObject.AddComponent<HitState>();
         dieState = gameObject.AddComponent<DieState>();
+        normalAttackState = gameObject.AddComponent<NormalAttackState>();
     }
     //캐릭터 턴 시작 처리
     protected virtual void TurnStart()
@@ -59,8 +61,7 @@ public abstract class CharacterController : MonoBehaviour
     {
         isTurnReady = false;//턴 오버 처리
     }
-
-   
+    
 
     //각 상태별로 호출하는 함수
     //등장 상태 호출 함수
@@ -85,7 +86,9 @@ public abstract class CharacterController : MonoBehaviour
     //피격 상태 호출 함수
     public void HitState(int damage)
     {
+        Debug.Log("isDamage" + damage);
         this.GetComponent<HitState>().hitDamage = damage;//데미지값 설정
+        Debug.Log("HitDamage" + this.GetComponent<HitState>().hitDamage);
         characterStateContext.Transition(hitState);
     }
 
@@ -93,6 +96,13 @@ public abstract class CharacterController : MonoBehaviour
     public void DieState()
     {
         characterStateContext.Transition(dieState);
+    }
+
+
+    //공격 상태 호출 함수
+    public void NormalAttackState()
+    {
+        characterStateContext.Transition(normalAttackState);
     }
 
     //상태 호출 함수 stateName: 호출할 상태 함수 명

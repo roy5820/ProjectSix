@@ -278,6 +278,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656027b7ed366f84188d044b09e3b67b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftMoveKey: 113
+  rightMoveKey: 101
+  turnAboutKey: 119
 --- !u!114 &520665383554115685
 MonoBehaviour:
   m_ObjectHideFlags: 0

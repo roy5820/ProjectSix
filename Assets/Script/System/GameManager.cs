@@ -32,6 +32,24 @@ public class GameManager : Singleton<GameManager>
         GameFlowEventBus.Publish(GameFlowType.Start);//게임 시작 이벤트 발생
     }
 
+    //특정 오브젝트가 속한 플렛폼 검색하여 index 번호를 반환하는 함수. null일 시 -1로 리턴
+    public int GetPlatformIndexForObj(GameObject chracterObj)
+    {
+        int index = -1;
+
+        //반복문으로 입력받은 게임 오브젝트가 속한 플렛폼 순차 탐색
+        for(int i = 0; i < PlatformList.Length; i++)
+        {
+            if(PlatformList[i].GetComponent<PlatformInfoManagement>().OnPlatformCharacter == chracterObj)
+            {
+                index = i;
+                break;
+            }
+        }
+
+        return index;
+    }
+
     //특정 위치의 플렛폼안에 캐릭터obj의 정보 반환 함수
     public GameObject GetOnPlatformObj(int indexNum)
     {
