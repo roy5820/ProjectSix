@@ -37,8 +37,8 @@ public class PlayerInputHandler : MonoBehaviour
                     if (_gameManager.GetOnPlatformObj(nexIndex) == null)
                         _playerController.MoveState(moveDir);
                     //아닐 시 공격 실행
-                    else
-                        _playerController.NormalAttackState();
+                    else if(moveDir == _playerController.direction)
+                        _playerController.NormalAttackState(1.0f);
                 }
             }
             //턴 전환 키

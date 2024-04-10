@@ -26,7 +26,7 @@ public abstract class CharacterController : MonoBehaviour
         }
     }
     public int offensePower = 50;//공격력
-
+    
     public CharacterDirection direction { get; set; }//캐릭터가 바라보는 방향
     public bool isTurnReady = false;//턴 준비 여부
 
@@ -40,7 +40,7 @@ public abstract class CharacterController : MonoBehaviour
 
         characterStateContext = new CharacterStateContext(this);//상태콘택스트 초기화
         nowHp = maxHp;//현재 체력 초기화
-        direction = this.transform.localScale.x > 0 ? CharacterDirection.Left : CharacterDirection.Right;//캐릭터 방향 값 초기화
+        direction = this.transform.localScale.x > 0 ? CharacterDirection.Right : CharacterDirection.Left;//캐릭터 방향 값 초기화
 
         //각 상태들의 기능을 구현한 컴포넌트를 추가하는 부분
         appearsState = gameObject.AddComponent<AppearsState>();
@@ -73,8 +73,7 @@ public abstract class CharacterController : MonoBehaviour
     //전진 상태 호출 함수
     public void MoveState(CharacterDirection direction)
     {
-        this.GetComponent<MoveState>().moveDirection = direction;//이동 방향값 설정
-        characterStateContext.Transition(moveState);
+        characterStateContext.Transition(moveState, direction);
     }
 
     //방향 전환 상태 호출 함수
@@ -86,10 +85,7 @@ public abstract class CharacterController : MonoBehaviour
     //피격 상태 호출 함수
     public void HitState(int damage)
     {
-        Debug.Log("isDamage" + damage);
-        this.GetComponent<HitState>().hitDamage = damage;//데미지값 설정
-        Debug.Log("HitDamage" + this.GetComponent<HitState>().hitDamage);
-        characterStateContext.Transition(hitState);
+        characterStateContext.Transition(hitState, damage);
     }
 
     //죽음 상태 호출 함수
@@ -100,9 +96,9 @@ public abstract class CharacterController : MonoBehaviour
 
 
     //공격 상태 호출 함수
-    public void NormalAttackState()
+    public void NormalAttackState(float powerCoefficient)
     {
-        characterStateContext.Transition(normalAttackState);
+        characterStateContext.Transition(normalAttackState, powerCoefficient);
     }
 
     //상태 호출 함수 stateName: 호출할 상태 함수 명
