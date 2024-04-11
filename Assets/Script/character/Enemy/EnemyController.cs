@@ -11,6 +11,7 @@ public class EnemyController : CharacterController
         public string stateNmae; // 상태 이름
         public float range; // 사거리, 0은 사거리 없음
         public float cooldown; // 쿨타임, 0은 쿨타임 없음
+        public float nowCoolTIme;//현제 쿨타임
     }
 
     public List<StateCondition> stateConditions; // 상태와 조건의 리스트
@@ -53,7 +54,11 @@ public class EnemyController : CharacterController
     {
         string stateFuncName = null;//사용할 상태 실행함수 이름
 
+        //우선 순위에 따른 적 행동 선택
+        foreach(StateCondition condition in stateConditions)
+        {
 
+        }
 
         return stateFuncName;
     }
@@ -64,10 +69,5 @@ public class EnemyController : CharacterController
         GameManager.Instance.GetComponent<BattleManager>().OnTurnOverEnemyCnt++;//턴종료된 적 카운트 ++
         base.TurnEnd();//턴 앤드 처리
         TurnEventBus.Publish(TurnEventType.TurnEnd);//턴종료 이벤트 발생
-    }
-
-    private void OnDestroy()
-    {
-        GameManager.Instance.GetComponent<BattleManager>().onEnemysList.Remove(this.gameObject);
     }
 }

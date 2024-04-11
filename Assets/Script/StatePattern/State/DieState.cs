@@ -7,7 +7,8 @@ public class DieState : StateBase
     {
         //캐릭터 죽음 기능 구현
         Debug.Log(gameObject.name + " is Die");
-       Destroy(gameObject);
+        _gameManager.GetComponent<BattleManager>().onEnemysList.Remove(gameObject);
+        Destroy(gameObject);
         yield return null;
     }
 }

@@ -21,12 +21,7 @@ public class NormalAttackState : StateBase
             //애니메이션 처리 부분
 
             //데미지 계산 부분
-            GameObject targetCharacter = _gameManager.GetOnPlatformObj(attackIndex);//공격 위치 플렛폼의 캐릭터 오브젝트 가져오기
-            if (targetCharacter != null)
-            {
-                Debug.Log("Attack: " + thisDamage);
-                targetCharacter.GetComponent<CharacterController>().TransitionState("Hit", thisDamage);//공격 대상 피격 처리
-            }
+            _gameManager.GiveDamage(attackIndex, thisDamage);
         }
 
         yield return base.StateFuntion();

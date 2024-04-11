@@ -14,7 +14,6 @@ public class GameManager : Singleton<GameManager>
         GameFlowEventBus.Subscribe(GameFlowType.Rest, GameRest);
         GameFlowEventBus.Subscribe(GameFlowType.Lose, GameLose);
         GameFlowEventBus.Subscribe(GameFlowType.Win, GameWin);
-
     }
 
     //비활성화시 이벤트 제거
@@ -74,6 +73,18 @@ public class GameManager : Singleton<GameManager>
         }
 
         return returnPos;
+    }
+    
+    //특정 위치 타일에 적에게 데미지 부여
+    public void GiveDamage(int index, int damage)
+    {
+        GameObject tartget = GetOnPlatformObj(index);//데미지를 줄 오브젝트 가져오기
+
+        //null체크
+        if ((tartget))
+        {
+            tartget.GetComponent<CharacterController>().TransitionState("Hit", damage);//대상 피격 상태 발생
+        }
     }
 
     //게임 시작시 이벤트 처리
