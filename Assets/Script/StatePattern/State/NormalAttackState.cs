@@ -25,7 +25,7 @@ public class NormalAttackState : StateBase
             if (targetCharacter != null)
             {
                 Debug.Log("Attack: " + thisDamage);
-                targetCharacter.GetComponent<CharacterController>().HitState(thisDamage);//공격 대상 피격 처리
+                targetCharacter.GetComponent<CharacterController>().TransitionState("Hit", thisDamage);//공격 대상 피격 처리
             }
         }
 

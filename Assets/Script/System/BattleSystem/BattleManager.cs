@@ -9,7 +9,7 @@ public class BattleManager : MonoBehaviour
     //전투스테이지의 몬스터 스폰 관리를 위한 변수 선언
     public List<StageInfo> stageList;//스테이지 정보를 담은 리스트
     public List<WaveInfo> nowStage;//현제 스테이지 정보를 담을 리스트
-    private List<GameObject> onEnemysList = new List<GameObject>();//현재 필드위에 몬스터 리스트
+    public List<GameObject> onEnemysList = new List<GameObject>();//현재 필드위에 몬스터 리스트
     private int nextWaveNum = 0;//현제 웨이브 num
 
     private string turnState;//현제 턴상태
@@ -44,7 +44,7 @@ public class BattleManager : MonoBehaviour
         TurnEventBus.Unsubscribe(TurnEventType.TurnEnd, TurnEnd);//TurnEnd 이벤트 제거
     }
 
-    //
+    //Enemy 턴 종료 체크를 위한 프로퍼티
     public int OnTurnOverEnemyCnt
     {
         get
@@ -53,7 +53,7 @@ public class BattleManager : MonoBehaviour
         }
         set
         {
-            turnOverEnemyCnt += value;
+            turnOverEnemyCnt = value;
 
             //Enemy 턴 오버 카운트 갱신 시 필드의 Enemy 수와 턴 오버 Enemy수가 같으면 턴 엔드로 전환
             if (isEnemyTurn && (turnOverEnemyCnt == onEnemysList.Count))
@@ -81,30 +81,26 @@ public class BattleManager : MonoBehaviour
         turnState = "TurnStart";
         Debug.Log(turnState);
 
-        //다음에 소환할 ENemyList가 있는 지 체크
-        if (nextWaveNum < nowStage.Count)
+        //Enemy 스폰 여부 확인
+        if (nextWaveNum < nowStage.Count && onEnemysList.Count == 0)
         {
-            //nowStage의 몬스터 스폰 턴마다 몬스터 소환, 필드에 몬스터가 없으면 다음 웨이브 소환
-            if (nowTurnCnt == nowStage[nextWaveNum].thisTurn)
+            //스폰할 몬스터 리스트의 몬스터들을 소환
+            foreach (SpawnEnemyInfo enemy in nowStage[nextWaveNum].enemyInfoList)
             {
-                //스폰할 몬스터 리스트의 몬스터들을 소환
-                foreach (SpawnEnemyInfo enemy in nowStage[nextWaveNum].enemyInfoList)
+                int platformSIze = gameManager.PlatformList.Length;
+                //스폰 위치에 따른 스폰 위치 탐색
+                for (int i = (enemy.spawnPos < 0 ? 0 : platformSIze - 1); (enemy.spawnPos < 0 ? i < platformSIze : i >= 0); i += (enemy.spawnPos < 0 ? 1 : -1))
                 {
-                    int platformSIze = gameManager.PlatformList.Length;
-                    //스폰 위치에 따른 스폰 위치 탐색
-                    for (int i = (enemy.spawnPos < 0 ? 0 : platformSIze - 1); (enemy.spawnPos < 0 ? i < platformSIze : i >= 0); i += (enemy.spawnPos < 0 ? 1 : -1))
+                    //해당 위치에 몬스터 스폰 여부 확인
+                    if (gameManager.GetOnPlatformObj(i) == null)
                     {
-                        //해당 위치에 몬스터 스폰 여부 확인
-                        if (gameManager.GetOnPlatformObj(i) == null)
-                        {
-                            GameObject enemyPre = Instantiate(enemy.enemyPre, gameManager.GetStandingPos(i), Quaternion.identity);
-                            onEnemysList.Add(enemyPre);
-                            break;
-                        }
+                        GameObject enemyPre = Instantiate(enemy.enemyPre, gameManager.GetStandingPos(i), Quaternion.identity);
+                        onEnemysList.Add(enemyPre);
+                        break;
                     }
                 }
-                nextWaveNum++;//다음에 스폰할 웨이브 번호 1 증가
             }
+            nextWaveNum++;//다음에 스폰할 웨이브 번호 1 증가
         }
         
         TurnEventBus.Publish(TurnEventType.PlayerTurn);//PlayerTurn 이벤트 발생

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7035493264269367599}
   - component: {fileID: 7035493264269367598}
   - component: {fileID: 7035493264269367569}
+  - component: {fileID: 8895482240667154366}
   m_Layer: 7
   m_Name: EnemyBase
   m_TagString: Untagged
@@ -102,7 +103,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 100
-  maxShild: 20
+  offensePower: 50
+  isTurnReady: 0
+  _stateList:
+  - state: {fileID: 7035493264269367597}
+    stateName: Appears
+  - state: {fileID: 7035493264269367598}
+    stateName: Hit
+  - state: {fileID: 7035493264269367569}
+    stateName: Die
+  - state: {fileID: 7035493264269367596}
+    stateName: Move
+  - state: {fileID: 7035493264269367599}
+    stateName: Turnabout
+  - state: {fileID: 8895482240667154366}
+    stateName: NormalAttack
+  stateConditions: []
 --- !u!114 &7035493264269367594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +192,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3c616e1f60303243996e2af65a5d284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8895482240667154366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7035493264269367571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b9c4cd17da85a4689b52aff46b4bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7035493265507423620

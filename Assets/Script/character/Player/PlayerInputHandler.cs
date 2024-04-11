@@ -35,16 +35,16 @@ public class PlayerInputHandler : MonoBehaviour
                 {
                     //이동가능 여부 체크
                     if (_gameManager.GetOnPlatformObj(nexIndex) == null)
-                        _playerController.MoveState(moveDir);
+                        _playerController.TransitionState("Move", moveDir);
                     //아닐 시 공격 실행
                     else if(moveDir == _playerController.direction)
-                        _playerController.NormalAttackState(1.0f);
+                        _playerController.TransitionState("NormalAttack", 1.0f);
                 }
             }
             //턴 전환 키
             if (Input.GetKeyDown(turnAboutKey))
             {
-                _playerController.TurnaboutState();
+                _playerController.TransitionState("Turnabout");
             }
         }
     }
