@@ -12,6 +12,7 @@ public class EnemyController : CharacterController
         public float range; // 사거리, 0은 사거리 없음
         public float cooldown; // 쿨타임, 0은 쿨타임 없음
         public float nowCoolTIme;//현제 쿨타임
+        public object paramater;//파라미터
     }
 
     public List<StateCondition> stateConditions; // 상태와 조건의 리스트
@@ -45,7 +46,7 @@ public class EnemyController : CharacterController
             if (selectStateEnum > 0)
             {
                 // 선택된 상태를 실행
-                
+                TransitionState(selectStateEnum);
             }
         }
     }
