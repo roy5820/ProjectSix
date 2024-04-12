@@ -83,7 +83,7 @@ public class GameManager : Singleton<GameManager>
         //null체크
         if ((tartget))
         {
-            tartget.GetComponent<CharacterController>().TransitionState("Hit", damage);//대상 피격 상태 발생
+            tartget.GetComponent<CharacterController>().TransitionState(StateEnum.Hit, damage);//대상 피격 상태 발생
         }
     }
 

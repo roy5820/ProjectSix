@@ -35,7 +35,7 @@ public abstract class CharacterController : MonoBehaviour
     public class StateInfo
     {
         public StateBase state;//상태
-        public string stateName;//상태 명
+        public StateEnum stateEnum;//상태 열거형
     }
     [SerializeField]
     public List<StateInfo> _stateList;//캐릭터의 각 상태들을 답을 리스트
@@ -63,10 +63,11 @@ public abstract class CharacterController : MonoBehaviour
     
 
     //상태명으로 상태 호출하는 함수
-    public void TransitionState(string stateName, params object[] datas)
+    public void TransitionState(StateEnum stateEnum, params object[] datas)
     {
-        CharacterState state = _stateList.Find(state => state.stateName.Equals(stateName)).state;//상태 명으로 상태 가져오기
-
+        Debug.Log(stateEnum);
+        CharacterState state = _stateList.Find(state => state.stateEnum.Equals(stateEnum)).state;//상태 명으로 상태 가져오기
+        
         characterStateContext.Transition((CharacterState)state, datas);
     }
 }

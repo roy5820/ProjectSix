@@ -107,18 +107,30 @@ MonoBehaviour:
   isTurnReady: 0
   _stateList:
   - state: {fileID: 7035493264269367597}
-    stateName: Appears
+    stateEnum: 0
   - state: {fileID: 7035493264269367598}
-    stateName: Hit
+    stateEnum: 1
   - state: {fileID: 7035493264269367569}
-    stateName: Die
+    stateEnum: 2
   - state: {fileID: 7035493264269367596}
-    stateName: Move
+    stateEnum: 3
   - state: {fileID: 7035493264269367599}
-    stateName: Turnabout
+    stateEnum: 4
   - state: {fileID: 8895482240667154366}
-    stateName: NormalAttack
-  stateConditions: []
+    stateEnum: 5
+  stateConditions:
+  - stateEnum: 5
+    range: 1
+    cooldown: 0
+    nowCoolTIme: 0
+  - stateEnum: 4
+    range: 0
+    cooldown: 0
+    nowCoolTIme: 0
+  - stateEnum: 3
+    range: 0
+    cooldown: 0
+    nowCoolTIme: 0
 --- !u!114 &7035493264269367594
 MonoBehaviour:
   m_ObjectHideFlags: 0

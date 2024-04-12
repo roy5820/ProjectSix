@@ -8,13 +8,14 @@ public class EnemyController : CharacterController
     [System.Serializable]
     public class StateCondition
     {
-        public string stateNmae; // 상태 이름
+        public StateEnum stateEnum; // 상태 열거형
         public float range; // 사거리, 0은 사거리 없음
         public float cooldown; // 쿨타임, 0은 쿨타임 없음
         public float nowCoolTIme;//현제 쿨타임
     }
 
     public List<StateCondition> stateConditions; // 상태와 조건의 리스트
+
 
     //이벤트 등록
     private void OnEnable()
@@ -40,8 +41,8 @@ public class EnemyController : CharacterController
         if (isTurnReady)
         {
             // 상태 리스트에서 조건에 맞는 상태를 선택
-            string selectedStateFunctionName = SelectStateFunctionName();
-            if (!string.IsNullOrEmpty(selectedStateFunctionName))
+            StateEnum selectStateEnum = SelectStateEnum();
+            if (selectStateEnum > 0)
             {
                 // 선택된 상태를 실행
                 
@@ -49,10 +50,10 @@ public class EnemyController : CharacterController
         }
     }
 
-    //stateConditions리스트에서 조건
-    private string SelectStateFunctionName()
+    //stateConditions리스트에서 사용가능 한 상태를 우선순위에 따라 찾아 해당 상태 열거형을 반환
+    private StateEnum SelectStateEnum()
     {
-        string stateFuncName = null;//사용할 상태 실행함수 이름
+        StateEnum stateEnum = 0;//사용할 상태 실행함수 이름
 
         //우선 순위에 따른 적 행동 선택
         foreach(StateCondition condition in stateConditions)
@@ -60,7 +61,7 @@ public class EnemyController : CharacterController
 
         }
 
-        return stateFuncName;
+        return stateEnum;
     }
 
     //Enemy 턴 종료 처리
