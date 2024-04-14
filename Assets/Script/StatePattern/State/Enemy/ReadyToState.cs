@@ -32,9 +32,8 @@ public class ReadyToState : StateBase
     }
 
     //행동 준비 상태에서 적턴이 되면 isReady의 값을 true 하는 함수
-    private void StateReady()
+    public void StateReady()
     {
-        Debug.Log("StateReady");
         if(isPreparing == true)
             isPreparing = false;
     }

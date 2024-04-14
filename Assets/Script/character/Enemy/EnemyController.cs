@@ -39,6 +39,7 @@ public class EnemyController : CharacterController
         
         base.TurnStart();
         Debug.Log("-------------"+ AvailabilityOfAction);
+        GetComponent<ReadyToState>().StateReady();
         //전턴 준비중인 행동이 없으면 실행
         if (AvailabilityOfAction)
         {
