@@ -139,7 +139,6 @@ GameObject:
   - component: {fileID: 203374170}
   - component: {fileID: 203374171}
   - component: {fileID: 203374172}
-  - component: {fileID: 203374173}
   m_Layer: 0
   m_Name: GameManeger
   m_TagString: Untagged
@@ -197,24 +196,7 @@ MonoBehaviour:
   - enemyInfoList:
     - enemyPre: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       spawnPos: -1
-    - enemyPre: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-      spawnPos: 1
-  - enemyInfoList:
-    - enemyPre: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-      spawnPos: 1
   onEnemysList: []
---- !u!114 &203374173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203374169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb1312444e508584c8ff5bb25a0eb9e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &248781604
 GameObject:
   m_ObjectHideFlags: 0

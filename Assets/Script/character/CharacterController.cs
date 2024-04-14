@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class CharacterController : MonoBehaviour
 {
-    private GameManager gameManager = null;//게임 매니저를 가져와 저장할 변수
+    protected GameManager gameManager = null;//게임 매니저를 가져와 저장할 변수
 
     [Header("Player Status")]
     public int maxHp = 100;//최대체력
@@ -29,7 +29,7 @@ public abstract class CharacterController : MonoBehaviour
     
     public CharacterDirection direction { get; set; }//캐릭터가 바라보는 방향
     public bool isTurnReady = false;//턴 준비 여부
-
+    public bool AvailabilityOfAction = true;//행동 가능 여부
     //상태 정보
     [System.Serializable]
     public class StateInfo
@@ -50,7 +50,7 @@ public abstract class CharacterController : MonoBehaviour
         direction = this.transform.localScale.x > 0 ? CharacterDirection.Right : CharacterDirection.Left;//캐릭터 방향 값 초기화
     }
     //캐릭터 턴 시작 처리
-    protected virtual void TurnStart()
+    public virtual void TurnStart()
     {
         isTurnReady = true;
     }

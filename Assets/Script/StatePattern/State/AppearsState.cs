@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+//캐릭터 등장
 public class AppearsState : StateBase
 {
     protected override IEnumerator StateFuntion(params object[] datas)

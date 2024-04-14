@@ -8,7 +8,7 @@ public class CharacterMovement : MonoBehaviour
     private Collider2D characterCol2D = null;//캐릭터 콜라이더
     private GameManager getGameManager = null;//게임 메니저
 
-    Coroutine moveCoroutine = null;//이동 구현 코루틴 작동 시 저장할 변수
+    public Coroutine moveCoroutine = null;//이동 구현 코루틴 작동 시 저장할 변수
 
     public LayerMask platformLayer;//플렛폼 레이어 값
 
@@ -22,14 +22,11 @@ public class CharacterMovement : MonoBehaviour
     //타일 간 이동 구현 코루틴 moveDirX: 이동방향, movePower: 이동속도, moveSpaceDistance:이동거리(칸)
     public IEnumerator StraightLineMovement(int moveDirX, float movePower, int moveSpaceDistance)
     {
-        PlatformInfoManagement onPlatformInfo = null;//플렛폼 정보값을 가져올 변수
         int onPlatformIndex = -1;//플렛폼 인덱스 값이 저장될 변수
         //moveSaceNum만큼 칸 이동을 구현하는 반복문
         for (int i = 0; i < moveSpaceDistance; i++)
         {
-            RaycastHit2D onPlatform = Physics2D.Raycast(transform.position, Vector2.down, 1, platformLayer);//레이케스트로 현재 플렛폼 정보 가져오기
-            onPlatformInfo = onPlatform.collider.gameObject.GetComponent<PlatformInfoManagement>();//자신이 서있는 플렛폼의 정보 컴포넌트를 가져오기
-            onPlatformIndex = onPlatformInfo.indexNum;//자신이 속한 플렛폼 인덱스 값
+            onPlatformIndex = getGameManager.GetPlatformIndexForObj(gameObject);//자신이 속한 플렛폼 인덱스 값
             int moveIndex = onPlatformIndex + moveDirX;//이동 할 플렛폼의 인데스 값
             
             Vector3 targetPlatformPos = getGameManager.GetStandingPos(moveIndex);//이동할 플렛폼 오브젝트 값

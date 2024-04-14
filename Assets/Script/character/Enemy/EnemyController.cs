@@ -9,14 +9,13 @@ public class EnemyController : CharacterController
     public class StateCondition
     {
         public StateEnum stateEnum; // 상태 열거형
-        public float range; // 사거리, 0은 사거리 없음
-        public float cooldown; // 쿨타임, 0은 쿨타임 없음
+        public float range; // 사거리, 99는 사거리 없음
+        public float cooldown; // 쿨타임, 0 쿨타임 없음
         public float nowCoolTIme;//현제 쿨타임
-        public object paramater;//파라미터
+        public bool NeedToPrepare;//파라미터
     }
 
     public List<StateCondition> stateConditions; // 상태와 조건의 리스트
-
 
     //이벤트 등록
     private void OnEnable()
@@ -33,33 +32,64 @@ public class EnemyController : CharacterController
     protected override void Start()
     {
         base.Start();
+    }
+
+    public override void TurnStart()
+    {
+        
+        base.TurnStart();
+        Debug.Log("-------------"+ AvailabilityOfAction);
+        //전턴 준비중인 행동이 없으면 실행
+        if (AvailabilityOfAction)
+        {
+            StateEnum selectStateEnum = SelectState();//enemy턴이 되었을 때 행동가능 상태면 해동 실행
+        }
+        else
+            TurnEnd();
         
     }
 
-    private void Update()
-    {
-        //enemy턴이 되었을 때 행동을 하나 골라 실행 하는 코드
-        if (isTurnReady)
-        {
-            // 상태 리스트에서 조건에 맞는 상태를 선택
-            StateEnum selectStateEnum = SelectStateEnum();
-            if (selectStateEnum > 0)
-            {
-                // 선택된 상태를 실행
-                TransitionState(selectStateEnum);
-            }
-        }
-    }
-
     //stateConditions리스트에서 사용가능 한 상태를 우선순위에 따라 찾아 해당 상태 열거형을 반환
-    private StateEnum SelectStateEnum()
+    private StateEnum SelectState()
     {
         StateEnum stateEnum = 0;//사용할 상태 실행함수 이름
 
-        //우선 순위에 따른 적 행동 선택
-        foreach(StateCondition condition in stateConditions)
+        //적과의 사거리 계산하기
+        int distance = 99;//플레이어와의 거리
+        int thisIndex = gameManager.GetPlatformIndexForObj(gameObject);//현재 위치 값 가져오기
+        int countDistance = 0;//플레이어 와의 거리를 카운트할 값이 저장되는 변수
+        //플레이어 와의 거리 가져오기
+        for (int i = thisIndex + (direction == CharacterDirection.Right ? 1: -1); direction == CharacterDirection.Right ? i < gameManager.PlatformList.Length : i >= 0; i += (direction == CharacterDirection.Right ? 1 : -1))
         {
+            
+            countDistance++;
+            GameObject targetObj = gameManager.GetOnPlatformObj(i);
+            if(targetObj != null)
+            {
+                //경로상 플레이어가 있으면 거리 갱신
+                if (targetObj.layer == LayerMask.NameToLayer("Player"))
+                {
+                    distance = countDistance;
+                    break;
+                }
+            }
+        }
 
+        Debug.Log(distance);
+        //우선 순위에 따른 적 행동 선택
+        foreach (StateCondition condition in stateConditions)
+        {
+            //스킬 사용 가능 여부 체크
+            if (condition.nowCoolTIme == 0 && condition.range >= distance)
+            {
+                Debug.Log("-------------NeedToPrepare: " + condition.NeedToPrepare);
+                //준비해야하는 스킬인지에 따른 상태 처리
+                if (condition.NeedToPrepare)
+                    TransitionState(StateEnum.ReadyToState, condition.stateEnum);//상태 실행
+                else
+                    TransitionState(condition.stateEnum);//상태 실행
+                break;
+            }
         }
 
         return stateEnum;
@@ -68,8 +98,7 @@ public class EnemyController : CharacterController
     //Enemy 턴 종료 처리
     public override void TurnEnd()
     {
-        GameManager.Instance.GetComponent<BattleManager>().OnTurnOverEnemyCnt++;//턴종료된 적 카운트 ++
+        gameManager.GetComponent<BattleManager>().OnTurnOverEnemyCnt++;//턴종료된 적 카운트 ++
         base.TurnEnd();//턴 앤드 처리
-        TurnEventBus.Publish(TurnEventType.TurnEnd);//턴종료 이벤트 발생
     }
 }

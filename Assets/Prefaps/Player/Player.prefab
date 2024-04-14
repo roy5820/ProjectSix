@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 9141398214432291536}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,19 +274,20 @@ MonoBehaviour:
   maxHp: 100
   offensePower: 50
   isTurnReady: 0
+  isReadyToState: 0
   _stateList:
   - state: {fileID: 7059534277545993757}
-    stateEnum: 0
-  - state: {fileID: 5313507360809348014}
     stateEnum: 1
-  - state: {fileID: 6393193024610376427}
+  - state: {fileID: 5313507360809348014}
     stateEnum: 2
-  - state: {fileID: 8189629695826103116}
+  - state: {fileID: 6393193024610376427}
     stateEnum: 3
-  - state: {fileID: 7172966285257238275}
+  - state: {fileID: 8189629695826103116}
     stateEnum: 4
-  - state: {fileID: 9141398214432291536}
+  - state: {fileID: 7172966285257238275}
     stateEnum: 5
+  - state: {fileID: 9141398214432291536}
+    stateEnum: 6
 --- !u!114 &3296758257399933357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8163e51ffa51495468b00b841a4d8357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movePower: 30
 --- !u!114 &7172966285257238275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,3 +391,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b9c4cd17da85a4689b52aff46b4bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerCoefficient: 1

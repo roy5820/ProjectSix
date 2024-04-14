@@ -44,6 +44,15 @@ public class BattleManager : MonoBehaviour
         TurnEventBus.Unsubscribe(TurnEventType.TurnEnd, TurnEnd);//TurnEnd 이벤트 제거
     }
 
+    private void Update()
+    {
+        //턴종료 수가 필드의 몬스터 수와 같을 경우 턴종료 이벤트 발생
+        if (isEnemyTurn && (turnOverEnemyCnt >= onEnemysList.Count))
+        {
+            TurnEventBus.Publish(TurnEventType.TurnEnd);//턴 종료 이벤트 발생
+        }
+    }
+
     //Enemy 턴 종료 체크를 위한 프로퍼티
     public int OnTurnOverEnemyCnt
     {
@@ -54,12 +63,6 @@ public class BattleManager : MonoBehaviour
         set
         {
             turnOverEnemyCnt = value;
-
-            //Enemy 턴 오버 카운트 갱신 시 필드의 Enemy 수와 턴 오버 Enemy수가 같으면 턴 엔드로 전환
-            if (isEnemyTurn && (turnOverEnemyCnt == onEnemysList.Count))
-            {
-                TurnEventBus.Publish(TurnEventType.TurnEnd);//턴 종료 이벤트 발생
-            }
         }
     }
 
@@ -128,7 +131,6 @@ public class BattleManager : MonoBehaviour
     {
         isEnemyTurn = false;//적턴 여부 비활성화
         turnState = "TurnEnd";
-        Debug.Log(turnState);
 
         nowTurnCnt++;//턴 종료 시 경과 턴 +1
         TurnEventBus.Publish(TurnEventType.TurnStart);//TurnStart 이벤트 발생

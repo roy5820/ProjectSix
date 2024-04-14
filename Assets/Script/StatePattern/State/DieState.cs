@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+//캐릭터 죽음
 public class DieState : StateBase
 {
     protected override IEnumerator StateFuntion(params object[] datas)
