@@ -8,7 +8,7 @@ public class NormalAttackState : StateBase
     protected override IEnumerator StateFuntion(params object[] datas)
     {
 
-        int thisDamage = characterController.offensePower * (int)powerCoefficient;//계산할 데미지 구하기
+        int thisDamage = (int)(characterController.offensePower * powerCoefficient);//계산할 데미지 구하기
 
         CharacterDirection characterDir = characterController.direction;//캐릭터 방향가져오기
 

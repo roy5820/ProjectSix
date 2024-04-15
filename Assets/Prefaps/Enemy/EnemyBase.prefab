@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 100
-  offensePower: 50
+  offensePower: 25
   isTurnReady: 0
   AvailabilityOfAction: 1
   _stateList:

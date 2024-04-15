@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyController : CharacterController
@@ -32,17 +33,39 @@ public class EnemyController : CharacterController
     protected override void Start()
     {
         base.Start();
+        //스폰 시 플레이어 방향으로 방향 전환 시키기
+        int targetIndex = gameManager.GetPlatformIndexForObj(GameObject.FindGameObjectWithTag("Player"));//플레이어 위치 가져오기
+        int thisIndex = gameManager.GetPlatformIndexForObj(gameObject);//해당 객체의 위치 가져오기
+
+        CharacterDirection targetDir = targetIndex < thisIndex ? CharacterDirection.Left : CharacterDirection.Right;//타겟 방향
+        CharacterDirection thisDir = direction;//해당 객체의 바라보는 방향
+        //바로보는 방향에 타겟이 없으면 방향 전환
+        if (targetDir != thisDir)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+            direction = targetDir;
+        }
+            
     }
 
     public override void TurnStart()
     {
         
         base.TurnStart();
-        Debug.Log("-------------"+ AvailabilityOfAction);
         GetComponent<ReadyToState>().TurnStart();//공격 딜레이 구현 상태에게 turnStart상태 알림
         //전턴 준비중인 행동이 없으면 실행
         if (AvailabilityOfAction)
         {
+            //적 행동 쿨타임 돌리기
+            foreach (StateCondition condition in stateConditions)
+            {
+                //스킬 사용 가능 여부 체크
+                if (condition.nowCoolTIme > 0)
+                {
+                    condition.nowCoolTIme--;//쿨타임 감소
+                }
+            }
+
             StateEnum selectStateEnum = SelectState();//enemy턴이 되었을 때 행동가능 상태면 해동 실행
         }
         else
@@ -76,14 +99,14 @@ public class EnemyController : CharacterController
             }
         }
 
-        Debug.Log(distance);
         //우선 순위에 따른 적 행동 선택
         foreach (StateCondition condition in stateConditions)
         {
             //스킬 사용 가능 여부 체크
             if (condition.nowCoolTIme == 0 && condition.range >= distance)
             {
-                Debug.Log("-------------NeedToPrepare: " + condition.NeedToPrepare);
+                condition.nowCoolTIme = condition.cooldown;//쿨타임 적용
+
                 //준비해야하는 스킬인지에 따른 상태 처리
                 if (condition.NeedToPrepare)
                     TransitionState(StateEnum.ReadyToState, condition.stateEnum);//상태 실행
