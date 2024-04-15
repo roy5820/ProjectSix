@@ -140,4 +140,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerCoefficient: 1.5
   dashSpeed: 60
-  dashRange: 3
+  dashRange: 4

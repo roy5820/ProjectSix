@@ -19,8 +19,9 @@ public class MoveState : StateBase
         {
             yield return null;
         }
-
-        yield return base.StateFuntion();
+        characterController.TurnEnd();//상태 종료 시 턴 종료
+        yield return base.StateFuntion(datas);
+        
     }
 }
 

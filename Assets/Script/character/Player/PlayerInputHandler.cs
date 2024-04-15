@@ -21,9 +21,10 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Update()
     {
-        //플레이어 턴 체크
-        if (_playerController.isTurnReady)
+        //플레이어 턴 체크 및 행동 가능 여부 체크
+        if (_playerController.isTurnReady && _playerController.isActiveAndEnabled)
         {
+            
             //이동 키 입력 처리(이동 키 하나로 이동 + 일반 공격 처리)
             if (Input.GetKeyDown(leftMoveKey) || Input.GetKeyDown(rightMoveKey))
             {

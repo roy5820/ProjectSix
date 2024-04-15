@@ -20,6 +20,6 @@ public class TrackPlayerState : StateBase
         else
             characterController.TransitionState(StateEnum.Turnabout);//방향전환 상태 실행
 
-        yield return base.StateFuntion();
+        yield return base.StateFuntion(datas);
     }
 }

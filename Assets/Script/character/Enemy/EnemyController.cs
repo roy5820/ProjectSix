@@ -52,7 +52,7 @@ public class EnemyController : CharacterController
     {
         
         base.TurnStart();
-        GetComponent<ReadyToState>().TurnStart();//공격 딜레이 구현 상태에게 turnStart상태 알림
+        GetComponent<EnemyReadyToState>().TurnStart();//공격 딜레이 구현 상태에게 turnStart상태 알림
         //전턴 준비중인 행동이 없으면 실행
         if (AvailabilityOfAction)
         {

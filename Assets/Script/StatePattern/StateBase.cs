@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class StateBase : MonoBehaviour, CharacterState
 {
-    protected CharacterController characterController;//캐릭터 컨트롤러
-    protected GameManager _gameManager;//게임 메니저
+    protected CharacterController characterController = null;//캐릭터 컨트롤러
+    protected GameManager _gameManager = null;//게임 메니저
+    protected Animator _animator = null;//캐릭터 애니메이션
 
     public void Handle(CharacterController characterController, params object[] datas)
     {
@@ -14,13 +15,19 @@ public class StateBase : MonoBehaviour, CharacterState
         //캐릭터 메니저 값 초기화
         if (!this._gameManager)
             this._gameManager = GameManager.Instance;
+        //캐릭터 애니메이터 가져오기
+        if (!this._animator)
+            TryGetComponent<Animator>(out _animator);
+
+        characterController.AvailabilityOfAction = false;//행동 가능 여부 false 변경
         StartCoroutine(StateFuntion(datas));//기능 구현 코루틴 함수 호출
     }
 
     //상속 받아 기능을 구현할 부분
     protected virtual IEnumerator StateFuntion(params object[] datas)
     {
-        characterController.TurnEnd();//상태 종료 시 턴 종료
+        characterController.AvailabilityOfAction = true;//행동 가능 여부 true 변경
+        Debug.Log("AvailabilityOfAction: " + characterController.AvailabilityOfAction);
         yield return null;
     }
 }

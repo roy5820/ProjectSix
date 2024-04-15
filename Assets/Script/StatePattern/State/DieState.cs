@@ -9,7 +9,7 @@ public class DieState : StateBase
         Debug.Log(gameObject.name + " is Die");
         _gameManager.GetComponent<BattleManager>().onEnemysList.Remove(gameObject);
         Destroy(gameObject);
-        yield return null;
+        yield return base.StateFuntion(datas);
     }
 }
 
