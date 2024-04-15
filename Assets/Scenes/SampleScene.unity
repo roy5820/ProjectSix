@@ -194,9 +194,12 @@ MonoBehaviour:
   stageList: []
   nowStage:
   - enemyInfoList:
+    - enemyPre: {fileID: 8181526713515221384, guid: 1bf957c32e778514ba806c7fb6bc36a1, type: 3}
+      spawnPos: 1
     - enemyPre: {fileID: 7367348094448265910, guid: 3fb4ee80037dbbb4491122a5ae1e43fc, type: 3}
       spawnPos: -1
-    - enemyPre: {fileID: 8181526713515221384, guid: 1bf957c32e778514ba806c7fb6bc36a1, type: 3}
+  - enemyInfoList:
+    - enemyPre: {fileID: 7367348094448265910, guid: 3fb4ee80037dbbb4491122a5ae1e43fc, type: 3}
       spawnPos: -1
   onEnemysList: []
 --- !u!1 &248781604
@@ -417,7 +420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 520665383554115681, guid: d8cab42c0de5d3a428436de861499f60, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.739
+      value: -0.52
       objectReference: {fileID: 0}
     - target: {fileID: 520665383554115681, guid: d8cab42c0de5d3a428436de861499f60, type: 3}
       propertyPath: m_LocalPosition.z

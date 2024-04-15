@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Name
-      value: SswordsMan Variant
+      value: SwordsMan Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: _stateList.Array.size
@@ -140,4 +140,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerCoefficient: 1.5
   dashSpeed: 60
-  dashRange: 2
+  dashRange: 3

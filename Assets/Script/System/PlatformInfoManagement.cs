@@ -7,7 +7,7 @@ public class PlatformInfoManagement : MonoBehaviour
 {
     public int indexNum = 0;//해당 플렛폼이 플렛폼 리스트의 몇번째 위치에 있는지 나타내는 인덱스 번호
     public LayerMask characterLayer;//플렛폼위에 올라올 수 있는 캐릭터의 레이어 값
-    private GameObject onPlatformCharacter = null;//해당 플렛폼의 있는 캐릭터 obj
+    public GameObject onPlatformCharacter = null;//해당 플렛폼의 있는 캐릭터 obj
     public Transform standingObj = null;//플렛폼위에 설 위치
 
     //onPlatformCharacter 프로퍼티
