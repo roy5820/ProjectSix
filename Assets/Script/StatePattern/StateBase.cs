@@ -8,7 +8,7 @@ public abstract class StateBase : MonoBehaviour, CharacterState
     protected Animator _animator = null;//캐릭터 애니메이션
 
     public string stateAniParamater = "";
-    public float sateDelayTime = 0.3f;//상태 딜레이 시간
+    public float sateDelayTime = 0.5f;//상태 딜레이 시간
 
     public void Handle(CharacterController characterController, params object[] datas)
     {

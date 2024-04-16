@@ -4,6 +4,7 @@ using UnityEngine;
 //캐릭터 일반공격
 public class NormalAttackState : StateBase
 {
+    public float attackAfterDelay = 0.5f;//공격 후딜
     public float powerCoefficient = 1.0f;
     protected override IEnumerator StateFuntion(params object[] datas)
     {
@@ -24,8 +25,7 @@ public class NormalAttackState : StateBase
             _gameManager.GiveDamage(attackIndex, thisDamage);
         }
 
-        
+        yield return new WaitForSeconds(attackAfterDelay);//공격 후딜 구현
         characterController.TurnEnd();//상태 종료 시 턴 종료
-        yield return null;
     }
 }

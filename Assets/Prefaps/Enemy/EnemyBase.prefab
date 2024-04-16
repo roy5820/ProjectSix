@@ -197,6 +197,7 @@ MonoBehaviour:
     stateEnum: 6
   - state: {fileID: 837721778842730234}
     stateEnum: 7
+  isDie: 0
   stateConditions:
   - stateEnum: 6
     range: 1
@@ -236,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: 
-  sateDelayTime: 0.3
+  sateDelayTime: 0.5
 --- !u!114 &7035493264269367597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: 
-  sateDelayTime: 0.3
+  sateDelayTime: 0.5
 --- !u!114 &7035493264269367596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,7 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: DashState
-  sateDelayTime: 0.1
+  sateDelayTime: 0.2
   movePower: 30
 --- !u!114 &7035493264269367599
 MonoBehaviour:
@@ -279,7 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: 
-  sateDelayTime: 0.3
+  sateDelayTime: 0.5
 --- !u!114 &7035493264269367598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,7 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: HitState
-  sateDelayTime: 0.3
+  sateDelayTime: 0.5
 --- !u!114 &7035493264269367569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,7 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: DieState
-  sateDelayTime: 0.3
+  sateDelayTime: 0.9
 --- !u!114 &8895482240667154366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: AttackState
   sateDelayTime: 0.3
+  attackAfterDelay: 0.5
   powerCoefficient: 1
 --- !u!114 &837721778842730234
 MonoBehaviour:
@@ -336,4 +338,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: 
-  sateDelayTime: 0.3
+  sateDelayTime: 0
