@@ -20,7 +20,6 @@ public class MoveState : StateBase
             yield return null;
         }
         characterController.TurnEnd();//상태 종료 시 턴 종료
-        yield return base.StateFuntion(datas);
         
     }
 }

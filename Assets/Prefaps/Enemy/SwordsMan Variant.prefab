@@ -107,6 +107,10 @@ PrefabInstance:
       propertyPath: stateConditions.Array.data[1].NeedToPrepare
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7035493264269367596, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: movePower
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7035493265507423618, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Color.b
       value: 0.7406688

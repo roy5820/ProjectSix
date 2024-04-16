@@ -7,7 +7,6 @@ public class HitState : StateBase
 
     protected override IEnumerator StateFuntion(params object[] datas)
     {
-
         hitDamage = (int)datas[0];
         //피격 처리 기능 구현
         characterController.NowHp -= hitDamage;//데미지 계산
@@ -15,7 +14,7 @@ public class HitState : StateBase
         if (characterController.NowHp == 0)
             gameObject.GetComponent<CharacterController>().TransitionState(StateEnum.Die);
 
-        yield return base.StateFuntion(datas);
+        yield return null;
     }
 }
 

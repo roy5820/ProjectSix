@@ -195,7 +195,7 @@ MonoBehaviour:
   nowStage:
   - enemyInfoList:
     - enemyPre: {fileID: 7367348094448265910, guid: 3fb4ee80037dbbb4491122a5ae1e43fc, type: 3}
-      spawnPos: 1
+      spawnPos: -1
   onEnemysList: []
 --- !u!1 &248781604
 GameObject:
@@ -353,31 +353,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &881104250 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 520665383554115680, guid: d8cab42c0de5d3a428436de861499f60, type: 3}
-  m_PrefabInstance: {fileID: 520665383380055482}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &881104264
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881104250}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cc536b78f6152cb4583dc00fd5eb714a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1032521354 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2023627886755085511, guid: 96b307757ce26724da071fb587ff8044, type: 3}
@@ -473,10 +448,6 @@ PrefabInstance:
     - target: {fileID: 520665383554115681, guid: d8cab42c0de5d3a428436de861499f60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8189629695826103116, guid: d8cab42c0de5d3a428436de861499f60, type: 3}
-      propertyPath: movePower
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8cab42c0de5d3a428436de861499f60, type: 3}

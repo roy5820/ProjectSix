@@ -24,7 +24,8 @@ public class NormalAttackState : StateBase
             _gameManager.GiveDamage(attackIndex, thisDamage);
         }
 
-        yield return base.StateFuntion(datas);
+        
         characterController.TurnEnd();//상태 종료 시 턴 종료
+        yield return null;
     }
 }

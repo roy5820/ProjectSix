@@ -19,7 +19,7 @@ public class RushAttack : NormalAttackState
         {
             yield return null;
         }
-        yield return base.StateFuntion(datas);
-        characterController.TurnEnd();//상태 종료 시 턴 종료
+
+        yield return base.StateFuntion(datas);//공격 실행
     }
 }

@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class StateBase : MonoBehaviour, CharacterState
+public abstract class StateBase : MonoBehaviour, CharacterState
 {
     protected CharacterController characterController = null;//캐릭터 컨트롤러
     protected GameManager _gameManager = null;//게임 메니저
@@ -19,15 +19,9 @@ public class StateBase : MonoBehaviour, CharacterState
         if (!this._animator)
             TryGetComponent<Animator>(out _animator);
 
-        characterController.AvailabilityOfAction = false;//행동 가능 여부 false 변경
         StartCoroutine(StateFuntion(datas));//기능 구현 코루틴 함수 호출
     }
 
     //상속 받아 기능을 구현할 부분
-    protected virtual IEnumerator StateFuntion(params object[] datas)
-    {
-        characterController.AvailabilityOfAction = true;//행동 가능 여부 true 변경
-        Debug.Log("AvailabilityOfAction: " + characterController.AvailabilityOfAction);
-        yield return null;
-    }
+    protected abstract IEnumerator StateFuntion(params object[] datas);
 }

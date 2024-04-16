@@ -109,7 +109,7 @@ public class EnemyController : CharacterController
 
                 //준비해야하는 스킬인지에 따른 상태 처리
                 if (condition.NeedToPrepare)
-                    TransitionState(StateEnum.ReadyToState, condition.stateEnum);//상태 실행
+                    TransitionState(StateEnum.EnemyReadyToState, condition.stateEnum);//상태 실행
                 else
                     TransitionState(condition.stateEnum);//상태 실행
                 break;

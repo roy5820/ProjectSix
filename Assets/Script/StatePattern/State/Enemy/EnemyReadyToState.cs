@@ -9,6 +9,7 @@ public class EnemyReadyToState : StateBase
 
     protected override IEnumerator StateFuntion(params object[] datas)
     {
+        characterController.AvailabilityOfAction = false;
         isPreparing = true;//행동 준비 여부 ture
 
         //행동 준비 상태로 전환 후 행동 행동 종료
@@ -19,22 +20,17 @@ public class EnemyReadyToState : StateBase
         {
             if (!isPreparing)
                 break;
-            Debug.Log("공격 준비 중");
             yield return null;
         }
-        Debug.Log("공격 실행");
+        characterController.AvailabilityOfAction = true;
         //매개 변수 값에 따라 행동 실행 여부 선택
         if (datas[0] != null)
             characterController.TransitionState((StateEnum)datas[0]);//행동 실행
-        else
-            yield return base.StateFuntion(datas);
-
     }
 
     //행동 준비 상태에서 적턴이 되면 isReady의 값을 true 하는 함수
     public void TurnStart()
     {
-        Debug.Log("공격 준비 완료");
         if(isPreparing == true)
             isPreparing = false;
             

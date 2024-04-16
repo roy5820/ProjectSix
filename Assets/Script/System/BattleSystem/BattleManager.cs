@@ -73,7 +73,7 @@ public class BattleManager : MonoBehaviour
         nowTurnCnt = 0;
         nextWaveNum = 0;
 
-        TurnEventBus.Publish(TurnEventType.TurnStart);//TurnStart 이벤트 발생
+        TurnEventBus. Publish(TurnEventType.TurnStart);//TurnStart 이벤트 발생
     }
 
     //전투 종료 처리

@@ -22,7 +22,7 @@ public class PlayerInputHandler : MonoBehaviour
     private void Update()
     {
         //플레이어 턴 체크 및 행동 가능 여부 체크
-        if (_playerController.isTurnReady && _playerController.isActiveAndEnabled)
+        if (_playerController.isTurnReady && _playerController.AvailabilityOfAction)
         {
             
             //이동 키 입력 처리(이동 키 하나로 이동 + 일반 공격 처리)
@@ -36,15 +36,24 @@ public class PlayerInputHandler : MonoBehaviour
                 {
                     //이동가능 여부 체크
                     if (_gameManager.GetOnPlatformObj(nexIndex) == null)
+                    {
+                        _playerController.AvailabilityOfAction = false;
                         _playerController.TransitionState(StateEnum.Move, moveDir);
+                    }
+                        
                     //아닐 시 공격 실행
                     else if(moveDir == _playerController.direction)
+                    {
+                        _playerController.AvailabilityOfAction = false;
                         _playerController.TransitionState(StateEnum.NormalAttack, 1.0f);
+                    }
+                        
                 }
             }
             //턴 전환 키
             if (Input.GetKeyDown(turnAboutKey))
             {
+                _playerController.AvailabilityOfAction = false;
                 _playerController.TransitionState(StateEnum.Turnabout);
             }
         }
