@@ -103,6 +103,7 @@ MonoBehaviour:
   characterLayer:
     serializedVersion: 2
     m_Bits: 192
+  onPlatformCharacter: {fileID: 0}
   standingObj: {fileID: 8477969476020566995}
 --- !u!61 &2474369678709863775
 BoxCollider2D:
@@ -128,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.918705, y: 0.21008146}
+  m_Size: {x: 3, y: 0.21008146}
   m_EdgeRadius: 0
 --- !u!1 &8477969476020566994
 GameObject:

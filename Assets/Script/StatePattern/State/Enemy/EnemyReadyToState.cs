@@ -6,11 +6,13 @@ using UnityEngine;
 public class EnemyReadyToState : StateBase
 {
     bool isPreparing = false;//행동 준비 중 여부
-
+    
     protected override IEnumerator StateFuntion(params object[] datas)
     {
         characterController.AvailabilityOfAction = false;
         isPreparing = true;//행동 준비 여부 ture
+
+        yield return new WaitForSeconds(sateDelayTime);//행동 선택 후딜레이
 
         //행동 준비 상태로 전환 후 행동 행동 종료
         characterController.TurnEnd();

@@ -7,6 +7,9 @@ public abstract class StateBase : MonoBehaviour, CharacterState
     protected GameManager _gameManager = null;//게임 메니저
     protected Animator _animator = null;//캐릭터 애니메이션
 
+    public string stateAniParamater = "";
+    public float sateDelayTime = 0.3f;//상태 딜레이 시간
+
     public void Handle(CharacterController characterController, params object[] datas)
     {
         //캐릭터 컨트롤러 값 초기화
@@ -18,6 +21,10 @@ public abstract class StateBase : MonoBehaviour, CharacterState
         //캐릭터 애니메이터 가져오기
         if (!this._animator)
             TryGetComponent<Animator>(out _animator);
+
+        //캐릭터 행동 애니메이션 출력
+        if (!string.IsNullOrEmpty(stateAniParamater) && this._animator)
+            _animator.SetTrigger(stateAniParamater);
 
         StartCoroutine(StateFuntion(datas));//기능 구현 코루틴 함수 호출
     }

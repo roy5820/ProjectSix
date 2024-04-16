@@ -11,6 +11,9 @@ public class HitState : StateBase
         //피격 처리 기능 구현
         characterController.NowHp -= hitDamage;//데미지 계산
         Debug.Log(gameObject.name + " is Hit, nowDamage: "+ hitDamage + " nowHp: " + characterController.NowHp);
+
+        yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
+
         if (characterController.NowHp == 0)
             gameObject.GetComponent<CharacterController>().TransitionState(StateEnum.Die);
 

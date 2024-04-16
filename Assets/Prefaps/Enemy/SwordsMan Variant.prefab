@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[0].range
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[1].range
@@ -142,6 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756b17e033c511c4fa9e72d527440375, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateAniParamater: DashState
+  sateDelayTime: 0.1
   powerCoefficient: 1.5
-  dashSpeed: 60
+  dashSpeed: 80
   dashRange: 4

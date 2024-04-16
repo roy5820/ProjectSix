@@ -19,6 +19,8 @@ public class MoveState : StateBase
         {
             yield return null;
         }
+
+        yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
         characterController.TurnEnd();//상태 종료 시 턴 종료
         
     }

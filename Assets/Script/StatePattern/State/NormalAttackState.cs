@@ -7,7 +7,7 @@ public class NormalAttackState : StateBase
     public float powerCoefficient = 1.0f;
     protected override IEnumerator StateFuntion(params object[] datas)
     {
-
+        yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
         int thisDamage = (int)(characterController.offensePower * powerCoefficient);//계산할 데미지 구하기
 
         CharacterDirection characterDir = characterController.direction;//캐릭터 방향가져오기
