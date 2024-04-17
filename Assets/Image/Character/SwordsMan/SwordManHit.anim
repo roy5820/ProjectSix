@@ -7,7 +7,7 @@ AnimationClip:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SwordManHit
-  serializedVersion: 6
+  serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
@@ -18,25 +18,27 @@ AnimationClip:
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves:
-  - curve:
+  - serializedVersion: 2
+    curve:
     - time: 0
       value: {fileID: -65556698, guid: 377c389f4d9abad42a4e4eabf12da1fd, type: 3}
-    - time: 0.083333336
+    - time: 0.041666668
       value: {fileID: -79377133, guid: 377c389f4d9abad42a4e4eabf12da1fd, type: 3}
-    - time: 0.16666667
+    - time: 0.083333336
       value: {fileID: -788612608, guid: 377c389f4d9abad42a4e4eabf12da1fd, type: 3}
-    - time: 0.25
+    - time: 0.125
       value: {fileID: -661828966, guid: 377c389f4d9abad42a4e4eabf12da1fd, type: 3}
-    - time: 0.33333334
+    - time: 0.16666667
       value: {fileID: -280017074, guid: 377c389f4d9abad42a4e4eabf12da1fd, type: 3}
-    - time: 0.41666666
+    - time: 0.20833333
       value: {fileID: 1462933429, guid: 377c389f4d9abad42a4e4eabf12da1fd, type: 3}
-    - time: 0.5
+    - time: 0.25
       value: {fileID: 1674244894, guid: 377c389f4d9abad42a4e4eabf12da1fd, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
+    flags: 2
   m_SampleRate: 24
   m_WrapMode: 0
   m_Bounds:
@@ -51,6 +53,8 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: -65556698, guid: 377c389f4d9abad42a4e4eabf12da1fd, type: 3}
     - {fileID: -79377133, guid: 377c389f4d9abad42a4e4eabf12da1fd, type: 3}
@@ -64,7 +68,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5416667
+    m_StopTime: 0.29166666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

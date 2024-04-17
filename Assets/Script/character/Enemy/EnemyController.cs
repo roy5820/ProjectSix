@@ -33,25 +33,6 @@ public class EnemyController : CharacterController
     protected override void Start()
     {
         base.Start();
-
-        Debug.Log("적 시작");
-        TurnaboutToPlayer();
-    }
-
-    //플레이어 방향으로 바라보게 방향 전환 하는 함수
-    public void TurnaboutToPlayer()
-    {
-        int targetIndex = gameManager.GetPlatformIndexForObj(GameObject.FindGameObjectWithTag("Player"));//플레이어 위치 가져오기
-        int thisIndex = gameManager.GetPlatformIndexForObj(gameObject);//해당 객체의 위치 가져오기
-
-        CharacterDirection targetDir = targetIndex < thisIndex ? CharacterDirection.Left : CharacterDirection.Right;//타겟 방향
-        CharacterDirection thisDir = direction;//해당 객체의 바라보는 방향
-        //바로보는 방향에 타겟이 없으면 방향 전환
-        if (targetDir != thisDir)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-            direction = targetDir;
-        }
     }
 
     public override void TurnStart()
