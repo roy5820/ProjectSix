@@ -33,7 +33,14 @@ public class EnemyController : CharacterController
     protected override void Start()
     {
         base.Start();
-        //스폰 시 플레이어 방향으로 방향 전환 시키기
+
+        Debug.Log("적 시작");
+        TurnaboutToPlayer();
+    }
+
+    //플레이어 방향으로 바라보게 방향 전환 하는 함수
+    public void TurnaboutToPlayer()
+    {
         int targetIndex = gameManager.GetPlatformIndexForObj(GameObject.FindGameObjectWithTag("Player"));//플레이어 위치 가져오기
         int thisIndex = gameManager.GetPlatformIndexForObj(gameObject);//해당 객체의 위치 가져오기
 
@@ -45,7 +52,6 @@ public class EnemyController : CharacterController
             transform.localScale = new Vector3(-1, 1, 1);
             direction = targetDir;
         }
-            
     }
 
     public override void TurnStart()
@@ -68,7 +74,7 @@ public class EnemyController : CharacterController
 
             StateEnum selectStateEnum = SelectState();//enemy턴이 되었을 때 행동가능 상태면 해동 실행
         }
-        else
+        else if(!isDie)
             TurnEnd();
         
     }

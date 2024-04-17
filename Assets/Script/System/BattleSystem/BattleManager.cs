@@ -49,6 +49,7 @@ public class BattleManager : MonoBehaviour
         //턴종료 수가 필드의 몬스터 수와 같을 경우 턴종료 이벤트 발생
         if (isEnemyTurn && (turnOverEnemyCnt >= onEnemysList.Count))
         {
+            Debug.Log("적 행동 완료");
             TurnEventBus.Publish(TurnEventType.TurnEnd);//턴 종료 이벤트 발생
         }
     }
@@ -97,8 +98,9 @@ public class BattleManager : MonoBehaviour
                     //해당 위치에 몬스터 스폰 여부 확인
                     if (gameManager.GetOnPlatformObj(i) == null)
                     {
-                        GameObject enemyPre = Instantiate(enemy.enemyPre, gameManager.GetStandingPos(i), Quaternion.identity);
-                        onEnemysList.Add(enemyPre);
+                        GameObject enemyPre = Instantiate(enemy.enemyPre, gameManager.GetStandingPos(i), Quaternion.identity);//적 프리펩 생성
+                        Debug.Log(enemyPre.GetComponent<EnemyController>());
+                        onEnemysList.Add(enemyPre);//적 리스트에 추가
                         break;
                     }
                 }
@@ -131,7 +133,7 @@ public class BattleManager : MonoBehaviour
     {
         isEnemyTurn = false;//적턴 여부 비활성화
         turnState = "TurnEnd";
-
+        Debug.Log(turnState);
         nowTurnCnt++;//턴 종료 시 경과 턴 +1
         TurnEventBus.Publish(TurnEventType.TurnStart);//TurnStart 이벤트 발생
     }
