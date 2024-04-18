@@ -12,6 +12,10 @@ public class EnemyReadyToState : StateBase
         characterController.AvailabilityOfAction = false;
         isPreparing = true;//행동 준비 여부 ture
 
+        //현재 준비중인 상태의 행동 아이콘을 띄우는 부분
+        EnemyHUDController eHUD = GetComponent<EnemyHUDController>();
+        eHUD.OnActionIcon((StateEnum)datas[0]);
+
         yield return new WaitForSeconds(sateDelayTime);//행동 선택 후딜레이
 
         //행동 준비 상태로 전환 후 행동 행동 종료
@@ -24,6 +28,9 @@ public class EnemyReadyToState : StateBase
                 break;
             yield return null;
         }
+        //행동 아이콘 제거 부분
+        eHUD.OffActionIcon();
+
         characterController.AvailabilityOfAction = true;
         //매개 변수 값에 따라 행동 실행 여부 선택
         if (datas[0] != null)

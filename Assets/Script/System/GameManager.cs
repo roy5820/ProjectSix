@@ -28,6 +28,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
+        Debug.Log("게임 시작");
         GameFlowEventBus.Publish(GameFlowType.Start);//게임 시작 이벤트 발생
     }
 

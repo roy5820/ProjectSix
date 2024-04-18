@@ -12,8 +12,8 @@ public class Singleton<T> : MonoBehaviour where T : Component
         {
             if (_instance == null)
             {
-                _instance = FindObjectOfType<T>();//
-                                                  //지정한 타입의 오브젝트가 없을 시 새로운 GameObject를 생성하고 이름을 바꾼 후 지정되지 않은 유형의 컴포넌트를 추가
+                _instance = FindObjectOfType<T>();
+                //지정한 타입의 오브젝트가 없을 시 새로운 GameObject를 생성하고 이름을 바꾼 후 지정되지 않은 유형의 컴포넌트를 추가
                 if (_instance == null)
                 {
                     GameObject obj = new GameObject();
@@ -27,6 +27,7 @@ public class Singleton<T> : MonoBehaviour where T : Component
 
     public virtual void Awake()
     {
+        Debug.Log(_instance);
         //기존의 인스턴스가 없으면 인스턴스값 초기화
         if (_instance == null)
         {
@@ -35,7 +36,7 @@ public class Singleton<T> : MonoBehaviour where T : Component
         }
         else
         {
-            Destroy(gameObject);
+            DestroyImmediate(gameObject);
         }
     }
 }

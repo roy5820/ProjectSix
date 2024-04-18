@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2761166733252793296}
   - component: {fileID: 3460632640467974704}
   - component: {fileID: 745839624992482727}
-  - component: {fileID: 7498810618252480833}
   m_Layer: 7
   m_Name: EnemyHUD
   m_TagString: Untagged
@@ -104,19 +103,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &7498810618252480833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160905019862333406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fbd4c75e196c1f4eb6060fa5767c010, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpBar: {fileID: 1259997053823850288}
 --- !u!1 &3465618291207222292
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +192,7 @@ GameObject:
   - component: {fileID: 7035493264269367593}
   - component: {fileID: 7035493264269367592}
   - component: {fileID: 7035493264269367590}
+  - component: {fileID: 4668484187003630436}
   - component: {fileID: 7035493264269367594}
   - component: {fileID: 8962740115635574446}
   - component: {fileID: 7035493264269367597}
@@ -428,6 +415,25 @@ MonoBehaviour:
     cooldown: 0
     nowCoolTIme: 0
     NeedToPrepare: 0
+--- !u!114 &4668484187003630436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7035493264269367571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fbd4c75e196c1f4eb6060fa5767c010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpBar: {fileID: 1259997053823850288}
+  actionIcon: {fileID: 3872324380237681398}
+  actionList:
+  - stateEnum: 6
+    icon: {fileID: 21300000, guid: b960873b18898e5499dfdbe84e62b806, type: 3}
+  - stateEnum: 9
+    icon: {fileID: 21300000, guid: cbcc03de04288b544b80e137836001c2, type: 3}
 --- !u!114 &7035493264269367594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,7 +581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9075333844950123291
 RectTransform:
   m_ObjectHideFlags: 0

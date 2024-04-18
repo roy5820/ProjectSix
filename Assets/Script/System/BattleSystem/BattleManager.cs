@@ -23,8 +23,6 @@ public class BattleManager : MonoBehaviour
     //활성화시 이벤트 설정
     private void OnEnable()
     {
-        gameManager = GameManager.Instance;//게임 메니저 값 초기화
-
         GameFlowEventBus.Subscribe(GameFlowType.Battle, BattleStart);//Battle 이벤트 설정
 
         TurnEventBus.Subscribe(TurnEventType.TurnStart, TurnStart);//TurnStart 이벤트 설정
@@ -44,9 +42,17 @@ public class BattleManager : MonoBehaviour
         TurnEventBus.Unsubscribe(TurnEventType.TurnEnd, TurnEnd);//TurnEnd 이벤트 제거
     }
 
+    private void Start()
+    {
+        gameManager = GameManager.Instance;
+    }
+
     private void Update()
     {
-        //턴종료 수가 필드의 몬스터 수와 같을 경우 턴종료 이벤트 발생
+        //적턴 턴 종료 처리를 위한 부분
+        //플레이어 행동 여부에 따라 EnemyTurn이벤트 발생
+
+        //적 행동 여부에 따라 TurnEnd이벤트 발생
         if (isEnemyTurn && (turnOverEnemyCnt >= onEnemysList.Count))
         {
             TurnEventBus.Publish(TurnEventType.TurnEnd);//턴 종료 이벤트 발생
@@ -76,6 +82,7 @@ public class BattleManager : MonoBehaviour
         TurnEventBus. Publish(TurnEventType.TurnStart);//TurnStart 이벤트 발생
     }
 
+
     //전투 종료 처리
 
     //턴 시작 시 이벤트 처리
@@ -92,7 +99,9 @@ public class BattleManager : MonoBehaviour
             {
                 int platformSIze = gameManager.PlatformList.Length;
                 //스폰 위치에 따른 스폰 위치 탐색
-                for (int i = (enemy.spawnPos < 0 ? 0 : platformSIze - 1); (enemy.spawnPos < 0 ? i < platformSIze : i >= 0); i += (enemy.spawnPos < 0 ? 1 : -1))
+                for (int i = (enemy.spawnPos < 0 ? 0 : platformSIze - 1);
+                    (enemy.spawnPos < 0 ? i < platformSIze : i >= 0);
+                    i += (enemy.spawnPos < 0 ? 1 : -1))
                 {
                     //해당 위치에 몬스터 스폰 여부 확인
                     if (gameManager.GetOnPlatformObj(i) == null)
