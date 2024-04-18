@@ -8,7 +8,7 @@ public class DieState : StateBase
         yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
         //캐릭터 죽음 기능 구현
         Debug.Log(gameObject.name + " is Die");
-        _gameManager.GetComponent<BattleManager>().onEnemysList.Remove(gameObject);
+        BattleManager.Instance.onEnemysList.Remove(gameObject);
         Destroy(gameObject);
         yield return null;
     }

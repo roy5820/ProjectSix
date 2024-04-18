@@ -3,6 +3,7 @@ using UnityEngine;
 //게임 매니저 구현을 위한 싱글톤 클래스 구현
 public class Singleton<T> : MonoBehaviour where T : Component
 {
+    public bool dontDestroy = true;//dontDestroy 여부
     private static T _instance;//게임 매니저의 인스턴스
 
     //get 프로퍼티로 인스턴스 반환
@@ -32,7 +33,8 @@ public class Singleton<T> : MonoBehaviour where T : Component
         if (_instance == null)
         {
             _instance = this as T;
-            DontDestroyOnLoad(gameObject);
+            if(dontDestroy)
+                DontDestroyOnLoad(gameObject);
         }
         else
         {

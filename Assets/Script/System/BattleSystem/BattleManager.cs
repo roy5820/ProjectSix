@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleManager : MonoBehaviour
+public class BattleManager : Singleton<BattleManager>
 {
-    GameManager gameManager;//게임 메니저
+    public GameManager gameManager;//게임 메니저
 
     //전투스테이지의 몬스터 스폰 관리를 위한 변수 선언
     public List<StageInfo> stageList;//스테이지 정보를 담은 리스트

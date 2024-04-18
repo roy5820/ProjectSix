@@ -109,7 +109,7 @@ public class EnemyController : CharacterController
     //Enemy 턴 종료 처리
     public override void TurnEnd()
     {
-        gameManager.GetComponent<BattleManager>().OnTurnOverEnemyCnt++;//턴종료된 적 카운트 ++
+        BattleManager.Instance.OnTurnOverEnemyCnt++;//턴종료된 적 카운트 ++
         base.TurnEnd();//턴 앤드 처리
     }
 }
