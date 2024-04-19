@@ -13,6 +13,8 @@ public class TurnaboutState : StateBase
         yield return new WaitForSeconds(sateDelayTime);//방향전환 후 딜레이
 
         characterController.TurnEnd();//상태 종료 시 턴 종료
+
+        yield return base.StateFuntion(datas);
     }
 }
 

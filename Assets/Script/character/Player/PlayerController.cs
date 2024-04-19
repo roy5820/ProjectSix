@@ -30,11 +30,18 @@ public class PlayerController : CharacterController
             TurnEventBus.Publish(TurnEventType.TurnEnd);
         }
     }
-
+    //턴 시작 처리
     public override void TurnStart()
     {
         base.TurnStart();
-        AvailabilityOfAction = true;
+        //배틀메니저의 onPlayer값이 없으면 값 초기화
+        if (_battleManager.onPlayer == null)
+        {
+            _battleManager.onPlayer = this;
+            Debug.Log("플레이어 값 초기화");
+        }
+            
+        isAvailabilityOfAction = true;
     }
 
     //플레이어 턴 종료 처리

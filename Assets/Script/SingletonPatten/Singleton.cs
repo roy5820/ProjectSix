@@ -28,7 +28,6 @@ public class Singleton<T> : MonoBehaviour where T : Component
 
     public virtual void Awake()
     {
-        Debug.Log(_instance);
         //기존의 인스턴스가 없으면 인스턴스값 초기화
         if (_instance == null)
         {

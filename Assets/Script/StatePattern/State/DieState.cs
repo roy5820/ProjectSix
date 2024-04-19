@@ -10,6 +10,7 @@ public class DieState : StateBase
         Debug.Log(gameObject.name + " is Die");
         BattleManager.Instance.onEnemysList.Remove(gameObject);
         Destroy(gameObject);
+
         yield return null;
     }
 }

@@ -16,11 +16,10 @@ public class HitState : StateBase
 
         if (characterController.NowHp == 0)
         {
-            characterController.isDie = true;//캐릭터 죽음 처리로 전환
             gameObject.GetComponent<CharacterController>().TransitionState(StateEnum.Die);
         }
 
-        yield return null;
+        yield return base.StateFuntion(datas);
     }
 }
 

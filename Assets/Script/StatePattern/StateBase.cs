@@ -21,14 +21,19 @@ public abstract class StateBase : MonoBehaviour, CharacterState
         //캐릭터 애니메이터 가져오기
         if (!this._animator)
             TryGetComponent<Animator>(out _animator);
-
         //캐릭터 행동 애니메이션 출력
         if (!string.IsNullOrEmpty(stateAniParamater) && this._animator)
             _animator.SetTrigger(stateAniParamater);
+         
+        characterController.isStatusProcessing = true;//캐릭터 상태 처리 중
 
         StartCoroutine(StateFuntion(datas));//기능 구현 코루틴 함수 호출
     }
 
     //상속 받아 기능을 구현할 부분
-    protected abstract IEnumerator StateFuntion(params object[] datas);
+    protected virtual IEnumerator StateFuntion(params object[] datas)
+    {
+        characterController.isStatusProcessing = true;//캐릭터 상태 처리 종료
+        yield return null;
+    }
 }

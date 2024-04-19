@@ -41,7 +41,7 @@ public class EnemyController : CharacterController
         base.TurnStart();
         GetComponent<EnemyReadyToState>().TurnStart();//공격 딜레이 구현 상태에게 turnStart상태 알림
         //전턴 준비중인 행동이 없으면 실행
-        if (AvailabilityOfAction)
+        if (isAvailabilityOfAction)
         {
             //적 행동 쿨타임 돌리기
             foreach (StateCondition condition in stateConditions)
@@ -55,9 +55,8 @@ public class EnemyController : CharacterController
 
             StateEnum selectStateEnum = SelectState();//enemy턴이 되었을 때 행동가능 상태면 해동 실행
         }
-        else if(!isDie)
+        else
             TurnEnd();
-        
     }
 
     //stateConditions리스트에서 사용가능 한 상태를 우선순위에 따라 찾아 해당 상태 열거형을 반환
@@ -104,12 +103,5 @@ public class EnemyController : CharacterController
         }
 
         return stateEnum;
-    }
-
-    //Enemy 턴 종료 처리
-    public override void TurnEnd()
-    {
-        BattleManager.Instance.OnTurnOverEnemyCnt++;//턴종료된 적 카운트 ++
-        base.TurnEnd();//턴 앤드 처리
     }
 }

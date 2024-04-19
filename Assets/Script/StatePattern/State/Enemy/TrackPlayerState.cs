@@ -19,7 +19,6 @@ public class TrackPlayerState : StateBase
         //아닌 경우 방향 전환 실행
         else
             characterController.TransitionState(StateEnum.Turnabout);//방향전환 상태 실행
-
         yield return null;
     }
 }
