@@ -14,9 +14,12 @@ public class HitState : StateBase
 
         yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
 
+        //체력이 0이면 죽음 처리
         if (characterController.NowHp == 0)
         {
+            characterController.isAvailabilityOfAction = false;
             gameObject.GetComponent<CharacterController>().TransitionState(StateEnum.Die);
+            yield break;
         }
 
         yield return base.StateFuntion(datas);

@@ -33,7 +33,7 @@ public abstract class StateBase : MonoBehaviour, CharacterState
     //상속 받아 기능을 구현할 부분
     protected virtual IEnumerator StateFuntion(params object[] datas)
     {
-        characterController.isStatusProcessing = true;//캐릭터 상태 처리 종료
+        characterController.isStatusProcessing = false;//캐릭터 상태 처리 종료
         yield return null;
     }
 }

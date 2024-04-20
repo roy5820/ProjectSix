@@ -24,6 +24,13 @@ public class EnemyReadyToState : StateBase
         {
             if (!isPreparing)
                 break;
+            //턴중 행동 불가 될경우 공격 취소
+            else if (!characterController.isAvailabilityOfAction)
+            {
+                eHUD.OffActionIcon();
+                yield break;
+            }
+                
             yield return null;
         }
         //행동 아이콘 제거 부분

@@ -385,7 +385,9 @@ MonoBehaviour:
   maxHp: 100
   offensePower: 25
   isTurnReady: 0
-  AvailabilityOfAction: 1
+  isAvailabilityOfAction: 1
+  isStatusProcessing: 0
+  isCharging: 0
   _stateList:
   - state: {fileID: 8962740115635574446}
     stateEnum: 0
@@ -403,7 +405,6 @@ MonoBehaviour:
     stateEnum: 6
   - state: {fileID: 837721778842730234}
     stateEnum: 7
-  isDie: 0
   stateConditions:
   - stateEnum: 6
     range: 1
@@ -462,7 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: 
-  sateDelayTime: 0.5
+  sateDelayTime: 0
 --- !u!114 &7035493264269367597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,7 +477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: 
-  sateDelayTime: 0.5
+  sateDelayTime: 0
 --- !u!114 &7035493264269367596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,7 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: DashState
-  sateDelayTime: 0.2
+  sateDelayTime: 0
   movePower: 30
 --- !u!114 &7035493264269367599
 MonoBehaviour:
@@ -505,7 +506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: 
-  sateDelayTime: 0.5
+  sateDelayTime: 0
 --- !u!114 &7035493264269367598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,7 +549,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: AttackState
   sateDelayTime: 0.3
-  attackAfterDelay: 0.5
   powerCoefficient: 1
 --- !u!114 &837721778842730234
 MonoBehaviour:

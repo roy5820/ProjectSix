@@ -61,10 +61,13 @@ public class BattleManager : Singleton<BattleManager>
                 if (!eContoller.isStatusProcessing)
                     readyForEnemyCnt++;
             }
-            Debug.Log("준비된 적 수: "+readyForEnemyCnt);
+
             //턴 전환 여부 체크
             if(!onPlayer.isTurnReady && !onPlayer.isStatusProcessing && onEnemysList.Count == readyForEnemyCnt)
+            {
                 TurnEventBus.Publish(TurnEventType.EnemyTurn);//턴 전환 이벤트 발생
+            }
+                
         }
 
         //적 행동 여부에 따라 TurnEnd이벤트 발생
@@ -78,12 +81,11 @@ public class BattleManager : Singleton<BattleManager>
                 EnemyController eContoller = enemy.GetComponent<EnemyController>();
                 if (!eContoller.isStatusProcessing && !eContoller.isTurnReady)
                     readyForEnemyCnt++;
-                Debug.Log(eContoller.isStatusProcessing + ", " + eContoller.isTurnReady);
             }
-            Debug.Log("준비된 적 수: " + readyForEnemyCnt);
+
             //턴 전환 여부 체크
             if (!onPlayer.isStatusProcessing && onEnemysList.Count == readyForEnemyCnt)
-                TurnEventBus.Publish(TurnEventType.EnemyTurn);//턴 전환 이벤트 발생
+                TurnEventBus.Publish(TurnEventType.TurnEnd);//턴 전환 이벤트 발생
         }
     }
 

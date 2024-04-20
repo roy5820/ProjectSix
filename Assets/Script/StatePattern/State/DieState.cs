@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+
 //캐릭터 죽음
 public class DieState : StateBase
 {
@@ -14,4 +15,3 @@ public class DieState : StateBase
         yield return null;
     }
 }
-
