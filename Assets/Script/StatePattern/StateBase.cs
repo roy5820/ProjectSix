@@ -4,7 +4,7 @@ using UnityEngine;
 public abstract class StateBase : MonoBehaviour, CharacterState
 {
     protected CharacterController characterController = null;//캐릭터 컨트롤러
-    protected GameManager _gameManager = null;//게임 메니저
+    protected BattleManager _battleManager = null;//배틀 매니저
     protected Animator _animator = null;//캐릭터 애니메이션
 
     public string stateAniParamater = "";
@@ -15,9 +15,9 @@ public abstract class StateBase : MonoBehaviour, CharacterState
         //캐릭터 컨트롤러 값 초기화
         if (!this.characterController)
             this.characterController = characterController;
-        //캐릭터 메니저 값 초기화
-        if (!this._gameManager)
-            this._gameManager = GameManager.Instance;
+        //배틀 매니저 값 초기화
+        if(!this._battleManager)
+            this._battleManager = BattleManager.Instance;
         //캐릭터 애니메이터 가져오기
         if (!this._animator)
             TryGetComponent<Animator>(out _animator);

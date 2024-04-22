@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerInputHandler : MonoBehaviour
 {
     private GameManager _gameManager;//게임 메니저
+    private BattleManager _battleManager;//배틀 메니저
     private PlayerController _playerController;//플레이어 컨트롤러
 
     //입력 키 값
@@ -16,6 +17,7 @@ public class PlayerInputHandler : MonoBehaviour
     private void Start()
     {
         _gameManager = GameManager.Instance;//게임 메니저 가져오기
+        _battleManager = BattleManager.Instance;//배틀 매니저 가져오기
         _playerController = this.GetComponent<PlayerController>();//플레이어 컨트롤러 초기화
     }
 
@@ -29,13 +31,13 @@ public class PlayerInputHandler : MonoBehaviour
             if (Input.GetKeyDown(leftMoveKey) || Input.GetKeyDown(rightMoveKey))
             {
                 CharacterDirection moveDir = Input.GetKeyDown(leftMoveKey) ? CharacterDirection.Left : CharacterDirection.Right;//캐릭터 이동 방향
-                int onIndex = _gameManager.GetPlatformIndexForObj(this.gameObject);
+                int onIndex = _battleManager.GetPlatformIndexForObj(this.gameObject);
                 int nexIndex = onIndex + ((int)moveDir);//이동할 플렛폼 index
                 //이동 + 공격 여부 체크
-                if (nexIndex >= 0 && nexIndex < _gameManager.PlatformList.Length)
+                if (nexIndex >= 0 && nexIndex < _battleManager.PlatformList.Length)
                 {
                     //이동가능 여부 체크
-                    if (_gameManager.GetOnPlatformObj(nexIndex) == null)
+                    if (_battleManager.GetOnPlatformObj(nexIndex) == null)
                     {
                         _playerController.isAvailabilityOfAction = false;
                         _playerController.TransitionState(StateEnum.Move, moveDir);

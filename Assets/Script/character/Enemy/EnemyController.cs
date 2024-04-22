@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class EnemyController : CharacterController
 {
+    public int dropMoney = 50;//몬스터 처치 시 드랍하는 돈
+
+
     //적이 사용할 상태에 대한 정보
     [System.Serializable]
     public class StateCondition
@@ -66,14 +69,14 @@ public class EnemyController : CharacterController
 
         //적과의 사거리 계산하기
         int distance = 99;//플레이어와의 거리
-        int thisIndex = gameManager.GetPlatformIndexForObj(gameObject);//현재 위치 값 가져오기
+        int thisIndex = _battleManager.GetPlatformIndexForObj(gameObject);//현재 위치 값 가져오기
         int countDistance = 0;//플레이어 와의 거리를 카운트할 값이 저장되는 변수
         //플레이어 와의 거리 가져오기
-        for (int i = thisIndex + (direction == CharacterDirection.Right ? 1: -1); direction == CharacterDirection.Right ? i < gameManager.PlatformList.Length : i >= 0; i += (direction == CharacterDirection.Right ? 1 : -1))
+        for (int i = thisIndex + (direction == CharacterDirection.Right ? 1: -1); direction == CharacterDirection.Right ? i < _battleManager.PlatformList.Length : i >= 0; i += (direction == CharacterDirection.Right ? 1 : -1))
         {
             
             countDistance++;
-            GameObject targetObj = gameManager.GetOnPlatformObj(i);
+            GameObject targetObj = _battleManager.GetOnPlatformObj(i);
             if(targetObj != null)
             {
                 //경로상 플레이어가 있으면 거리 갱신
@@ -103,5 +106,11 @@ public class EnemyController : CharacterController
         }
 
         return stateEnum;
+    }
+
+    private void OnDestroy()
+    {
+        //적 유닛 죽을 시 dropMoney만큼 스테이지 보상 증가
+        _battleManager.stageRewards += dropMoney;
     }
 }

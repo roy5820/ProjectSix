@@ -173,12 +173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroy: 1
-  PlatformList:
-  - {fileID: 139821784}
-  - {fileID: 1032521354}
-  - {fileID: 1228482921}
-  - {fileID: 285465951}
-  - {fileID: 368253734}
 --- !u!1 &248781604
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +491,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroy: 0
-  gameManager: {fileID: 0}
+  PlatformList:
+  - {fileID: 139821784}
+  - {fileID: 1032521354}
+  - {fileID: 1228482921}
+  - {fileID: 285465951}
+  - {fileID: 368253734}
   stageList: []
   nowStage:
   - enemyInfoList:
@@ -509,6 +508,8 @@ MonoBehaviour:
     - enemyPre: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       spawnPos: 1
   onEnemysList: []
+  onPlayer: {fileID: 0}
+  nowTurnCnt: 0
 --- !u!1001 &520665383380055482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -598,6 +599,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 910645009963521767, guid: 60a2a839147621440b37a59bc7cf3e12, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2005315761736351314, guid: 60a2a839147621440b37a59bc7cf3e12, type: 3}
       propertyPath: m_Name
       value: InGameHUD

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BattleManager : Singleton<BattleManager>
 {
-    public GameManager gameManager;//게임 메니저
+    private GameManager gameManager;//게임 메니저
 
+    public GameObject[] PlatformList;//플랫폼 리스트
     //전투스테이지의 몬스터 스폰 관리를 위한 변수 선언
     public List<StageInfo> stageList;//스테이지 정보를 담은 리스트
     public List<WaveInfo> nowStage;//현제 스테이지 정보를 담을 리스트
@@ -14,12 +15,13 @@ public class BattleManager : Singleton<BattleManager>
     private int nextWaveNum = 0;//현제 웨이브 num
 
     private TurnEventType turnState;//현제 턴상태
-    private int nowTurnCnt = 0;//경과 턴
+    public int nowTurnCnt = 0;//경과 턴
 
     //enemyTurn 관리를 위한 변수 선언
     private bool isEnemyTurn = false;
     private int turnOverEnemyCnt = 0;//턴종료된 몬스터 수
-    
+
+    public int stageRewards {get;set;}//스테이지 보상
 
     //활성화시 이벤트 설정
     private void OnEnable()
@@ -102,6 +104,7 @@ public class BattleManager : Singleton<BattleManager>
         }
     }
 
+    //이벤트 처리 관련 부분
     //배틀 시작 시 이벤트 처리
     public void BattleStart()
     {
@@ -115,8 +118,6 @@ public class BattleManager : Singleton<BattleManager>
     }
 
 
-    //전투 종료 처리
-
     //턴 시작 시 이벤트 처리
     public void TurnStart()
     {
@@ -129,19 +130,19 @@ public class BattleManager : Singleton<BattleManager>
             //스폰할 몬스터 리스트의 몬스터들을 소환
             foreach (SpawnEnemyInfo enemy in nowStage[nextWaveNum].enemyInfoList)
             {
-                int platformSIze = gameManager.PlatformList.Length;
+                int platformSIze = PlatformList.Length;
                 //스폰 위치에 따른 스폰 위치 탐색
                 for (int i = (enemy.spawnPos < 0 ? 0 : platformSIze - 1);
                     (enemy.spawnPos < 0 ? i < platformSIze : i >= 0);
                     i += (enemy.spawnPos < 0 ? 1 : -1))
                 {
                     //해당 위치에 몬스터 스폰 여부 확인
-                    if (gameManager.GetOnPlatformObj(i) == null)
+                    if (GetOnPlatformObj(i) == null)
                     {
-                        GameObject enemyPre = Instantiate(enemy.enemyPre, gameManager.GetStandingPos(i), Quaternion.identity);
+                        GameObject enemyPre = Instantiate(enemy.enemyPre, GetStandingPos(i), Quaternion.identity);
                         onEnemysList.Add(enemyPre);
                         //적 스폰 시 플레이어를 바라보는 방향으로 전환 시키기
-                        int targetIndex = gameManager.GetPlatformIndexForObj(GameObject.FindGameObjectWithTag("Player"));//플레이어 위치 가져오기
+                        int targetIndex = GetPlatformIndexForObj(GameObject.FindGameObjectWithTag("Player"));//플레이어 위치 가져오기
                         int thisIndex = i;//해당 객체의 위치 가져오기
 
                         //바로보는 방향에 타겟이 없으면 방향 전환
@@ -186,8 +187,60 @@ public class BattleManager : Singleton<BattleManager>
         TurnEventBus.Publish(TurnEventType.TurnStart);//TurnStart 이벤트 발생
     }
 
-    private void OnGUI()
+    //전투 스테이지 시 사용할 기능들
+    //특정 오브젝트가 속한 플렛폼 검색하여 index 번호를 반환하는 함수. null일 시 -1로 리턴
+    public int GetPlatformIndexForObj(GameObject chracterObj)
     {
-        GUI.Label(new Rect(10, 10, 200, 20), "TURN STATUS: " + turnState);
+        int index = -1;
+
+        //반복문으로 입력받은 게임 오브젝트가 속한 플렛폼 순차 탐색
+        for (int i = 0; i < PlatformList.Length; i++)
+        {
+            if (PlatformList[i].GetComponent<PlatformInfoManagement>().OnPlatformCharacter == chracterObj)
+            {
+                index = i;
+                break;
+            }
+        }
+
+        return index;
+    }
+
+    //특정 위치의 플렛폼안에 캐릭터obj의 정보 반환 함수
+    public GameObject GetOnPlatformObj(int indexNum)
+    {
+        GameObject returnObj = null;//반환할 오브젝트 값
+
+        //플렛폼 리스트의 유효한 인덱스 값인지 체크
+        if (indexNum > -1 && indexNum < PlatformList.Length)
+        {
+            returnObj = PlatformList[indexNum].GetComponent<PlatformInfoManagement>().OnPlatformCharacter;
+        }
+        return returnObj;
+    }
+
+    //특정 위치의 플렛폼안에  정보 반환 함수
+    public Vector3 GetStandingPos(int indexNum)
+    {
+        Vector3 returnPos = Vector3.zero;//반환할 위치 값
+
+        if (indexNum > -1 && indexNum < PlatformList.Length)
+        {
+            returnPos = PlatformList[indexNum].GetComponent<PlatformInfoManagement>().StandingPos;
+        }
+
+        return returnPos;
+    }
+
+    //특정 위치 타일에 적에게 데미지 부여
+    public void GiveDamage(int index, int damage)
+    {
+        GameObject tartget = GetOnPlatformObj(index);//데미지를 줄 오브젝트 가져오기
+
+        //null체크
+        if ((tartget))
+        {
+            tartget.GetComponent<CharacterController>().TransitionState(StateEnum.Hit, damage);//대상 피격 상태 발생
+        }
     }
 }

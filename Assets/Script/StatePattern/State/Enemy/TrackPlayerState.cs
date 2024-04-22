@@ -8,8 +8,8 @@ public class TrackPlayerState : StateBase
     protected override IEnumerator StateFuntion(params object[] datas)
     {
         //플레이어 추적 구현
-        int targetIndex = _gameManager.GetPlatformIndexForObj(GameObject.FindGameObjectWithTag("Player"));//플레이어 위치 가져오기
-        int thisIndex = _gameManager.GetPlatformIndexForObj(gameObject);//해당 객체의 위치 가져오기
+        int targetIndex = _battleManager.GetPlatformIndexForObj(GameObject.FindGameObjectWithTag("Player"));//플레이어 위치 가져오기
+        int thisIndex = _battleManager.GetPlatformIndexForObj(gameObject);//해당 객체의 위치 가져오기
         
         CharacterDirection targetDir = targetIndex < thisIndex ? CharacterDirection.Left : CharacterDirection.Right ;//타겟 방향
         CharacterDirection thisDir = characterController.direction;//해당 객체의 바라보는 방향
