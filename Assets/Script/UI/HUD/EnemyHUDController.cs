@@ -7,7 +7,9 @@ public class EnemyHUDController : MonoBehaviour
 {
     EnemyController _eController;//적 컨트롤러
     public Image hpBar;//체력바 이미지 오브젝트
+    private float nowHp;//현제 체력
     public Image actionIcon;//행동 아이콘을 표기할 이미지 오브젝트
+    private Coroutine runningCoroutine = null;
 
     //상태 타입과 아이콘 정보를 가진 클래스
     [System.Serializable]
@@ -32,15 +34,26 @@ public class EnemyHUDController : MonoBehaviour
         {
             if (_eController.direction == CharacterDirection.Left)
                 this.transform.GetChild(0).localScale = new Vector3(-0.1f, 0.1f, 0.1f);
-            UpdateHealthBar(_eController.NowHp, _eController.maxHp);
+            //체력 변동 시 체력을 점진적으로 변화 시키는 코루틴 실행
+            float targetHp = _eController.NowHp;//목표 체력
+            if (nowHp != targetHp && runningCoroutine == null)
+                runningCoroutine = StartCoroutine(IncreaseHpGauge(targetHp, 0.001f));
         }
     }
 
     //Hud업데이트 하는 함수
-    void UpdateHealthBar(int currentHealth, int maxHealth)
+    //플레이어 체력바를 목표 체력 값을 점진적으로 변화시키는 코루틴
+    IEnumerator IncreaseHpGauge(float targetHp, float delay)
     {
-        float healthPercentage = (float)currentHealth / maxHealth;
-        hpBar.fillAmount = healthPercentage;
+        float maxHp = _eController.maxHp;//최대 체력 가져오기
+        while (nowHp != targetHp)
+        {
+            nowHp += nowHp > targetHp ? -1 : 1;//현재 체력 갱신
+            hpBar.fillAmount = nowHp / maxHp;//최대체력바 갱신
+            yield return new WaitForSeconds(delay);//증가  딜레이 폭
+        }
+
+        runningCoroutine = null;
     }
 
     //공격 준비 시 액션 아이콘 띄우는 함수
