@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1bf08ba1249d6af41b4848066e399c07
+guid: 063d35312beb02f4886e29d684b13c18
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -65,7 +65,7 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -94,33 +94,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -136,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy-1_idle_0
+      name: player_dash_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 125
+        width: 140
         height: 125
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -150,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bce855a61011a3342aa5c90237779c61
-      internalID: 454078903
+      spriteID: b99f4410a505ffd41a76527229f00047
+      internalID: -148195214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy-1_idle_1
+      name: player_dash_1
       rect:
         serializedVersion: 2
-        x: 125
+        x: 140
         y: 0
-        width: 125
+        width: 140
         height: 125
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -171,19 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ce644522a695fe479f4a35c19239837
-      internalID: 340813906
+      spriteID: 99147af5c6c1f53488189f32e68106d4
+      internalID: 1254977687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy-1_idle_2
+      name: player_dash_2
       rect:
         serializedVersion: 2
-        x: 250
+        x: 280
         y: 0
-        width: 125
+        width: 140
         height: 125
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -192,19 +166,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: accefaec1cc55de4caa821b63d00ca17
-      internalID: 1846671708
+      spriteID: 8ef32b85fa2c30e458d3b93846180702
+      internalID: 840860482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy-1_idle_3
+      name: player_dash_3
       rect:
         serializedVersion: 2
-        x: 375
+        x: 420
         y: 0
-        width: 125
+        width: 140
         height: 125
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -213,19 +187,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3bb11a917f04304e9ee4a70c87d0ecb
-      internalID: -1573053699
+      spriteID: c64aa5f186ac737478e9ed71694ce490
+      internalID: -482238031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy-1_idle_4
+      name: player_dash_4
       rect:
         serializedVersion: 2
-        x: 500
+        x: 560
         y: 0
-        width: 125
+        width: 140
         height: 125
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -234,8 +208,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a76e5f16a0d4a4a4283a2a07a32ccff3
-      internalID: -1210383192
+      spriteID: 9e4b548058bc49f4b9967358380994c5
+      internalID: 990013068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_dash_5
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 140
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec448a385f223f4190ac16aade50d29
+      internalID: -14851388
       vertices: []
       indices: 
       edges: []
@@ -251,11 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemy-1_idle_0: 454078903
-      enemy-1_idle_1: 340813906
-      enemy-1_idle_2: 1846671708
-      enemy-1_idle_3: -1573053699
-      enemy-1_idle_4: -1210383192
+      player_dash_0: -148195214
+      player_dash_1: 1254977687
+      player_dash_2: 840860482
+      player_dash_3: -482238031
+      player_dash_4: 990013068
+      player_dash_5: -14851388
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

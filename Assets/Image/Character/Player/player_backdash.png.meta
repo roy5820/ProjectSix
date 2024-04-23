@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1bf08ba1249d6af41b4848066e399c07
+guid: 70378c155351b4f4f99a561d936e42e8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -65,7 +65,7 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -94,33 +94,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -136,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy-1_idle_0
+      name: player_backdash_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 125
+        width: 140
         height: 125
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -150,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bce855a61011a3342aa5c90237779c61
-      internalID: 454078903
+      spriteID: 87e525f6829840147bda9864a76baca8
+      internalID: -414439199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy-1_idle_1
+      name: player_backdash_1
       rect:
         serializedVersion: 2
-        x: 125
+        x: 140
         y: 0
-        width: 125
+        width: 140
         height: 125
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -171,19 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ce644522a695fe479f4a35c19239837
-      internalID: 340813906
+      spriteID: 851f957541761bf4f9638c7c8c66dbff
+      internalID: -771346993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy-1_idle_2
+      name: player_backdash_2
       rect:
         serializedVersion: 2
-        x: 250
+        x: 280
         y: 0
-        width: 125
+        width: 140
         height: 125
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -192,19 +166,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: accefaec1cc55de4caa821b63d00ca17
-      internalID: 1846671708
+      spriteID: ca90a42015c156643ac0f28db7317cbf
+      internalID: -393125799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy-1_idle_3
+      name: player_backdash_3
       rect:
         serializedVersion: 2
-        x: 375
+        x: 420
         y: 0
-        width: 125
+        width: 140
         height: 125
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -213,19 +187,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3bb11a917f04304e9ee4a70c87d0ecb
-      internalID: -1573053699
+      spriteID: 8fced66042db190459afa92913677eb1
+      internalID: 559046388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy-1_idle_4
+      name: player_backdash_4
       rect:
         serializedVersion: 2
-        x: 500
+        x: 560
         y: 0
-        width: 125
+        width: 140
         height: 125
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -234,8 +208,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a76e5f16a0d4a4a4283a2a07a32ccff3
-      internalID: -1210383192
+      spriteID: f423fa00a50af8a44b05fe07eae80e41
+      internalID: 811344211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_backdash_5
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 140
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c474eb03bb0c8e440b1f8fba8261de48
+      internalID: 644661543
       vertices: []
       indices: 
       edges: []
@@ -251,11 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemy-1_idle_0: 454078903
-      enemy-1_idle_1: 340813906
-      enemy-1_idle_2: 1846671708
-      enemy-1_idle_3: -1573053699
-      enemy-1_idle_4: -1210383192
+      player_backdash_0: -414439199
+      player_backdash_1: -771346993
+      player_backdash_2: -393125799
+      player_backdash_3: 559046388
+      player_backdash_4: 811344211
+      player_backdash_5: 644661543
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
