@@ -14,7 +14,7 @@ public class PlayerHUDController : MonoBehaviour
     void Start()
     {
         _characterController = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();//캐릭터 매니저 초기화
-        nowHp = _characterController.NowHp;//현재 체력 정보 초기화
+        //nowHp = _characterController.NowHp;//현재 체력 정보 초기화
     }
 
     // Update is called once per frame
