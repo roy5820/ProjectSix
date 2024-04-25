@@ -10,7 +10,7 @@ public class MoveState : StateBase
 
     protected override IEnumerator StateFuntion(params object[] datas)
     {
-        CharacterMovement movement = GetComponent<CharacterMovement>();//캐릭터 무브먼트 가져오기
+        CharacterMovement movement = characterController.GetComponent<CharacterMovement>();//캐릭터 무브먼트 가져오기
         moveDirection = (CharacterDirection)datas[0];//입력 받은 캐릭터 이동방향 설정
         movement.moveCoroutine = StartCoroutine(movement.StraightLineMovement((int)moveDirection, movePower, 1));//캐릭터 무브먼트를 사용하여 이동 구현
 

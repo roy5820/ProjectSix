@@ -18,7 +18,7 @@ public class HitState : StateBase
         if (characterController.NowHp == 0)
         {
             characterController.isAvailabilityOfAction = false;
-            gameObject.GetComponent<CharacterController>().TransitionState(StateEnum.Die);
+            characterController.TransitionState(StateEnum.Die);
             yield break;
         }
 

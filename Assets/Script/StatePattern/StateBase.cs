@@ -20,7 +20,7 @@ public abstract class StateBase : MonoBehaviour, CharacterState
             this._battleManager = BattleManager.Instance;
         //캐릭터 애니메이터 가져오기
         if (!this._animator)
-            TryGetComponent<Animator>(out _animator);
+            characterController.gameObject.TryGetComponent<Animator>(out _animator);
         //캐릭터 행동 애니메이션 출력
         if (!string.IsNullOrEmpty(stateAniParamater) && this._animator)
             _animator.SetTrigger(stateAniParamater);
