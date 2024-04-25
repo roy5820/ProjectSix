@@ -40,9 +40,7 @@ public class EnemyController : CharacterController
 
     public override void TurnStart()
     {
-        
         base.TurnStart();
-        GetComponent<EnemyReadyToState>().TurnStart();//공격 딜레이 구현 상태에게 turnStart상태 알림
         //전턴 준비중인 행동이 없으면 실행
         if (isAvailabilityOfAction && !isCharging)
         {
@@ -58,6 +56,9 @@ public class EnemyController : CharacterController
 
             StateEnum selectStateEnum = SelectState();//enemy턴이 되었을 때 행동가능 상태면 해동 실행
         }
+        //차징 종료 후 EnemyReadyToState에서 인식하여 준비하던 상태 실행
+        else if (isCharging)
+            isCharging = false;
         else
             TurnEnd();
     }

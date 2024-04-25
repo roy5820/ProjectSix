@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b9c4cd17da85a4689b52aff46b4bdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAniParamater: NomalAttackState
+  stateAniParamater: AttackState
   sateDelayTime: 0.2
   powerCoefficient: 1
 --- !u!1 &2178880529283880895
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: DieState
-  sateDelayTime: 0.5
+  sateDelayTime: 1.2
 --- !u!1 &3465618291207222292
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,11 +516,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5317512035797257591}
+  - {fileID: 3091910315434989581}
   - {fileID: 4224528036693632303}
   - {fileID: 2795672715325928434}
   - {fileID: 8023524808883595150}
   - {fileID: 9142476428608443709}
-  - {fileID: 3091910315434989581}
   - {fileID: 7735257348980861839}
   - {fileID: 533063705607718997}
   m_Father: {fileID: 7035493264269367568}
