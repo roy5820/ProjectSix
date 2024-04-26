@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c161663f65a4f43823bb60549393cf, type: 3}
   m_Name: EnemyStatus
   m_EditorClassIdentifier: 
-  maxHp: 75
-  nowHp: 75
-  offensePower: 25
+  maxHp: 125
+  nowHp: 125
+  offensePower: 50

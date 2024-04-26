@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a281aa030a1c8d46bedda3964bf7ead, type: 3}
   m_Name: PlayerStatus
   m_EditorClassIdentifier: 
-  maxHp: 100
-  nowHp: 100
+  maxHp: 150
+  nowHp: 150
   offensePower: 50
   bettery: 10

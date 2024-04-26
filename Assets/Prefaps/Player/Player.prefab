@@ -197,6 +197,8 @@ MonoBehaviour:
     stateEnum: 6
   - state: {fileID: 5322769788218924858}
     stateEnum: 9
+  - state: {fileID: 3185217476324514115}
+    stateEnum: 10
 --- !u!114 &3296758257399933357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: StrongAttackState
-  sateDelayTime: 0.7
+  sateDelayTime: 0.5
   powerCoefficient: 1.5
   dashSpeed: 60
   dashRange: 2
@@ -528,6 +530,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: 
   sateDelayTime: 0.5
+--- !u!1 &4956792569305514298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4674153060953085245}
+  - component: {fileID: 3185217476324514115}
+  m_Layer: 0
+  m_Name: NockbackAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4674153060953085245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4956792569305514298}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 179049701720933937}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3185217476324514115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4956792569305514298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b795905ba4c34e43a8890c88b6c27f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateAniParamater: StrongAttackState
+  sateDelayTime: 0.5
+  powerCoefficient: 1
+  nockBackPower: 100
 --- !u!1 &5549311789189142602
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,5 +661,6 @@ Transform:
   - {fileID: 4169624696950482886}
   - {fileID: 1358912311563719205}
   - {fileID: 5077363615844527216}
+  - {fileID: 4674153060953085245}
   m_Father: {fileID: 520665383554115681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
