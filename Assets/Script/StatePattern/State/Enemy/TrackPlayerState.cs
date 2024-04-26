@@ -9,11 +9,11 @@ public class TrackPlayerState : StateBase
     {
         //플레이어 추적 구현
         int targetIndex = _battleManager.GetPlatformIndexForObj(GameObject.FindGameObjectWithTag("Player"));//플레이어 위치 가져오기
-        int thisIndex = _battleManager.GetPlatformIndexForObj(gameObject);//해당 객체의 위치 가져오기
+        int thisIndex = _battleManager.GetPlatformIndexForObj(characterController.gameObject);//해당 객체의 위치 가져오기
         
         CharacterDirection targetDir = targetIndex < thisIndex ? CharacterDirection.Left : CharacterDirection.Right ;//타겟 방향
         CharacterDirection thisDir = characterController.direction;//해당 객체의 바라보는 방향
-        Debug.Log("target: "+targetDir);
+        
         //바로보는 방향에 타겟이 있으면 전진
         if (targetDir == thisDir)
             characterController.TransitionState(StateEnum.Move, targetDir);//이동 상태 실행
