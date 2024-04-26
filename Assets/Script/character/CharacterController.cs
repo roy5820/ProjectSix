@@ -8,7 +8,8 @@ public abstract class CharacterController : MonoBehaviour
     protected BattleManager _battleManager = null;//배틀 매니저 가져올 변수
 
     [Header("Player Status")]
-    public int maxHp = 100;//최대체력
+    public CharacterStatus _characterStatus;
+    public int maxHp;//최대체력
     private int nowHp;//현재 체력
     //현재체력 프로퍼티
     public int NowHp 
@@ -26,7 +27,7 @@ public abstract class CharacterController : MonoBehaviour
 
         }
     }
-    public int offensePower = 50;//공격력
+    public int offensePower;//공격력
     
     public CharacterDirection direction { get; set; }//캐릭터가 바라보는 방향
     public bool isTurnReady = false;//턴 준비 여부
@@ -49,8 +50,13 @@ public abstract class CharacterController : MonoBehaviour
         _battleManager = BattleManager.Instance;//배틀 매니저 값 초기화
 
         characterStateContext = new CharacterStateContext(this);//상태콘택스트 초기화
-        nowHp = maxHp;//현재 체력 초기화
+        
         direction = this.transform.localScale.x > 0 ? CharacterDirection.Right : CharacterDirection.Left;//캐릭터 방향 값 초기화
+
+        //캐릭터 능력치 _characterStatus를 기준으로 초기화
+        maxHp = _characterStatus.maxHp;//최대체력
+        nowHp = _characterStatus.nowHp;//현재체력
+        offensePower = _characterStatus.offensePower;//공격력
     }
     //캐릭터 턴 시작 처리
     public virtual void TurnStart()
@@ -64,11 +70,10 @@ public abstract class CharacterController : MonoBehaviour
         isTurnReady = false;//턴 오버 처리
     }
     
-
     //상태명으로 상태 호출하는 함수
     public void TransitionState(StateEnum stateEnum, params object[] datas)
     {
-        Debug.Log(stateEnum);
+        Debug.Log(stateEnum + ", " + direction);
         CharacterState state = _stateList.Find(state => state.stateEnum.Equals(stateEnum)).state;//상태 명으로 상태 가져오기
         
         characterStateContext.Transition((CharacterState)state, datas);

@@ -814,7 +814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06dfd69226db1804589eb4db34d2cc9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 100
+  _characterStatus: {fileID: 11400000, guid: 83bebf4817a6ee44e8fd86c13833aca9, type: 2}
+  maxHp: 75
   offensePower: 25
   isTurnReady: 0
   isAvailabilityOfAction: 1

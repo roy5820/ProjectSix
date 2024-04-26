@@ -17,7 +17,6 @@ public class EnemyReadyToState : StateBase
         //행동 준비 상태로 전환 후 행동 행동 종료
         characterController.isStatusProcessing = false;
         characterController.TurnEnd();
-        Debug.Log("반복문 시작");
         //턴 경과 체크
         while (true)
         {

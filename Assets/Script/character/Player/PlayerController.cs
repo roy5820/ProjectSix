@@ -20,7 +20,6 @@ public class PlayerController : CharacterController
     protected override void Start()
     {
         base.Start();
-
     }
 
     public void Update()

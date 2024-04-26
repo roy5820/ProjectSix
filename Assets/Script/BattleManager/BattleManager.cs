@@ -17,9 +17,6 @@ public class BattleManager : Singleton<BattleManager>
     private TurnEventType turnState;//현제 턴상태
     public int nowTurnCnt = 0;//경과 턴
 
-    //enemyTurn 관리를 위한 변수 선언
-    private bool isEnemyTurn = false;
-    private int turnOverEnemyCnt = 0;//턴종료된 몬스터 수
 
     public int stageRewards {get;set;}//스테이지 보상
 
@@ -91,19 +88,6 @@ public class BattleManager : Singleton<BattleManager>
         }
     }
 
-    //Enemy 턴 종료 체크를 위한 프로퍼티
-    public int OnTurnOverEnemyCnt
-    {
-        get
-        {
-            return turnOverEnemyCnt;
-        }
-        set
-        {
-            turnOverEnemyCnt = value;
-        }
-    }
-
     //이벤트 처리 관련 부분
     //배틀 시작 시 이벤트 처리
     public void BattleStart()
@@ -171,16 +155,13 @@ public class BattleManager : Singleton<BattleManager>
     //적턴 시작 시 이벤트 처리
     public void EnemyTurn()
     {
-        isEnemyTurn = true;//적턴 여부 활성화
         turnState = TurnEventType.EnemyTurn;
-        turnOverEnemyCnt = 0;//적턴 시작 시 턴오버 카운트 0으로 초기화
         Debug.Log(turnState);
     }
 
     //턴 종료 시 이벤트 처리
     public void TurnEnd()
     {
-        isEnemyTurn = false;//적턴 여부 비활성화
         turnState = TurnEventType.TurnEnd;
 
         nowTurnCnt++;//턴 종료 시 경과 턴 +1
