@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -37,21 +38,28 @@ public class EnemyHUDController : MonoBehaviour
             //체력 변동 시 체력을 점진적으로 변화 시키는 코루틴 실행
             float targetHp = _eController.NowHp;//목표 체력
             if (nowHp != targetHp && runningCoroutine == null)
-                runningCoroutine = StartCoroutine(IncreaseHpGauge(targetHp, 0.001f));
+                runningCoroutine = StartCoroutine(IncreaseHpGauge(targetHp, 5f));
         }
     }
 
     //Hud업데이트 하는 함수
     //플레이어 체력바를 목표 체력 값을 점진적으로 변화시키는 코루틴
-    IEnumerator IncreaseHpGauge(float targetHp, float delay)
+    IEnumerator IncreaseHpGauge(float targetHp, float fillSpeed)
     {
         float maxHp = _eController.maxHp;//최대 체력 가져오기
-        while (nowHp != targetHp)
+        float startHp = nowHp;
+        while (true)
         {
-            nowHp += nowHp > targetHp ? -1 : 1;//현재 체력 갱신
+            //조건 채크
+            if ((startHp > targetHp && nowHp <= targetHp) || (startHp < targetHp && nowHp >= targetHp))
+                break;
+            nowHp += nowHp > targetHp ? -fillSpeed : fillSpeed;//현재 체력 갱신
             hpBar.fillAmount = nowHp / maxHp;//최대체력바 갱신
-            yield return new WaitForSeconds(delay);//증가  딜레이 폭
+            yield return new WaitForFixedUpdate();//증가  딜레이 폭
         }
+        //체력바 재조정
+        nowHp = targetHp;
+        hpBar.fillAmount = nowHp / maxHp;
 
         runningCoroutine = null;
     }

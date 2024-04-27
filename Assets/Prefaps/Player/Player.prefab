@@ -211,9 +211,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656027b7ed366f84188d044b09e3b67b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftMoveKey: 113
-  rightMoveKey: 101
+  leftMoveKey: 97
+  rightMoveKey: 100
   turnAboutKey: 119
+  reseKey: 114
 --- !u!114 &520665383554115685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: DieState
-  sateDelayTime: 0.5
+  sateDelayTime: 1.5
 --- !u!1 &1202726021827125355
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,7 +577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: StrongAttackState
   sateDelayTime: 0.5
-  powerCoefficient: 1
+  powerCoefficient: 1.3
   nockBackPower: 100
 --- !u!1 &5549311789189142602
 GameObject:

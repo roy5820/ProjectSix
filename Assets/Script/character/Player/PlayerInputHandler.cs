@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerInputHandler : MonoBehaviour
     public KeyCode leftMoveKey;
     public KeyCode rightMoveKey;
     public KeyCode turnAboutKey;
+    public KeyCode reseKey;
 
     private void Start()
     {
@@ -28,7 +30,6 @@ public class PlayerInputHandler : MonoBehaviour
         //플레이어 턴 체크 및 행동 가능 여부 체크
         if (_playerController.isTurnReady && !_playerController.isStatusProcessing)
         {
-            
             //이동 키 입력 처리(이동 키 하나로 이동 + 일반 공격 처리)
             if (Input.GetKeyDown(leftMoveKey) || Input.GetKeyDown(rightMoveKey))
             {
@@ -65,6 +66,10 @@ public class PlayerInputHandler : MonoBehaviour
                 _playerController.isAvailabilityOfAction = false;
                 _playerController.TransitionState(StateEnum.Turnabout);
             }
+        }
+        if(Input.GetKeyUp(reseKey))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

@@ -48,7 +48,6 @@ public abstract class CharacterController : MonoBehaviour
     {
         gameManager = GameManager.Instance;//게임 매니저 값 초기화
         _battleManager = BattleManager.Instance;//배틀 매니저 값 초기화
-
         characterStateContext = new CharacterStateContext(this);//상태콘택스트 초기화
         
         direction = this.transform.localScale.x > 0 ? CharacterDirection.Right : CharacterDirection.Left;//캐릭터 방향 값 초기화

@@ -42,6 +42,7 @@ public class NockbackAttack : StateBase
                     yield return null;
                 }
 
+                yield return new WaitForSeconds(sateDelayTime);
             }
         }
 

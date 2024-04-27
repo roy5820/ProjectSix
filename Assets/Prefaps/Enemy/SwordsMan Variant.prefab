@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: DashState
   sateDelayTime: 0.3
-  powerCoefficient: 1.5
+  powerCoefficient: 1.1
   dashSpeed: 75
   dashRange: 2
 --- !u!1001 &548598955828622245

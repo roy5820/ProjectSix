@@ -39,7 +39,7 @@ public class StageHUD : MonoBehaviour
         while(stageRewards < targetValue)
         {
             stageRewards++;
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSecondsRealtime(delay);
         }
 
         runningCoroutine = null;

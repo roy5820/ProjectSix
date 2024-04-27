@@ -26,8 +26,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        Debug.Log("게임 시작");
-        GameFlowEventBus.Publish(GameFlowType.Start);//게임 시작 이벤트 발생
+        
     }
 
     
@@ -35,7 +34,7 @@ public class GameManager : Singleton<GameManager>
     //게임 시작시 이벤트 처리
     public void GameStart()
     {
-        GameFlowEventBus.Publish(GameFlowType.Battle);
+        
     }
 
     //업그레이드 단계 이벤트 처리
