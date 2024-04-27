@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroy: 1
+  reseKey: 114
 --- !u!1 &248781604
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +519,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 520665383554115674, guid: d8cab42c0de5d3a428436de861499f60, type: 3}
+      propertyPath: batteryRecoveryFigures
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 520665383554115680, guid: d8cab42c0de5d3a428436de861499f60, type: 3}
       propertyPath: m_Name
       value: Player

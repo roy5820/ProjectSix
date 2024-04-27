@@ -15,7 +15,7 @@ public class PlayerInputHandler : MonoBehaviour
     public KeyCode leftMoveKey;
     public KeyCode rightMoveKey;
     public KeyCode turnAboutKey;
-    public KeyCode reseKey;
+    
 
     private void Start()
     {
@@ -67,9 +67,6 @@ public class PlayerInputHandler : MonoBehaviour
                 _playerController.TransitionState(StateEnum.Turnabout);
             }
         }
-        if(Input.GetKeyUp(reseKey))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+        
     }
 }

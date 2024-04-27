@@ -5,18 +5,24 @@ using UnityEngine.UI;
 
 public class UseItem : MonoBehaviour
 {
-    private CharacterController _characterController;
+    private PlayerController _playerController;
     public StateEnum useState;//아이템 사용시 사용할 상태
+    public int cost = 5;
 
     private void Start()
     {
-        _characterController = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
+        _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     //아이템 사용 처리
     public void ClickItem()
     {
-        if(!_characterController.isStatusProcessing)
-            _characterController.TransitionState(useState);
+
+        if(!_playerController.isStatusProcessing && _playerController.isTurnReady && _playerController.nowBattery >= cost)
+        {
+            _playerController.TransitionState(useState);
+            _playerController.nowBattery -= cost;
+        }
+            
     }
 }

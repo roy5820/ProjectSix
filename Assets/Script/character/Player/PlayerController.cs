@@ -4,7 +4,23 @@ using UnityEngine;
 
 public class PlayerController : CharacterController
 {
+    public int maxBattery = 10;
+    public int nowBattery = 0;
+    public int NowBattery
+    {
+        get
+        {
+            return nowBattery;
+        }
 
+        set
+        {
+            nowBattery = value;
+            if(nowBattery > maxBattery)
+                nowBattery = maxBattery;
+        }
+    }
+    public int batteryRecoveryFigures = 1;
     //이벤트 등록
     private void OnEnable()
     {
@@ -20,6 +36,8 @@ public class PlayerController : CharacterController
     protected override void Start()
     {
         base.Start();
+
+        nowBattery = maxBattery / 2;
     }
 
     public void Update()
@@ -40,5 +58,6 @@ public class PlayerController : CharacterController
         }
             
         isAvailabilityOfAction = true;
+        NowBattery += batteryRecoveryFigures;
     }
 }

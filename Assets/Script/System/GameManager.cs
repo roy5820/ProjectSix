@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
+    public KeyCode reseKey;
     //활성화시 이벤트 설정
     private void OnEnable()
     {
@@ -29,7 +31,13 @@ public class GameManager : Singleton<GameManager>
         
     }
 
-    
+    private void Update()
+    {
+        if (Input.GetKeyUp(reseKey))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
 
     //게임 시작시 이벤트 처리
     public void GameStart()
