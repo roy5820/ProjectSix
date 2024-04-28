@@ -51,6 +51,7 @@ public class PlayerController : CharacterController
     public override void TurnStart()
     {
         base.TurnStart();
+        Debug.Log(_battleManager);
         //배틀메니저의 onPlayer값이 없으면 값 초기화
         if (_battleManager.onPlayer == null)
         {
