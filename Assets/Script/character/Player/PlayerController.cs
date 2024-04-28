@@ -40,13 +40,6 @@ public class PlayerController : CharacterController
         nowBattery = maxBattery / 2;
     }
 
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            TurnEventBus.Publish(TurnEventType.TurnEnd);
-        }
-    }
     //턴 시작 처리
     public override void TurnStart()
     {
