@@ -126,7 +126,7 @@ BoxCollider2D:
   m_Offset: {x: -0.06982541, y: 1.7420412}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.45, y: 0}
     oldSize: {x: 5.681818, y: 5.681818}
     newSize: {x: 5.681818, y: 5.681818}
     adaptiveTilingThreshold: 0.5
@@ -199,6 +199,9 @@ MonoBehaviour:
     stateEnum: 9
   - state: {fileID: 3185217476324514115}
     stateEnum: 10
+  maxBattery: 10
+  nowBattery: 0
+  batteryRecoveryFigures: 1
 --- !u!114 &3296758257399933357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +217,6 @@ MonoBehaviour:
   leftMoveKey: 97
   rightMoveKey: 100
   turnAboutKey: 119
-  reseKey: 114
 --- !u!114 &520665383554115685
 MonoBehaviour:
   m_ObjectHideFlags: 0
