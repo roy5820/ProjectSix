@@ -36,7 +36,7 @@ public class PlayerController : CharacterController
     protected override void Start()
     {
         base.Start();
-
+        maxBattery = ((PlayerStatus)_characterStatus).bettery;//배터리 값 갱신
         nowBattery = maxBattery / 2;
     }
 

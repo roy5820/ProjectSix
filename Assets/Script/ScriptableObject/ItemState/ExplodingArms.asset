@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 475e4ab617f6b714eb6020bb6fda1c02, type: 3}
+  m_Name: ExplodingArms
+  m_EditorClassIdentifier: 
+  itemName: ExplodingArms
+  itemImg: {fileID: 21300000, guid: 1024cf20963d6be45a0f7550f661e2fa, type: 3}
+  itemObj: {fileID: 5475929578023894544, guid: ba867fc0883fcdf428ea158f599ef24c, type: 3}
+  price: 200
+  useCost: 4
+  itemLevel: 0

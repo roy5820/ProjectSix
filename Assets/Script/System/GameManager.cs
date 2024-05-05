@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : Singleton<GameManager>
 {
     public KeyCode reseKey;
+
+    public List<ItemInfo> itemDB;//아이템 DB
+    public List<ItemInfo> playerItemDB;//플레이어가 보유한 아이템 DB
     //활성화시 이벤트 설정
     private void OnEnable()
     {

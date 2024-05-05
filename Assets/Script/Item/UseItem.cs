@@ -7,6 +7,7 @@ public class UseItem : MonoBehaviour
 {
     private PlayerController _playerController;
     public StateEnum useState;//아이템 사용시 사용할 상태
+    public float offense = 1f;//계수
     public int useCost = 5;//사용 시 지불 코스트
 
     private void Start()
