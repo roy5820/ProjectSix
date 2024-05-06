@@ -23,7 +23,6 @@ public class UseItem : MonoBehaviour
         {
             _playerController.TransitionState(useState);//아이템 사용
             _playerController.nowBattery -= useCost;//코스트 지불
-        }
-            
+        }  
     }
 }
