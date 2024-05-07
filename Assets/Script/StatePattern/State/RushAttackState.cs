@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class RushAttack : NormalAttackState
+public class RushAttackState : NormalAttackState
 {
     public float dashSpeed = 60f;//대쉬 속도
     public int dashRange = 4;
