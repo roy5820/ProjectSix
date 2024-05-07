@@ -33,7 +33,7 @@ public class PlayerHUDController : MonoBehaviour
     //플레이어 체력바를 목표 체력 값을 점진적으로 변화시키는 코루틴
     IEnumerator IncreaseHpGauge(float targetHp,  float fillSpeed)
     {
-        float maxHp = _characterController.maxHp;//최대 체력 가져오기
+        float maxHp = _characterController._characterStatus.maxHp;//최대 체력 가져오기
         float startHp = nowHp;
         while (true)
         {

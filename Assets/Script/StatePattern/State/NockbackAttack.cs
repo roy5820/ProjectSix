@@ -12,7 +12,7 @@ public class NockbackAttack : StateBase
     {
         //공격 구현
         yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
-        int thisDamage = (int)(characterController.offensePower * powerCoefficient);//계산할 데미지 구하기
+        int thisDamage = (int)(characterController._characterStatus.offensePower * powerCoefficient);//계산할 데미지 구하기
 
         CharacterDirection characterDir = characterController.direction;//캐릭터 방향가져오기
 

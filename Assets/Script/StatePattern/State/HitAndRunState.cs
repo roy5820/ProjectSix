@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//캐릭터 일반공격
-public class NormalAttackState : StateBase
+
+public class HitAndRunState : MoveState
 {
-    public float powerCoefficient = 1.0f;
+    public string dashAniParamater = "";//대쉬 애니메이션
+    public float dashDelay = 0.1f;//백대쉬 실행 전 딜레이
+    public float powerCoefficient = 1.2f;//공격력 계수
     protected override IEnumerator StateFuntion(params object[] datas)
     {
         yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
@@ -18,11 +20,18 @@ public class NormalAttackState : StateBase
         //공격 가능 여부
         if (attackIndex >= 0 && attackIndex < _battleManager.PlatformList.Length)
         {
+            //애니메이션 처리 부분
+            Debug.Log(attackIndex + ", " + attackIndex);
             //데미지 계산 부분
             _battleManager.GiveDamage(attackIndex, thisDamage);
         }
 
-        characterController.TurnEnd();//상태 종료 시 턴 종료
-        yield return base.StateFuntion(datas);
+        //캐릭터 도주 방향 설정 
+        CharacterDirection runDirection = 
+            (characterController.direction == CharacterDirection.Left ? CharacterDirection.Right : CharacterDirection.Left);
+        _animator.SetBool("IsFront", false);//애니메이션 이동 방향 설정
+        _animator.SetTrigger(dashAniParamater);//백대쉬 애니메이션 재생
+        yield return new WaitForSeconds(dashDelay);//대쉬 딜레이
+        yield return base.StateFuntion(runDirection);//공격 실행
     }
 }

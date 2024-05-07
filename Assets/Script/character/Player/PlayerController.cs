@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : CharacterController
 {
+    PlayerStatus playerStatus;
     public int maxBattery = 10;
     public int nowBattery = 0;
     public int NowBattery
@@ -32,11 +33,10 @@ public class PlayerController : CharacterController
     {
         TurnEventBus.Unsubscribe(TurnEventType.PlayerTurn, TurnStart);
     }
-
     protected override void Start()
     {
         base.Start();
-        maxBattery = ((PlayerStatus)_characterStatus).bettery;//배터리 값 갱신
+        //상태값 초기화
         nowBattery = maxBattery / 2;
     }
 

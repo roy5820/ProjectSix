@@ -9,6 +9,9 @@ public class GameManager : Singleton<GameManager>
 
     public List<ItemInfo> itemDB;//아이템 DB
     public List<ItemInfo> playerItemDB;//플레이어가 보유한 아이템 DB
+
+    public int moneyHeld { get; set; }//보유 돈
+
     //활성화시 이벤트 설정
     private void OnEnable()
     {

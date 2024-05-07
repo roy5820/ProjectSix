@@ -1,5 +1,55 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &367235582781040407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9097167087900718870}
+  - component: {fileID: 3339912262194735027}
+  m_Layer: 0
+  m_Name: HitAndRun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9097167087900718870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367235582781040407}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 179049701720933937}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3339912262194735027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367235582781040407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f2bc92c5871ca4bb47844956675aac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateAniParamater: NomalAttackState
+  sateDelayTime: 0.4
+  movePower: 30
+  dashAniParamater: DashState
+  dashDelay: 0.3
+  powerCoefficient: 1.2
 --- !u!1 &520665383554115680
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,9 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf76c231c7618564285c96eb35bfe1aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterStatus: {fileID: 11400000, guid: 7af3458cec7e52845ad28b08c9a3ca68, type: 2}
-  maxHp: 100
-  offensePower: 50
+  _characterStatusOriginal: {fileID: 11400000, guid: 7af3458cec7e52845ad28b08c9a3ca68, type: 2}
+  _characterStatus: {fileID: 0}
   isTurnReady: 0
   isAvailabilityOfAction: 1
   isStatusProcessing: 0
@@ -199,6 +248,8 @@ MonoBehaviour:
     stateEnum: 9
   - state: {fileID: 3185217476324514115}
     stateEnum: 10
+  - state: {fileID: 3339912262194735027}
+    stateEnum: 11
   maxBattery: 10
   nowBattery: 0
   batteryRecoveryFigures: 1
@@ -665,5 +716,6 @@ Transform:
   - {fileID: 1358912311563719205}
   - {fileID: 5077363615844527216}
   - {fileID: 4674153060953085245}
+  - {fileID: 9097167087900718870}
   m_Father: {fileID: 520665383554115681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

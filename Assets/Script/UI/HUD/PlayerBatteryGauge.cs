@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerBatteryGauge : MonoBehaviour
 {
-    private PlayerController _playerController;//배틀매니저
+    private PlayerController _playerController;//플레이어 컨트롤러
     public Text maxBatteryGauge;
     public Text nowBatteryGauge;
 

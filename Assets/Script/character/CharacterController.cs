@@ -8,26 +8,23 @@ public abstract class CharacterController : MonoBehaviour
     protected BattleManager _battleManager = null;//배틀 매니저 가져올 변수
 
     [Header("Player Status")]
-    public CharacterStatus _characterStatus;
-    public int maxHp;//최대체력
-    private int nowHp;//현재 체력
+    public CharacterStatus _characterStatusOriginal;//캐릭터 스테이터스 오리지널 상태값
+    public CharacterStatus _characterStatus;//캐릭터 스테이터스
     //현재체력 프로퍼티
     public int NowHp 
     {
         get
         {
-            return nowHp;
+            return _characterStatus.nowHp;
         }
         set
         {
-            nowHp = value;
+            _characterStatus.nowHp = value;
             //최대체력보다 높아지거나 0보다 작아지면 조정
-            if (nowHp > maxHp) nowHp = maxHp;
-            else if(nowHp < 0) nowHp = 0;
-
+            if (_characterStatus.nowHp > _characterStatus.maxHp) _characterStatus.nowHp = _characterStatus.maxHp;
+            else if(_characterStatus.nowHp < 0) _characterStatus.nowHp = 0;
         }
     }
-    public int offensePower;//공격력
     
     public CharacterDirection direction { get; set; }//캐릭터가 바라보는 방향
     public bool isTurnReady = false;//턴 준비 여부
@@ -44,18 +41,19 @@ public abstract class CharacterController : MonoBehaviour
     [SerializeField]
     public List<StateInfo> _stateList;//캐릭터의 각 상태들을 답을 리스트
     protected CharacterStateContext characterStateContext;//캐릭터 상태 콘텍스트
+    
     protected virtual void Start()
     {
         gameManager = GameManager.Instance;//게임 매니저 값 초기화
         _battleManager = BattleManager.Instance;//배틀 매니저 값 초기화
         characterStateContext = new CharacterStateContext(this);//상태콘택스트 초기화
-        
-        direction = this.transform.localScale.x > 0 ? CharacterDirection.Right : CharacterDirection.Left;//캐릭터 방향 값 초기화
 
-        //캐릭터 능력치 _characterStatus를 기준으로 초기화
-        maxHp = _characterStatus.maxHp;//최대체력
-        nowHp = _characterStatus.nowHp;//현재체력
-        offensePower = _characterStatus.offensePower;//공격력
+        //캐릭터 상태값 초기화
+        _characterStatus = ScriptableObject.CreateInstance<CharacterStatus>();
+        _characterStatus.maxHp = _characterStatusOriginal.maxHp;
+        _characterStatus.nowHp = _characterStatusOriginal.nowHp; 
+        _characterStatus.offensePower = _characterStatusOriginal.offensePower;
+        direction = this.transform.localScale.x > 0 ? CharacterDirection.Right : CharacterDirection.Left;//캐릭터 방향 값 초기화
     }
     //캐릭터 턴 시작 처리
     public virtual void TurnStart()
