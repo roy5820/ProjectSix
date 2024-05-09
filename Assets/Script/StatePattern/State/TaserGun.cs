@@ -12,8 +12,6 @@ public class TaserGun : StateBase
 
         CharacterDirection characterDir = characterController.direction;//캐릭터 방향가져오기
 
-        
-
         characterController.TurnEnd();//상태 종료 시 턴 종료
         yield return base.StateFuntion(datas);
     }

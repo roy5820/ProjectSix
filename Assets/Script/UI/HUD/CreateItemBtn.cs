@@ -16,7 +16,6 @@ public class CreateItemBtn : MonoBehaviour
 
         // 가운데를 기준으로 정렬하기 위해 화면 너비의 절반 값 계산
         float centerX = 0;
-        // 아이템 버튼 간 간격
 
         // 버튼의 총 개수를 이용해 처음 버튼의 위치 계산
         float startX = centerX - (itemList.Count - 1) * btnInterval / 2f;
