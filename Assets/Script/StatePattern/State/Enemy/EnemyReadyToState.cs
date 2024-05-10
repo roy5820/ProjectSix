@@ -26,6 +26,7 @@ public class EnemyReadyToState : StateBase
             //턴중 행동 불가 될경우 공격 취소
             else if (!characterController.isAvailabilityOfAction)
             {
+                characterController.isCharging = false;
                 eHUD.OffActionIcon();
                 yield break;
             }
