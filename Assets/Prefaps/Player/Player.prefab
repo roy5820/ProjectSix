@@ -50,6 +50,55 @@ MonoBehaviour:
   dashAniParamater: DashState
   dashDelay: 0.3
   powerCoefficient: 1.2
+--- !u!1 &491888474883736776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6269568998242534408}
+  - component: {fileID: 5636536670211972251}
+  m_Layer: 0
+  m_Name: BulletFire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6269568998242534408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491888474883736776}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 179049701720933937}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5636536670211972251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491888474883736776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e17bb05a937e84393b6ce16d75fcde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateAniParamater: StrongAttackState
+  sateDelayTime: 0.5
+  powerCoefficient: 1.2
+  bulletPre: {fileID: 6187953982776812604, guid: 884454d5ffcca3840a560918be5e9466, type: 3}
+  firePoint: {fileID: 3456770123327120299}
 --- !u!1 &520665383554115680
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,6 +136,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 179049701720933937}
+  - {fileID: 3456770123327120299}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5679890240524916365
@@ -238,6 +288,8 @@ MonoBehaviour:
     stateEnum: 2
   - state: {fileID: 8353969072623496514}
     stateEnum: 3
+  - state: {fileID: 5889628750055746235}
+    stateEnum: 13
   - state: {fileID: 8544450325514806147}
     stateEnum: 4
   - state: {fileID: 108900085654222363}
@@ -250,6 +302,8 @@ MonoBehaviour:
     stateEnum: 10
   - state: {fileID: 3339912262194735027}
     stateEnum: 11
+  - state: {fileID: 5636536670211972251}
+    stateEnum: 12
   maxBattery: 10
   nowBattery: 0
   batteryRecoveryFigures: 1
@@ -538,6 +592,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: HitState
   sateDelayTime: 0.5
+--- !u!1 &3374213206849996585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3456770123327120299}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3456770123327120299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3374213206849996585}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.99, y: 3.31, z: 3.2028432}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 520665383554115681}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4023224629708812408
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,6 +764,67 @@ MonoBehaviour:
   stateAniParamater: NomalAttackState
   sateDelayTime: 0.2
   powerCoefficient: 1
+--- !u!1 &6105801589736824093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5069705629671907616}
+  - component: {fileID: 5889628750055746235}
+  - component: {fileID: 7269708040639626255}
+  m_Layer: 0
+  m_Name: Stun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5069705629671907616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105801589736824093}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 179049701720933937}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5889628750055746235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105801589736824093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c616e1f60303243996e2af65a5d284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateAniParamater: DieState
+  sateDelayTime: 1.5
+--- !u!114 &7269708040639626255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105801589736824093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d35902edd4b7f44fb64a842ee2bfdbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateAniParamater: 
+  sateDelayTime: 0.5
 --- !u!1 &8005539305195442120
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,11 +857,13 @@ Transform:
   - {fileID: 2008413186106119503}
   - {fileID: 1182331601469573963}
   - {fileID: 6241800005833869198}
+  - {fileID: 5069705629671907616}
   - {fileID: 8822846400327530905}
   - {fileID: 4169624696950482886}
   - {fileID: 1358912311563719205}
   - {fileID: 5077363615844527216}
   - {fileID: 4674153060953085245}
   - {fileID: 9097167087900718870}
+  - {fileID: 6269568998242534408}
   m_Father: {fileID: 520665383554115681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

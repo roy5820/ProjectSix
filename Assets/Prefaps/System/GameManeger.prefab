@@ -50,4 +50,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 98363075058b6014684d7e938e38625f, type: 2}
   - {fileID: 11400000, guid: 4eb73426f66cf15489e3e2116a8424a5, type: 2}
   - {fileID: 11400000, guid: 91474c2ec9c77f8499b6eff9cfbb37ac, type: 2}
+  - {fileID: 11400000, guid: b2296799ec2165e4aaafa83b88be8ef2, type: 2}
   playerItemDB: []

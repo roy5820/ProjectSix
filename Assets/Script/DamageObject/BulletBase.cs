@@ -15,7 +15,7 @@ public class BulletBase : MonoBehaviour
         rBody = GetComponent<Rigidbody2D>();//리지드바디 초기화
     }
 
-    protected virtual void OnFire()
+    public virtual void OnFire()
     {
         isFire = true;
     }
@@ -30,7 +30,7 @@ public class BulletBase : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         BattleManager _battleManager = BattleManager.Instance;
         _battleManager.GiveDamage(_battleManager.GetPlatformIndexForObj(other.gameObject), damage);//데미지 부여
