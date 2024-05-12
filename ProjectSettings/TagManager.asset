@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGound
+    uniqueID: 3276495501
+    locked: 0
+  - name: DecoObj
+    uniqueID: 571056099
+    locked: 0
+  - name: Player
+    uniqueID: 118046623
+    locked: 0
+  - name: Enemy
+    uniqueID: 1434829513
+    locked: 0
+  - name: Effect
+    uniqueID: 2851472513
+    locked: 0
+  - name: UI
+    uniqueID: 384184987
+    locked: 0

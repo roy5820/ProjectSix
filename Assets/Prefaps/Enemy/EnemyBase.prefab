@@ -488,9 +488,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: 1434829513
+  m_SortingLayer: 4
+  m_SortingOrder: 0
   m_Sprite: {fileID: 454078903, guid: 1bf08ba1249d6af41b4848066e399c07, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -613,6 +613,7 @@ MonoBehaviour:
   isAvailabilityOfAction: 1
   isStatusProcessing: 0
   isCharging: 0
+  isInvincibility: 0
   _stateList:
   - state: {fileID: 4121761619425807549}
     stateEnum: 0
@@ -635,13 +636,11 @@ MonoBehaviour:
   dropMoney: 50
   stateConditions:
   - stateEnum: 6
-    offence: 1
     range: 1
     cooldown: 0
     nowCoolTIme: 0
     NeedToPrepare: 1
   - stateEnum: 7
-    offence: 0
     range: 99
     cooldown: 0
     nowCoolTIme: 0
@@ -734,6 +733,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7035493264269367568}
     m_Modifications:
+    - target: {fileID: 2225138492432401707, guid: e8e7f41ee703e31479ec4a6c327e5176, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2659095041759559689, guid: e8e7f41ee703e31479ec4a6c327e5176, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -817,6 +820,18 @@ PrefabInstance:
     - target: {fileID: 4538423706305743045, guid: e8e7f41ee703e31479ec4a6c327e5176, type: 3}
       propertyPath: m_Name
       value: EnemyHUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 5564708416164388939, guid: e8e7f41ee703e31479ec4a6c327e5176, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986960291548199936, guid: e8e7f41ee703e31479ec4a6c327e5176, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986960291548199936, guid: e8e7f41ee703e31479ec4a6c327e5176, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

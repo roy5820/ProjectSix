@@ -33,8 +33,10 @@ public class EnemyHUDController : MonoBehaviour
         //상태 값에 따른 HUD 없데이트
         if (_eController)
         {
-            if (_eController.direction == CharacterDirection.Left)
+            if (_eController.direction == CharacterDirection.Right)
                 this.transform.GetChild(0).localScale = new Vector3(-0.1f, 0.1f, 0.1f);
+            else
+                this.transform.GetChild(0).localScale = new Vector3(0.1f, 0.1f, 0.1f);
             //체력 변동 시 체력을 점진적으로 변화 시키는 코루틴 실행
             float targetHp = _eController.NowHp;//목표 체력
             if (nowHp != targetHp && runningCoroutine == null)
