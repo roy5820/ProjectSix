@@ -909,6 +909,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 520665383554115674, guid: d8cab42c0de5d3a428436de861499f60, type: 3}
+      propertyPath: _characterStatusOriginal
+      value: 
+      objectReference: {fileID: 11400000, guid: 7af3458cec7e52845ad28b08c9a3ca68, type: 2}
     - target: {fileID: 520665383554115680, guid: d8cab42c0de5d3a428436de861499f60, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1052,8 +1056,12 @@ PrefabInstance:
       value: GameManeger
       objectReference: {fileID: 0}
     - target: {fileID: 5268945417505440717, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
+      propertyPath: itemDB.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: f600742b018c7704f8f5944eb817b357, type: 2}
+    - target: {fileID: 5268945417505440717, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
       propertyPath: playerItemDB.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5268945417505440717, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
       propertyPath: playerItemDB.Array.data[0]
@@ -1071,6 +1079,10 @@ PrefabInstance:
       propertyPath: playerItemDB.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: b2296799ec2165e4aaafa83b88be8ef2, type: 2}
+    - target: {fileID: 5268945417505440717, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
+      propertyPath: playerItemDB.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: f600742b018c7704f8f5944eb817b357, type: 2}
     - target: {fileID: 8034181183838411811, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

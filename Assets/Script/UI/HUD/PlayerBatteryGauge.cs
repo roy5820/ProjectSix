@@ -20,11 +20,10 @@ public class PlayerBatteryGauge : MonoBehaviour
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();//캐릭터 매니저 초기화
 
         //최대 배터리 용량 만큼 
-
         // 버튼의 총 개수를 이용해 처음 버튼의 위치 계산
-        float startX = -(_playerController.maxBattery - 1) * batteryInterval / 2f;
+        float startX = -(_playerController._characterStatus.maxBattery - 1) * batteryInterval / 2f;
         //플레이어 아이템 DB를 바탕으로 아이템 사용 버튼 생성 및 배치
-        for (int i = 0; i < _playerController.maxBattery; i++)
+        for (int i = 0; i < _playerController._characterStatus.maxBattery; i++)
         {
             GameObject battery = Instantiate(batteryPre, transform);
 
@@ -45,7 +44,7 @@ public class PlayerBatteryGauge : MonoBehaviour
         //배터리 값 갱신
         if (_playerController)
         {
-            for (int i = 0; i < _playerController.maxBattery; i++)
+            for (int i = 0; i < _playerController._characterStatus.maxBattery; i++)
             {
                 Sprite batteryImg = i < _playerController.nowBattery ? batteryOnImg : batteryOffImg;//현재 배터리 수치에 따른 이미지 선택
                 batteryImageList[i].sprite = batteryImg;

@@ -14,8 +14,8 @@ public class EnemyController : CharacterController
     {
         public StateEnum stateEnum; // 상태 열거형
         public float range; // 사거리, 99는 사거리 없음
-        public float cooldown; // 쿨타임, 0 쿨타임 없음
-        public float nowCoolTIme;//현제 쿨타임
+        public int cooldown; // 쿨타임, 0 쿨타임 없음
+        public int nowCoolTIme;//현제 쿨타임
         public bool NeedToPrepare;//파라미터
     }
 

@@ -635,11 +635,13 @@ MonoBehaviour:
   dropMoney: 50
   stateConditions:
   - stateEnum: 6
+    offence: 1
     range: 1
     cooldown: 0
     nowCoolTIme: 0
     NeedToPrepare: 1
   - stateEnum: 7
+    offence: 0
     range: 99
     cooldown: 0
     nowCoolTIme: 0

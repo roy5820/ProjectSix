@@ -607,6 +607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnInterval: 50
+  useItemBtnPre: {fileID: 1859478455967829868, guid: be5e75cebb56a8a4baaa835c60eca599, type: 3}
 --- !u!1 &4410534259697545567
 GameObject:
   m_ObjectHideFlags: 0

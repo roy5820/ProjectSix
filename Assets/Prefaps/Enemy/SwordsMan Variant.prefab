@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3742861035565292230
+--- !u!1 &6596833438560373564
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6874313066140371411}
-  - component: {fileID: 7920872547189664891}
+  - component: {fileID: 8997762397047425729}
+  - component: {fileID: 8825011772871182461}
   m_Layer: 0
   m_Name: RushAttack
   m_TagString: Untagged
@@ -17,28 +17,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6874313066140371411
+--- !u!4 &8997762397047425729
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3742861035565292230}
+  m_GameObject: {fileID: 6596833438560373564}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1049224827534182525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7920872547189664891
+--- !u!114 &8825011772871182461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3742861035565292230}
+  m_GameObject: {fileID: 6596833438560373564}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 756b17e033c511c4fa9e72d527440375, type: 3}
@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: DashState
   sateDelayTime: 0.3
-  powerCoefficient: 1.1
-  dashSpeed: 75
+  powerCoefficient: 1.5
+  dashSpeed: 60
   dashRange: 2
 --- !u!1001 &548598955828622245
 PrefabInstance:
@@ -57,10 +57,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7035493264269367568, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367568, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -101,33 +97,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7035493264269367569, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-      propertyPath: sateDelayTime
-      value: 0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Name
       value: SwordsMan Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: _stateList.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-      propertyPath: _stateList.Array.data[8].state
+      propertyPath: _stateList.Array.data[9].state
       value: 
-      objectReference: {fileID: 7920872547189664891}
+      objectReference: {fileID: 8825011772871182461}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-      propertyPath: _stateList.Array.data[8].stateEnum
+      propertyPath: _stateList.Array.data[9].stateEnum
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[0].range
-      value: 3
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[1].range
@@ -136,6 +128,14 @@ PrefabInstance:
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[2].range
       value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: stateConditions.Array.data[0].offence
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: stateConditions.Array.data[1].offence
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[0].cooldown
@@ -161,36 +161,12 @@ PrefabInstance:
       propertyPath: stateConditions.Array.data[1].NeedToPrepare
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7035493264269367596, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-      propertyPath: movePower
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7035493265507423618, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-      propertyPath: m_Color.b
-      value: 0.7406688
-      objectReference: {fileID: 0}
-    - target: {fileID: 7035493265507423618, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7035493265507423618, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8895482240667154366, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-      propertyPath: sateDelayTime
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8962740115635574446, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-      propertyPath: sateDelayTime
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 653756127961594840, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6874313066140371411}
+      addedObject: {fileID: 8997762397047425729}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
 --- !u!4 &1049224827534182525 stripped

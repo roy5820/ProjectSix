@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 475e4ab617f6b714eb6020bb6fda1c02, type: 3}
-  m_Name: CounterThrustArm
+  m_Name: ElectromagneticShield
   m_EditorClassIdentifier: 
-  itemName: "\uC5ED\uCD94\uC9C4 \uC7A5\uAC11"
-  itemImg: {fileID: 0}
-  itemObj: {fileID: 5475929578023894544, guid: 7ccfbf02c6c826f4cab7adc4663fadf0, type: 3}
-  price: 1200
+  itemName: "\uC804\uC790\uAE30 \uC2E4\uB4DC"
+  itemImg: {fileID: -880495864, guid: c399aad19529f784ba2414134db614b3, type: 3}
+  state: 14
+  price: 1000
+  offense: 1
   useCost: 3
   itemLevel: 0

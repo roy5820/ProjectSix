@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerController : CharacterController
 {
-    PlayerStatus playerStatus;
-    public int maxBattery = 10;
     public int nowBattery = 0;
     public int NowBattery
     {
@@ -17,8 +15,8 @@ public class PlayerController : CharacterController
         set
         {
             nowBattery = value;
-            if(nowBattery > maxBattery)
-                nowBattery = maxBattery;
+            if(nowBattery > _characterStatus.maxBattery)
+                nowBattery = _characterStatus.maxBattery;
         }
     }
     public int batteryRecoveryFigures = 1;
@@ -37,7 +35,7 @@ public class PlayerController : CharacterController
     {
         base.Start();
         //상태값 초기화
-        nowBattery = maxBattery / 2;
+        nowBattery = _characterStatus.maxBattery / 2;
     }
 
     //턴 시작 처리

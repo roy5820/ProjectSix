@@ -8,6 +8,9 @@ public class NormalAttackState : StateBase
     protected override IEnumerator StateFuntion(params object[] datas)
     {
         yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
+        //공격 계수 인자 값이 있으면 값 적용
+        if (datas.Length > 0)
+            powerCoefficient = (float)datas[0];
         int thisDamage = (int)(characterController._characterStatus.offensePower * powerCoefficient);//계산할 데미지 구하기
 
         CharacterDirection characterDir = characterController.direction;//캐릭터 방향가져오기

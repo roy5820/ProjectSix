@@ -159,7 +159,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -281,6 +281,7 @@ MonoBehaviour:
   isAvailabilityOfAction: 1
   isStatusProcessing: 0
   isCharging: 0
+  isInvincibility: 0
   _stateList:
   - state: {fileID: 7172335447429195455}
     stateEnum: 1
@@ -304,7 +305,8 @@ MonoBehaviour:
     stateEnum: 11
   - state: {fileID: 5636536670211972251}
     stateEnum: 12
-  maxBattery: 10
+  - state: {fileID: 4158208292314828440}
+    stateEnum: 14
   nowBattery: 0
   batteryRecoveryFigures: 1
 --- !u!114 &3296758257399933357
@@ -499,6 +501,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: 
   sateDelayTime: 0.5
+--- !u!1 &1801504086681799690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7137771189357118599}
+  - component: {fileID: 4158208292314828440}
+  m_Layer: 0
+  m_Name: Defense
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7137771189357118599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801504086681799690}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 179049701720933937}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4158208292314828440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801504086681799690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0e3bd5e78e5054ca95a7100cda9c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateAniParamater: HitState
+  sateDelayTime: 0.8
 --- !u!1 &2239837465864274091
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,5 +913,6 @@ Transform:
   - {fileID: 4674153060953085245}
   - {fileID: 9097167087900718870}
   - {fileID: 6269568998242534408}
+  - {fileID: 7137771189357118599}
   m_Father: {fileID: 520665383554115681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

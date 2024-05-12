@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 475e4ab617f6b714eb6020bb6fda1c02, type: 3}
-  m_Name: ExplodingArms
+  m_Name: RocketArm
   m_EditorClassIdentifier: 
-  itemName: ExplodingArms
-  itemImg: {fileID: 21300000, guid: 1024cf20963d6be45a0f7550f661e2fa, type: 3}
-  itemObj: {fileID: 5475929578023894544, guid: ba867fc0883fcdf428ea158f599ef24c, type: 3}
-  price: 200
-  useCost: 4
+  itemName: RoketArm
+  itemImg: {fileID: 21300000, guid: aaa7c57a102cb5b4bbba9825c5eafc32, type: 3}
+  state: 9
+  price: 950
+  offense: 1.5
+  useCost: 5
   itemLevel: 0
