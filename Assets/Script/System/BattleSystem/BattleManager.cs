@@ -6,6 +6,8 @@ public class BattleManager : Singleton<BattleManager>
 {
     private GameManager gameManager;//게임 메니저
 
+    public int bestTurn;//베스트 턴
+    public int worstTurn;//워스트 턴
     public GameObject[] PlatformList;//플랫폼 리스트
     //전투스테이지의 몬스터 스폰 관리를 위한 변수 선언
     public List<StageInfo> stageList;//스테이지 정보를 담은 리스트
@@ -74,7 +76,6 @@ public class BattleManager : Singleton<BattleManager>
         //적 행동 여부에 따라 TurnEnd이벤트 발생
         if (turnState == TurnEventType.EnemyTurn && onPlayer != null)
         {
-
             //적 상태처리 완료 여부 카운트하는 부분
             int readyForEnemyCnt = 0;
             foreach (GameObject enemy in onEnemysList)
@@ -165,9 +166,16 @@ public class BattleManager : Singleton<BattleManager>
     public void TurnEnd()
     {
         turnState = TurnEventType.TurnEnd;
-
-        nowTurnCnt++;//턴 종료 시 경과 턴 +1
-        TurnEventBus.Publish(TurnEventType.TurnStart);//TurnStart 이벤트 발생
+        //스테이지 클리어 체크 후 결산 처리
+        if (onEnemysList.Count == 0 && nowStage.Count <= nextWaveNum) {
+            Debug.Log("Clear");
+            TurnEventBus.Publish(TurnEventType.StageClear);
+        }
+        else
+        {
+            nowTurnCnt++;//턴 종료 시 경과 턴 +1
+            TurnEventBus.Publish(TurnEventType.TurnStart);//TurnStart 이벤트 발생
+        }
     }
 
     //전투 스테이지 시 사용할 기능들

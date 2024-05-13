@@ -7,7 +7,7 @@ using UnityEngine;
 public class StageInfo
 {
     public List<WaveInfo> waveList;
+    public int bestTurn;
+    public int worstTurn;
     public int stageLevel;
-
-
 }

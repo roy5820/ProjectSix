@@ -1019,6 +1019,18 @@ PrefabInstance:
       value: BattleManager
       objectReference: {fileID: 0}
     - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
+      propertyPath: bestTurn
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
+      propertyPath: worstTurn
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
+      propertyPath: stageList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
       propertyPath: PlatformList.Array.data[0]
       value: 
       objectReference: {fileID: 139821784}
@@ -1142,7 +1154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2005315761736351314, guid: 60a2a839147621440b37a59bc7cf3e12, type: 3}
       propertyPath: m_Name
-      value: InGameHUD
+      value: InGameUI
       objectReference: {fileID: 0}
     - target: {fileID: 2005315761736351314, guid: 60a2a839147621440b37a59bc7cf3e12, type: 3}
       propertyPath: m_IsActive
@@ -1307,9 +1319,9 @@ SceneRoots:
   - {fileID: 671541868}
   - {fileID: 1844819285}
   - {fileID: 1815580519}
-  - {fileID: 4380660918383748024}
-  - {fileID: 1273601497602456391}
   - {fileID: 4173098292478705427}
+  - {fileID: 1273601497602456391}
+  - {fileID: 4380660918383748024}
   - {fileID: 1005924398}
   - {fileID: 1259850595}
   - {fileID: 304289770}
