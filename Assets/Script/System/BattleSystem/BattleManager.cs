@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class BattleManager : Singleton<BattleManager>
 {
     private GameManager gameManager;//게임 메니저
 
-    public int bestTurn;//베스트 턴
-    public int worstTurn;//워스트 턴
     public GameObject[] PlatformList;//플랫폼 리스트
     //전투스테이지의 몬스터 스폰 관리를 위한 변수 선언
     public List<StageInfo> stageList;//스테이지 정보를 담은 리스트
-    public List<WaveInfo> nowStage;//현제 스테이지 정보를 담을 리스트
+    public StageInfo nowStage;//현제 스테이지 정보를 담을 리스트
+
     public List<GameObject> onEnemysList = new List<GameObject>();//현재 필드위에 몬스터 리스트
     public PlayerController onPlayer;//필드위에 플레이어 오브젝트
     private int nextWaveNum = 0;//현제 웨이브 num
@@ -97,6 +98,16 @@ public class BattleManager : Singleton<BattleManager>
     {
         if(gameManager == null)
             gameManager = GameManager.Instance;
+
+        //스테이지 정보 갱신
+        List<StageInfo> filteredStages =
+            stageList.Where(stage => stage.stageLevel == gameManager.stageLevel[gameManager.nowProgress]).ToList();
+        if (filteredStages.Count > 0)
+        {
+            int ranIndex = Random.Range(0, filteredStages.Count);
+            nowStage = filteredStages[ranIndex];
+        }
+
         //전투 시작 시 스테이지 정보 초기화 작업
         nowTurnCnt = 0;
         nextWaveNum = 0;
@@ -112,10 +123,10 @@ public class BattleManager : Singleton<BattleManager>
         Debug.Log(turnState);
 
         //Enemy 스폰 여부 확인
-        if (nextWaveNum < nowStage.Count && onEnemysList.Count == 0)
+        if (nextWaveNum < nowStage.waveList.Count && onEnemysList.Count == 0)
         {
             //스폰할 몬스터 리스트의 몬스터들을 소환
-            foreach (SpawnEnemyInfo enemy in nowStage[nextWaveNum].enemyInfoList)
+            foreach (SpawnEnemyInfo enemy in nowStage.waveList[nextWaveNum].enemyInfoList)
             {
                 int platformSIze = PlatformList.Length;
                 //스폰 위치에 따른 스폰 위치 탐색
@@ -128,15 +139,7 @@ public class BattleManager : Singleton<BattleManager>
                     {
                         GameObject enemyPre = Instantiate(enemy.enemyPre, GetStandingPos(i), Quaternion.identity);
                         onEnemysList.Add(enemyPre);
-                        //적 스폰 시 플레이어를 바라보는 방향으로 전환 시키기
-                        int targetIndex = GetPlatformIndexForObj(GameObject.FindGameObjectWithTag("Player"));//플레이어 위치 가져오기
-                        int thisIndex = i;//해당 객체의 위치 가져오기
-
-                        //바로보는 방향에 타겟이 없으면 방향 전환
-                        if (targetIndex < thisIndex)
-                        {
-                            enemyPre.transform.localScale = new Vector3(-1, 1, 1);
-                        }
+                        
                         break;
                     }
                 }
@@ -166,8 +169,8 @@ public class BattleManager : Singleton<BattleManager>
     public void TurnEnd()
     {
         turnState = TurnEventType.TurnEnd;
-        //스테이지 클리어 체크 후 결산 처리
-        if (onEnemysList.Count == 0 && nowStage.Count <= nextWaveNum) {
+        //스테이지 클리어 체크 후 스테이지 클리어 이벤트 발생
+        if (onEnemysList.Count == 0 && nowStage.waveList.Count <= nextWaveNum) {
             Debug.Log("Clear");
             TurnEventBus.Publish(TurnEventType.StageClear);
         }
@@ -187,6 +190,7 @@ public class BattleManager : Singleton<BattleManager>
         //반복문으로 입력받은 게임 오브젝트가 속한 플렛폼 순차 탐색
         for (int i = 0; i < PlatformList.Length; i++)
         {
+            Debug.Log(i + ": " + PlatformList[i].GetComponent<PlatformInfoManagement>().OnPlatformCharacter);
             if (PlatformList[i].GetComponent<PlatformInfoManagement>().OnPlatformCharacter == chracterObj)
             {
                 index = i;

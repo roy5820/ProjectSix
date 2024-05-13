@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public abstract class CharacterController : MonoBehaviour
 {
@@ -51,14 +52,8 @@ public abstract class CharacterController : MonoBehaviour
         gameManager = GameManager.Instance;//게임 매니저 값 초기화
         _battleManager = BattleManager.Instance;//배틀 매니저 값 초기화
         characterStateContext = new CharacterStateContext(this);//상태콘택스트 초기화
-
-        //캐릭터 상태값 초기화
-        _characterStatus = ScriptableObject.CreateInstance<CharacterStatus>();
-        _characterStatus.maxHp = _characterStatusOriginal.maxHp;
-        _characterStatus.nowHp = _characterStatusOriginal.nowHp;
-        _characterStatus.offensePower = _characterStatusOriginal.offensePower;
-        _characterStatus.maxBattery = _characterStatusOriginal.maxBattery;
         
+        StatusValueSetting();
     }
 
     protected virtual void Start()
@@ -82,5 +77,15 @@ public abstract class CharacterController : MonoBehaviour
     {
         CharacterState state = _stateList.Find(state => state.stateEnum.Equals(stateEnum)).state;//상태 명으로 상태 가져오기
         characterStateContext.Transition((CharacterState)state, datas);
+    }
+
+    //캐릭터 상태값 초기화 함수
+    public virtual void StatusValueSetting()
+    {
+        _characterStatus = ScriptableObject.CreateInstance<CharacterStatus>();
+        _characterStatus.maxHp = _characterStatusOriginal.maxHp;
+        _characterStatus.nowHp = _characterStatusOriginal.nowHp;
+        _characterStatus.offensePower = _characterStatusOriginal.offensePower;
+        _characterStatus.maxBattery = _characterStatusOriginal.maxBattery;
     }
 }

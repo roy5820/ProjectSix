@@ -51,4 +51,16 @@ public class PlayerController : CharacterController
         isAvailabilityOfAction = true;
         NowBattery += batteryRecoveryFigures;
     }
+
+    public override void StatusValueSetting()
+    {
+        //게임 메니저에 저장된 플레이어 스테이터스 값이 있으면
+        if(gameManager.playerStatus != null)
+        {
+            _characterStatus = gameManager.playerStatus;
+            return;
+        }
+
+        base.StatusValueSetting();
+    }
 }

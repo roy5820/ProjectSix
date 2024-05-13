@@ -36,8 +36,8 @@ public class Settlement : MonoBehaviour
         string battleAchievements = null;
         int bonusAmount = 0;
         int clearTurn = _battleManager.nowTurnCnt;
-        int bestTurn = _battleManager.bestTurn;
-        int worstTurn = _battleManager.worstTurn;
+        int bestTurn = _battleManager.nowStage.bestTurn;
+        int worstTurn = _battleManager.nowStage.worstTurn;
 
         if (clearTurn < bestTurn)
         {

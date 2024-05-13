@@ -901,6 +901,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1975162239 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 520665383554115674, guid: d8cab42c0de5d3a428436de861499f60, type: 3}
+  m_PrefabInstance: {fileID: 520665383380055482}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf76c231c7618564285c96eb35bfe1aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &520665383380055482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1019,17 +1030,9 @@ PrefabInstance:
       value: BattleManager
       objectReference: {fileID: 0}
     - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: bestTurn
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: worstTurn
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.size
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: onPlayer
+      value: 
+      objectReference: {fileID: 1975162239}
     - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
       propertyPath: PlatformList.Array.data[0]
       value: 
@@ -1067,34 +1070,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManeger
       objectReference: {fileID: 0}
-    - target: {fileID: 5268945417505440717, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
-      propertyPath: itemDB.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: f600742b018c7704f8f5944eb817b357, type: 2}
-    - target: {fileID: 5268945417505440717, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
-      propertyPath: playerItemDB.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5268945417505440717, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
-      propertyPath: playerItemDB.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 98363075058b6014684d7e938e38625f, type: 2}
-    - target: {fileID: 5268945417505440717, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
-      propertyPath: playerItemDB.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4eb73426f66cf15489e3e2116a8424a5, type: 2}
-    - target: {fileID: 5268945417505440717, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
-      propertyPath: playerItemDB.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 91474c2ec9c77f8499b6eff9cfbb37ac, type: 2}
-    - target: {fileID: 5268945417505440717, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
-      propertyPath: playerItemDB.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: b2296799ec2165e4aaafa83b88be8ef2, type: 2}
-    - target: {fileID: 5268945417505440717, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
-      propertyPath: playerItemDB.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: f600742b018c7704f8f5944eb817b357, type: 2}
     - target: {fileID: 8034181183838411811, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

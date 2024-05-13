@@ -51,16 +51,55 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  stageList: []
+  stageList:
+  - waveList:
+    - enemyInfoList:
+      - enemyPre: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+        spawnPos: 1
+    - enemyInfoList:
+      - enemyPre: {fileID: 7367348094448265910, guid: 3fb4ee80037dbbb4491122a5ae1e43fc, type: 3}
+        spawnPos: 1
+    bestTurn: 8
+    worstTurn: 12
+    stageLevel: 1
+  - waveList:
+    - enemyInfoList:
+      - enemyPre: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+        spawnPos: -1
+      - enemyPre: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+        spawnPos: 1
+    - enemyInfoList:
+      - enemyPre: {fileID: 7367348094448265910, guid: 3fb4ee80037dbbb4491122a5ae1e43fc, type: 3}
+        spawnPos: -1
+      - enemyPre: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+        spawnPos: 1
+    bestTurn: 10
+    worstTurn: 15
+    stageLevel: 2
+  - waveList:
+    - enemyInfoList:
+      - enemyPre: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+        spawnPos: -1
+      - enemyPre: {fileID: 7367348094448265910, guid: 3fb4ee80037dbbb4491122a5ae1e43fc, type: 3}
+        spawnPos: 1
+    - enemyInfoList:
+      - enemyPre: {fileID: 7367348094448265910, guid: 3fb4ee80037dbbb4491122a5ae1e43fc, type: 3}
+        spawnPos: -1
+      - enemyPre: {fileID: 7367348094448265910, guid: 3fb4ee80037dbbb4491122a5ae1e43fc, type: 3}
+        spawnPos: 1
+    - enemyInfoList:
+      - enemyPre: {fileID: 7367348094448265910, guid: 3fb4ee80037dbbb4491122a5ae1e43fc, type: 3}
+        spawnPos: -1
+      - enemyPre: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+        spawnPos: 1
+    bestTurn: 13
+    worstTurn: 18
+    stageLevel: 3
   nowStage:
-  - enemyInfoList:
-    - enemyPre: {fileID: 7367348094448265910, guid: 3fb4ee80037dbbb4491122a5ae1e43fc, type: 3}
-      spawnPos: 1
-  - enemyInfoList:
-    - enemyPre: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-      spawnPos: -1
-    - enemyPre: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-      spawnPos: 1
+    waveList: []
+    bestTurn: 0
+    worstTurn: 0
+    stageLevel: 0
   onEnemysList: []
   onPlayer: {fileID: 0}
   nowTurnCnt: 0
