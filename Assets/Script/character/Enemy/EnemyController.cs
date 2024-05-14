@@ -120,8 +120,8 @@ public class EnemyController : CharacterController
     private void DirectionSetting()
     {
         //적 스폰 시 플레이어를 바라보는 방향으로 전환 시키기
-        int targetIndex = _battleManager.GetPlatformIndexForObj(_battleManager.onPlayer.gameObject);//플레이어 위치 가져오기
-        int thisIndex = _battleManager.GetPlatformIndexForObj(gameObject);//해당 객체의 위치 가져오기
+        float targetIndex = _battleManager.onPlayer.gameObject.transform.position.x;//플레이어 위치 가져오기
+        float thisIndex = gameObject.transform.position.x;//해당 객체의 위치 가져오기
 
         //바로보는 방향에 타겟이 없으면 방향 전환
         if (targetIndex < thisIndex)
