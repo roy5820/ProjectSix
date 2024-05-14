@@ -22,7 +22,7 @@ public abstract class StateBase : MonoBehaviour, CharacterState
         if (!this._animator)
             characterController.gameObject.TryGetComponent<Animator>(out _animator);
         //캐릭터 행동 애니메이션 출력
-        if (!string.IsNullOrEmpty(stateAniParamater) && this._animator)
+        if (!string.IsNullOrEmpty(stateAniParamater) && this._animator && _animator.GetCurrentAnimatorStateInfo(0).IsName("IDLE"))
             _animator.SetTrigger(stateAniParamater);
          
         characterController.isStatusProcessing = true;//캐릭터 상태 처리 중

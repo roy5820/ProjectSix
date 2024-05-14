@@ -57,10 +57,19 @@ public class PlayerController : CharacterController
         //게임 메니저에 저장된 플레이어 스테이터스 값이 있으면
         if(gameManager.playerStatus != null)
         {
-            _characterStatus = gameManager.playerStatus;
+            _characterStatus = ScriptableObject.CreateInstance<CharacterStatus>();
+            _characterStatus.maxHp = gameManager.playerStatus.maxHp;
+            _characterStatus.nowHp = gameManager.playerStatus.nowHp;
+            _characterStatus.maxBattery = gameManager.playerStatus.maxBattery;
+
             return;
         }
 
         base.StatusValueSetting();
+    }
+
+    private void OnDestroy()
+    {
+        TurnEventBus.Publish(TurnEventType.Lose);
     }
 }

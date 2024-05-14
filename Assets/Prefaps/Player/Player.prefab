@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: HitState
-  sateDelayTime: 0.5
+  sateDelayTime: 0.8
 --- !u!1 &3374213206849996585
 GameObject:
   m_ObjectHideFlags: 0

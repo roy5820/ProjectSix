@@ -9,4 +9,16 @@ public class SceneMovement : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void OnCloseGame()
+    {
+        Application.Quit();
+    }
+
+    public void OnPopupPanel()
+    {
+
+    }
+
+    
 }

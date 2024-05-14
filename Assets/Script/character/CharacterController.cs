@@ -75,7 +75,9 @@ public abstract class CharacterController : MonoBehaviour
     //상태명으로 상태 호출하는 함수
     public void TransitionState(StateEnum stateEnum, params object[] datas)
     {
+        Debug.Log(stateEnum);
         CharacterState state = _stateList.Find(state => state.stateEnum.Equals(stateEnum)).state;//상태 명으로 상태 가져오기
+        
         characterStateContext.Transition((CharacterState)state, datas);
     }
 

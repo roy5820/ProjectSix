@@ -75,7 +75,9 @@ public class EnemyController : CharacterController
         int thisIndex = _battleManager.GetPlatformIndexForObj(gameObject);//현재 위치 값 가져오기
         int countDistance = 0;//플레이어 와의 거리를 카운트할 값이 저장되는 변수
         //플레이어 와의 거리 가져오기
-        for (int i = thisIndex + (direction == CharacterDirection.Right ? 1: -1); direction == CharacterDirection.Right ? i < _battleManager.PlatformList.Length : i >= 0; i += (direction == CharacterDirection.Right ? 1 : -1))
+        for (int i = thisIndex + (direction == CharacterDirection.Right ? 1: -1);
+            direction == CharacterDirection.Right ? i < _battleManager.PlatformList.Length : i >= 0;
+            i += (direction == CharacterDirection.Right ? 1 : -1))
         {
             
             countDistance++;
@@ -98,7 +100,7 @@ public class EnemyController : CharacterController
             if (condition.nowCoolTIme == 0 && condition.range >= distance)
             {
                 condition.nowCoolTIme = condition.cooldown;//쿨타임 적용
-
+                Debug.Log(condition.stateEnum);
                 //준비해야하는 스킬인지에 따른 상태 처리
                 if (condition.NeedToPrepare)
                     TransitionState(StateEnum.EnemyReadyToState, condition.stateEnum);//상태 실행

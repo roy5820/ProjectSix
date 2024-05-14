@@ -106,6 +106,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: _characterStatusOriginal
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a2bae4ad6abd9e4f9572ee0f03b6b0b, type: 2}
+    - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.size
       value: 3
       objectReference: {fileID: 0}

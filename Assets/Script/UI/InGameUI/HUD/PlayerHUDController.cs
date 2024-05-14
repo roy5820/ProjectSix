@@ -22,6 +22,7 @@ public class PlayerHUDController : MonoBehaviour
     {
         if ((_characterController))
         {
+            
             float targetHp = _characterController.NowHp;//목표 체력
             //체력 변동 시 체력을 점진적으로 변화 시키는 코루틴 실행
             if (nowHp != targetHp && runningCoroutine ==  null)

@@ -172,7 +172,10 @@ public class BattleManager : Singleton<BattleManager>
         //스테이지 클리어 체크 후 스테이지 클리어 이벤트 발생
         if (onEnemysList.Count == 0 && nowStage.waveList.Count <= nextWaveNum) {
             Debug.Log("Clear");
-            TurnEventBus.Publish(TurnEventType.StageClear);
+            if(gameManager.nowProgress+1 >= gameManager.stageLevel.Count)
+                TurnEventBus.Publish(TurnEventType.Win);
+            else
+                TurnEventBus.Publish(TurnEventType.StageClear);
         }
         else
         {
@@ -190,7 +193,6 @@ public class BattleManager : Singleton<BattleManager>
         //반복문으로 입력받은 게임 오브젝트가 속한 플렛폼 순차 탐색
         for (int i = 0; i < PlatformList.Length; i++)
         {
-            Debug.Log(i + ": " + PlatformList[i].GetComponent<PlatformInfoManagement>().OnPlatformCharacter);
             if (PlatformList[i].GetComponent<PlatformInfoManagement>().OnPlatformCharacter == chracterObj)
             {
                 index = i;

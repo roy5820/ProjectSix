@@ -314,8 +314,8 @@ Transform:
   - {fileID: 2606923679299881864}
   - {fileID: 8023524808883595150}
   - {fileID: 9142476428608443709}
-  - {fileID: 7735257348980861839}
   - {fileID: 533063705607718997}
+  - {fileID: 7735257348980861839}
   m_Father: {fileID: 7035493264269367568}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6223696861117701081
@@ -664,6 +664,8 @@ MonoBehaviour:
     icon: {fileID: 21300000, guid: 43b57258f8d6fd3478b356d39fe0d09e, type: 3}
   - stateEnum: 9
     icon: {fileID: 21300000, guid: 918426bc1c4370143a2e7c4599d83e1f, type: 3}
+  - stateEnum: 10
+    icon: {fileID: 21300000, guid: 1024cf20963d6be45a0f7550f661e2fa, type: 3}
 --- !u!114 &7035493264269367594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,7 +726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: HitState
-  sateDelayTime: 0.5
+  sateDelayTime: 0.8
 --- !u!1001 &3379921448193523483
 PrefabInstance:
   m_ObjectHideFlags: 0
