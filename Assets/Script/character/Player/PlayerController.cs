@@ -61,6 +61,7 @@ public class PlayerController : CharacterController
             _characterStatus.maxHp = gameManager.playerStatus.maxHp;
             _characterStatus.nowHp = gameManager.playerStatus.nowHp;
             _characterStatus.maxBattery = gameManager.playerStatus.maxBattery;
+            _characterStatus.offensePower = gameManager.playerStatus.offensePower;
 
             return;
         }

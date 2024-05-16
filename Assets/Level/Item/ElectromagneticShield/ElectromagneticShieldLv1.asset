@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 475e4ab617f6b714eb6020bb6fda1c02, type: 3}
-  m_Name: ElectromagneticShield
+  m_Name: ElectromagneticShieldLv1
   m_EditorClassIdentifier: 
   itemName: "\uC804\uC790\uAE30 \uC2E4\uB4DC"
+  itemType: 1
   itemImg: {fileID: -880495864, guid: c399aad19529f784ba2414134db614b3, type: 3}
   state: 14
   price: 1000
   offense: 1
   useCost: 3
-  itemLevel: 0
+  effectDescription: "\uC0AC\uC6A9 \uC2DC \uD574\uB2F9 \uD134 \uB370\uBBF8\uC9C0\uB97C
+    \uBC1B\uC9C0 \uC54A\uB294\uB2E4"
+  storeDescription: "\uBE44\uC6A9\uC774 1 \uAC10\uC18C \uD55C\uB2E4"

@@ -147,11 +147,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424efdcefbdd6e64e8c3231ce6b3efe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemInfo: {fileID: 0}
   itemImg: {fileID: 4977624264660870217}
   itemText: {fileID: 2283968359869597403}
   useState: 9
   offense: 1
   useCost: 5
+  itemInspectorPre: {fileID: 3311442752191906535, guid: 92b4dd35e8b0a3b4b810e1c7c1ea3c24, type: 3}
 --- !u!1 &3683924103873265542
 GameObject:
   m_ObjectHideFlags: 0

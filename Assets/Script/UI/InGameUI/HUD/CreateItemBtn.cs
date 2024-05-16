@@ -13,7 +13,7 @@ public class CreateItemBtn : MonoBehaviour
     void Start()
     {
         _gameManager = GameManager.Instance;//게임 메니저 가져오기
-        itemList = _gameManager.playerItemDB;//플레이어가 보유중인 아이템 DB 가져오기
+        itemList = _gameManager.OutputOfHaveItems();//플레이어가 보유중인 아이템 DB 가져오기
 
         // 가운데를 기준으로 정렬하기 위해 화면 너비의 절반 값 계산
         float centerX = 0;
@@ -22,18 +22,10 @@ public class CreateItemBtn : MonoBehaviour
         //플레이어 아이템 DB를 바탕으로 아이템 사용 버튼 생성 및 배치
         for (int i = 0; i < itemList.Count; i++)
         {
-            
+            //아이템 정보 갱신 후 프리펩 생성
+            useItemBtnPre.GetComponent<UseItem>().itemInfo = itemList[i];
             GameObject itemBtn = Instantiate(useItemBtnPre, transform);
 
-            //item사용 버튼 값 초기화
-            UseItem useItem = useItemBtnPre.GetComponent<UseItem>();
-            if (useItem != null)
-            {
-                useItem.itemImg.sprite = itemList[i].itemImg;//아이템 이미지 설정
-                useItem.useState = itemList[i].state;//사용 상태 설정
-                useItem.useCost = itemList[i].useCost;//사용 코스트 설정
-                useItem.offense = itemList[i].offense;//사용 계수 설정
-            }
 
             // 버튼의 위치 계산
             float posX = startX + i * btnInterval;
