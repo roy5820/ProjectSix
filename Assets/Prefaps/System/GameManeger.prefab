@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8034181183838411811}
-  - component: {fileID: 5268945417505440717}
+  - component: {fileID: 6907261508417593615}
   m_Layer: 0
   m_Name: GameManeger
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5268945417505440717
+--- !u!114 &6907261508417593615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,44 +45,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroy: 1
-  reseKey: 114
-  stageLevel: 010000000200000001000000030000000200000063000000
+  reseKey: 0
+  stageLevel: 01000000020000000300000063000000
   nowProgress: 0
   itemDB:
-  - itemName: CounterThrustArm
+  - itemId: 101
+    itemName: "\uC5ED\uCD94\uC9C4\uC7A5\uAC11"
     itemInfo:
     - {fileID: 11400000, guid: 91474c2ec9c77f8499b6eff9cfbb37ac, type: 2}
     - {fileID: 11400000, guid: 75e7a6a2a0cbfcc4789a6ec8df2ebdd7, type: 2}
     - {fileID: 11400000, guid: 8eb6b958042969f49a9edcffb15e047f, type: 2}
-  - itemName: ElectromagneticShield
-    itemInfo:
-    - {fileID: 11400000, guid: f600742b018c7704f8f5944eb817b357, type: 2}
-    - {fileID: 11400000, guid: 8b78a757daae28248a9c5aa260b978d7, type: 2}
-    - {fileID: 11400000, guid: 3fe3b15b9a2e0e149b6700bd8a401161, type: 2}
-  - itemName: ExplodingArms
+  - itemId: 102
+    itemName: "\uD3ED\uBC1C\uC7A5\uAC11"
     itemInfo:
     - {fileID: 11400000, guid: 4eb73426f66cf15489e3e2116a8424a5, type: 2}
     - {fileID: 11400000, guid: 734e8559c8086e54f8c9d1a946128da9, type: 2}
     - {fileID: 11400000, guid: e03a8772f3b851140898d96bbed6e694, type: 2}
-  - itemName: RocketArm
+  - itemId: 103
+    itemName: "\uB85C\uCF13\uC554"
     itemInfo:
     - {fileID: 11400000, guid: 98363075058b6014684d7e938e38625f, type: 2}
     - {fileID: 11400000, guid: f7db346ec1c44524894daaf7f4d4e087, type: 2}
     - {fileID: 11400000, guid: 5539054a9749c43449e5bd02583fce3c, type: 2}
-  - itemName: TagerGun
+  - itemId: 104
+    itemName: "\uD14C\uC774\uC800\uAC74"
     itemInfo:
     - {fileID: 11400000, guid: b2296799ec2165e4aaafa83b88be8ef2, type: 2}
     - {fileID: 11400000, guid: 5aee748c18c04a347a5644a6d6626873, type: 2}
     - {fileID: 11400000, guid: f26c0467cc2a5954488fe32525a5ec08, type: 2}
+  - itemId: 201
+    itemName: "\uC804\uC790\uAE30 \uC2E4\uB4DC"
+    itemInfo:
+    - {fileID: 11400000, guid: f600742b018c7704f8f5944eb817b357, type: 2}
+    - {fileID: 11400000, guid: 8b78a757daae28248a9c5aa260b978d7, type: 2}
+    - {fileID: 11400000, guid: 3fe3b15b9a2e0e149b6700bd8a401161, type: 2}
   playerItemDB:
-  - itemName: CounterThrustArm
+  - itemId: 101
     itemLevel: 0
-  - itemName: ElectromagneticShield
+  - itemId: 102
     itemLevel: 0
-  - itemName: ExplodingArms
+  - itemId: 103
     itemLevel: 0
-  - itemName: RocketArm
+  - itemId: 104
     itemLevel: 0
-  - itemName: TagerGun
+  - itemId: 201
     itemLevel: 0
   playerStatus: {fileID: 0}

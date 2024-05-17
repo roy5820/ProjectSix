@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 475e4ab617f6b714eb6020bb6fda1c02, type: 3}
   m_Name: RocketArmLv2
   m_EditorClassIdentifier: 
-  itemName: "\uB85C\uCF01 \uC7A5\uAC11"
+  itemName: "\uB85C\uCF13 \uC7A5\uAC11"
   itemType: 0
   itemImg: {fileID: 21300000, guid: aaa7c57a102cb5b4bbba9825c5eafc32, type: 3}
   state: 9
