@@ -56,6 +56,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 720827163021459218, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1411968381574116720, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Controller
       value: 
@@ -103,6 +107,10 @@ PrefabInstance:
     - target: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Name
       value: HighKicker Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: dropMoney
+      value: 650
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: _stateList.Array.size
@@ -166,11 +174,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367593, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 3.90625
+      value: 5.681818
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367593, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.90625
+      value: 5.681818
       objectReference: {fileID: 0}
     - target: {fileID: 8177145996210550471, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Sprite

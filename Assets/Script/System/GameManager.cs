@@ -13,6 +13,7 @@ public class GameManager : Singleton<GameManager>
     public List<ItemData> itemDB;//아이템 DB
     public List<PlayerHaveItemData> playerItemDB;//플레이어 보유 아이템 DB
     public int moneyHeld { get; set; }//보유 돈
+    public int startMoney = 1000;//시작 보유 돈
     public CharacterStatus playerStatus = null;//플레이어 스테이터스
 
     //활성화시 이벤트 설정
@@ -29,7 +30,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        
+        moneyHeld = startMoney;//보유돈 시작돈으로 초기화
     }
 
     private void Update()
@@ -67,23 +68,28 @@ public class GameManager : Singleton<GameManager>
             PlayerHaveItemData addData = new PlayerHaveItemData();
             addData.itemId = data.itemId;
             addData.itemLevel = 0;
+
             //보유한 아이템 level이 최대인지 체크, 최대인 경우 컨티뉴
             if (findData != null)
             {
-                if (findData.itemLevel < data.itemInfo.Count - 1)
+                if (findData.itemLevel >= data.itemInfo.Count - 1)
                     continue;
                 addData.itemLevel = findData.itemLevel + 1;//현재 보유 중인 아이템일 경우 다음 레벨의 아이템으로 설정
             }
 
-            //삽입할 데이터 생성 및 값 초기화
-
+            addData.itemInfo = data.itemInfo[addData.itemLevel];//아이템 정보값 초기화
 
             //미보유 일 경우 outputList에 해당 아이템 삽입
             unownedItems.Add(addData);
         }
 
         //출력 개수 만큼 outputList리스트에 랜덤으로 요소 추가
-        
+        while(outputList.Count < number && unownedItems.Count > 0)
+        {
+            int ranNum = Random.Range(0, unownedItems.Count);//랜덤 숫자 추출
+            outputList.Add(unownedItems[ranNum]);//값 추가
+            unownedItems.RemoveAt(ranNum);
+        }
 
         return outputList;
     }
@@ -102,5 +108,31 @@ public class GameManager : Singleton<GameManager>
         }
         
         return outputList;
+    }
+
+    //플레이어 아이템 획득 구현 함수
+    public void PlayerGetItem(int itemID, int itemLV, ItemInfo itemINFO)
+    {
+        Debug.Log(itemID + ", " + itemLV + ", " + itemINFO);
+        PlayerHaveItemData getItem = playerItemDB.Find(item => item.itemId == itemID);//현재 보유중인 ID인지 검색
+        
+        //미보유 아이템일경 리스트에 아이템 정보 추가
+        if (getItem == null)
+        {
+            PlayerHaveItemData addItem = new PlayerHaveItemData();
+            addItem.itemId = itemID;
+            addItem.itemLevel = itemLV;
+            addItem.itemInfo = itemINFO;
+            playerItemDB.Add(addItem);
+        }
+        //있을 시 아이템 정보 수정
+        else
+        {
+            int findItemIndex = playerItemDB.FindIndex(item => item.itemId == getItem.itemId);
+            
+            playerItemDB[findItemIndex].itemId = itemID;
+            playerItemDB[findItemIndex].itemLevel = itemLV;
+            playerItemDB[findItemIndex].itemInfo = itemINFO;
+        }
     }
 }

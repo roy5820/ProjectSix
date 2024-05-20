@@ -19,7 +19,7 @@ public class PlayerController : CharacterController
                 nowBattery = _characterStatus.maxBattery;
         }
     }
-    public int batteryRecoveryFigures = 1;
+    public int batteryRecoveryFigures = 1;//배터리 회복 량
     //이벤트 등록
     private void OnEnable()
     {

@@ -28,7 +28,7 @@ public class ItemInspectorPopup : MonoBehaviour
                 offense = (int)(BattleManager.Instance.onPlayer._characterStatus.offensePower * itemInfo.offense);//데미지 계산
                 break;
             case 1:
-                offenseTxt = "지속시간: ";
+                offenseTxt = "지속턴: ";
                 break;
             case 2:
                 offenseTxt = "";

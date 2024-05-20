@@ -633,7 +633,7 @@ MonoBehaviour:
     stateEnum: 6
   - state: {fileID: 4024265412612799271}
     stateEnum: 7
-  dropMoney: 50
+  dropMoney: 500
   stateConditions:
   - stateEnum: 6
     range: 1
