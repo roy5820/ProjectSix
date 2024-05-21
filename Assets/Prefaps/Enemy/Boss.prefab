@@ -107,12 +107,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 720827163021459218, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.5
+      value: 7.75
       objectReference: {fileID: 0}
     - target: {fileID: 1411968381574116720, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 5e94c82d0f7c716469b0f4666d67a664, type: 2}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: minHpFillAmount
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: actionList.Array.size
       value: 3
@@ -283,23 +287,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367593, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 5.681818
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367593, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 5.681818
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8177145996210550471, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 879778759, guid: 1a5bbcdef7b7c2640b80becaa22a8c67, type: 3}
+      objectReference: {fileID: -776268346, guid: f1085bc1c60b411418649f87805e9da9, type: 3}
     - target: {fileID: 8177145996210550471, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8177145996210550471, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8177145996210550471, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Color.r

@@ -12,6 +12,7 @@ public class EnemyHUDController : MonoBehaviour
     public Image actionIcon;//행동 아이콘을 표기할 이미지 오브젝트
     private Coroutine runningCoroutine = null;
     public float fillSpeed = 10;//hp바 변경 속도
+    public float minHpFillAmount = 0.1f;//최소 HP바 크기
     //상태 타입과 아이콘 정보를 가진 클래스
     [System.Serializable]
     public class ActionInfo {
@@ -48,6 +49,7 @@ public class EnemyHUDController : MonoBehaviour
     //플레이어 체력바를 목표 체력 값을 점진적으로 변화시키는 코루틴
     IEnumerator IncreaseHpGauge(float targetHp, float fillSpeed)
     {
+        float fillAmount = 0;
         float maxHp = _eController._characterStatus.maxHp;//최대 체력 가져오기
         float startHp = nowHp;
         while (true)
@@ -56,12 +58,14 @@ public class EnemyHUDController : MonoBehaviour
             if ((startHp > targetHp && nowHp <= targetHp) || (startHp < targetHp && nowHp >= targetHp))
                 break;
             nowHp += nowHp > targetHp ? -fillSpeed : fillSpeed;//현재 체력 갱신
-            hpBar.fillAmount = nowHp / maxHp;//최대체력바 갱신
+            fillAmount = nowHp / maxHp;//최대체력바 비율 계산
+            hpBar.fillAmount = fillAmount >= minHpFillAmount || nowHp == 0 ? fillAmount : minHpFillAmount;//최대체력바 갱신
             yield return new WaitForFixedUpdate();//증가  딜레이 폭
         }
         //체력바 재조정
         nowHp = targetHp;
-        hpBar.fillAmount = nowHp / maxHp;
+        fillAmount = nowHp / maxHp;//최대체력바 비율 계산
+        hpBar.fillAmount = fillAmount >= minHpFillAmount || nowHp == 0 ? fillAmount : minHpFillAmount;//최대체력바 갱신
 
         runningCoroutine = null;
     }

@@ -9,6 +9,7 @@ public class PlayerHUDController : MonoBehaviour
     public Image hpBar;//플레이어 체력바 
     private float nowHp = 0;//현재 체력
     public float fillSpeed = 10;//체력바 변경 시 체우는 속도
+    public float minHpFillAmount = 0.05f;//최소 HP바 크기
     private Coroutine runningCoroutine = null;//현재 실행중인 코루틴
 
     // Start is called before the first frame update
@@ -35,6 +36,7 @@ public class PlayerHUDController : MonoBehaviour
     //플레이어 체력바를 목표 체력 값을 점진적으로 변화시키는 코루틴
     IEnumerator IncreaseHpGauge(float targetHp,  float fillSpeed)
     {
+        float fillAmount = 0;
         float maxHp = _characterController._characterStatus.maxHp;//최대 체력 가져오기
         float startHp = nowHp;
         while (true)
@@ -43,12 +45,14 @@ public class PlayerHUDController : MonoBehaviour
             if ((startHp > targetHp && nowHp <= targetHp) || (startHp < targetHp && nowHp >= targetHp))
                 break;
             nowHp += nowHp > targetHp ? -fillSpeed : fillSpeed;//현재 체력 갱신
-            hpBar.fillAmount  = nowHp  / maxHp;//최대체력바 갱신
+            fillAmount = nowHp / maxHp;//최대체력바 비율 계산
+            hpBar.fillAmount  = fillAmount >= minHpFillAmount || nowHp == 0 ? fillAmount : minHpFillAmount;//최대체력바 갱신
             yield return new WaitForFixedUpdate();//증가  딜레이 폭
         }
         //체력바 재조정
         nowHp = targetHp;
-        hpBar.fillAmount = nowHp / maxHp;
+        fillAmount = nowHp / maxHp;//최대체력바 비율 계산
+        hpBar.fillAmount = fillAmount >= minHpFillAmount || nowHp == 0 ? fillAmount : minHpFillAmount;//최대체력바 갱신
 
         runningCoroutine = null;
     }

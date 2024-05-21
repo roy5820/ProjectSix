@@ -659,6 +659,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpBar: {fileID: 1259997053823850288}
   actionIcon: {fileID: 3872324380237681398}
+  fillSpeed: 10
+  minHpFillAmount: 0.15
   actionList:
   - stateEnum: 6
     icon: {fileID: 21300000, guid: 43b57258f8d6fd3478b356d39fe0d09e, type: 3}

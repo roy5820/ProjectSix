@@ -16,6 +16,10 @@ public class GameManager : Singleton<GameManager>
     public int startMoney = 1000;//시작 보유 돈
     public CharacterStatus playerStatus = null;//플레이어 스테이터스
 
+    //칩기능 관련 전역 변수
+    public List<CheepInfo> cheepDataBase;//칩 데이터  베이스
+    public List<int> cheepInventory;//칩 인벤토리
+
     //활성화시 이벤트 설정
     private void OnEnable()
     {
@@ -135,4 +139,31 @@ public class GameManager : Singleton<GameManager>
             playerItemDB[findItemIndex].itemInfo = itemINFO;
         }
     }
+
+    //칩 관련 함수
+    //칩 리스트를 가져오는 함수 outType 0:모든 칩 , 1:보유 중인 칩
+    public List<CheepInfo> GetCheepList(int outType)
+    {
+        List<CheepInfo> returnList = new List<CheepInfo>();//리턴할 칩정보 리스트
+
+        switch (outType) {
+            //cheepDataBase의 모든 정보를 returnList에 삽입
+            case 0:
+                returnList = cheepDataBase;
+                break;
+            //cheepDataBased의 보유 중인 칩만 returnList에 삽입
+            case 1:
+
+                break;
+        }
+
+        return returnList;//칩 리스트 출력
+    }
+
+    //칩 인벤토리의 값을 설정하는 함수 index: 칩 설정 위치, cheepID: 설정할 칩 ID
+    public void SetCheepList(int index, int cheepID)
+    {
+
+    }
+    
 }

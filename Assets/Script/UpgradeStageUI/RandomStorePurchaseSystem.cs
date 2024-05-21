@@ -128,7 +128,6 @@ public class RandomStorePurchaseSystem : MonoBehaviour
         //버튼 인덱스가 유효한지 체크
         if(btnIndex < sellItemInfoLIst.Count && btnIndex >= 0)
         {
-            Debug.Log("getItemInfo" + sellItemInfoLIst[btnIndex].getItemInfo);
             //빈값 여부 체크
             if (sellItemInfoLIst[btnIndex].getItemInfo == null)
                 return;
