@@ -8,7 +8,8 @@ public class PlayerHUDController : MonoBehaviour
     private CharacterController _characterController;//배틀매니저
     public Image hpBar;//플레이어 체력바 
     private float nowHp = 0;//현재 체력
-    private Coroutine runningCoroutine = null;
+    public float fillSpeed = 10;//체력바 변경 시 체우는 속도
+    private Coroutine runningCoroutine = null;//현재 실행중인 코루틴
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class PlayerHUDController : MonoBehaviour
             float targetHp = _characterController.NowHp;//목표 체력
             //체력 변동 시 체력을 점진적으로 변화 시키는 코루틴 실행
             if (nowHp != targetHp && runningCoroutine ==  null)
-                runningCoroutine = StartCoroutine(IncreaseHpGauge(targetHp, 10f));
+                runningCoroutine = StartCoroutine(IncreaseHpGauge(targetHp, fillSpeed));
         }
         
     }

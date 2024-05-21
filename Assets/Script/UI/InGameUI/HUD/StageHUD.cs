@@ -9,8 +9,9 @@ public class StageHUD : MonoBehaviour
 
     public Text nowTurnInfoHUD;//현재 턴 표기하는 text오브젝트
     public Text stageRewardsHUD;//현재 스테이지 보상을 표기하는 Text오브젝트
-    private int stageRewards = 0;//턴 보상
+    private int stageRewards = 0;//스테이지 보상
     private Coroutine runningCoroutine = null;//현재 실행 중인 코루틴
+    public int increaseSpeed = 3;//스테이지 보상 증가 속도
 
     private void Start()
     {
@@ -27,20 +28,24 @@ public class StageHUD : MonoBehaviour
             //스테이지 보상 갱신 처리 부분
             int targetValue = _battleManager.stageRewards;
             if (stageRewards < targetValue && runningCoroutine == null)
-                runningCoroutine = StartCoroutine(IncreaseStageRewards(targetValue, 0.01f));
+                runningCoroutine = StartCoroutine(IncreaseStageRewards(targetValue, increaseSpeed));
 
             stageRewardsHUD.text = stageRewards.ToString();
         }
     }
 
-    //스테이지 보상을 1씩 순차적으로 증가시키는 코루틴 함수
-    IEnumerator IncreaseStageRewards(int targetValue, float delay)
+    //스테이지 보상을 순차적으로 증가시키는 코루틴 함수
+    IEnumerator IncreaseStageRewards(int targetValue, int increaseSpeed)
     {
         while(stageRewards < targetValue)
         {
-            stageRewards++;
-            yield return new WaitForSecondsRealtime(delay);
+            stageRewards+= increaseSpeed;
+            if (stageRewards > targetValue)
+                stageRewards = targetValue;
+            yield return new WaitForFixedUpdate();
         }
+
+        
 
         runningCoroutine = null;
     }

@@ -2948,6 +2948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nowTurnInfoHUD: {fileID: 9130674274689307662}
   stageRewardsHUD: {fileID: 6954540939615913769}
+  increaseSpeed: 111
 --- !u!1 &8662505203798904999
 GameObject:
   m_ObjectHideFlags: 0

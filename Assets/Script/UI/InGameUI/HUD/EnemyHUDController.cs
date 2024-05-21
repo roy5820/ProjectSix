@@ -11,7 +11,7 @@ public class EnemyHUDController : MonoBehaviour
     private float nowHp;//현제 체력
     public Image actionIcon;//행동 아이콘을 표기할 이미지 오브젝트
     private Coroutine runningCoroutine = null;
-
+    public float fillSpeed = 10;//hp바 변경 속도
     //상태 타입과 아이콘 정보를 가진 클래스
     [System.Serializable]
     public class ActionInfo {
@@ -40,7 +40,7 @@ public class EnemyHUDController : MonoBehaviour
             //체력 변동 시 체력을 점진적으로 변화 시키는 코루틴 실행
             float targetHp = _eController.NowHp;//목표 체력
             if (nowHp != targetHp && runningCoroutine == null)
-                runningCoroutine = StartCoroutine(IncreaseHpGauge(targetHp, 5f));
+                runningCoroutine = StartCoroutine(IncreaseHpGauge(targetHp, fillSpeed));
         }
     }
 
