@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39c62641a298d5f4d956850d083cddc6, type: 3}
-  m_Name: ServeHeart
+  m_Name: Berserker
   m_EditorClassIdentifier: 
-  CheepID: 102
-  CheepName: "\uC11C\uBE0C\uD558\uD2B8"
+  CheepID: 0
+  CheepName: "\uBC84\uC11C\uCEE4"
   ChangeStateList:
-  - stateType: 2
+  - stateType: 3
+    chageState: {fileID: 0}
+  - stateType: 4
     chageState: {fileID: 0}

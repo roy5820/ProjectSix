@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CheepID: 101
   CheepName: "\uC720\uB9AC\uB300\uD3EC"
-  ApplyStateType: 0
-  ApplyState: {fileID: 0}
+  ChangeStateList:
+  - stateType: 2
+    chageState: {fileID: 0}
