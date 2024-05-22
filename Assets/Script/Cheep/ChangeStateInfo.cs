@@ -6,5 +6,5 @@ using UnityEngine;
 public class ChangeStateInfo
 {
     public StateEnum stateType;//변경할 상태 타입
-    public StateBase chageState;//변경할 상태
+    public string chageStateName;//변경할 상태명
 }

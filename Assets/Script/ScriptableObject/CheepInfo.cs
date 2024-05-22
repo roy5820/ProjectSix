@@ -5,5 +5,5 @@ public class CheepInfo : ScriptableObject
 {
     public int CheepID;//칩 ID
     public string CheepName;//칩 이름
-    public List<ChangeStateInfo> ChangeStateList = new List<ChangeStateInfo>();//변경할 상태 목록 
+    public CheepType cheepType;//적욕할 칩 타입
 }

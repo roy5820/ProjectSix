@@ -6,6 +6,8 @@ public class SetCheepForCharacter : MonoBehaviour
 {
     GameManager _gameManager = null;//게임 메니저
     CharacterController _chracterController = null;//캐릭터 컨트롤러
+    
+    public List<CheepPair> cheepList = new List<CheepPair>();//칩 타입과 기능 구현 컴포넌트를 연결하는 리스트
     // Start is called before the first frame update
     void Start()
     {
