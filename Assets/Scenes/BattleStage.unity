@@ -1015,10 +1015,6 @@ PrefabInstance:
       value: BattleManager
       objectReference: {fileID: 0}
     - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
       propertyPath: PlatformList.Array.data[0]
       value: 
       objectReference: {fileID: 139821784}
@@ -1038,82 +1034,6 @@ PrefabInstance:
       propertyPath: PlatformList.Array.data[4]
       value: 
       objectReference: {fileID: 368253734}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].bestTurn
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].worstTurn
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].stageLevel
-      value: 99
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[0].enemyInfoList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[1].enemyInfoList.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[2].enemyInfoList.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[0].enemyInfoList.Array.data[0].enemyPre
-      value: 
-      objectReference: {fileID: 8181526713515221384, guid: 1bf957c32e778514ba806c7fb6bc36a1, type: 3}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[0].enemyInfoList.Array.data[0].spawnPos
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[0].enemyInfoList.Array.data[1].enemyPre
-      value: 
-      objectReference: {fileID: 7367348094448265910, guid: 3fb4ee80037dbbb4491122a5ae1e43fc, type: 3}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[0].enemyInfoList.Array.data[1].spawnPos
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[1].enemyInfoList.Array.data[0].enemyPre
-      value: 
-      objectReference: {fileID: 7367348094448265910, guid: 3fb4ee80037dbbb4491122a5ae1e43fc, type: 3}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[1].enemyInfoList.Array.data[0].spawnPos
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[1].enemyInfoList.Array.data[1].enemyPre
-      value: 
-      objectReference: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[1].enemyInfoList.Array.data[1].spawnPos
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[2].enemyInfoList.Array.data[0].enemyPre
-      value: 
-      objectReference: {fileID: 7367348094448265910, guid: 3fb4ee80037dbbb4491122a5ae1e43fc, type: 3}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[2].enemyInfoList.Array.data[0].spawnPos
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[2].enemyInfoList.Array.data[1].enemyPre
-      value: 
-      objectReference: {fileID: 7035493264269367571, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
-    - target: {fileID: 9084005088245458650, guid: 4b8d57e5a3e964e428b14efdb4f3a344, type: 3}
-      propertyPath: stageList.Array.data[3].waveList.Array.data[2].enemyInfoList.Array.data[1].spawnPos
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

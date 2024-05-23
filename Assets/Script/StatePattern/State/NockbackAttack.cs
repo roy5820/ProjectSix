@@ -26,7 +26,6 @@ public class NockbackAttack : StateBase
         if (attackIndex >= 0 && attackIndex < _battleManager.PlatformList.Length)
         {
             //애니메이션 처리 부분
-            Debug.Log(attackIndex + ", " + attackIndex);
             //데미지 계산 부분
             _battleManager.GiveDamage(attackIndex, thisDamage);
 

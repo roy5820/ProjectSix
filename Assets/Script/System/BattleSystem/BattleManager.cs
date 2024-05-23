@@ -20,7 +20,6 @@ public class BattleManager : Singleton<BattleManager>
     private TurnEventType turnState;//현제 턴상태
     public int nowTurnCnt = 0;//경과 턴
 
-
     public int stageRewards {get;set;}//스테이지 보상
 
     //활성화시 이벤트 설정
@@ -102,6 +101,7 @@ public class BattleManager : Singleton<BattleManager>
         //스테이지 정보 갱신
         List<StageInfo> filteredStages =
             stageList.Where(stage => stage.stageLevel == gameManager.stageLevel[gameManager.nowProgress]).ToList();
+
         if (filteredStages.Count > 0)
         {
             int ranIndex = Random.Range(0, filteredStages.Count);
@@ -179,6 +179,7 @@ public class BattleManager : Singleton<BattleManager>
         }
         else
         {
+            Debug.Log(onEnemysList.Count);
             nowTurnCnt++;//턴 종료 시 경과 턴 +1
             TurnEventBus.Publish(TurnEventType.TurnStart);//TurnStart 이벤트 발생
         }
