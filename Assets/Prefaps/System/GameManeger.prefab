@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroy: 1
   reseKey: 114
-  stageLevel: 0200000001000000020000000300000063000000
+  stageLevel: 01000000020000000300000063000000
   nowProgress: 0
   itemDB:
   - itemId: 101
@@ -84,4 +84,7 @@ MonoBehaviour:
   playerStatus: {fileID: 0}
   cheepDataBase:
   - {fileID: 11400000, guid: 043075be44999524299c91fc7c30e998, type: 2}
-  cheepInventory: 67000000
+  - {fileID: 11400000, guid: 86c3dbb2926426b4c9f449b64e77ea18, type: 2}
+  - {fileID: 11400000, guid: 63c43f643bef9a44191c571d64245d67, type: 2}
+  - {fileID: 11400000, guid: bd15a804dbefdb14cb1f3ad75272273f, type: 2}
+  cheepInventory: 6700000066000000

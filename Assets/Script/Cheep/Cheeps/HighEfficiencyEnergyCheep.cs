@@ -10,7 +10,7 @@ public class HighEfficiencyEnergyCheep : CheepBase
     //베터리 회복량 증가 및 최대 베터리량 감소
     public override void ActivateChipEffect()
     {
-        PlayerController _playerController = transform.parent.parent.GetComponent<PlayerController>();
+        PlayerController _playerController = (PlayerController)_characterController;
         //배터리 회복량 증가 및 최대 개수 감소
         if(_playerController != null)
         {
