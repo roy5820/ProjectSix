@@ -23,8 +23,13 @@ public class SetCheepForCharacter : MonoBehaviour
             //칩인벤토리에 있는 칩들의 ID를 바탕으로 칩 기능구현 하는 CHeepBase객체를 찾아 실행
             for(int i = 0; i < haveCheepIDS.Count; i++)
             {
-                CheepType cheepType = cheepList.Find(cheep => cheep.CheepID.Equals(haveCheepIDS[i])).cheepType;
-                TransitionCheep(cheepType);
+                
+                CheepInfo cheepInfo = cheepList.Find(cheep => cheep.CheepID.Equals(haveCheepIDS[i]));
+                if(cheepInfo != null )
+                {
+                    CheepType cheepType = cheepList.Find(cheep => cheep.CheepID.Equals(haveCheepIDS[i])).cheepType;
+                    TransitionCheep(cheepType);
+                }
             }
 
         }

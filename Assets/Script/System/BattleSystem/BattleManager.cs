@@ -179,7 +179,6 @@ public class BattleManager : Singleton<BattleManager>
         }
         else
         {
-            Debug.Log(onEnemysList.Count);
             nowTurnCnt++;//턴 종료 시 경과 턴 +1
             TurnEventBus.Publish(TurnEventType.TurnStart);//TurnStart 이벤트 발생
         }

@@ -93,6 +93,39 @@ MonoBehaviour:
   stateAniParamater: DashState
   sateDelayTime: 0.5
   movePower: 30
+--- !u!1 &1679298471220920767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1649157232106796960}
+  m_Layer: 6
+  m_Name: Cheeps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1649157232106796960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679298471220920767}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2, y: -3.3980002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2141237736962655111}
+  - {fileID: 2891297415684912777}
+  m_Father: {fileID: 7035493264269367568}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1956882288161063754
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,6 +173,52 @@ MonoBehaviour:
   stateAniParamater: AttackState
   sateDelayTime: 0.2
   powerCoefficient: 1
+--- !u!1 &1990371880653679821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2891297415684912777}
+  - component: {fileID: 8187545037705518744}
+  m_Layer: 6
+  m_Name: Berserker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2891297415684912777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990371880653679821}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1649157232106796960}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8187545037705518744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990371880653679821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ba5c9df0242a04abfcd09d64ef1161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageWhenMovingState: {fileID: 0}
+  recoveHPWhenKillState: {fileID: 1614953013812635714}
 --- !u!1 &2178880529283880895
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +265,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: 
   sateDelayTime: 0.5
+--- !u!1 &2377873982140489553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141237736962655111}
+  - component: {fileID: 6686857583008459604}
+  m_Layer: 6
+  m_Name: GlassCannon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2141237736962655111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377873982140489553}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1649157232106796960}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6686857583008459604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377873982140489553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d27cc2ba80fea45a034828db61f34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeState: {fileID: 912505243052051269}
 --- !u!1 &2456989992406353346
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +402,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: DieState
   sateDelayTime: 1.2
+--- !u!1 &4921610667119086802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4195829201411478902}
+  - component: {fileID: 912505243052051269}
+  m_Layer: 0
+  m_Name: DoubleDamageHit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4195829201411478902
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4921610667119086802}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 653756127961594840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &912505243052051269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4921610667119086802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a57e5a5299577e408a5aeb3e93f3702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateAniParamater: 
+  sateDelayTime: 0
+  DamageAmplification: 2
 --- !u!1 &5790145671296567765
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,13 +482,62 @@ Transform:
   - {fileID: 3091910315434989581}
   - {fileID: 4224528036693632303}
   - {fileID: 2795672715325928434}
+  - {fileID: 4195829201411478902}
   - {fileID: 2606923679299881864}
   - {fileID: 8023524808883595150}
+  - {fileID: 6370848552760728301}
   - {fileID: 9142476428608443709}
   - {fileID: 533063705607718997}
   - {fileID: 7735257348980861839}
   m_Father: {fileID: 7035493264269367568}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6099224528248911377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6370848552760728301}
+  - component: {fileID: 1614953013812635714}
+  m_Layer: 0
+  m_Name: RecoveHPWhenKill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6370848552760728301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6099224528248911377}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 653756127961594840}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1614953013812635714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6099224528248911377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b41a02d882150b43a0c2098eb3a5000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateAniParamater: DieState
+  sateDelayTime: 1.2
+  recoveryLevel: 75
 --- !u!1 &6223696861117701081
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,6 +668,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 653756127961594840}
+  - {fileID: 1649157232106796960}
   - {fileID: 720827163021459218}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -696,7 +917,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df4908fd9eb6ca44daeff8f68e4f6440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cheepList: []
+  cheepList:
+  - cheepType: 1
+    cheepComponent: {fileID: 6686857583008459604}
+  - cheepType: 0
+    cheepComponent: {fileID: 8187545037705518744}
 --- !u!1 &7410507398545312991
 GameObject:
   m_ObjectHideFlags: 0

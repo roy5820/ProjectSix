@@ -7,20 +7,27 @@ public class HitState : StateBase
 
     protected override IEnumerator StateFuntion(params object[] datas)
     {
-        hitDamage = (int)datas[0];
-        //피격 처리 기능 구현
-        characterController.NowHp -= hitDamage;//데미지 계산
-        Debug.Log(gameObject.name + " is Hit, nowDamage: "+ hitDamage + " nowHp: " + characterController.NowHp);
-
-        yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
-
-        //체력이 0이면 죽음 처리
-        if (characterController.NowHp == 0)
+        Debug.Log("Hit 부모 호출");
+        //체력이 0 이상일 때 피격 처리
+        if (characterController.NowHp > 0)
         {
-            characterController.isAvailabilityOfAction = false;
-            characterController.TransitionState(StateEnum.Die);
-            yield break;
+            hitDamage = (int)datas[0];
+            Debug.Log("Hit: " + hitDamage);
+            //피격 처리 기능 구현
+            characterController.NowHp -= hitDamage;//데미지 계산
+            Debug.Log(gameObject.name + " is Hit, nowDamage: " + hitDamage + " nowHp: " + characterController.NowHp);
+
+            yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
+
+            //체력이 0이면 죽음 처리
+            if (characterController.NowHp == 0)
+            {
+                characterController.isAvailabilityOfAction = false;
+                characterController.TransitionState(StateEnum.Die);
+                yield break;
+            }
         }
+        
 
         yield return base.StateFuntion(datas);
     }

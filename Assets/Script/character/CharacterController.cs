@@ -77,14 +77,14 @@ public abstract class CharacterController : MonoBehaviour
     {
         Debug.Log(stateEnum);
         CharacterState state = _stateList.Find(state => state.stateEnum.Equals(stateEnum)).state;//상태 타입으로 상태 가져오기
-        
-        characterStateContext.Transition((CharacterState)state, datas);
+        characterStateContext.Transition(state, datas);
     }
 
     //상태 타입에 따른 연결된 상태구현 컴포넌트 바꾸는 함수
     public void ChangingStateByType(StateEnum stateEnum, StateBase changState)
     {
         int stateIndex = _stateList.FindIndex(state => state.stateEnum.Equals(stateEnum));//바꿀 상태의 리스트 위치 가져오기
+
         //바꾸려는 상태가 있으면 changState로 상태 변경
         if (stateIndex >= 0)
             _stateList[stateIndex].state = changState;

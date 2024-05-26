@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 //서브 하트 칩 기능 구현(죽었다 부활하는 기능)ㅂ
 public class ServeHartState : StateBase
@@ -10,7 +12,6 @@ public class ServeHartState : StateBase
     protected override IEnumerator StateFuntion(params object[] datas)
     {
         yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
-        
         //부활 가능 여부 체크
         if (serveHartCnt > 0)
         {
@@ -24,7 +25,5 @@ public class ServeHartState : StateBase
         {
             characterController.TransitionState(StateEnum.Die);
         }
-
-        yield return null;
     }
 }

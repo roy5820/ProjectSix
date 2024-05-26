@@ -1074,6 +1074,26 @@ PrefabInstance:
       propertyPath: stageLevel.Array.data[1]
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6907261508417593615, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
+      propertyPath: cheepInventory.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907261508417593615, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
+      propertyPath: cheepInventory.Array.data[0]
+      value: 104
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907261508417593615, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
+      propertyPath: cheepInventory.Array.data[1]
+      value: 103
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907261508417593615, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
+      propertyPath: cheepInventory.Array.data[2]
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907261508417593615, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
+      propertyPath: cheepInventory.Array.data[3]
+      value: 101
+      objectReference: {fileID: 0}
     - target: {fileID: 8034181183838411811, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

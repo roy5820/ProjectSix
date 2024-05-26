@@ -8,6 +8,7 @@ public class ServeHartCheep : CheepBase
     //서브 하트 칩 기능 구현
     public override void ActivateChipEffect()
     {
+        base.ActivateChipEffect();
         //죽을 시 쓸 상태를 서브 하트 상태로 바꿈
         if(serveHartState != null)
         {

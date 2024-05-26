@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c62641a298d5f4d956850d083cddc6, type: 3}
   m_Name: Berserker
   m_EditorClassIdentifier: 
-  CheepID: 0
+  CheepID: 104
   CheepName: "\uBC84\uC11C\uCEE4"
-  ChangeStateList:
-  - stateType: 3
-    chageState: {fileID: 0}
-  - stateType: 4
-    chageState: {fileID: 0}
+  cheepType: 0
