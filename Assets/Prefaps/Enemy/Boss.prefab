@@ -112,7 +112,7 @@ PrefabInstance:
     - target: {fileID: 1411968381574116720, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 5e94c82d0f7c716469b0f4666d67a664, type: 2}
+      objectReference: {fileID: 9100000, guid: 981d9db7589d2fd4cab72874f9428983, type: 2}
     - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: minHpFillAmount
       value: 0.15
@@ -271,7 +271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[0].NeedToPrepare
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[1].NeedToPrepare
