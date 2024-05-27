@@ -20,18 +20,26 @@ public class ChipInventorySystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        _gameManager = GameManager.Instance;//게임메니저 초기화
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        SetChipBtn();//버튼 초기화
     }
 
     //cheep리스트를 바탕으로 칩 버튼 구성하는 함수
     private void SetChipBtn()
     {
+        //기존 Insert버튼 지우기
+        while(notHeldChipBtnList.Count > 0)
+        {
+            Destroy(notHeldChipBtnList[0]);
+            notHeldChipBtnList.RemoveAt(0);
+        }
+
+        heldChipList = notHeldChipList = _gameManager.cheepDataBase;//칩 데이터 가져오기
+
+        List<int> cheepInventory = _gameManager.cheepInventory;//보유 칩 정보 가져오기
+
+
 
     }
 }
