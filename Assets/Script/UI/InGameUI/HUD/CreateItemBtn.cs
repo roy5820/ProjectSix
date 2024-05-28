@@ -33,8 +33,6 @@ public class CreateItemBtn : MonoBehaviour
             // 버튼의 RectTransform 가져와서 위치 설정
             RectTransform rectTransform = itemBtn.GetComponent<RectTransform>();
             rectTransform.anchoredPosition = new Vector2(posX, rectTransform.anchoredPosition.y);
-
-            
         }
     }
 }

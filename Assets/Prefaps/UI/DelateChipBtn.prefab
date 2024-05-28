@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6102442363537182025}
   - component: {fileID: 2198210954782937013}
   - component: {fileID: 2661125383310017232}
-  - component: {fileID: 7230426287712741514}
+  - component: {fileID: 8529957353964635951}
   m_Layer: 5
   m_Name: DelateChipBtn
   m_TagString: Untagged
@@ -121,8 +121,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2198210954782937013}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7230426287712741514
+      m_Calls:
+      - m_Target: {fileID: 8529957353964635951}
+        m_TargetAssemblyTypeName: HeldChipBtn, Assembly-CSharp
+        m_MethodName: OnChipEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8529957353964635951
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,9 +143,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 224835159154972838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8306fe5634fc104d94f859a185ec776, type: 3}
+  m_Script: {fileID: 11500000, guid: 035d277b9b9d30742baebf5d1799a419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chipInfo: {fileID: 0}
+  nullIcon: {fileID: 0}
+  chipIndex: -1
 --- !u!1 &5254371852227252797
 GameObject:
   m_ObjectHideFlags: 0

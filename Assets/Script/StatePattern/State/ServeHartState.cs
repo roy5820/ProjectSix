@@ -14,10 +14,10 @@ public class ServeHartState : DieState
     public string deadAniPara = "DieState";//죽을 시 재생할 애니 파라미터
     protected override IEnumerator StateFuntion(params object[] datas)
     {
-        yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
         //부활 가능 여부 체크
         if (serveHartCnt > 0)
         {
+            yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
             serveHartCnt--;//부활 횟수 감소
             characterController._characterStatus.nowHp = (int)(characterController._characterStatus.maxHp * recoveryRate);//체력 회복
             yield return new WaitForSeconds(respawnDelay);//리스폰 시 딜레이 구현

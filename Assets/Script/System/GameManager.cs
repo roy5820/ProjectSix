@@ -159,11 +159,5 @@ public class GameManager : Singleton<GameManager>
 
         return returnList;//칩 리스트 출력
     }
-
-    //칩 인벤토리의 값을 설정하는 함수 index: 칩 설정 위치, cheepID: 설정할 칩 ID
-    public void SetCheepList(int index, int cheepID)
-    {
-
-    }
     
 }

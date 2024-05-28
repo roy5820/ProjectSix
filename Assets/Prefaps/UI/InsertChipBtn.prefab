@@ -121,7 +121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4646999357375581789}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2905261587614852865}
+        m_TargetAssemblyTypeName: InsertChipBtn, Assembly-CSharp
+        m_MethodName: OnChipEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2905261587614852865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8306fe5634fc104d94f859a185ec776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chipInfo: {fileID: 0}
+  nullIcon: {fileID: 0}
 --- !u!1 &7061412077555778157
 GameObject:
   m_ObjectHideFlags: 0

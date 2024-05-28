@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CheepID: 103
   CheepName: "\uACE0\uD6A8\uC728 \uC5D0\uB108\uC9C0"
+  CheepEffectExplanationTxt: "\uB9E4\uD134 \uBC30\uD130\uB9AC \uD68C\uBCF5\uB7C9
+    \uC99D\uAC00, \uCD5C\uB300 \uBC30\uD130\uB9AC\uB7C9 \uAC10\uC18C"
+  CheepIcon: {fileID: 21300000, guid: d4383c9e9ec525141bf99213691b3796, type: 3}
   cheepType: 2

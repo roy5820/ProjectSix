@@ -2,18 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //칩 삽입 버튼 구현
-public class InsertChipBtn : MonoBehaviour
+public class InsertChipBtn : ChipBtnBase
 {
-    private GameManager _gameManager;//게임 메니저
-    public CheepInfo chipInfo = null;// 현재칩 정보
-    private void Start()
+    //칩삽입 이벤트 구현 부분
+    public override void OnChipEvent()
     {
-        _gameManager = GameManager.Instance;//게임메니저 초기화
-    }
+        //삽입 자리 탐색
+        int insertIndex = _gameManager.cheepInventory.FindIndex(chip => chip.Equals(-1));
+        
+        //삽입할 자리가 없으면 리턴
+        if (insertIndex == -1)
+            return;
 
-    //칩 인벤토리에 추가하는 함수
-    public void OnInsertChip()
-    {
+        _gameManager.cheepInventory[insertIndex] = chipInfo.CheepID;//칩 장비
 
+        base.OnChipEvent();
     }
 }
