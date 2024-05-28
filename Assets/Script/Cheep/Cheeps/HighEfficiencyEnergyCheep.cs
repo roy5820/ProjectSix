@@ -10,10 +10,13 @@ public class HighEfficiencyEnergyCheep : CheepBase
     //베터리 회복량 증가 및 최대 베터리량 감소
     public override void ActivateChipEffect()
     {
+        base.ActivateChipEffect();
         PlayerController _playerController = (PlayerController)_characterController;
+        Debug.Log(_playerController);
         //배터리 회복량 증가 및 최대 개수 감소
-        if(_playerController != null)
+        if (_playerController != null)
         {
+            Debug.Log("고효율 배터리 적용");
             _playerController.batteryRecoveryFigures += increasedRecoveryAmount;
             _playerController._characterStatus.maxBattery = maximumReductionAmount;
         }

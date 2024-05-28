@@ -48,5 +48,6 @@ public class ChipBtnBase : MonoBehaviour, IPointerEnterHandler
         {
             ChipInventorySystem chipInventorySystem = GetComponentInParent<ChipInventorySystem>();//칩인벤토리 관리 시스템 가져오기
             chipInventorySystem.UpdateChipInfo(chipInfo);//칩 정보창 업데이트 함수 호출
-        }    }
+        }    
+    }
 }

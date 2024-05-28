@@ -10,6 +10,6 @@ public class CheepBase : MonoBehaviour
     //칩기능 구현을 할 부분
     public virtual void ActivateChipEffect()
     {
-        _characterController = transform.parent.parent.GetComponent<CharacterController>();//캐릭터 컨트롤러
+        _characterController = transform.GetComponentInParent<CharacterController>();//캐릭터 컨트롤러
     }
 }

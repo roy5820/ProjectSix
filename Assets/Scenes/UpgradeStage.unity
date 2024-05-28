@@ -472,11 +472,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1325554091 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3880769915457743033, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
-  m_PrefabInstance: {fileID: 1504461936}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1460784633
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,10 +525,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 269923890722066662, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 963655942700207001, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -614,14 +605,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2636760430971686533, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5372408016709066723, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
-      propertyPath: cheepMountedPanel
-      value: 
-      objectReference: {fileID: 1325554091}
     - target: {fileID: 8245499314473479288, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
       propertyPath: m_Name
       value: UpgradeStageUi

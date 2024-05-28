@@ -113,9 +113,9 @@ GameObject:
   - component: {fileID: 520665383554115684}
   - component: {fileID: 520665383554115686}
   - component: {fileID: 520665383554115674}
+  - component: {fileID: 3589588470541684213}
   - component: {fileID: 3296758257399933357}
   - component: {fileID: 520665383554115685}
-  - component: {fileID: 3589588470541684213}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -332,6 +332,27 @@ MonoBehaviour:
     stateEnum: 14
   nowBattery: 0
   batteryRecoveryFigures: 1
+--- !u!114 &3589588470541684213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520665383554115680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4908fd9eb6ca44daeff8f68e4f6440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cheepList:
+  - cheepType: 2
+    cheepComponent: {fileID: 2670196460496165363}
+  - cheepType: 3
+    cheepComponent: {fileID: 3727195435960071956}
+  - cheepType: 1
+    cheepComponent: {fileID: 9146302936568011133}
+  - cheepType: 0
+    cheepComponent: {fileID: 4548688269813853286}
 --- !u!114 &3296758257399933357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,27 +383,6 @@ MonoBehaviour:
   platformLayer:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &3589588470541684213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 520665383554115680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df4908fd9eb6ca44daeff8f68e4f6440, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cheepList:
-  - cheepType: 2
-    cheepComponent: {fileID: 2670196460496165363}
-  - cheepType: 3
-    cheepComponent: {fileID: 3727195435960071956}
-  - cheepType: 1
-    cheepComponent: {fileID: 9146302936568011133}
-  - cheepType: 0
-    cheepComponent: {fileID: 4548688269813853286}
 --- !u!1 &960184110260013419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,6 +1210,8 @@ MonoBehaviour:
   serveHartCnt: 1
   recoveryRate: 0.5
   respawnDelay: 0.3
+  deadDelay: 1.2
+  deadAniPara: DieState
 --- !u!1 &8005539305195442120
 GameObject:
   m_ObjectHideFlags: 0
