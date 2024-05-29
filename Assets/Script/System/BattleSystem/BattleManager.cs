@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class BattleManager : Singleton<BattleManager>
@@ -43,11 +42,6 @@ public class BattleManager : Singleton<BattleManager>
     private void Start()
     {
         BattleStart();
-    }
-
-    private void Reset()
-    {
-        
     }
 
     private void Update()

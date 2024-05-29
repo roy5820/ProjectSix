@@ -60,7 +60,7 @@ public class PlayerController : CharacterController
             _characterStatus = ScriptableObject.CreateInstance<CharacterStatus>();
             _characterStatus.maxHp = gameManager.playerStatus.maxHp;
             _characterStatus.nowHp = gameManager.playerStatus.nowHp;
-            _characterStatus.maxBattery = gameManager.playerStatus.maxBattery;
+            _characterStatus.maxBattery = _characterStatusOriginal.maxBattery;
             _characterStatus.offensePower = gameManager.playerStatus.offensePower;
 
             return;
