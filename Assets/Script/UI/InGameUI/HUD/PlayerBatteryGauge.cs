@@ -28,8 +28,6 @@ public class PlayerBatteryGauge : MonoBehaviour
         //배터리 값 갱신
         if (_playerController)
         {
-            
-
             //현재 배터리량 값 갱신
             for (int i = 0; i < batteryImageList.Count; i++)
             {

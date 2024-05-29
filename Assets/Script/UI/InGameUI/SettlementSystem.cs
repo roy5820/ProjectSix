@@ -10,7 +10,8 @@ public class Settlement : MonoBehaviour
     //결산 표시 텍스트
     public Text stageRewards;
     public Text stageBonus;
-    public Text moneyHeld;
+    public Text beforMoneyHeld;
+    public Text afterMoneyHeld;
     //활성화시 이벤트 설정
     private void OnEnable()
     {
@@ -34,6 +35,7 @@ public class Settlement : MonoBehaviour
 
         //스테이지 성과에 따른 결과 표시 기능 구현
         string battleAchievements = null;
+        int afterMoney = _gameManager.moneyHeld;//기존 잔액
         int bonusAmount = 0;
         int clearTurn = _battleManager.nowTurnCnt;
         int bestTurn = _battleManager.nowStage.bestTurn;
@@ -55,9 +57,10 @@ public class Settlement : MonoBehaviour
         }
         _gameManager.moneyHeld += (_battleManager.stageRewards + bonusAmount);
 
+        beforMoneyHeld.text = afterMoney.ToString();
         resultTxt.text = battleAchievements;
         stageRewards.text = _battleManager.stageRewards.ToString();
         stageBonus.text = bonusAmount.ToString();
-        moneyHeld.text = _gameManager.moneyHeld.ToString();
+        afterMoneyHeld.text = _gameManager.moneyHeld.ToString();
     }
 }
