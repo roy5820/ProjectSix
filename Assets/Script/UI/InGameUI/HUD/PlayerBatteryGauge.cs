@@ -13,6 +13,7 @@ public class PlayerBatteryGauge : MonoBehaviour
     public Sprite batteryOnImg;//배터리 켜졌을 때 이미지
     public Sprite batteryOffImg;//배터리 꺼졌을 때 이미지
 
+    private Coroutine runningCoroutine = null;//현재 진행중인 코루틴
 
     // Start is called before the first frame update
     void Start()
@@ -27,22 +28,7 @@ public class PlayerBatteryGauge : MonoBehaviour
         //배터리 값 갱신
         if (_playerController)
         {
-            //최대 배터리용량 변경에 따른 버튼 배치 다시하기
-            if (batteryImageList.Count != _playerController._characterStatus.maxBattery)
-            {
-                
-                //기존 배터리 제거
-                while(batteryImageList.Count == 0)
-                {
-                    Destroy(batteryImageList[0].gameObject);
-                    batteryImageList.RemoveAt(0);
-                }
-                
-                //새로 생성
-                StartCoroutine(SetMaxBattery());
-            }
             
-
 
             //현재 배터리량 값 갱신
             for (int i = 0; i < batteryImageList.Count; i++)
@@ -73,7 +59,7 @@ public class PlayerBatteryGauge : MonoBehaviour
             //battery Image컴포넌트 리스트에 넣기
             batteryImageList.Add(battery);
         }
-
+        runningCoroutine = null;
         yield return null;
     }
 }
