@@ -47,7 +47,7 @@ public class PlayerController : CharacterController
         {
             _battleManager.onPlayer = this;
         }
-            
+        
         isAvailabilityOfAction = true;
         NowBattery += batteryRecoveryFigures;
     }
@@ -67,6 +67,14 @@ public class PlayerController : CharacterController
         }
 
         base.StatusValueSetting();
+    }
+
+    public override void TurnEnd()
+    {
+        //신경폭주 상태일 경우 턴 종료 안됨
+        if (false)
+            return;
+        base.TurnEnd();
     }
 
     private void OnDestroy()
