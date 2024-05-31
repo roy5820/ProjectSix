@@ -34,8 +34,8 @@ public abstract class CharacterController : MonoBehaviour
     public bool isTurnReady = false;//턴 준비 여부
     public bool isAvailabilityOfAction = true;//행동 가능 여부
     public bool isStatusProcessing = false;//상태 처리 여부
-    public bool isCharging = false;//공격 준비 여부
     public bool isInvincibility = false;//무적 여부
+    public int delayTurn = 0;//행동 준비 턴 수
     //상태 정보
     [System.Serializable]
     public class StateInfo

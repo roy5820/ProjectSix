@@ -8,7 +8,7 @@ public class EnemyReadyToState : StateBase
     
     protected override IEnumerator StateFuntion(params object[] datas)
     {
-        characterController.isCharging = true;//공격 준비 여부 true
+        characterController.delayTurn = (int)datas[1];//공격 준비 턴 설정
         //현재 준비중인 상태의 행동 아이콘을 띄우는 부분
         EnemyHUDController eHUD = characterController.GetComponent<EnemyHUDController>();
         
@@ -21,12 +21,12 @@ public class EnemyReadyToState : StateBase
         while (true)
         {
             //차징 종료 시 상태 실행
-            if (!characterController.isCharging && characterController.isAvailabilityOfAction)
+            if (characterController.delayTurn == 0 && characterController.isAvailabilityOfAction)
                 break;
             //턴중 행동 불가 될경우 공격 취소
             else if (!characterController.isAvailabilityOfAction)
             {
-                characterController.isCharging = false;
+                characterController.delayTurn = 0;
                 eHUD.OffActionIcon();
                 yield break;
             }
@@ -36,7 +36,7 @@ public class EnemyReadyToState : StateBase
         //행동 아이콘 제거 부분
         eHUD.OffActionIcon();
 
-        characterController.isCharging = false;//공격 준비 여부 false
+        characterController.delayTurn = 0;//공격 준비 여부 false
 
         //매개 변수 값에 따라 행동 실행 여부 선택
         if (datas[0] != null)

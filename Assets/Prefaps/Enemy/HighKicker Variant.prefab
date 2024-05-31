@@ -157,6 +157,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: stateConditions.Array.data[1].delayTurn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[1].stateEnum
       value: 6
       objectReference: {fileID: 0}

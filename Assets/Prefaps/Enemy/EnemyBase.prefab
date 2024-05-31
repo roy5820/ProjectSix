@@ -834,8 +834,8 @@ MonoBehaviour:
   isTurnReady: 0
   isAvailabilityOfAction: 1
   isStatusProcessing: 0
-  isCharging: 0
   isInvincibility: 0
+  delayTurn: 0
   _stateList:
   - state: {fileID: 4121761619425807549}
     stateEnum: 0
@@ -860,13 +860,13 @@ MonoBehaviour:
   - stateEnum: 6
     range: 1
     cooldown: 0
-    nowCoolTIme: 0
-    NeedToPrepare: 1
+    nowCoolTime: 0
+    delayTurn: 1
   - stateEnum: 7
     range: 99
     cooldown: 0
-    nowCoolTIme: 0
-    NeedToPrepare: 0
+    nowCoolTime: 0
+    delayTurn: 0
 --- !u!114 &4668484187003630436
 MonoBehaviour:
   m_ObjectHideFlags: 0

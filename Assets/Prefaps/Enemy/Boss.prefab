@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6476481503275284488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8878611132046664153}
+  m_Layer: 7
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8878611132046664153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6476481503275284488}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3, y: 4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8181526713515221387}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7287640792528249064
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,12 +285,24 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: stateConditions.Array.data[0].delayTurn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[0].stateEnum
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: stateConditions.Array.data[1].delayTurn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[1].stateEnum
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: stateConditions.Array.data[2].delayTurn
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[2].stateEnum
@@ -312,6 +355,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7035493264269367568, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 8878611132046664153}
     - targetCorrespondingSourceObject: {fileID: 653756127961594840, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2971001195565066224}
@@ -323,5 +369,10 @@ PrefabInstance:
 --- !u!4 &1818068143050769219 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 653756127961594840, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+  m_PrefabInstance: {fileID: 1164612525360969883}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8181526713515221387 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7035493264269367568, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
   m_PrefabInstance: {fileID: 1164612525360969883}
   m_PrefabAsset: {fileID: 0}

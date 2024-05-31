@@ -15,8 +15,8 @@ public class EnemyController : CharacterController
         public StateEnum stateEnum; // 상태 열거형
         public float range; // 사거리, 99는 사거리 없음
         public int cooldown; // 쿨타임, 0 쿨타임 없음
-        public int nowCoolTIme;//현제 쿨타임
-        public bool NeedToPrepare;//파라미터
+        public int nowCoolTime;//현제 쿨타임
+        public int delayTurn;//상태 딜레이 턴
     }
 
     public List<StateCondition> stateConditions; // 상태와 조건의 리스트
@@ -44,25 +44,30 @@ public class EnemyController : CharacterController
     {
         base.TurnStart();
         //전턴 준비중인 행동이 없으면 실행
-        if (isAvailabilityOfAction && !isCharging)
+        if (isAvailabilityOfAction && delayTurn == 0)
         {
             //적 행동 쿨타임 돌리기
             foreach (StateCondition condition in stateConditions)
             {
                 //스킬 사용 가능 여부 체크
-                if (condition.nowCoolTIme > 0)
+                if (condition.nowCoolTime > 0)
                 {
-                    condition.nowCoolTIme--;//쿨타임 감소
+                    condition.nowCoolTime--;//쿨타임 감소
                 }
             }
 
             StateEnum selectStateEnum = SelectState();//enemy턴이 되었을 때 행동가능 상태면 해동 실행
         }
         //차징 종료 후 EnemyReadyToState에서 인식하여 준비하던 상태 실행
-        else if (isCharging)
-            isCharging = false;
         else
+        {
+            if (delayTurn > 0)
+            {
+                delayTurn--;
+            }
             TurnEnd();
+        }
+            
     }
 
     //stateConditions리스트에서 사용가능 한 상태를 우선순위에 따라 찾아 해당 상태 열거형을 반환
@@ -97,13 +102,13 @@ public class EnemyController : CharacterController
         foreach (StateCondition condition in stateConditions)
         {
             //스킬 사용 가능 여부 체크
-            if (condition.nowCoolTIme == 0 && condition.range >= distance)
+            if (condition.nowCoolTime == 0 && condition.range >= distance)
             {
-                condition.nowCoolTIme = condition.cooldown;//쿨타임 적용
+                condition.nowCoolTime = condition.cooldown;//쿨타임 적용
                 Debug.Log(condition.stateEnum);
                 //준비해야하는 스킬인지에 따른 상태 처리
-                if (condition.NeedToPrepare)
-                    TransitionState(StateEnum.EnemyReadyToState, condition.stateEnum);//상태 실행
+                if (condition.delayTurn > 0)
+                    TransitionState(StateEnum.EnemyReadyToState, condition.stateEnum, condition.delayTurn);//상태 실행
                 else
                     TransitionState(condition.stateEnum);//상태 실행
                 break;

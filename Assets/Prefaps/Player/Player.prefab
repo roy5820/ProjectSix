@@ -303,8 +303,8 @@ MonoBehaviour:
   isTurnReady: 0
   isAvailabilityOfAction: 1
   isStatusProcessing: 0
-  isCharging: 0
   isInvincibility: 0
+  delayTurn: 0
   _stateList:
   - state: {fileID: 7172335447429195455}
     stateEnum: 1
@@ -1205,8 +1205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff2633c3bd1c3140a095f80101d9346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAniParamater: 
-  sateDelayTime: 0.5
+  stateAniParamater: HitState
+  sateDelayTime: 0.7
   serveHartCnt: 1
   recoveryRate: 0.5
   respawnDelay: 0.3
