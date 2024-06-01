@@ -13,7 +13,7 @@ public class NormalAttackState : StateBase
             powerCoefficient = (float)datas[0];
         int thisDamage = (int)(characterController._characterStatus.offensePower * powerCoefficient);//계산할 데미지 구하기
 
-        CharacterDirection characterDir = characterController.direction;//캐릭터 방향가져오기
+        CharacterDirection characterDir = characterController.Direction;//캐릭터 방향가져오기
 
         int onIndex = _battleManager.GetPlatformIndexForObj(characterController.gameObject);
         int attackIndex = onIndex + ((int)characterDir);//공격 할 플렛폼 index

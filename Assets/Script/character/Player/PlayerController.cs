@@ -31,9 +31,8 @@ public class PlayerController : CharacterController
     {
         TurnEventBus.Unsubscribe(TurnEventType.PlayerTurn, TurnStart);
     }
-    protected override void Start()
+    protected void Start()
     {
-        base.Start();
         //상태값 초기화
         nowBattery = _characterStatus.maxBattery / 2;
     }

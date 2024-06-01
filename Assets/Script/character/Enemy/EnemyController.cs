@@ -33,11 +33,9 @@ public class EnemyController : CharacterController
         TurnEventBus.Unsubscribe(TurnEventType.EnemyTurn, TurnStart);
     }
 
-    protected override void Start()
+    protected void Start()
     {
         DirectionSetting();
-        base.Start();
-        
     }
 
     public override void TurnStart()
@@ -59,15 +57,20 @@ public class EnemyController : CharacterController
             StateEnum selectStateEnum = SelectState();//enemy턴이 되었을 때 행동가능 상태면 해동 실행
         }
         //차징 종료 후 EnemyReadyToState에서 인식하여 준비하던 상태 실행
-        else
+        else if (delayTurn > 0)
         {
-            if (delayTurn > 0)
-            {
-                delayTurn--;
-            }
-            TurnEnd();
+            delayTurn--;
+            if(delayTurn > 0)
+                TurnEnd();
         }
-            
+        else
+            TurnEnd();
+    }
+
+    public override void TurnEnd()
+    {
+        base.TurnEnd();
+        _battleManager.ReadyForEnemy();
     }
 
     //stateConditions리스트에서 사용가능 한 상태를 우선순위에 따라 찾아 해당 상태 열거형을 반환
@@ -80,9 +83,9 @@ public class EnemyController : CharacterController
         int thisIndex = _battleManager.GetPlatformIndexForObj(gameObject);//현재 위치 값 가져오기
         int countDistance = 0;//플레이어 와의 거리를 카운트할 값이 저장되는 변수
         //플레이어 와의 거리 가져오기
-        for (int i = thisIndex + (direction == CharacterDirection.Right ? 1: -1);
-            direction == CharacterDirection.Right ? i < _battleManager.PlatformList.Length : i >= 0;
-            i += (direction == CharacterDirection.Right ? 1 : -1))
+        for (int i = thisIndex + (Direction == CharacterDirection.Right ? 1: -1);
+            Direction == CharacterDirection.Right ? i < _battleManager.PlatformList.Length : i >= 0;
+            i += (Direction == CharacterDirection.Right ? 1 : -1))
         {
             
             countDistance++;
@@ -127,13 +130,10 @@ public class EnemyController : CharacterController
     private void DirectionSetting()
     {
         //적 스폰 시 플레이어를 바라보는 방향으로 전환 시키기
-        float targetIndex = _battleManager.onPlayer.gameObject.transform.position.x;//플레이어 위치 가져오기
-        float thisIndex = gameObject.transform.position.x;//해당 객체의 위치 가져오기
-
-        //바로보는 방향에 타겟이 없으면 방향 전환
-        if (targetIndex < thisIndex)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
+        float targetPos = _battleManager.onPlayer.gameObject.transform.position.x;//플레이어 위치 가져오기
+        float thisPos = gameObject.transform.position.x;//해당 객체의 위치 가져오기
+        Direction = targetPos < thisPos ? CharacterDirection.Left : CharacterDirection.Right;
     }
+
+
 }

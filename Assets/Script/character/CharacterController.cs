@@ -29,8 +29,22 @@ public abstract class CharacterController : MonoBehaviour
             }
         }
     }
-    
-    public CharacterDirection direction { get; set; }//캐릭터가 바라보는 방향
+    //캐릭터가 바라보는 방향
+    public CharacterDirection direction = CharacterDirection.Right;
+    public CharacterDirection Direction {
+        get
+        {
+            return direction;
+        }
+        set
+        {
+            if (value == CharacterDirection.Right)
+                transform.localScale = new Vector3(1, 1, 1);
+            else
+                transform.localScale = new Vector3(-1, 1, 1);
+            direction = value;
+        }
+    }
     public bool isTurnReady = false;//턴 준비 여부
     public bool isAvailabilityOfAction = true;//행동 가능 여부
     public bool isStatusProcessing = false;//상태 처리 여부
@@ -56,10 +70,6 @@ public abstract class CharacterController : MonoBehaviour
         StatusValueSetting();
     }
 
-    protected virtual void Start()
-    {
-        direction = this.transform.localScale.x > 0 ? CharacterDirection.Right : CharacterDirection.Left;//캐릭터 방향 값 초기화
-    }
     //캐릭터 턴 시작 처리
     public virtual void TurnStart()
     {

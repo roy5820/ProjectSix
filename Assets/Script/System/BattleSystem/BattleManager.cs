@@ -20,7 +20,7 @@ public class BattleManager : Singleton<BattleManager>
     public int nowTurnCnt = 0;//경과 턴
 
     public int stageRewards {get;set;}//스테이지 보상
-
+    private int readyForEnemyCnt = 0;//준비된 적 수
     //활성화시 이벤트 설정
     private void OnEnable()
     {
@@ -76,12 +76,16 @@ public class BattleManager : Singleton<BattleManager>
             {
                 EnemyController eContoller = enemy.GetComponent<EnemyController>();
                 if (!eContoller.isStatusProcessing && !eContoller.isTurnReady)
+                {
                     readyForEnemyCnt++;
+                }
             }
 
             //턴 전환 여부 체크
-            if (!onPlayer.isStatusProcessing && onEnemysList.Count == readyForEnemyCnt)
+            if (!onPlayer.isStatusProcessing && onEnemysList.Count <= readyForEnemyCnt)
+            {
                 TurnEventBus.Publish(TurnEventType.TurnEnd);//턴 전환 이벤트 발생
+            }
         }
     }
 
@@ -105,7 +109,7 @@ public class BattleManager : Singleton<BattleManager>
         //전투 시작 시 스테이지 정보 초기화 작업
         nowTurnCnt = 0;
         nextWaveNum = 0;
-
+        readyForEnemyCnt = 0;
         TurnEventBus. Publish(TurnEventType.TurnStart);//TurnStart 이벤트 발생
     }
 
@@ -174,6 +178,7 @@ public class BattleManager : Singleton<BattleManager>
         else
         {
             nowTurnCnt++;//턴 종료 시 경과 턴 +1
+            
             TurnEventBus.Publish(TurnEventType.TurnStart);//TurnStart 이벤트 발생
         }
     }
@@ -233,5 +238,11 @@ public class BattleManager : Singleton<BattleManager>
         {
             tartget.GetComponent<CharacterController>().TransitionState(StateEnum.Hit, damage);//대상 피격 상태 발생
         }
+    }
+
+    //적 오브젝트 턴 종료시 readyForEnemyCnt++
+    public void ReadyForEnemy()
+    {
+        readyForEnemyCnt++;
     }
 }

@@ -300,13 +300,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterStatusOriginal: {fileID: 11400000, guid: 7af3458cec7e52845ad28b08c9a3ca68, type: 2}
   _characterStatus: {fileID: 0}
+  direction: 1
   isTurnReady: 0
   isAvailabilityOfAction: 1
   isStatusProcessing: 0
   isInvincibility: 0
   delayTurn: 0
   _stateList:
-  - state: {fileID: 7172335447429195455}
+  - state: {fileID: 3185217476324514115}
     stateEnum: 1
   - state: {fileID: 5371684512084625283}
     stateEnum: 2

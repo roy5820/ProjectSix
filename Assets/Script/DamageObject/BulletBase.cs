@@ -6,7 +6,7 @@ public class BulletBase : MonoBehaviour
 {
     public float speed = 60f;//발사 속도
     public int damage;//데미지
-    bool isFire = true;//발사 여부
+    protected bool isFire = true;//발사 여부
     public CharacterDirection fireDir = 0;//발사방향
     private Rigidbody2D rBody;//리지드 바디
 

@@ -12,7 +12,7 @@ public class TrackPlayerState : StateBase
         int thisIndex = _battleManager.GetPlatformIndexForObj(characterController.gameObject);//해당 객체의 위치 가져오기
         
         CharacterDirection targetDir = targetIndex < thisIndex ? CharacterDirection.Left : CharacterDirection.Right ;//타겟 방향
-        CharacterDirection thisDir = characterController.direction;//해당 객체의 바라보는 방향
+        CharacterDirection thisDir = characterController.Direction;//해당 객체의 바라보는 방향
         
         //바로보는 방향에 타겟이 있으면 전진
         if (targetDir == thisDir)

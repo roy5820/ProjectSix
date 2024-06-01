@@ -34,7 +34,7 @@ public class EnemyHUDController : MonoBehaviour
         //상태 값에 따른 HUD 없데이트
         if (_eController)
         {
-            if (_eController.direction == CharacterDirection.Right)
+            if (_eController.Direction == CharacterDirection.Right)
                 this.transform.GetChild(0).localScale = new Vector3(-0.1f, 0.1f, 0.1f);
             else
                 this.transform.GetChild(0).localScale = new Vector3(0.1f, 0.1f, 0.1f);

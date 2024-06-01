@@ -15,7 +15,7 @@ public class BulletFireState : StateBase
             powerCoefficient = (float)datas[0];
         int thisDamage = (int)(characterController._characterStatus.offensePower * powerCoefficient);//계산할 데미지 구하기
 
-        CharacterDirection characterDir = characterController.direction;//바라보는 방향가져오기
+        CharacterDirection characterDir = characterController.Direction;//바라보는 방향가져오기
 
         GameObject bullet = Instantiate(bulletPre, firePoint.position, Quaternion.identity);//총알 오브젝트 생성
         BulletBase bulletBase = bullet.GetComponent<BulletBase>();//총알 컴포넌트가져오기

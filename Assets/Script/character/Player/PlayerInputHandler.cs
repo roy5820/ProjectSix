@@ -43,7 +43,7 @@ public class PlayerInputHandler : MonoBehaviour
                     if (_battleManager.GetOnPlatformObj(nexIndex) == null)
                     {
                         //이동 방향에 따른 isFront 파라미터 변경
-                        if (moveDir == _playerController.direction)
+                        if (moveDir == _playerController.Direction)
                             _playerAni.SetBool("IsFront", true);
                         else
                             _playerAni.SetBool("IsFront", false);
@@ -52,7 +52,7 @@ public class PlayerInputHandler : MonoBehaviour
                     }
                         
                     //아닐 시 공격 실행
-                    else if(moveDir == _playerController.direction)
+                    else if(moveDir == _playerController.Direction)
                     {
                         _playerController.isAvailabilityOfAction = false;
                         _playerController.TransitionState(StateEnum.NormalAttack, 1.0f);
