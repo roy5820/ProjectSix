@@ -79,7 +79,14 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f600742b018c7704f8f5944eb817b357, type: 2}
     - {fileID: 11400000, guid: 8b78a757daae28248a9c5aa260b978d7, type: 2}
     - {fileID: 11400000, guid: 3fe3b15b9a2e0e149b6700bd8a401161, type: 2}
-  playerItemDB: []
+  - itemId: 202
+    itemName: "\uC2E0\uACBD\uACC4 \uD3ED\uC8FC"
+    itemInfo:
+    - {fileID: 11400000, guid: 7e64b2b782fc2a14fb61b4a0e102b665, type: 2}
+  playerItemDB:
+  - itemId: 202
+    itemLevel: 0
+    itemInfo: {fileID: 11400000, guid: 7e64b2b782fc2a14fb61b4a0e102b665, type: 2}
   startMoney: 1500
   playerStatus: {fileID: 0}
   cheepDataBase:

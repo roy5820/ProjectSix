@@ -24,7 +24,7 @@ public class UseItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             itemImg.sprite = itemInfo.itemImg;//아이템 이미지=
             offense = itemInfo.offense;//아이템 계수
-                                       //지불 코스트
+            //지불 코스트
             useCost = itemInfo.useCost;
             itemText.text = itemInfo.useCost.ToString();
             useState = itemInfo.state;//상할 상태
@@ -37,10 +37,12 @@ public class UseItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         //아이템 사용 가능 여부 체크
         if (_playerController)
         {
-            if (!_playerController.isStatusProcessing && _playerController.isTurnReady && _playerController.nowBattery >= useCost)
+            if (!_playerController.isStatusProcessing && _playerController.isTurnReady && (_playerController.nowBattery >= useCost || _playerController.isBreakdown))
             {
                 _playerController.TransitionState(useState, offense);//아이템 사용
-                _playerController.nowBattery -= useCost;//코스트 지불
+                //폭주 상태가 아닐경우 코스트 지불
+                if(!_playerController.isBreakdown)
+                    _playerController.nowBattery -= useCost;//코스트 지불
             }
         }
     }

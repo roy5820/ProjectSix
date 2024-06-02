@@ -20,6 +20,7 @@ public class PlayerController : CharacterController
         }
     }
     public int batteryRecoveryFigures = 1;//배터리 회복 량
+    public bool isBreakdown = false;//폭주 여부
     //이벤트 등록
     private void OnEnable()
     {
@@ -71,8 +72,12 @@ public class PlayerController : CharacterController
     public override void TurnEnd()
     {
         //신경폭주 상태일 경우 턴 종료 안됨
-        if (false)
+        if (isBreakdown)
+        {
+            NowBattery--;//행동 후 배터리 1 감소
             return;
+        }
+            
         base.TurnEnd();
     }
 

@@ -331,8 +331,11 @@ MonoBehaviour:
     stateEnum: 12
   - state: {fileID: 4158208292314828440}
     stateEnum: 14
+  - state: {fileID: 7638871067574441436}
+    stateEnum: 17
   nowBattery: 0
   batteryRecoveryFigures: 1
+  isBreakdown: 0
 --- !u!114 &3589588470541684213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1071,6 +1074,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeState: {fileID: 1243250319318656608}
+--- !u!1 &7031147587998128808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1229300023282764043}
+  - component: {fileID: 7638871067574441436}
+  m_Layer: 0
+  m_Name: NervousBreakdown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1229300023282764043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7031147587998128808}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 179049701720933937}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7638871067574441436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7031147587998128808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79a6232ccfc621549bd1d47e4472cb18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateAniParamater: 
+  sateDelayTime: 0.5
 --- !u!1 &7257447165367544589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1306,7 @@ Transform:
   - {fileID: 9097167087900718870}
   - {fileID: 6269568998242534408}
   - {fileID: 7137771189357118599}
+  - {fileID: 1229300023282764043}
   m_Father: {fileID: 520665383554115681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8126884533329817948

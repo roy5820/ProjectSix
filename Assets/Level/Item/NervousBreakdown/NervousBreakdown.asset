@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 475e4ab617f6b714eb6020bb6fda1c02, type: 3}
+  m_Name: NervousBreakdown
+  m_EditorClassIdentifier: 
+  itemName: "\uC2E0\uACBD\uACC4 \uD3ED\uC8FC"
+  itemType: 1
+  itemImg: {fileID: 21300000, guid: 25278816e1546b341aedd8258fcfdc5b, type: 3}
+  state: 17
+  price: 3000
+  offense: 0
+  useCost: 4
+  effectDescription: "\uD589\uB3D9 \uD6C4 \uBC30\uD130\uB9AC\uB97C 1 \uC18C\uBAA8\uD558\uB294
+    \uB300\uC2E0 \uBC30\uD130\uB9AC\uAC00 0\uC774 \uB420\uB54C\uAE4C\uC9C0 \uD134\uC774
+    \uC885\uB8CC\uB418\uC9C0 \uC54A\uC73C\uBA70, \uBAA8\uB4E0 \uC544\uC774\uD15C\uC758
+    \uCF54\uC2A4\uD2B8\uAC00 1\uC774 \uB41C\uB2E4."
+  storeDescription: "\uD589\uB3D9 \uD6C4 \uBC30\uD130\uB9AC\uB97C 1 \uC18C\uBAA8\uD558\uB294
+    \uB300\uC2E0 \uBC30\uD130\uB9AC\uAC00 0\uC774 \uB420\uB54C\uAE4C\uC9C0 \uD134\uC774
+    \uC885\uB8CC\uB418\uC9C0 \uC54A\uC73C\uBA70, \uBAA8\uB4E0 \uC544\uC774\uD15C\uC758
+    \uCF54\uC2A4\uD2B8\uAC00 1\uC774 \uB41C\uB2E4."
