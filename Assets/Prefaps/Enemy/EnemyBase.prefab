@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a57e5a5299577e408a5aeb3e93f3702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAniParamater: 
+  stateAniParamater: HitState
   sateDelayTime: 0
   DamageAmplification: 2
 --- !u!1 &5790145671296567765
@@ -831,6 +831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterStatusOriginal: {fileID: 11400000, guid: 83bebf4817a6ee44e8fd86c13833aca9, type: 2}
   _characterStatus: {fileID: 0}
+  direction: 1
   isTurnReady: 0
   isAvailabilityOfAction: 1
   isStatusProcessing: 0
@@ -882,7 +883,7 @@ MonoBehaviour:
   hpBar: {fileID: 1259997053823850288}
   actionIcon: {fileID: 3872324380237681398}
   fillSpeed: 10
-  minHpFillAmount: 0.15
+  minHpFillAmount: 0.1
   actionList:
   - stateEnum: 6
     icon: {fileID: 21300000, guid: 43b57258f8d6fd3478b356d39fe0d09e, type: 3}

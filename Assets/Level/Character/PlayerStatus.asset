@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 300
   nowHp: 300
-  offensePower: 85
+  offensePower: 80
   maxBattery: 10

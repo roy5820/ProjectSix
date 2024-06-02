@@ -1303,6 +1303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a57e5a5299577e408a5aeb3e93f3702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAniParamater: 
+  stateAniParamater: HitState
   sateDelayTime: 0
   DamageAmplification: 2
