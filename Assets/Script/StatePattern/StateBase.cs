@@ -9,6 +9,8 @@ public abstract class StateBase : MonoBehaviour, CharacterState
 
     public string stateAniParamater = "";
     public float sateDelayTime = 0.5f;//상태 딜레이 시간
+    public SoundManger _soundManger = null;//사운드 메니저
+    public AudioClip stateSound = null;//상태 시 재생할 사운드
 
     public void Handle(CharacterController characterController, params object[] datas)
     {
@@ -24,7 +26,13 @@ public abstract class StateBase : MonoBehaviour, CharacterState
         //캐릭터 행동 애니메이션 출력
         if (!string.IsNullOrEmpty(stateAniParamater) && this._animator && _animator.GetCurrentAnimatorStateInfo(0).IsName("IDLE"))
             _animator.SetTrigger(stateAniParamater);
-         
+        //사운드 메니저 가져오기
+        if(!_soundManger)
+            _soundManger = SoundManger.Instance;
+        //사운드 출력
+        if (_soundManger && stateSound)
+            _soundManger.PlaySFX(stateSound);
+
         characterController.isStatusProcessing = true;//캐릭터 상태 처리 중
 
         StartCoroutine(StateFuntion(datas));//기능 구현 코루틴 함수 호출

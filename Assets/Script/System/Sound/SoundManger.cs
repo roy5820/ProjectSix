@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManger : MonoBehaviour
+public class SoundManger : Singleton<SoundManger>
 {
-    // Start is called before the first frame update
-    void Start()
+    // BGM과 SFX를 위한 AudioSources
+    public AudioSource bgmSource;
+    public AudioSource sfxSource;
+
+
+    // BGM 재생
+    public void PlayBGM(AudioClip bgmClip)
     {
-        
+        bgmSource.clip = bgmClip;
+        bgmSource.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    // SFX 재생
+    public void PlaySFX(AudioClip sfxClip)
     {
-        
+        sfxSource.PlayOneShot(sfxClip);
     }
 }
