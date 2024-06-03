@@ -605,6 +605,78 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1967984006753802728, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967984006753802728, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070293700611361605, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070293700611361605, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859407290988707019, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859407290988707019, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859407290988707019, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512880784680200197, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512880784680200197, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512880784680200197, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336805757883932014, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336805757883932014, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126203012299762400, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126203012299762400, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126203012299762400, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6785519999330926126, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6785519999330926126, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6785519999330926126, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8245499314473479288, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
       propertyPath: m_Name
       value: UpgradeStageUi
@@ -613,6 +685,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 8918345881096605635, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918345881096605635, guid: bfd8160f6486ffa42be1a575a1c9d1c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneMovement : MonoBehaviour
+public class ButtonController : MonoBehaviour
 {
     //æ¿¿Ãµø √≥∏Æ
     public void OnSceneMove(string sceneName)
