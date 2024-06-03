@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c161663f65a4f43823bb60549393cf, type: 3}
   m_Name: HighKickerVariantStatus
   m_EditorClassIdentifier: 
-  maxHp: 200
-  nowHp: 200
+  maxHp: 175
+  nowHp: 175
   offensePower: 75
   maxBattery: 0

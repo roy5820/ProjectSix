@@ -60,7 +60,8 @@ public class BattleManager : Singleton<BattleManager>
             }
 
             //턴 전환 여부 체크
-            if(!onPlayer.isTurnReady && !onPlayer.isStatusProcessing && onEnemysList.Count == readyForEnemyCnt)
+            if((!onPlayer.isTurnReady && !onPlayer.isStatusProcessing && onEnemysList.Count == readyForEnemyCnt)
+                || (onEnemysList.Count == 0 && !onPlayer.isStatusProcessing))
             {
                 TurnEventBus.Publish(TurnEventType.EnemyTurn);//턴 전환 이벤트 발생
             }
