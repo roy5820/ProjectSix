@@ -83,10 +83,7 @@ MonoBehaviour:
     itemName: "\uC2E0\uACBD\uACC4 \uD3ED\uC8FC"
     itemInfo:
     - {fileID: 11400000, guid: 7e64b2b782fc2a14fb61b4a0e102b665, type: 2}
-  playerItemDB:
-  - itemId: 202
-    itemLevel: 0
-    itemInfo: {fileID: 11400000, guid: 7e64b2b782fc2a14fb61b4a0e102b665, type: 2}
+  playerItemDB: []
   startMoney: 3000
   playerStatus: {fileID: 0}
   cheepDataBase:

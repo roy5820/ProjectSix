@@ -354,11 +354,11 @@ RectTransform:
   - {fileID: 1350245639827588046}
   m_Father: {fileID: 4595899021850199030}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: -10}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -10}
+  m_SizeDelta: {x: 1000, y: 80}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &2047145383181913813
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -442,8 +442,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5781161496222894055}
-        m_TargetAssemblyTypeName: SceneMovement, Assembly-CSharp
-        m_MethodName: OnClosePopupPanel
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnDownPopupPanel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1213755349336640245}
@@ -465,6 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9776b4afbbb614f8a05f95be5071ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popupMoveSeed: 0.1
 --- !u!1 &572551601892665893
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4595899021850199030
 RectTransform:
   m_ObjectHideFlags: 0
@@ -659,11 +660,11 @@ RectTransform:
   - {fileID: 8218451255740071238}
   m_Father: {fileID: 963655942700207001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 1.5}
 --- !u!222 &4430361430623226887
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2963,7 +2964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &449791319506994533
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2981,11 +2982,11 @@ RectTransform:
   - {fileID: 3571166228635461060}
   m_Father: {fileID: 963655942700207001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 1.5}
 --- !u!222 &8982743044369394035
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3500,6 +3501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9776b4afbbb614f8a05f95be5071ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popupMoveSeed: 0.01
 --- !u!1 &6560404888030701491
 GameObject:
   m_ObjectHideFlags: 0
@@ -3693,11 +3695,11 @@ RectTransform:
   - {fileID: 3478456132087791074}
   m_Father: {fileID: 449791319506994533}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: -10}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -10}
+  m_SizeDelta: {x: 1000, y: 80}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &1034167348526296517
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3780,9 +3782,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3488329615054957509}
-        m_TargetAssemblyTypeName: SceneMovement, Assembly-CSharp
-        m_MethodName: OnClosePopupPanel
+      - m_Target: {fileID: 5781161496222894055}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnDownPopupPanel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 5146122009701049679}
@@ -3804,6 +3806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9776b4afbbb614f8a05f95be5071ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popupMoveSeed: 0.1
 --- !u!1 &6845597499589761807
 GameObject:
   m_ObjectHideFlags: 0
@@ -4376,8 +4379,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2103644892556229702}
-        m_TargetAssemblyTypeName: SceneMovement, Assembly-CSharp
-        m_MethodName: OnOpenPopupPanel
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnUpPopupPanel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1213755349336640245}
@@ -4399,6 +4402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9776b4afbbb614f8a05f95be5071ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popupMoveSeed: 0.1
 --- !u!1 &7574941492401547219
 GameObject:
   m_ObjectHideFlags: 0
@@ -4754,8 +4758,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7297505683821161156}
-        m_TargetAssemblyTypeName: SceneMovement, Assembly-CSharp
-        m_MethodName: OnOpenPopupPanel
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnUpPopupPanel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 5146122009701049679}
@@ -4777,6 +4781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9776b4afbbb614f8a05f95be5071ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popupMoveSeed: 0.1
 --- !u!1 &7901259905955238081
 GameObject:
   m_ObjectHideFlags: 0
