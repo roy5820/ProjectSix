@@ -33,7 +33,7 @@ public class ButtonController : MonoBehaviour
         GameManager _gameManager = GameManager.Instance;
         if (_gameManager != null)
         {
-            Destroy(_gameManager);
+            Destroy(_gameManager.gameObject);
         }
     }
 }

@@ -48,7 +48,7 @@ public class PlayerBatteryGauge : MonoBehaviour
             GameObject battery = Instantiate(batteryPre, transform);
 
             // 버튼의 위치 계산
-            float posX = startX + i * batteryInterval;
+            float posX = i * batteryInterval;
 
             // battery의 RectTransform 가져와서 위치 설정
             RectTransform rectTransform = battery.GetComponent<RectTransform>();

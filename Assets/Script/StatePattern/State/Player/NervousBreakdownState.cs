@@ -22,12 +22,12 @@ public class NervousBreakdownState : StateBase
     {
         playerController = (PlayerController)characterController;//플레이어 컨트롤러 가져오기
         yield return new WaitForSeconds(sateDelayTime);//딜레이 구현
-        
+
         //폭주 여부에 따른 효과 처리
+        BackgroundEffectController.Instance.OnSwitchBackgroundAfterimage();//배경 잔상효과 적용
         //폭주 종료 처리
         if (playerController.isBreakdown)
         {
-            characterController.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             playerController.isBreakdown = false;
             StopCoroutine(endCheckCoroutine);
             characterController.TurnEnd();
@@ -35,7 +35,6 @@ public class NervousBreakdownState : StateBase
         //폭주 시작 처리
         else
         {
-            characterController.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             playerController.isBreakdown = true;
             endCheckCoroutine = StartCoroutine(BreakdownEndCheck());
         }

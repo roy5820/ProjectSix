@@ -34,7 +34,7 @@ public class tmp : MonoBehaviour
     {
         float sound = sfxSlider.value;
 
-        if (sound == -40f) audioMixer.SetFloat("BGM", -80);
-        else audioMixer.SetFloat("BGM", sound);
+        if (sound == -40f) audioMixer.SetFloat("SFX", -80);
+        else audioMixer.SetFloat("SFX", sound);
     }
 }

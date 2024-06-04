@@ -7,6 +7,7 @@ public class CreateItemBtn : MonoBehaviour
 {
     GameManager _gameManager;//게임 메니저
     private List<ItemInfo> itemList = new List<ItemInfo>();//플레이어가 보유중인 아이템 DB
+    public GameObject itemCreationPanel = null;
     public float btnInterval = 40;//버튼 간격
     public GameObject useItemBtnPre;
     // Start is called before the first frame update
@@ -24,7 +25,7 @@ public class CreateItemBtn : MonoBehaviour
         {
             //아이템 정보 갱신 후 프리펩 생성
             useItemBtnPre.GetComponent<UseItem>().itemInfo = itemList[i];
-            GameObject itemBtn = Instantiate(useItemBtnPre, transform);
+            GameObject itemBtn = Instantiate(useItemBtnPre, itemCreationPanel.transform);
 
 
             // 버튼의 위치 계산

@@ -46,7 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: 
   sateDelayTime: 0.75
-  powerCoefficient: 1
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
+  powerCoefficient: 1.5
   bulletPre: {fileID: 6243990242209194675, guid: a511be00fed14314d8009495a84787b8, type: 3}
   firePoint: {fileID: 8878611132046664153}
 --- !u!1 &5954343606852594410
@@ -95,6 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: 
   sateDelayTime: 0.75
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
   AttackStateType: 12
   AttackDelayTurn: 2
 --- !u!1 &6476481503275284488
@@ -174,7 +178,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: DashState
   sateDelayTime: 0.3
-  powerCoefficient: 1.5
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
+  powerCoefficient: 1.2
   dashSpeed: 60
   dashRange: 2
 --- !u!1 &7752424465731405037
@@ -223,7 +229,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: 
   sateDelayTime: 0.5
-  powerCoefficient: 1
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
+  powerCoefficient: 2
   nockBackPower: 100
 --- !u!1001 &1164612525360969883
 PrefabInstance:

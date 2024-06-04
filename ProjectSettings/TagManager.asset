@@ -45,6 +45,9 @@ TagManager:
   - name: BackGound
     uniqueID: 3276495501
     locked: 0
+  - name: BackGoundsAfterimage
+    uniqueID: 4086455487
+    locked: 0
   - name: DecoObj
     uniqueID: 571056099
     locked: 0

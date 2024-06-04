@@ -51,7 +51,7 @@ public class UseItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnPointerEnter(PointerEventData eventData)
     {
         itemInspectorPre.GetComponent<ItemInspectorPopup>().itemInfo = itemInfo;
-        popupPre = Instantiate(itemInspectorPre, this.transform.parent.parent);
+        popupPre = Instantiate(itemInspectorPre, this.transform.parent.parent.parent);
     }
 
     //마우스 포인터가 벗어 날 경우 앙이템 인스펙터 창을 없애는 이벤트
