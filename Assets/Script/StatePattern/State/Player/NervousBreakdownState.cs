@@ -21,7 +21,6 @@ public class NervousBreakdownState : StateBase
     protected override IEnumerator StateFuntion(params object[] datas)
     {
         playerController = (PlayerController)characterController;//플레이어 컨트롤러 가져오기
-        yield return new WaitForSeconds(sateDelayTime);//딜레이 구현
 
         //폭주 여부에 따른 효과 처리
         BackgroundEffectController.Instance.OnSwitchBackgroundAfterimage();//배경 잔상효과 적용

@@ -39,10 +39,10 @@ public class UseItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             if (!_playerController.isStatusProcessing && _playerController.isTurnReady && (_playerController.nowBattery >= useCost || _playerController.isBreakdown))
             {
-                _playerController.TransitionState(useState, offense);//아이템 사용
                 //폭주 상태가 아닐경우 코스트 지불
-                if(!_playerController.isBreakdown)
+                if (!_playerController.isBreakdown)
                     _playerController.nowBattery -= useCost;//코스트 지불
+                _playerController.TransitionState(useState, offense);//아이템 사용
             }
         }
     }

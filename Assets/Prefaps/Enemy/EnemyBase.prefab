@@ -46,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: 
   sateDelayTime: 0
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
 --- !u!1 &1036463730476937744
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +94,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: DashState
   sateDelayTime: 0.5
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
   movePower: 30
 --- !u!1 &1679298471220920767
 GameObject:
@@ -172,6 +176,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: AttackState
   sateDelayTime: 0.2
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
   powerCoefficient: 1
 --- !u!1 &1990371880653679821
 GameObject:
@@ -265,6 +271,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: 
   sateDelayTime: 0.5
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
 --- !u!1 &2377873982140489553
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +364,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: 
   sateDelayTime: 0.5
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
 --- !u!1 &2910182323074540282
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +412,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: DieState
   sateDelayTime: 1.2
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
 --- !u!1 &4921610667119086802
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,7 +459,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: HitState
-  sateDelayTime: 0
+  sateDelayTime: 0.8
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
+  cameraShake: 0
+  shakeTime: 0.3
+  shakePower: 20
   DamageAmplification: 2
 --- !u!1 &5790145671296567765
 GameObject:
@@ -537,6 +554,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: DieState
   sateDelayTime: 1.2
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
   recoveryLevel: 75
 --- !u!1 &6223696861117701081
 GameObject:
@@ -584,6 +603,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: 
   sateDelayTime: 0.5
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
 --- !u!1 &6924408500839719625
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,6 +651,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: 
   sateDelayTime: 0
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
 --- !u!1 &7035493264269367571
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,7 +734,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1434829513
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 454078903, guid: 1bf08ba1249d6af41b4848066e399c07, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -969,6 +992,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniParamater: HitState
   sateDelayTime: 0.8
+  _soundManger: {fileID: 0}
+  stateSound: {fileID: 0}
+  cameraShake: 0
+  shakeTime: 0.3
+  shakePower: 20
 --- !u!1001 &3379921448193523483
 PrefabInstance:
   m_ObjectHideFlags: 0
