@@ -3619,6 +3619,7 @@ GameObject:
   - component: {fileID: 350710185405626832}
   - component: {fileID: 6496659873760327632}
   - component: {fileID: 5507094420827585719}
+  - component: {fileID: 4682576136971532573}
   m_Layer: 5
   m_Name: StageHUD
   m_TagString: Untagged
@@ -3701,6 +3702,20 @@ MonoBehaviour:
   nowTurnInfoHUD: {fileID: 9130674274689307662}
   stageRewardsHUD: {fileID: 6954540939615913769}
   increaseSpeed: 111
+--- !u!114 &4682576136971532573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595198770667678686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128fe69432428404f8fc650a51681e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardObj: {fileID: 1107670427939937513}
+  TurnSteelTimer: {fileID: 8509109213932829199}
 --- !u!1 &8662505203798904999
 GameObject:
   m_ObjectHideFlags: 0

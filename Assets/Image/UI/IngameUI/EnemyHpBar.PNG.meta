@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 063d35312beb02f4886e29d684b13c18
+guid: 686ac7718d648294e87b3fe76df9aa7d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 22
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,127 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_dash_0
+      name: EnemyHpBar_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 140
-        height: 125
-      alignment: 9
-      pivot: {x: 0.45, y: 0}
+        width: 78
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b99f4410a505ffd41a76527229f00047
-      internalID: -148195214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_dash_1
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 0
-        width: 140
-        height: 125
-      alignment: 9
-      pivot: {x: 0.45, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99147af5c6c1f53488189f32e68106d4
-      internalID: 1254977687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_dash_2
-      rect:
-        serializedVersion: 2
-        x: 280
-        y: 0
-        width: 140
-        height: 125
-      alignment: 9
-      pivot: {x: 0.45, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ef32b85fa2c30e458d3b93846180702
-      internalID: 840860482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_dash_3
-      rect:
-        serializedVersion: 2
-        x: 420
-        y: 0
-        width: 140
-        height: 125
-      alignment: 9
-      pivot: {x: 0.45, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c64aa5f186ac737478e9ed71694ce490
-      internalID: -482238031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_dash_4
-      rect:
-        serializedVersion: 2
-        x: 560
-        y: 0
-        width: 140
-        height: 125
-      alignment: 9
-      pivot: {x: 0.45, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e4b548058bc49f4b9967358380994c5
-      internalID: 990013068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_dash_5
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 0
-        width: 140
-        height: 125
-      alignment: 9
-      pivot: {x: 0.45, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ec448a385f223f4190ac16aade50d29
-      internalID: -14851388
+      spriteID: 3b43addde977df447acf04b8135c7f96
+      internalID: 997308187
       vertices: []
       indices: 
       edges: []
@@ -246,12 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player_dash_0: -148195214
-      player_dash_1: 1254977687
-      player_dash_2: 840860482
-      player_dash_3: -482238031
-      player_dash_4: 990013068
-      player_dash_5: -14851388
+      EnemyHpBar_0: 997308187
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
