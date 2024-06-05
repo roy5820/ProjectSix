@@ -227,8 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b795905ba4c34e43a8890c88b6c27f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAniParamater: 
-  sateDelayTime: 0.5
+  stateAniParamater: AttackState
+  sateDelayTime: 0.2
   _soundManger: {fileID: 0}
   stateSound: {fileID: 0}
   powerCoefficient: 2

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1a5bbcdef7b7c2640b80becaa22a8c67
+guid: 82e9f0d972813c44a9493a318ad5e1f3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -65,7 +65,7 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -94,33 +94,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -136,106 +110,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy-2_idle_0
+      name: boos_d-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 125
-        height: 125
-      alignment: 9
-      pivot: {x: 0.55, y: 0}
+        width: 200
+        height: 159
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2cd02fd193521f44a935fcb15fc5ba6
-      internalID: 879778759
+      spriteID: 4778525799271e244afe20c87a6cabdc
+      internalID: -2104558210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy-2_idle_1
+      name: boos_d-Sheet_1
       rect:
         serializedVersion: 2
-        x: 125
+        x: 200
         y: 0
-        width: 125
-        height: 125
-      alignment: 9
-      pivot: {x: 0.55, y: 0}
+        width: 200
+        height: 159
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bb237d02863dee4c9203464e171f9e5
-      internalID: 1295980538
+      spriteID: ce84cc438b31b174b889ea118104adde
+      internalID: -1314574741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy-2_idle_2
+      name: boos_d-Sheet_2
       rect:
         serializedVersion: 2
-        x: 250
+        x: 400
         y: 0
-        width: 125
-        height: 125
-      alignment: 9
-      pivot: {x: 0.55, y: 0}
+        width: 200
+        height: 159
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f75f4fd32610ccf468c49133d9be46ef
-      internalID: -1665278334
+      spriteID: 2ad30744664a5bd4bb4348590f431d65
+      internalID: 1623216475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy-2_idle_3
+      name: boos_d-Sheet_3
       rect:
         serializedVersion: 2
-        x: 375
+        x: 600
         y: 0
-        width: 125
-        height: 125
-      alignment: 9
-      pivot: {x: 0.55, y: 0}
+        width: 200
+        height: 159
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 700db0c703b7a224591b202e26cec8dd
-      internalID: 2062591952
+      spriteID: c16e061d8db69624a900a9a735a44a6d
+      internalID: -670295563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy-2_idle_4
+      name: boos_d-Sheet_4
       rect:
         serializedVersion: 2
-        x: 500
+        x: 800
         y: 0
-        width: 125
-        height: 125
-      alignment: 9
-      pivot: {x: 0.55, y: 0}
+        width: 200
+        height: 159
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d675ac1bbd1094e4aa82492f90c025e5
-      internalID: -1898092023
+      spriteID: e27de04cabbff2d44970d83aee696429
+      internalID: -436136794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boos_d-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 200
+        height: 159
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95dcf02c2ef62346be8049a4d7a20bd
+      internalID: 2030457493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boos_d-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 200
+        height: 159
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a229de35a75d7594da44e3a363f75b20
+      internalID: 695243623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boos_d-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 200
+        height: 159
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8beeb4d185c3a1c42a27abe6c14aaeaf
+      internalID: 1661099046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boos_d-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 200
+        height: 159
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f27831a08b0a7f40b52ddeae6788c61
+      internalID: 1831461597
       vertices: []
       indices: 
       edges: []
@@ -251,11 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemy-2_idle_0: 879778759
-      enemy-2_idle_1: 1295980538
-      enemy-2_idle_2: -1665278334
-      enemy-2_idle_3: 2062591952
-      enemy-2_idle_4: -1898092023
+      boos_d-Sheet_0: -2104558210
+      boos_d-Sheet_1: -1314574741
+      boos_d-Sheet_2: 1623216475
+      boos_d-Sheet_3: -670295563
+      boos_d-Sheet_4: -436136794
+      boos_d-Sheet_5: 2030457493
+      boos_d-Sheet_6: 695243623
+      boos_d-Sheet_7: 1661099046
+      boos_d-Sheet_8: 1831461597
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

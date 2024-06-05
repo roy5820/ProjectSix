@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   increasedRecoveryAmount: 1
-  maximumReductionAmount: 6
+  maximumReductionAmount: 7
 --- !u!1 &6763941045754566318
 GameObject:
   m_ObjectHideFlags: 0

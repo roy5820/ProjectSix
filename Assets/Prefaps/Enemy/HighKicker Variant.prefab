@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b795905ba4c34e43a8890c88b6c27f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAniParamater: 
-  sateDelayTime: 0.5
+  stateAniParamater: AttackState
+  sateDelayTime: 0.2
   _soundManger: {fileID: 0}
   stateSound: {fileID: 0}
   powerCoefficient: 1
@@ -214,6 +214,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 879778759, guid: 1a5bbcdef7b7c2640b80becaa22a8c67, type: 3}
+    - target: {fileID: 8177145996210550471, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_Color.b
+      value: 0.4584905
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177145996210550471, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4584905
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177145996210550471, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
