@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39c62641a298d5f4d956850d083cddc6, type: 3}
-  m_Name: HighEfficiencyEnergy
+  m_Name: ServeHeart
   m_EditorClassIdentifier: 
-  CheepID: 103
-  CheepName: "\uACE0\uD6A8\uC728 \uC5D0\uB108\uC9C0"
-  CheepEffectExplanationTxt: "\uB9E4\uD134 \uBC30\uD130\uB9AC \uD68C\uBCF5\uB7C9
-    \uC99D\uAC00, \uCD5C\uB300 \uBC30\uD130\uB9AC\uB7C9 \uAC10\uC18C"
-  CheepIcon: {fileID: 21300000, guid: d4383c9e9ec525141bf99213691b3796, type: 3}
-  cheepType: 2
+  CheepID: 102
+  CheepName: "\uC11C\uBE0C\uD558\uD2B8"
+  CheepEffectExplanationTxt: "\uB9E4 \uC2A4\uD14C\uC774\uC9C0 \uBCC4 1\uBC88 \uCE58\uBA85\uC801
+    \uB370\uBBF8\uC9C0\uB97C \uBC1B\uC744 \uC2DC  \uBD80\uD65C \uAC00\uB2A5"
+  CheepIcon: {fileID: 21300000, guid: 120ffee7eba2dc64baedf14c8d832bac, type: 3}
+  cheepType: 3

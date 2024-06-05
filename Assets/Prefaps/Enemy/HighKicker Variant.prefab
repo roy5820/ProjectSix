@@ -70,6 +70,22 @@ PrefabInstance:
       propertyPath: minHpFillAmount
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[0].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 2f78824df164cd34b9cfb730ca38f88e, type: 3}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[1].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 336d49bc94353ed479a8aec469e7e4ae, type: 3}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[1].stateEnum
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367568, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

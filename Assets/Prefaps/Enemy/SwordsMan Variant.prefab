@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: minHpFillAmount
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367568, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2

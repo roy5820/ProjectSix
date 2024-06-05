@@ -910,10 +910,6 @@ MonoBehaviour:
   actionList:
   - stateEnum: 6
     icon: {fileID: 21300000, guid: 43b57258f8d6fd3478b356d39fe0d09e, type: 3}
-  - stateEnum: 9
-    icon: {fileID: 21300000, guid: 918426bc1c4370143a2e7c4599d83e1f, type: 3}
-  - stateEnum: 10
-    icon: {fileID: 21300000, guid: 1024cf20963d6be45a0f7550f661e2fa, type: 3}
 --- !u!114 &7035493264269367594
 MonoBehaviour:
   m_ObjectHideFlags: 0
