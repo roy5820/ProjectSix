@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e17bb05a937e84393b6ce16d75fcde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAniParamater: 
-  sateDelayTime: 0.75
+  stateAniParamater: LaserAttack
+  sateDelayTime: 1
   _soundManger: {fileID: 0}
   stateSound: {fileID: 0}
   powerCoefficient: 1.5
@@ -126,7 +126,7 @@ Transform:
   m_GameObject: {fileID: 6476481503275284488}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 4, z: 0}
+  m_LocalPosition: {x: 7.5, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -158,7 +158,7 @@ Transform:
   m_GameObject: {fileID: 7287640792528249064}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -176,13 +176,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756b17e033c511c4fa9e72d527440375, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAniParamater: DashState
-  sateDelayTime: 0.3
+  stateAniParamater: RushState
+  sateDelayTime: 0.1
   _soundManger: {fileID: 0}
   stateSound: {fileID: 0}
   powerCoefficient: 1.2
   dashSpeed: 60
   dashRange: 2
+  rushDelay: 0.33
 --- !u!1 &7752424465731405037
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,12 +228,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b795905ba4c34e43a8890c88b6c27f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAniParamater: AttackState
-  sateDelayTime: 0.2
+  stateAniParamater: DwonAttackState
+  sateDelayTime: 0.65
   _soundManger: {fileID: 0}
   stateSound: {fileID: 0}
   powerCoefficient: 2
   nockBackPower: 100
+  cameraShake: 1
+  shakeTime: 0.2
+  shakePower: 0.3
 --- !u!1001 &1164612525360969883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -245,6 +249,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 6.94
       objectReference: {fileID: 0}
+    - target: {fileID: 1189646136446838083, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: sateDelayTime
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1411968381574116720, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Controller
       value: 
@@ -256,6 +264,10 @@ PrefabInstance:
     - target: {fileID: 3692023931567630290, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483775109715122026, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: sateDelayTime
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: hpBar
@@ -475,7 +487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[0].nowCoolTime
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[1].nowCoolTime
@@ -498,12 +510,28 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367593, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 21.454546
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035493264269367593, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 7.409091
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035493264269367593, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367593, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177145996210550471, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_Size.x
+      value: 21.454546
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177145996210550471, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_Size.y
+      value: 7.409091
       objectReference: {fileID: 0}
     - target: {fileID: 8177145996210550471, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Sprite

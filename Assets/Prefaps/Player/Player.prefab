@@ -443,6 +443,7 @@ MonoBehaviour:
   powerCoefficient: 1.5
   dashSpeed: 60
   dashRange: 2
+  rushDelay: 0
 --- !u!1 &1132949588621475083
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +902,9 @@ MonoBehaviour:
   stateSound: {fileID: 0}
   powerCoefficient: 1.3
   nockBackPower: 100
+  cameraShake: 0
+  shakeTime: 0.3
+  shakePower: 20
 --- !u!1 &5549311789189142602
 GameObject:
   m_ObjectHideFlags: 0

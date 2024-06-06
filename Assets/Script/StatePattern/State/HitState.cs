@@ -6,7 +6,7 @@ public class HitState : StateBase
     private int hitDamage { get; set; }//피격 시 계산할 데미지
     public bool cameraShake = false;//화면 흔들림 여부
     public float shakeTime = 0.3f;//흔들림 지속 시간
-    public float shakePower = 20f;//흔들림 파워
+    public float shakePower = 0.25f;//흔들림 파워
 
     protected override IEnumerator StateFuntion(params object[] datas)
     {

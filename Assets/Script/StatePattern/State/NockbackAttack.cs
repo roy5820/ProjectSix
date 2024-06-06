@@ -7,11 +7,16 @@ public class NockbackAttack : StateBase
 {
     public float powerCoefficient = 1.0f;
     public float nockBackPower = 100f;
-
+    public bool cameraShake = false;//화면 흔들림 여부
+    public float shakeTime = 0.3f;//흔들림 지속 시간
+    public float shakePower = 20f;//흔들림 파워
     protected override IEnumerator StateFuntion(params object[] datas)
     {
         //공격 구현
         yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
+        //화면 흔들림 구현
+        if (cameraShake)
+            CameraController.Instance.OnShake(shakeTime, shakePower);
         //공격 계수 인자 값이 있으면 값 적용
         if (datas.Length > 0)
             powerCoefficient = (float)datas[0];

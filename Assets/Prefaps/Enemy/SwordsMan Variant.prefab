@@ -51,6 +51,7 @@ MonoBehaviour:
   powerCoefficient: 1.5
   dashSpeed: 60
   dashRange: 2
+  rushDelay: 0
 --- !u!1001 &548598955828622245
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,10 +8,8 @@ public class CameraController : Singleton<CameraController>
     //화면 흔들림 호출 함수
     public void OnShake(float duration, float shakeMagnitude)
     {
-        if (cameraShakeCoroutine != null)
-            StopCoroutine(cameraShakeCoroutine);
-        Debug.Log("ShakeCamera");
-        cameraShakeCoroutine = StartCoroutine(CameraShake(duration, shakeMagnitude));
+        if (cameraShakeCoroutine == null)
+            cameraShakeCoroutine = StartCoroutine(CameraShake(duration, shakeMagnitude));
     }
 
     //화면 흔들림 구현 코루틴 함수

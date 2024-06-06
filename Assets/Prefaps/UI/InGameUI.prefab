@@ -2063,7 +2063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemCreationPanel: {fileID: 3984875890235833110}
-  btnInterval: 125
+  btnInterval: 150
   useItemBtnPre: {fileID: 1859478455967829868, guid: be5e75cebb56a8a4baaa835c60eca599, type: 3}
 --- !u!1 &4440137723141748843
 GameObject:
