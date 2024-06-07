@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroy: 1
   reseKey: 114
-  stageLevel: 0100000002000000010000000300000063000000
+  stageLevel: 6300000001000000020000000200000003000000
   nowProgress: 0
   itemDB:
   - itemId: 101

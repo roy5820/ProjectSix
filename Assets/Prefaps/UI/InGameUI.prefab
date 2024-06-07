@@ -1033,7 +1033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   batteryImageList: []
-  batteryInterval: 60
+  batteryInterval: 45
   batteryPre: {fileID: 7871804630859734758, guid: c77e4b6edbed8254f87c9b7ecb3a2357, type: 3}
   batteryOnImg: {fileID: 21300000, guid: 234bd3dbb3978cd47b299f1fd9972d5a, type: 3}
   batteryOffImg: {fileID: 21300000, guid: dad08d0fdd98b1b4e987caf5a4a17440, type: 3}
