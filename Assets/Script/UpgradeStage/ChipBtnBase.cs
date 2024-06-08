@@ -22,12 +22,13 @@ public class ChipBtnBase : MonoBehaviour, IPointerEnterHandler
         //CheepInfo의 icon이미지 적용
         if (chipInfo != null)
         {
+            chipIcon.gameObject.SetActive(true);
             chipIcon.sprite = chipInfo.CheepIcon;
         }
         //nullIcon 이미지 적용
         else
         {
-            chipIcon.sprite = nullIcon;
+            chipIcon.gameObject.SetActive(false);
         }
     }
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0a5dc7a44f265654db23add12b92bc25
+guid: 80484ec72d0e7974e945824c21f856b1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -110,190 +110,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boosaattack-Sheet_0
+      name: enemy-2_heart_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 267
-        height: 163
+        width: 246
+        height: 125
       alignment: 9
-      pivot: {x: 0.7, y: 0}
+      pivot: {x: 0.85, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc182e557a9b5704e91f2815303d117f
-      internalID: -1964270883
+      spriteID: a212d548a4e1917408ddb2674097c000
+      internalID: 7482156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boosaattack-Sheet_1
+      name: enemy-2_heart_1
       rect:
         serializedVersion: 2
-        x: 267
+        x: 246
         y: 0
-        width: 267
-        height: 163
+        width: 246
+        height: 125
       alignment: 9
-      pivot: {x: 0.7, y: 0}
+      pivot: {x: 0.85, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b9a88e537489484794a0c0200251392
-      internalID: -238179929
+      spriteID: b20890a88653ee04596242de7b2e05a5
+      internalID: -1748551679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boosaattack-Sheet_2
+      name: enemy-2_heart_2
       rect:
         serializedVersion: 2
-        x: 534
+        x: 492
         y: 0
-        width: 267
-        height: 163
+        width: 246
+        height: 125
       alignment: 9
-      pivot: {x: 0.7, y: 0}
+      pivot: {x: 0.85, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4ed3e6d2e34b8e42911f119a6306ae7
-      internalID: -670240523
+      spriteID: b291786d2dff6b248b1a395f58f94d97
+      internalID: 141275624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boosaattack-Sheet_3
+      name: enemy-2_heart_3
       rect:
         serializedVersion: 2
-        x: 801
+        x: 738
         y: 0
-        width: 267
-        height: 163
+        width: 246
+        height: 125
       alignment: 9
-      pivot: {x: 0.7, y: 0}
+      pivot: {x: 0.85, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a70b712f89b2e394ea97e5cf3661db7f
-      internalID: -1055663873
+      spriteID: edc2c5cf244a37b48b885e4becc5cefc
+      internalID: -1560550446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boosaattack-Sheet_4
+      name: enemy-2_heart_4
       rect:
         serializedVersion: 2
-        x: 1068
+        x: 984
         y: 0
-        width: 267
-        height: 163
+        width: 246
+        height: 125
       alignment: 9
-      pivot: {x: 0.7, y: 0}
+      pivot: {x: 0.85, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1324825fb0a28bf44b2637e335d6ff09
-      internalID: -1185636847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boosaattack-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 1335
-        y: 0
-        width: 267
-        height: 163
-      alignment: 9
-      pivot: {x: 0.7, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c711def754210e243be977b38a8d167f
-      internalID: -446023130
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boosaattack-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 1602
-        y: 0
-        width: 267
-        height: 163
-      alignment: 9
-      pivot: {x: 0.7, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d7a065cebb1b01428619d04ca5c665d
-      internalID: -682716580
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boosaattack-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 1869
-        y: 0
-        width: 267
-        height: 163
-      alignment: 9
-      pivot: {x: 0.7, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03ca404a32d42f945a9aa81e0daf997e
-      internalID: -460278982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boosaattack-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 2136
-        y: 0
-        width: 267
-        height: 163
-      alignment: 9
-      pivot: {x: 0.7, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 606f732642c4a9348ab2d280d30112d4
-      internalID: -1374641793
+      spriteID: bfc416e4c3c6e36439f67c9c68960a2c
+      internalID: 1425261346
       vertices: []
       indices: 
       edges: []
@@ -309,15 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boosaattack-Sheet_0: -1964270883
-      boosaattack-Sheet_1: -238179929
-      boosaattack-Sheet_2: -670240523
-      boosaattack-Sheet_3: -1055663873
-      boosaattack-Sheet_4: -1185636847
-      boosaattack-Sheet_5: -446023130
-      boosaattack-Sheet_6: -682716580
-      boosaattack-Sheet_7: -460278982
-      boosaattack-Sheet_8: -1374641793
+      enemy-2_heart_0: 7482156
+      enemy-2_heart_1: -1748551679
+      enemy-2_heart_2: 141275624
+      enemy-2_heart_3: -1560550446
+      enemy-2_heart_4: 1425261346
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

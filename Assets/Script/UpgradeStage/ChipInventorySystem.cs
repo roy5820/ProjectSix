@@ -78,9 +78,12 @@ public class ChipInventorySystem : MonoBehaviour
     {
         if(chipInfo != null)
         {
+            chipIconImage.gameObject.SetActive(true);
             chipIconImage.sprite = chipInfo.CheepIcon;//칩정보 갱신
             chipName.text = chipInfo.CheepName;//칩 이름
             chipEffect.text = chipInfo.CheepEffectExplanationTxt;
         }
+        else
+            chipIconImage.gameObject.SetActive(false);
     }
 }

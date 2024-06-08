@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\uC2E0\uACBD\uACC4 \uD3ED\uC8FC"
   itemType: 1
-  itemImg: {fileID: 21300000, guid: 25278816e1546b341aedd8258fcfdc5b, type: 3}
+  itemImg: {fileID: 21300000, guid: 6fafd82526a510745a53884f46edf15e, type: 3}
   state: 17
   price: 3000
   offense: 0
-  useCost: 4
+  useCost: 5
   effectDescription: "\uD589\uB3D9 \uD6C4 \uBC30\uD130\uB9AC\uB97C 1 \uC18C\uBAA8\uD558\uB294
     \uB300\uC2E0 \uBC30\uD130\uB9AC\uAC00 0\uC774 \uB420\uB54C\uAE4C\uC9C0 \uD134\uC774
     \uC885\uB8CC\uB418\uC9C0 \uC54A\uC73C\uBA70, \uBAA8\uB4E0 \uC544\uC774\uD15C\uC758

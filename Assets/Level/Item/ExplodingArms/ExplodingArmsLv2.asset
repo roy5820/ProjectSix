@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\uD3ED\uBC1C \uC7A5\uAC11"
   itemType: 0
-  itemImg: {fileID: 21300000, guid: 1024cf20963d6be45a0f7550f661e2fa, type: 3}
+  itemImg: {fileID: 21300000, guid: 3423da3941d2cf64989c0488c94782dd, type: 3}
   state: 10
   price: 1200
   offense: 1.75
