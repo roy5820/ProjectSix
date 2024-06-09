@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 063d35312beb02f4886e29d684b13c18
+guid: f1a1f3d16c76c20419903ddcd7355337
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_dash_0
+      name: StrongPunch_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 140
+        width: 172
         height: 125
       alignment: 9
       pivot: {x: 0.45, y: 0}
@@ -124,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b99f4410a505ffd41a76527229f00047
-      internalID: -148195214
+      spriteID: 691d01572537b204bb15ebedd48d4462
+      internalID: 1958972790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_dash_1
+      name: StrongPunch_1
       rect:
         serializedVersion: 2
-        x: 140
+        x: 172
         y: 0
-        width: 140
+        width: 172
         height: 125
       alignment: 9
       pivot: {x: 0.45, y: 0}
@@ -145,19 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99147af5c6c1f53488189f32e68106d4
-      internalID: 1254977687
+      spriteID: bdc26c55747433e40b950ca99530a3f6
+      internalID: 1217286641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_dash_2
+      name: StrongPunch_2
       rect:
         serializedVersion: 2
-        x: 280
+        x: 344
         y: 0
-        width: 140
+        width: 172
         height: 125
       alignment: 9
       pivot: {x: 0.45, y: 0}
@@ -166,19 +166,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ef32b85fa2c30e458d3b93846180702
-      internalID: 840860482
+      spriteID: b948db2d7232d7e4db4b5a9925f60129
+      internalID: 862897075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_dash_3
+      name: StrongPunch_3
       rect:
         serializedVersion: 2
-        x: 420
+        x: 516
         y: 0
-        width: 140
+        width: 172
         height: 125
       alignment: 9
       pivot: {x: 0.45, y: 0}
@@ -187,19 +187,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c64aa5f186ac737478e9ed71694ce490
-      internalID: -482238031
+      spriteID: be0b04589fd44b349b0891238af27923
+      internalID: -782855469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_dash_4
+      name: StrongPunch_4
       rect:
         serializedVersion: 2
-        x: 560
+        x: 688
         y: 0
-        width: 140
+        width: 172
         height: 125
       alignment: 9
       pivot: {x: 0.45, y: 0}
@@ -208,19 +208,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e4b548058bc49f4b9967358380994c5
-      internalID: 990013068
+      spriteID: 2c0f23e2ae124cb45a584df2551e0656
+      internalID: 494098692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_dash_5
+      name: StrongPunch_5
       rect:
         serializedVersion: 2
-        x: 700
+        x: 860
         y: 0
-        width: 140
+        width: 172
         height: 125
       alignment: 9
       pivot: {x: 0.45, y: 0}
@@ -229,8 +229,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ec448a385f223f4190ac16aade50d29
-      internalID: -14851388
+      spriteID: 2bdf7580b3c4e004c9bfa6e8b875f184
+      internalID: 387050214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StrongPunch_6
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 0
+        width: 172
+        height: 125
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1662f0217b34994783f87aa7f7c189f
+      internalID: -409381074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StrongPunch_7
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 0
+        width: 172
+        height: 125
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1720eb1dcbc9c44adb7c82d446ba5a
+      internalID: -413498516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StrongPunch_8
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 0
+        width: 172
+        height: 125
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b522fa8e97cbd43899df37aa19faf3
+      internalID: 972100023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StrongPunch_9
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 0
+        width: 172
+        height: 125
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e9b5eb0cd38dd4a933e2fd0f681d55
+      internalID: 1174111395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StrongPunch_10
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 0
+        width: 172
+        height: 125
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062a5f31692d1bf45b37244e45dfda2a
+      internalID: 1985276955
       vertices: []
       indices: 
       edges: []
@@ -246,12 +351,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player_dash_0: -148195214
-      player_dash_1: 1254977687
-      player_dash_2: 840860482
-      player_dash_3: -482238031
-      player_dash_4: 990013068
-      player_dash_5: -14851388
+      StrongPunch_0: 1958972790
+      StrongPunch_1: 1217286641
+      StrongPunch_10: 1985276955
+      StrongPunch_2: 862897075
+      StrongPunch_3: -782855469
+      StrongPunch_4: 494098692
+      StrongPunch_5: 387050214
+      StrongPunch_6: -409381074
+      StrongPunch_7: -413498516
+      StrongPunch_8: 972100023
+      StrongPunch_9: 1174111395
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

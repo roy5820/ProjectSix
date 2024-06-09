@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 //신경계 폭주 아이템 구현
 public class NervousBreakdownState : StateBase

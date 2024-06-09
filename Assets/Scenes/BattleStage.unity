@@ -1205,6 +1205,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5679890240524916365, guid: d8cab42c0de5d3a428436de861499f60, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1407717509, guid: 0836ad8586cd7c947bea947e56318228, type: 3}
+    - target: {fileID: 5679890240524916365, guid: d8cab42c0de5d3a428436de861499f60, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1417,6 +1425,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1714975330042182244, guid: 60a2a839147621440b37a59bc7cf3e12, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.35
+      objectReference: {fileID: 0}
     - target: {fileID: 2005315761736351314, guid: 60a2a839147621440b37a59bc7cf3e12, type: 3}
       propertyPath: m_Name
       value: InGameUI

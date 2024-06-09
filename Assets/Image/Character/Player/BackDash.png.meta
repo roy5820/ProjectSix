@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 70378c155351b4f4f99a561d936e42e8
+guid: a257b6a967ab0b7438c3f9dd789a76d1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_backdash_0
+      name: BackDash_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 140
+        width: 172
         height: 125
       alignment: 9
       pivot: {x: 0.45, y: 0}
@@ -124,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87e525f6829840147bda9864a76baca8
-      internalID: -414439199
+      spriteID: 705696d31e10dab489d2015356a55984
+      internalID: -1291397113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_backdash_1
+      name: BackDash_1
       rect:
         serializedVersion: 2
-        x: 140
+        x: 172
         y: 0
-        width: 140
+        width: 172
         height: 125
       alignment: 9
       pivot: {x: 0.45, y: 0}
@@ -145,19 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 851f957541761bf4f9638c7c8c66dbff
-      internalID: -771346993
+      spriteID: 0aef7c4a55054bf4091ed7f65fd4d8b0
+      internalID: 1384747800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_backdash_2
+      name: BackDash_2
       rect:
         serializedVersion: 2
-        x: 280
+        x: 344
         y: 0
-        width: 140
+        width: 172
         height: 125
       alignment: 9
       pivot: {x: 0.45, y: 0}
@@ -166,19 +166,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca90a42015c156643ac0f28db7317cbf
-      internalID: -393125799
+      spriteID: 2a4a4a2c5a25ecf479bf836fa3ed2fb3
+      internalID: -1948789746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_backdash_3
+      name: BackDash_3
       rect:
         serializedVersion: 2
-        x: 420
+        x: 516
         y: 0
-        width: 140
+        width: 172
         height: 125
       alignment: 9
       pivot: {x: 0.45, y: 0}
@@ -187,19 +187,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fced66042db190459afa92913677eb1
-      internalID: 559046388
+      spriteID: 631cb461dbbb7bf42b369ca983b86862
+      internalID: -1562170455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_backdash_4
+      name: BackDash_4
       rect:
         serializedVersion: 2
-        x: 560
+        x: 688
         y: 0
-        width: 140
+        width: 172
         height: 125
       alignment: 9
       pivot: {x: 0.45, y: 0}
@@ -208,29 +208,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f423fa00a50af8a44b05fe07eae80e41
-      internalID: 811344211
+      spriteID: 401e42858a485764f8a07c88a5ca553a
+      internalID: 197475293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_backdash_5
+      name: BackDash_5
       rect:
         serializedVersion: 2
-        x: 700
+        x: 860
         y: 0
-        width: 140
+        width: 172
         height: 125
       alignment: 9
-      pivot: {x: 0.45, y: 0}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c474eb03bb0c8e440b1f8fba8261de48
-      internalID: 644661543
+      spriteID: 034ebda5318665745bf5c9b596faa279
+      internalID: 743283427
       vertices: []
       indices: 
       edges: []
@@ -246,12 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player_backdash_0: -414439199
-      player_backdash_1: -771346993
-      player_backdash_2: -393125799
-      player_backdash_3: 559046388
-      player_backdash_4: 811344211
-      player_backdash_5: 644661543
+      BackDash_0: -1291397113
+      BackDash_1: 1384747800
+      BackDash_2: -1948789746
+      BackDash_3: -1562170455
+      BackDash_4: 197475293
+      BackDash_5: 743283427
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
