@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 //캐릭터 피격
 public class StunState : StateBase
 {
@@ -27,7 +28,6 @@ public class StunState : StateBase
         //스턴 시간 설정
         if (datas.Length > 0)
             stunTurn = Convert.ToInt32(datas[0]);
-        Debug.Log(effectPos.position);
         //스턴 이펙트 생성
         GameObject sturnEffect = Instantiate(sturnEffectPre, effectPos.position, Quaternion.identity, characterController.transform);
 

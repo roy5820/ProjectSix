@@ -23,6 +23,9 @@ public class BulletBase : MonoBehaviour
         GetComponent<Collider2D>().enabled = true;
         if (thisAnimation != null)
             thisAnimation.SetTrigger("FIre");
+        //총알 방향에 따른 위치 조정
+        if (fireDir == CharacterDirection.Left)
+            transform.localScale = new Vector3(-1, 1, 1);
         isFire = true;
     }
 

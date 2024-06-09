@@ -506,7 +506,7 @@ MonoBehaviour:
       itemLevel: 0
       itemInfo: {fileID: 0}
   haveMoneyTxt: {fileID: 2281431891199129752}
-  binItemImg: {fileID: 21300000, guid: e374c658c85d17b4cb5634c3ea1ec100, type: 3}
+  binItemImg: {fileID: 21300000, guid: 2fdb0845bc199834db19ecee12d7ed80, type: 3}
 --- !u!1 &1851335833195441814
 GameObject:
   m_ObjectHideFlags: 0

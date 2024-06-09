@@ -22,9 +22,7 @@ public class LaserBullet : BulletBase
 
     public override void OnFire()
     {
-        //총알 방향에 따른 위치 조정
-        if (fireDir == CharacterDirection.Left)
-            transform.localScale = new Vector3(-1, 1, 1);
+        
         LaserLight.SetActive(true);
         base.OnFire();
     }
