@@ -35,7 +35,6 @@ public class StunState : StateBase
         characterController.isStatusProcessing = false;
         characterController.TurnEnd();
 
-
         while (stunTurn > 0)
         {
             yield return null;
@@ -56,7 +55,6 @@ public class StunState : StateBase
         {
             stunTurn--;
         }
-            
     }
 }
 
