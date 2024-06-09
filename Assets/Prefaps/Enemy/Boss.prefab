@@ -238,6 +238,9 @@ MonoBehaviour:
   cameraShake: 1
   shakeTime: 0.2
   shakePower: 0.3
+  effectPre: {fileID: 0}
+  effectPos: {fileID: 0}
+  effectLifeTime: 0.4
 --- !u!1001 &1164612525360969883
 PrefabInstance:
   m_ObjectHideFlags: 0
