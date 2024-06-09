@@ -6,6 +6,8 @@ public class DefenseState : StateBase
 {
     private bool isDefense = false;//방어 여부
     int defenseTurn = 1;//스턴 시간
+    public GameObject effectPre;//보호막 표현 이펙트
+    public Transform effectPos;//이펙트 소환 위치
 
     private void OnEnable()
     {
@@ -24,8 +26,10 @@ public class DefenseState : StateBase
 
         if(datas.Length > 0)
             defenseTurn = Convert.ToInt32(datas[0]);
+        
+        GameObject shiledPre = Instantiate(effectPre, effectPos.position, Quaternion.identity, characterController.transform);//보호막 이펙트 생성
 
-        characterController.gameObject.GetComponent<SpriteRenderer>().color = Color.gray;
+        yield return new WaitForSeconds(sateDelayTime);
 
         //스턴 상태로 전환 후 턴 종료 처리
         characterController.isStatusProcessing = false;
@@ -37,6 +41,7 @@ public class DefenseState : StateBase
         {
             yield return null;
         }
+        Destroy(shiledPre);//이펙트 제거
         characterController.isInvincibility = false;
         characterController.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
 

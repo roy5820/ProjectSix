@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992dcb8e1ace94d4490eba1182197733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steelCastingTime: 10
+  steelCastingTime: 7.5
 --- !u!4 &8181526713515221387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7035493264269367568, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
