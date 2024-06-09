@@ -7,9 +7,14 @@ public class HitState : StateBase
     public bool cameraShake = false;//화면 흔들림 여부
     public float shakeTime = 0.3f;//흔들림 지속 시간
     public float shakePower = 0.25f;//흔들림 파워
+    public GameObject effectList = null;//이펙트 들이 생성되는 곳
 
     protected override IEnumerator StateFuntion(params object[] datas)
     {
+        //이펙트 비활성화
+        if (effectList)
+            effectList.SetActive(false);
+
         //체력이 0 이상일 때 피격 처리
         if (characterController.NowHp > 0)
         {
@@ -33,8 +38,10 @@ public class HitState : StateBase
                 yield break;
             }
         }
-        
 
+        //이펙트 활성화
+        if (effectList)
+            effectList.SetActive(true);
         yield return base.StateFuntion(datas);
     }
 }
