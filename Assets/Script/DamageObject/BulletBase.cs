@@ -11,7 +11,7 @@ public class BulletBase : MonoBehaviour
     private Rigidbody2D rBody;//리지드 바디
     private Animator thisAnimation;
     public float destroyDelay = 0.5f;
-
+    public AudioClip fireSound = null;//발사 사운드
     private void Start()
     {
         rBody = GetComponent<Rigidbody2D>();//리지드바디 초기화
@@ -20,6 +20,8 @@ public class BulletBase : MonoBehaviour
 
     public virtual void OnFire()
     {
+        if(fireSound)
+            SoundManger.Instance.PlaySFX(fireSound);
         GetComponent<Collider2D>().enabled = true;
         if (thisAnimation != null)
             thisAnimation.SetTrigger("FIre");

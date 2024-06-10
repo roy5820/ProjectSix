@@ -214,6 +214,7 @@ MonoBehaviour:
   damage: 0
   fireDir: 0
   destroyDelay: 0.5
+  fireSound: {fileID: 8300000, guid: 85fcd38ee0b529849a2f6951aafe2aeb, type: 3}
   sutunTurn: 2
 --- !u!95 &3732982901333381621
 Animator:

@@ -12,6 +12,7 @@ public class StageHUD : MonoBehaviour
     private int stageRewards = 0;//스테이지 보상
     private Coroutine runningCoroutine = null;//현재 실행 중인 코루틴
     public int increaseSpeed = 3;//스테이지 보상 증가 속도
+    public AudioClip acquisitionSound;//돈 획득 사운드
 
     private void Start()
     {
@@ -37,6 +38,7 @@ public class StageHUD : MonoBehaviour
     //스테이지 보상을 순차적으로 증가시키는 코루틴 함수
     IEnumerator IncreaseStageRewards(int targetValue, int increaseSpeed)
     {
+        SoundManger.Instance.PlaySFX(acquisitionSound);
         while(stageRewards < targetValue)
         {
             stageRewards+= increaseSpeed;

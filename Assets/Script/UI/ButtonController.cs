@@ -67,4 +67,11 @@ public class ButtonController : MonoBehaviour
             Destroy(_gameManager.gameObject);
         }
     }
+
+
+    //클릭 시 효과음 재생
+    public void OnPlaySFX(AudioClip sfxClip)
+    {
+        SoundManger.Instance.PlaySFX(sfxClip);
+    }
 }

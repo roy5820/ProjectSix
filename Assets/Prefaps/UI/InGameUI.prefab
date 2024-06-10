@@ -3986,6 +3986,7 @@ MonoBehaviour:
   nowTurnInfoHUD: {fileID: 9130674274689307662}
   stageRewardsHUD: {fileID: 6954540939615913769}
   increaseSpeed: 111
+  acquisitionSound: {fileID: 8300000, guid: 241fc0acffd92a94da0e515845591dc6, type: 3}
 --- !u!114 &4682576136971532573
 MonoBehaviour:
   m_ObjectHideFlags: 0

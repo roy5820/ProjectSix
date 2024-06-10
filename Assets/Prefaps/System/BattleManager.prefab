@@ -112,3 +112,4 @@ MonoBehaviour:
   onEnemysList: []
   onPlayer: {fileID: 0}
   nowTurnCnt: 0
+  newWaveSound: {fileID: 8300000, guid: 72547508adf79bb49a0dfa9373d6d335, type: 3}
