@@ -13,10 +13,10 @@ public class BulletFireState : StateBase
         GameObject bullet = Instantiate(bulletPre, firePoint.position, Quaternion.identity);//총알 오브젝트 생성
         //발사 이펙트 생성
         GameObject fireEffect = null;
-        if(fireEffectPre  != null)
+        if (fireEffectPre != null)
             fireEffect = Instantiate(fireEffectPre, firePoint.position, Quaternion.identity);
         yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
-        if(fireEffect != null)
+        if (fireEffect != null)
             Destroy(fireEffect);
         //공격 계수 인자 값이 있으면 값 적용
         if (datas.Length > 0)
