@@ -53,13 +53,11 @@ public class TurnSteelTImer : MonoBehaviour
     //타이머 구현 코루틴 함수
     private IEnumerator TurnSteelTimer(float timerTime)
     {
-        Debug.Log("타이머 시작");
         float nowTimerTime = timerTime;
         while (nowTimerTime > 0)
         {
             nowTimerTime -= Time.deltaTime;
             nowTimerTime = Mathf.Clamp(nowTimerTime, 0, timerTime); // 최소값 0, 최대값 maxHealth로 제한
-            Debug.Log(nowTimerTime);
             //fillAmount설정
             timerBar.fillAmount = nowTimerTime / timerTime;
 

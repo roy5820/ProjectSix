@@ -6,11 +6,12 @@ public class LaserBullet : BulletBase
 {
     public float fireTime = 5f;//레이저 발사 시간
     private float nowTime = 0;
+    public GameObject LaserLight;//레이저 라이트
 
     protected override void FixedUpdate()
     {
         //발사 시간이 지나면 레이저 삭제
-        if(nowTime >= fireTime)
+        if(isFire && nowTime >= fireTime)
             Destroy(this.gameObject);
 
         if (isFire && fireDir != 0)
@@ -21,9 +22,8 @@ public class LaserBullet : BulletBase
 
     public override void OnFire()
     {
-        //총알 방향에 따른 위치 조정
-        if (fireDir == CharacterDirection.Left)
-            transform.localScale = new Vector3(-1, 1, 1);
+        
+        LaserLight.SetActive(true);
         base.OnFire();
     }
 

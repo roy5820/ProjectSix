@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756b17e033c511c4fa9e72d527440375, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAniParamater: DashState
-  sateDelayTime: 0.3
+  stateAniParamater: RushState
+  sateDelayTime: 0.2
   _soundManger: {fileID: 0}
-  stateSound: {fileID: 0}
+  stateSound: {fileID: 8300000, guid: 05354ff67c1fe3343ac86c937b274ad8, type: 3}
   powerCoefficient: 1.5
   dashSpeed: 60
   dashRange: 1
@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 5eb3c320b4f2b644e8fe3fa4c5e1a8fd, type: 2}
+    - target: {fileID: 4483775109715122026, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: stateSound
+      value: 
+      objectReference: {fileID: 8300000, guid: bad072befe1ca0b40ba6975e7e8a23be, type: 3}
     - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: minHpFillAmount
       value: 0.15
@@ -79,6 +83,22 @@ PrefabInstance:
     - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: actionList.Array.data[1].stateEnum
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173715038268912655, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173715038268912655, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237595262533350968, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237595262533350968, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367568, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_LocalPosition.x
@@ -130,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: dropMoney
-      value: 800
+      value: 650
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: _stateList.Array.size
@@ -174,7 +194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[0].cooldown
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[0].stateEnum
@@ -191,6 +211,10 @@ PrefabInstance:
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[2].stateEnum
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: stateConditions.Array.data[0].nowCoolTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[0].NeedToPrepare

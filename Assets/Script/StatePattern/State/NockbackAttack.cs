@@ -10,10 +10,21 @@ public class NockbackAttack : StateBase
     public bool cameraShake = false;//화면 흔들림 여부
     public float shakeTime = 0.3f;//흔들림 지속 시간
     public float shakePower = 20f;//흔들림 파워
+    public GameObject effectPre;//보호막 표현 이펙트
+    public Transform effectPos;//이펙트 소환 위치
+    public float effectLifeTime = 0.4f;//이펙트 생존 주기
+    private GameObject nowEffect = null;//생성한 이펙트
     protected override IEnumerator StateFuntion(params object[] datas)
     {
         //공격 구현
         yield return new WaitForSeconds(sateDelayTime);//애니메이션 출력을 위한 딜레이
+        //발사 이펙트 생성
+        if (effectPre != null)
+        {
+            nowEffect = Instantiate(effectPre, effectPos.position, Quaternion.identity);
+            Invoke("DestroyEffect", effectLifeTime);
+        }
+            
         //화면 흔들림 구현
         if (cameraShake)
             CameraController.Instance.OnShake(shakeTime, shakePower);
@@ -53,5 +64,10 @@ public class NockbackAttack : StateBase
         }
         characterController.TurnEnd();//상태 종료 시 턴 종료
         yield return base.StateFuntion(datas);
+    }
+
+    private void DestroyEffect()
+    {
+        Destroy(nowEffect);
     }
 }

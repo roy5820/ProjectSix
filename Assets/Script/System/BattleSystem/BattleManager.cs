@@ -21,6 +21,8 @@ public class BattleManager : Singleton<BattleManager>
 
     public int stageRewards {get;set;}//스테이지 보상
     private int readyForEnemyCnt = 0;//준비된 적 수
+
+    public AudioClip newWaveSound = null;//웨이브 시작시 사운드
     //활성화시 이벤트 설정
     private void OnEnable()
     {
@@ -124,6 +126,7 @@ public class BattleManager : Singleton<BattleManager>
         //Enemy 스폰 여부 확인
         if (nextWaveNum < nowStage.waveList.Count && onEnemysList.Count == 0)
         {
+            SoundManger.Instance.PlaySFX(newWaveSound);
             //스폰할 몬스터 리스트의 몬스터들을 소환
             foreach (SpawnEnemyInfo enemy in nowStage.waveList[nextWaveNum].enemyInfoList)
             {

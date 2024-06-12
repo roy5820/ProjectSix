@@ -6,6 +6,8 @@ public class NervousBreakdownState : StateBase
 {
     private Coroutine endCheckCoroutine = null;//
     private PlayerController playerController = null;
+    public RuntimeAnimatorController normalAni = null;
+    public RuntimeAnimatorController nervousBreakdwonAni = null;//신경계 폭주시 애니메이셪ㄴ
     //이벤트 등록
     private void OnEnable()
     {
@@ -27,6 +29,8 @@ public class NervousBreakdownState : StateBase
         //폭주 종료 처리
         if (playerController.isBreakdown)
         {
+            if (normalAni)
+                _animator.runtimeAnimatorController = normalAni;
             playerController.isBreakdown = false;
             StopCoroutine(endCheckCoroutine);
             characterController.TurnEnd();
@@ -34,6 +38,8 @@ public class NervousBreakdownState : StateBase
         //폭주 시작 처리
         else
         {
+            if (nervousBreakdwonAni)
+                _animator.runtimeAnimatorController = nervousBreakdwonAni;
             playerController.isBreakdown = true;
             endCheckCoroutine = StartCoroutine(BreakdownEndCheck());
         }

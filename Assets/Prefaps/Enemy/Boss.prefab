@@ -45,12 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: LaserAttack
-  sateDelayTime: 1
+  sateDelayTime: 1.2
   _soundManger: {fileID: 0}
-  stateSound: {fileID: 0}
+  stateSound: {fileID: 8300000, guid: cbbce4dcac5c72141a2a571533fb95a4, type: 3}
   powerCoefficient: 1.5
   bulletPre: {fileID: 6243990242209194675, guid: a511be00fed14314d8009495a84787b8, type: 3}
   firePoint: {fileID: 8878611132046664153}
+  fireEffectPre: {fileID: 0}
 --- !u!1 &5954343606852594410
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,7 +99,7 @@ MonoBehaviour:
   stateAniParamater: 
   sateDelayTime: 0.75
   _soundManger: {fileID: 0}
-  stateSound: {fileID: 0}
+  stateSound: {fileID: 8300000, guid: 507d2e6a2e098454481e3d41bffe14cf, type: 3}
   AttackStateType: 12
   AttackDelayTurn: 2
 --- !u!1 &6476481503275284488
@@ -179,7 +180,7 @@ MonoBehaviour:
   stateAniParamater: RushState
   sateDelayTime: 0.1
   _soundManger: {fileID: 0}
-  stateSound: {fileID: 0}
+  stateSound: {fileID: 8300000, guid: 1cf9d145062878f4496333f646e59afc, type: 3}
   powerCoefficient: 1.2
   dashSpeed: 60
   dashRange: 2
@@ -229,14 +230,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: DwonAttackState
-  sateDelayTime: 0.65
+  sateDelayTime: 0.85
   _soundManger: {fileID: 0}
-  stateSound: {fileID: 0}
+  stateSound: {fileID: 8300000, guid: e6db06e59651ee349b41467e18d3a185, type: 3}
   powerCoefficient: 2
   nockBackPower: 100
   cameraShake: 1
   shakeTime: 0.2
   shakePower: 0.3
+  effectPre: {fileID: 0}
+  effectPos: {fileID: 0}
+  effectLifeTime: 0.4
 --- !u!1001 &1164612525360969883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -250,8 +254,12 @@ PrefabInstance:
       value: 6.94
       objectReference: {fileID: 0}
     - target: {fileID: 1189646136446838083, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: stateSound
+      value: 
+      objectReference: {fileID: 8300000, guid: bed6ce8ff628b3a43950c4d4395bdfc2, type: 3}
+    - target: {fileID: 1189646136446838083, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: sateDelayTime
-      value: 2.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1411968381574116720, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Controller
@@ -265,6 +273,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4483775109715122026, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: stateSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6fd90ffaab7aaf64f92ebab98d7c6cf9, type: 3}
     - target: {fileID: 4483775109715122026, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: sateDelayTime
       value: 0.35
@@ -316,6 +328,22 @@ PrefabInstance:
     - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: actionList.Array.data[3].stateEnum
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173715038268912655, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173715038268912655, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237595262533350968, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237595262533350968, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 44.1
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367568, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_LocalPosition.x
@@ -439,11 +467,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[0].cooldown
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[1].cooldown
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[2].cooldown
@@ -491,7 +519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[1].nowCoolTime
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[0].NeedToPrepare
@@ -662,7 +690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992dcb8e1ace94d4490eba1182197733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steelCastingTime: 10
+  steelCastingTime: 7.5
 --- !u!4 &8181526713515221387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7035493264269367568, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}

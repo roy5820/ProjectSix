@@ -33,14 +33,14 @@ public class ButtonController : MonoBehaviour
     public void OnUpPopupPanel(GameObject gameObject)
     {
         if(moveCorutine == null)
-            moveCorutine = StartCoroutine(UpDownPopup(gameObject, 0.5f, popupMoveSeed));
+            moveCorutine = StartCoroutine(UpDownPopup(gameObject, 0f, popupMoveSeed));
     }
 
     //팝업 Down
     public void OnDownPopupPanel(GameObject gameObject)
     {
         if (moveCorutine == null)
-            moveCorutine = StartCoroutine(UpDownPopup(gameObject, 1.5f, popupMoveSeed));
+            moveCorutine = StartCoroutine(UpDownPopup(gameObject, 1f, popupMoveSeed));
     }
 
     //팝업창 올리고 내리는 기능 구현을 하는 코루틴 함수
@@ -66,5 +66,12 @@ public class ButtonController : MonoBehaviour
         {
             Destroy(_gameManager.gameObject);
         }
+    }
+
+
+    //클릭 시 효과음 재생
+    public void OnPlaySFX(AudioClip sfxClip)
+    {
+        SoundManger.Instance.PlaySFX(sfxClip);
     }
 }

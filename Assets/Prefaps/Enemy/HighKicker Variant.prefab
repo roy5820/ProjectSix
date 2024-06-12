@@ -44,12 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b795905ba4c34e43a8890c88b6c27f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAniParamater: AttackState
+  stateAniParamater: SAttackState
   sateDelayTime: 0.2
   _soundManger: {fileID: 0}
-  stateSound: {fileID: 0}
+  stateSound: {fileID: 8300000, guid: 602a7c701d81b2447966ee9fa4c20f65, type: 3}
   powerCoefficient: 1
   nockBackPower: 100
+  cameraShake: 0
+  shakeTime: 0.3
+  shakePower: 20
+  effectPre: {fileID: 0}
+  effectPos: {fileID: 0}
+  effectLifeTime: 0.4
 --- !u!1001 &1164612525360969883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 5e94c82d0f7c716469b0f4666d67a664, type: 2}
+    - target: {fileID: 4483775109715122026, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: stateSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 96e4600e9b029f24aae9f5eae6c0873c, type: 3}
     - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: minHpFillAmount
       value: 0.15
@@ -136,7 +146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: dropMoney
-      value: 650
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: _stateList.Array.size
@@ -191,6 +201,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: stateConditions.Array.data[0].nowCoolTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateConditions.Array.data[0].NeedToPrepare
       value: 1
       objectReference: {fileID: 0}
@@ -200,7 +214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367593, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.55
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367593, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -216,11 +230,11 @@ PrefabInstance:
       objectReference: {fileID: 879778759, guid: 1a5bbcdef7b7c2640b80becaa22a8c67, type: 3}
     - target: {fileID: 8177145996210550471, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8177145996210550471, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Color.g
-      value: 0.8294987
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8177145996210550471, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Color.r
