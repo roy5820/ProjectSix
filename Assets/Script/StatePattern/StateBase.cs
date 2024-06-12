@@ -12,6 +12,14 @@ public abstract class StateBase : MonoBehaviour, CharacterState
     public SoundManger _soundManger = null;//사운드 메니저
     public AudioClip stateSound = null;//상태 시 재생할 사운드
 
+    public CharacterState CharacterState
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     public void Handle(CharacterController characterController, params object[] datas)
     {
         //캐릭터 컨트롤러 값 초기화
