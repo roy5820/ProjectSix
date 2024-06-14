@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="아이템 관련 객체들&#xD;&#xA;사용 시 기능 구현은 상태패턴을 통해 구현">
+    <Position X="4.793" Y="1.181" Height="0.634" Width="3.001" />
+  </Comment>
+  <Comment CommentText="플레이어 보유 아이템 정보를 관리하는 객체">
+    <Position X="4.849" Y="2.627" Height="0.539" Width="1.7" />
+  </Comment>
+  <Comment CommentText="아이템 인벤토리 정보를 바탕으로 아이템 사용 버튼 생성">
+    <Position X="2.406" Y="2.193" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="아이템 정보 관리를 위한 ScriptableObject 객체">
+    <Position X="7.146" Y="2.625" Height="0.539" Width="1.7" />
+  </Comment>
+  <Comment CommentText="ItemDatabase에서 아이템 정보를 관리하기 위한 객체">
+    <Position X="9.023" Y="2.443" Height="0.75" Width="2.055" />
+  </Comment>
+  <Comment CommentText="아이템 사용 처리">
+    <Position X="8.003" Y="6.107" Height="0.587" Width="1.508" />
+  </Comment>
+  <Comment CommentText="아이템 상점에서 랜덤으로 아이템을 뿌리는 객체">
+    <Position X="4.935" Y="5.953" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="전투 스테이지에서 아이템 세부 정보를 표기하는 객체">
+    <Position X="1.964" Y="6.145" Height="0.75" Width="1.997" />
+  </Comment>
+  <Class Name="ItemData">
+    <Position X="9.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\ItemData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerHaveItemData">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAACAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\PlayerHaveItemData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UseItem" BaseTypeListCollapsed="true">
+    <Position X="8" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACAEAAAEQAAgAABACEAgAAAAEAAAAQAAEAA=</HashCode>
+      <FileName>Assets\Script\Item\UseItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ItemInfo">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABQAAABAAEAAAAAAAgAAAAAAAAAAAEEAACAAAAEAA=</HashCode>
+      <FileName>Assets\Script\ScriptableObject\ItemInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CreateItemBtn">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAACCAAIACAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\HUD\CreateItemBtn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemInspectorPopup">
+    <Position X="2" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAABCAABAAABAEAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\ItemInspectorPopup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RandomStorePurchaseSystem">
+    <Position X="4.75" Y="6.75" Width="2.25" />
+    <NestedTypes>
+      <Class Name="RandomStorePurchaseSystem.sellItemInfoDisplay" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Script\UpgradeStage\RandomStorePurchaseSystem.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQCCAEAAAAAQAAAAAEAEAAACAAAAAABgAAAAA=</HashCode>
+      <FileName>Assets\Script\UpgradeStage\RandomStorePurchaseSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

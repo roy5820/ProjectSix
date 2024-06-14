@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="싱글톤 패턴 구현을 위한 제네릭 클래스">
+    <Position X="12.5" Y="0.75" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="카메라 컨트롤러">
+    <Position X="6.978" Y="3.795" Height="0.308" Width="1.7" />
+  </Comment>
+  <Comment CommentText="사운드 크기 조절 구현">
+    <Position X="3.491" Y="4.414" Height="0.53" Width="1.643" />
+  </Comment>
+  <Comment CommentText="사운드 관리를 위한 열거형 객체">
+    <Position X="3.252" Y="7.677" Height="0.348" Width="2.285" />
+  </Comment>
+  <Comment CommentText="턴 이벤트 관리를 위한 열거형 객체">
+    <Position X="1.261" Y="7.264" Height="0.625" Width="1.7" />
+  </Comment>
+  <Comment CommentText="턴 관리를 위한 이벤트 버스">
+    <Position X="1.133" Y="4.533" Height="0.433" Width="1.908" />
+  </Comment>
+  <Comment CommentText="스테이지 별 몬스터 스폰 관리를 위한 객체들">
+    <Position X="10.067" Y="11.225" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="스테이지 정보(총 획득 톤, 현제 턴 수 등)를 UII에 표시하는 객체">
+    <Position X="14.723" Y="13.881" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="플레이어 사망 시 이벤트 처리 객체">
+    <Position X="8.123" Y="14.104" Height="0.561" Width="1.7" />
+  </Comment>
+  <Comment CommentText="게임 클리어 시 이벤트 처리 객체">
+    <Position X="10.14" Y="14.133" Height="0.546" Width="1.7" />
+  </Comment>
+  <Comment CommentText="스테이지 클리어 시 결산 처리&#xD;&#xA;결산: 클리어 시 턴 경과 정도에 따른 보상(돈) 지급">
+    <Position X="11.99" Y="14.104" Height="0.794" Width="2.225" />
+  </Comment>
+  <Comment CommentText="플렛폼에 들어오거나 나가는 적에 대한 정보 처리하는 객체">
+    <Position X="17.375" Y="12.84" Height="0.517" Width="2.268" />
+  </Comment>
+  <Comment CommentText="업그레이드 스테이지에서 플레이어의 체력을 회복 시키는 객체">
+    <Position X="5.859" Y="13.915" Height="0.735" Width="1.919" />
+  </Comment>
+  <Comment CommentText="버튼에 쓰이는 기능들을 모아놓은 객체&#xD;&#xA;OnCloseGame: 게임종료&#xD;&#xA;OnClosePopupPanel: 팝업창 닫기(비활성화)&#xD;&#xA;OnOpenPopupPanel: 팝업창 열기(활성화)&#xD;&#xA;OnDownPopupPanel: 팝업창 내리기&#xD;&#xA;OnUpPopupPanel: 팝업창 올리기&#xD;&#xA;OnSceneMove: 씬이동&#xD;&#xA;OnPlaySFX: 버튼 클릭시 효과음 재생&#xD;&#xA;OnRemoveGamemanger:게임 메니저 제거">
+    <Position X="2.886" Y="12.78" Height="2.183" Width="2.835" />
+  </Comment>
+  <Comment CommentText="특정 키 입력 시 인게임 옵션 팝업을 띄우는 객체">
+    <Position X="6.095" Y="10.317" Height="0.75" Width="1.968" />
+  </Comment>
+  <Comment CommentText="게임 메니저&#xD;&#xA;-칩, 아이템의 데이터 베이스 및 인벤토리 관리&#xD;&#xA;-스테이지별 난이도 조절&#xD;&#xA;-플레이어의 상태값(현재 체력, 보유 돈 등) 저장">
+    <Position X="9.651" Y="2.975" Height="1.114" Width="1.7" />
+  </Comment>
+  <Comment CommentText="게임 내 사운드(BGM, SFX) 관리">
+    <Position X="12.43" Y="3.997" Height="0.552" Width="1.7" />
+  </Comment>
+  <Comment CommentText="배경 변화를 주기위한 객체">
+    <Position X="15.049" Y="3.592" Height="0.375" Width="1.865" />
+  </Comment>
+  <Comment CommentText="배틀 메니저&#xD;&#xA;-몬스터 스폰&#xD;&#xA;-스테이지 패배, 승리, 클리어 여부 체크 및 이벤트 처리&#xD;&#xA;-턴 관리&#xD;&#xA;-전투시 필요한 다양한 메서드 지원&#xD;&#xA;ex: -특정 오브젝트가 속해 있는 플랫폼 위치 탐색&#xD;&#xA;    - 특정 플렛폼의 데미지 부여&#xD;&#xA;    - 등 지원">
+    <Position X="17.574" Y="1.834" Height="1.986" Width="2.582" />
+  </Comment>
+  <Comment CommentText="총알 기능 구현을 위한 베이스 클래스">
+    <Position X="22.25" Y="6.75" Height="0.75" Width="1.7" />
+  </Comment>
+  <Class Name="CameraController">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAhAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Assets\Script\Camera\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TurnEventBus">
+    <Position X="1.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAgACAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\EventBus\TurnEventBus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Singleton&lt;T&gt;">
+    <Position X="12.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Script\SingletonPatten\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BackgroundEffectController">
+    <Position X="14.75" Y="4.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Assets\Script\System\BackgroundEffectController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleManager">
+    <Position X="17.75" Y="4.75" Width="2" />
+    <InheritanceLine Type="Singleton&lt;T&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="13.25" Y="3.828" />
+        <Point X="13.25" Y="4.375" />
+        <Point X="18.75" Y="4.375" />
+        <Point X="18.75" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>EEUACAAIBiBAgAAQAAIAAEAwAAABAAAJAAAAACCgigQ=</HashCode>
+      <FileName>Assets\Script\System\BattleSystem\BattleManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpawnEnemyInfo">
+    <Position X="12" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\System\BattleSystem\SpawnEnemyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StageInfo">
+    <Position X="8.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAACAAAAAAAAAAAAABAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Script\System\BattleSystem\StageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaveInfo">
+    <Position X="10.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\System\BattleSystem\WaveInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager">
+    <Position X="9.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQQAAAAECABAIAAAABAIBAAAAAAABBIAAAAABAgSgA=</HashCode>
+      <FileName>Assets\Script\System\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformInfoManagement">
+    <Position X="17.5" Y="13.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAATAAABAAAAAAAAAAAgAAEAIAAAAAAAAAAAIEAA=</HashCode>
+      <FileName>Assets\Script\System\PlatformInfoManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundManger">
+    <Position X="12.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAUAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Script\System\Sound\SoundManger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tmp">
+    <Position X="3.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACCCAAAAACAAAAAgAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\Script\System\Sound\tmp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ButtonController">
+    <Position X="0.5" Y="12.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAAQCAAAAAQAgAAAAUAAAAAAAAAAAAAAAECAAAAUA=</HashCode>
+      <FileName>Assets\Script\UI\ButtonController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StageHUD">
+    <Position X="14.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAAAKAAAAAAAAIAAAIAgAAAAAAAAiAAABAAAAA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\HUD\StageHUD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoseSystem">
+    <Position X="8.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAABAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\LoseSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Settlement">
+    <Position X="12.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAIAAEAAAgAAAAAIEAAAABAACAQ=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\SettlementSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinSystem">
+    <Position X="10.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\WinSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenIngameOption">
+    <Position X="6" Y="11.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQIABAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UI\OpenIngameOption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RelaxationSystem">
+    <Position X="6" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACCAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UpgradeStage\RelaxationSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletBase">
+    <Position X="22.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAoAAAiAAgAQAEQAAAAAAAEAAAQgAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\DamageObject\BulletBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LaserBullet">
+    <Position X="20.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAQAAAAAQAAAEAAAEAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\DamageObject\LaserBullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StunBullet">
+    <Position X="24.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\DamageObject\StunBullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="TurnEventType">
+    <Position X="1.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAQAAAAAAAAAAAAEAAAAAgAAAAAAABAAAAABAgAAA=</HashCode>
+      <FileName>Assets\Script\EventBus\TurnEventType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sound">
+    <Position X="3.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAgAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\System\Sound\Sound.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
