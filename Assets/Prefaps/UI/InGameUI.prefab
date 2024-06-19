@@ -4216,6 +4216,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4074911683249449406, guid: 2d6e2149ec3b6464c84c1df101264187, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 3196247793661209117}
     - target: {fileID: 4693711374968278126, guid: 2d6e2149ec3b6464c84c1df101264187, type: 3}
       propertyPath: m_Name
       value: IngameOptionPopup
