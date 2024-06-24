@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5965621859696651583}
   - component: {fileID: 9196813814009212109}
   - component: {fileID: 3252946462295324675}
+  - component: {fileID: 8333692597140201040}
   m_Layer: 5
   m_Name: ShowChipIcon
   m_TagString: Untagged
@@ -75,3 +76,17 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8333692597140201040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8963825071828011739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc554689d917664fa05e99710149312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chipInfo: {fileID: 0}
+  chipInspectorPre: {fileID: 1650265177581694246, guid: 4aff46f72f079364ea0c74aad74d2bf8, type: 3}

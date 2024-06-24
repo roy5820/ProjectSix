@@ -5,7 +5,6 @@ using UnityEngine;
 //공격 준비 상태
 public class EnemyReadyToState : StateBase
 {
-    
     protected override IEnumerator StateFuntion(params object[] datas)
     {
         characterController.delayTurn = (int)datas[1];//공격 준비 턴 설정
@@ -23,13 +22,6 @@ public class EnemyReadyToState : StateBase
             //차징 종료 시 상태 실행
             if (characterController.delayTurn == 0 && characterController.isAvailabilityOfAction)
                 break;
-            //턴중 행동 불가 될경우 공격 취소
-            else if (!characterController.isAvailabilityOfAction)
-            {
-                characterController.delayTurn = 0;
-                eHUD.OffActionIcon();
-                yield break;
-            }
                 
             yield return null;
         }

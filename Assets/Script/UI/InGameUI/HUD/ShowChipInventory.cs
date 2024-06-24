@@ -39,7 +39,7 @@ public class ShowChipInventory : MonoBehaviour
         {
             
             GameObject chipBtn = Instantiate(chipIconPre, transform);//프리펩 생성
-            chipBtn.GetComponent<Image>().sprite = heldChipList[i].CheepIcon;
+            chipBtn.GetComponent<ChipInfoIcon>().chipInfo = heldChipList[i];
             // 칩 아이콘 위치 계산
             float posX = startX + i * chipInterval;
 

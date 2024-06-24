@@ -18,6 +18,8 @@ public class EnemyHUDController : MonoBehaviour
     public class ActionInfo {
         public StateEnum stateEnum;
         public Sprite icon;
+        public string actionName;
+        public string actionEffect;
     }
 
     //액션 정보 타입을 입력 받을 리스트(공격 준비시 stateEnum 값에 따라 행동 아이콘을 띄우기 위해 사용)
@@ -81,6 +83,8 @@ public class EnemyHUDController : MonoBehaviour
             {
                 actionIcon.sprite = actionInfo.icon;
                 actionIcon.gameObject.SetActive(true);
+                actionIcon.gameObject.GetComponent<ActionIcon>().actionName = actionInfo.actionName;
+                actionIcon.gameObject.GetComponent<ActionIcon>().actionEffect = actionInfo.actionEffect;
             }
         }
     }

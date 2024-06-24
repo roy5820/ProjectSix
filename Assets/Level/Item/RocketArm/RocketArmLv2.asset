@@ -19,6 +19,6 @@ MonoBehaviour:
   price: 1400
   offense: 1.5
   useCost: 3
-  effectDescription: "\uC804\uBC29\uC73C\uB85C 3\uCE78 \uAE4C\uC9C0 \uC774\uB3D9
-    \uD55C \uD6C4 \uC801\uC5D0\uAC8C \uB370\uBBF8\uC9C0\uB97C \uC900\uB2E4"
+  effectDescription: "\uC804\uBC29(1\uCE78)\uC73C\uB85C \uC774\uB3D9\uD558\uBA70
+    \uC801\uC744 \uACF5\uACA9\uD55C\uB2E4. "
   storeDescription: "\uB370\uBBF8\uC9C0\uAC00 50% \uC99D\uAC00 \uD55C\uB2E4"

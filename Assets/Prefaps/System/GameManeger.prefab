@@ -83,7 +83,25 @@ MonoBehaviour:
     itemName: "\uC2E0\uACBD\uACC4 \uD3ED\uC8FC"
     itemInfo:
     - {fileID: 11400000, guid: 7e64b2b782fc2a14fb61b4a0e102b665, type: 2}
-  playerItemDB: []
+  playerItemDB:
+  - itemId: 101
+    itemLevel: 0
+    itemInfo: {fileID: 11400000, guid: 91474c2ec9c77f8499b6eff9cfbb37ac, type: 2}
+  - itemId: 102
+    itemLevel: 0
+    itemInfo: {fileID: 11400000, guid: 4eb73426f66cf15489e3e2116a8424a5, type: 2}
+  - itemId: 103
+    itemLevel: 0
+    itemInfo: {fileID: 11400000, guid: 98363075058b6014684d7e938e38625f, type: 2}
+  - itemId: 104
+    itemLevel: 1
+    itemInfo: {fileID: 11400000, guid: 5aee748c18c04a347a5644a6d6626873, type: 2}
+  - itemId: 201
+    itemLevel: 0
+    itemInfo: {fileID: 11400000, guid: f600742b018c7704f8f5944eb817b357, type: 2}
+  - itemId: 202
+    itemLevel: 0
+    itemInfo: {fileID: 11400000, guid: 7e64b2b782fc2a14fb61b4a0e102b665, type: 2}
   startMoney: 2500
   playerStatus: {fileID: 0}
   cheepDataBase:

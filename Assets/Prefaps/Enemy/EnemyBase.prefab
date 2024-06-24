@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: DieState
-  sateDelayTime: 1.2
+  sateDelayTime: 0.75
   _soundManger: {fileID: 0}
   stateSound: {fileID: 0}
   effectList: {fileID: 1326962002546229456}
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: HitState
-  sateDelayTime: 0.8
+  sateDelayTime: 0.25
   _soundManger: {fileID: 0}
   stateSound: {fileID: 0}
   cameraShake: 0
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: DieState
-  sateDelayTime: 1.2
+  sateDelayTime: 0.66
   _soundManger: {fileID: 0}
   stateSound: {fileID: 0}
   effectList: {fileID: 0}
@@ -981,6 +981,8 @@ MonoBehaviour:
   actionList:
   - stateEnum: 6
     icon: {fileID: 21300000, guid: 43b57258f8d6fd3478b356d39fe0d09e, type: 3}
+    actionName: 
+    actionEffect: 
 --- !u!114 &7035493264269367594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1058,7 +1060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: HitState
-  sateDelayTime: 0.8
+  sateDelayTime: 0.5
   _soundManger: {fileID: 0}
   stateSound: {fileID: 0}
   cameraShake: 0

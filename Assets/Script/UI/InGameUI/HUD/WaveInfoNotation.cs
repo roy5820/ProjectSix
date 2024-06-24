@@ -13,12 +13,16 @@ public class WaveInfoNotation : MonoBehaviour
     private void OnEnable()
     {
         TurnEventBus.Subscribe(TurnEventType.TurnStart, TurnStart);//TurnStart 이벤트 설정
+        TurnEventBus.Subscribe(TurnEventType.StageClear, ClearWaveInfo);
+        TurnEventBus.Subscribe(TurnEventType.Win, ClearWaveInfo);
     }
 
     //비활성화시 이벤트 제거
     private void OnDisable()
     {
         TurnEventBus.Unsubscribe(TurnEventType.TurnStart, TurnStart);//TurnStart 이벤트 제거
+        TurnEventBus.Unsubscribe(TurnEventType.StageClear, ClearWaveInfo);
+        TurnEventBus.Unsubscribe(TurnEventType.Win, ClearWaveInfo);
     }
 
     // Start is called before the first frame update
@@ -66,5 +70,14 @@ public class WaveInfoNotation : MonoBehaviour
             }
         }
         
+    }
+
+    private void ClearWaveInfo()
+    {
+        int waveCnt = _battleManager.nowStage.waveList.Count;
+        for (int i = 0; i < waveCnt; i++)
+        {
+            preList[i].gameObject.SetActive(false);
+        }
     }
 }

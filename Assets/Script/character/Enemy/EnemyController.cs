@@ -59,7 +59,8 @@ public class EnemyController : CharacterController
         //차징 종료 후 EnemyReadyToState에서 인식하여 준비하던 상태 실행
         else if (delayTurn > 0)
         {
-            delayTurn--;
+            if(isAvailabilityOfAction)
+                delayTurn--;
             if(delayTurn > 0)
                 TurnEnd();
         }

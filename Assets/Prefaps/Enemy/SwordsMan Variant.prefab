@@ -84,6 +84,24 @@ PrefabInstance:
       propertyPath: actionList.Array.data[1].stateEnum
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[0].actionName
+      value: "\uCC0C\uB974\uAE30"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[1].actionName
+      value: "\uD68C\uC2EC\uC758 \uC77C\uACA9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[0].actionEffect
+      value: "\uC804\uBC29(1\uCE78)\uC5D0 \uC801\uC5D0\uAC8C \uC57D\uD55C \uCE7C
+        \uCC0C\uB974\uAE30 \uACF5\uACA9\uC744 \uD55C\uB2E4."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[1].actionEffect
+      value: "\uC804\uBC29(2\uCE78)\uC5D0 \uAC15\uB825\uD55C \uB3CC\uC9C4 \uACF5\uACA9\uC744
+        \uD55C\uB2E4."
+      objectReference: {fileID: 0}
     - target: {fileID: 5173715038268912655, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.49

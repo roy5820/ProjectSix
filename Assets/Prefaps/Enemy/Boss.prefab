@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: DwonAttackState
-  sateDelayTime: 0.85
+  sateDelayTime: 0.5
   _soundManger: {fileID: 0}
   stateSound: {fileID: 8300000, guid: e6db06e59651ee349b41467e18d3a185, type: 3}
   powerCoefficient: 2
@@ -328,6 +328,43 @@ PrefabInstance:
     - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: actionList.Array.data[3].stateEnum
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[0].actionName
+      value: "\uC5B4\uC370\uD2B8 \uC7BD"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[1].actionName
+      value: "\uAE30\uAC04\uD2B8 \uB7EC\uC26C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[2].actionName
+      value: "\uB77D\uB2E4\uC6B4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[3].actionName
+      value: "\uC624\uBA54\uAC00 \uBE0C\uB808\uC2A4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[0].actionEffect
+      value: "\uC804\uBC29(1\uCE78)\uC5D0 \uB300\uC0C1\uC5D0\uAC8C \uD380\uCE58 \uACF5\uACA9\uC744
+        \uD55C\uB2E4."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[1].actionEffect
+      value: "\uC804\uBC29(3\uCE78)\uC744 \uD5A5\uD574 \uAC15\uB825\uD55C \uB3CC\uC9C4
+        \uACF5\uACA9\uC744 \uD55C\uB2E4."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[2].actionEffect
+      value: "\uC804\uBC29(1\uCE78)\uC5D0 \uAC15\uB825\uD55C \uB0B4\uB824\uCC0D\uAE30
+        \uACF5\uACA9\uC744 \uD558\uBA70, \uD53C\uACA9 \uB300\uC0C1\uC744 \uB4A4\uB85C
+        \uB109\uBC31 \uB41C\uB2E4."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668484187003630436, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
+      propertyPath: actionList.Array.data[3].actionEffect
+      value: "2\uD134 \uB4A4\uC5D0 \uC804\uBC29\uC5D0 \uC788\uB294 \uBAA8\uB4E0 \uC801\uC744
+        \uBD88\uD0DC\uC6B0\uB294 \uB808\uC774\uC800 \uACF5\uACA9\uC744 \uD55C\uB2E4."
       objectReference: {fileID: 0}
     - target: {fileID: 5173715038268912655, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_LocalPosition.x
