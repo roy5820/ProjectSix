@@ -14,7 +14,7 @@ public class BattleManager : Singleton<BattleManager>
 
     public List<GameObject> onEnemysList = new List<GameObject>();//현재 필드위에 몬스터 리스트
     public PlayerController onPlayer;//필드위에 플레이어 오브젝트
-    private int nextWaveNum = 0;//현제 웨이브 num
+    public int nextWaveNum = 0;//현제 웨이브 num
 
     private TurnEventType turnState;//현제 턴상태
     public int nowTurnCnt = 0;//경과 턴
@@ -66,8 +66,7 @@ public class BattleManager : Singleton<BattleManager>
                 || (onEnemysList.Count == 0 && !onPlayer.isStatusProcessing))
             {
                 TurnEventBus.Publish(TurnEventType.EnemyTurn);//턴 전환 이벤트 발생
-            }
-                
+            }   
         }
 
         //적 행동 여부에 따라 TurnEnd이벤트 발생
