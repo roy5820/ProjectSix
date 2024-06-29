@@ -26,6 +26,9 @@ public class RandomStorePurchaseSystem : MonoBehaviour
     public Text haveMoneyTxt;//보유돈 표시 텍스트 객체
     private int haveMoney;//보유 돈
     public Sprite binItemImg = null;//빈 상태의 아이템 이미지
+
+    public GameObject rerollBtn;//리롤 버튼 오브젝트
+    private bool isReroll = true;//리롤 가능 여부
     // Start is called before the first frame update
     void Start()
     {
@@ -111,13 +114,10 @@ public class RandomStorePurchaseSystem : MonoBehaviour
     //돈을 소모하여 아이템 리롤이벤트 구현 함수
     public void OnRerollItems(int expense)
     {
-        int soldOutCnt = 0;//품절 아이템 개수 구하기
-        for (int i = 0; i < soldOutIndexList.Count; i++)
-            if (soldOutIndexList[i])
-                soldOutCnt++;
-        if (haveMoney >= expense && soldOutCnt < sellItemInfoLIst.Count)
+        if (haveMoney >= expense && isReroll)
         {
             _gameManager.moneyHeld -= expense;//비용 지불
+            DisableReroll();
             SetItems();//리롤
         }
     }
@@ -156,5 +156,22 @@ public class RandomStorePurchaseSystem : MonoBehaviour
                 sellItemInfoLIst[btnIndex].getItemInfo = null;
             }
         }
+
+        //모두 품절 여부에 따른 리롤 버튼 비활성화
+        int soldOutCnt = 0;
+        for (int i = 0; i < soldOutIndexList.Count; i++)
+        {
+            if (soldOutIndexList[i])
+                soldOutCnt++;
+        }
+        if (soldOutCnt >= sellItemInfoLIst.Count)
+            DisableReroll();
+    }
+
+    //리롤 비활성화
+    private void DisableReroll()
+    {
+        isReroll = false;
+        rerollBtn.GetComponent<Image>().color = Color.black;
     }
 }

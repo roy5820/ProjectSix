@@ -506,6 +506,7 @@ MonoBehaviour:
       itemInfo: {fileID: 0}
   haveMoneyTxt: {fileID: 2281431891199129752}
   binItemImg: {fileID: -1696565341, guid: 2fdb0845bc199834db19ecee12d7ed80, type: 3}
+  rerollBtn: {fileID: 7138506100924576731}
 --- !u!1 &1851335833195441814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2702,6 +2703,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 5146122009701049679}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7297505683821161156}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnPlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 6fd90ffaab7aaf64f92ebab98d7c6cf9, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

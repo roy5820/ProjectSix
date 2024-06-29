@@ -29,11 +29,21 @@ public class NervousBreakdownState : StateBase
         //气林 辆丰 贸府
         if (playerController.isBreakdown)
         {
-            if (normalAni)
-                _animator.runtimeAnimatorController = normalAni;
-            playerController.isBreakdown = false;
-            StopCoroutine(endCheckCoroutine);
-            characterController.TurnEnd();
+            while (true)
+            {
+                
+                if (_animator.GetCurrentAnimatorStateInfo(0).IsName("IDLE"))
+                {
+                    if (normalAni)
+                        _animator.runtimeAnimatorController = normalAni;
+                    playerController.isBreakdown = false;
+                    StopCoroutine(endCheckCoroutine);
+                    characterController.TurnEnd();
+                    break; 
+                }
+                yield return null;
+            }
+            
         }
         //气林 矫累 贸府
         else
