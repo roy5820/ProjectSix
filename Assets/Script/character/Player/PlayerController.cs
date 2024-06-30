@@ -75,7 +75,8 @@ public class PlayerController : CharacterController
         if (isBreakdown)
         {
             NowBattery--;//행동 후 배터리 1 감소
-            return;
+            if(NowBattery > 0)
+                return;
         }
             
         base.TurnEnd();

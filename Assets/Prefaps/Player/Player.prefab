@@ -722,7 +722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: HitState
-  sateDelayTime: 0.53
+  sateDelayTime: 0.6
   _soundManger: {fileID: 0}
   stateSound: {fileID: 0}
   cameraShake: 1

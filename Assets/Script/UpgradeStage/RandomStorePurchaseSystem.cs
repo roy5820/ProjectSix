@@ -22,6 +22,7 @@ public class RandomStorePurchaseSystem : MonoBehaviour
         public PlayerHaveItemData getItemInfo;//획득할 아이템 정보
     }
     public List<sellItemInfoDisplay> sellItemInfoLIst = new List<sellItemInfoDisplay>();//화면에 보여줄 판메아이템 리스트
+    public List<PlayerHaveItemData> getRandItems = new List<PlayerHaveItemData>();//
     List<bool> soldOutIndexList = new List<bool>();//품절리스트
     public Text haveMoneyTxt;//보유돈 표시 텍스트 객체
     private int haveMoney;//보유 돈
@@ -49,7 +50,9 @@ public class RandomStorePurchaseSystem : MonoBehaviour
     public void SetItems()
     {
         //sellItemInfoLIst의 수 만큼 랜덤 아이템 가져오기
-        List<PlayerHaveItemData> getRandItems = _gameManager.RandomOutputOfUnownedItems(sellItemInfoLIst.Count);
+        if(getRandItems.Count == 0)
+            getRandItems = _gameManager.RandomOutputOfUnownedItems(_gameManager.itemDB.Count);
+
 
         //soldOutIndexList(품절 여부 리스트)가 빈값이면 가져온 아이템 리스트의 수 만큼  값 초기화
         if(soldOutIndexList.Count == 0 )
@@ -58,7 +61,9 @@ public class RandomStorePurchaseSystem : MonoBehaviour
                 soldOutIndexList.Add(false);
         }
 
-        int nowGetListIndex = 0;//현재 읽고 있는 리스트 번호
+        int nowGetListIndex = getRandItems.Count-1;//현재 읽고 있는 리스트 번호
+        
+
         //getRandItems리스트를 토대로 화면에 아이템 정보 설정
         for (int i = 0; i < sellItemInfoLIst.Count; i++)
         {
@@ -76,9 +81,11 @@ public class RandomStorePurchaseSystem : MonoBehaviour
             //품절 여부 체크
             if (nowGetListIndex < getRandItems.Count && !soldOutIndexList[i])
             {
-                
+
                 //아이템 정보값을 가져와 변수의 저장
                 ItemInfo item = getRandItems[nowGetListIndex].itemInfo;
+                
+                
                 if (item != null)
                 {
                     itemImg = item.itemImg;//아이템 이미지 변경
@@ -95,7 +102,9 @@ public class RandomStorePurchaseSystem : MonoBehaviour
                     effectDescription = item.storeDescription;//효과 변경
                     getItemInfo = getRandItems[nowGetListIndex];//아이템 정보 갱신
                 }
-                nowGetListIndex++;//읽을 리스트 번호 증가
+                if (getRandItems.Count > sellItemInfoLIst.Count)
+                    getRandItems.RemoveAt(nowGetListIndex);
+                nowGetListIndex--;//읽을 리스트 번호 증가
             }
 
             //아이템 정보 갱신

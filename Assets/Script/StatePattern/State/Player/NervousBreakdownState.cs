@@ -37,7 +37,6 @@ public class NervousBreakdownState : StateBase
                     if (normalAni)
                         _animator.runtimeAnimatorController = normalAni;
                     playerController.isBreakdown = false;
-                    StopCoroutine(endCheckCoroutine);
                     characterController.TurnEnd();
                     break; 
                 }
@@ -51,20 +50,9 @@ public class NervousBreakdownState : StateBase
             if (nervousBreakdwonAni)
                 _animator.runtimeAnimatorController = nervousBreakdwonAni;
             playerController.isBreakdown = true;
-            endCheckCoroutine = StartCoroutine(BreakdownEndCheck());
         }
 
         yield return base.StateFuntion(datas);
-    }
-
-    //신경 폭주중 배터리 0이 될시 아이템 효과 종료 시키는 함수
-    private IEnumerator BreakdownEndCheck()
-    {
-        while (playerController.NowBattery > 0)
-        {
-            yield return null;
-        }
-        StartCoroutine(StateFuntion());//신경 폭주 종료
     }
 
     //신경 폭주 강제 종료 함수
