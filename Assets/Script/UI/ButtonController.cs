@@ -10,7 +10,7 @@ public class ButtonController : MonoBehaviour
     //씬이동 처리
     public void OnSceneMove(string sceneName)
     {
-        SceneManager.LoadSceneAsync(sceneName);
+        LoddingScene.LoadScene(sceneName);
     }
 
     //게임 종료처리 함수

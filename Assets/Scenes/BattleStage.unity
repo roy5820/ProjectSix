@@ -1601,10 +1601,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 2292379532336081009, guid: 77444c13708706f448e9457c7ca660a2, type: 3}
-      propertyPath: orthographic size
-      value: 7.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1621,6 +1617,22 @@ PrefabInstance:
     - target: {fileID: 1108084198234112885, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
       propertyPath: m_Name
       value: GameManeger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907261508417593615, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
+      propertyPath: stageLevel.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907261508417593615, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
+      propertyPath: stageLevel.Array.data[0]
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907261508417593615, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
+      propertyPath: stageLevel.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907261508417593615, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
+      propertyPath: stageLevel.Array.data[2]
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 8034181183838411811, guid: 7e66baa2442b37543b2e05ad610f7b59, type: 3}
       propertyPath: m_LocalPosition.x
