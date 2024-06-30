@@ -20,6 +20,13 @@ public class WinSystem : MonoBehaviour
 
     public void Win()
     {
+        //º¸½º »ç¸Á ÄÆ¾À Ãâ·Â
         winWindow.SetActive(true);
+    }
+
+    IEnumerator WinCutScene()
+    {
+
+        yield return null;
     }
 }
