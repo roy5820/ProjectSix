@@ -47,7 +47,7 @@ MonoBehaviour:
   stateAniParamater: SAttackState
   sateDelayTime: 0.3
   _soundManger: {fileID: 0}
-  stateSound: {fileID: 8300000, guid: 602a7c701d81b2447966ee9fa4c20f65, type: 3}
+  stateSound: {fileID: 8300000, guid: 01924f0b52eef99408d5a45059b192e0, type: 3}
   powerCoefficient: 1
   nockBackPower: 100
   cameraShake: 0
@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 912505243052051269, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: stateSound
       value: 
-      objectReference: {fileID: 8300000, guid: 01924f0b52eef99408d5a45059b192e0, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1411968381574116720, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: m_Controller
       value: 
