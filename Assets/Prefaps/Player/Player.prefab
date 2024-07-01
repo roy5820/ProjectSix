@@ -311,6 +311,7 @@ MonoBehaviour:
   isStatusProcessing: 0
   isInvincibility: 0
   delayTurn: 0
+  DeathEffect: {fileID: 0}
   _stateList:
   - state: {fileID: 3185217476324514115}
     stateEnum: 1
@@ -1124,7 +1125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   increasedRecoveryAmount: 1
-  maximumReductionAmount: 7
+  maximumReductionAmount: 5
 --- !u!1 &6739038713942910667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,7 +1489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniParamater: HitState
-  sateDelayTime: 0.8
+  sateDelayTime: 0.6
   _soundManger: {fileID: 0}
   stateSound: {fileID: 0}
   cameraShake: 1

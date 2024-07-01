@@ -50,6 +50,8 @@ public abstract class CharacterController : MonoBehaviour
     public bool isStatusProcessing = false;//상태 처리 여부
     public bool isInvincibility = false;//무적 여부
     public int delayTurn = 0;//행동 준비 턴 수
+
+    public GameObject DeathEffect = null;
     //상태 정보
     [System.Serializable]
     public class StateInfo
@@ -108,5 +110,13 @@ public abstract class CharacterController : MonoBehaviour
         _characterStatus.nowHp = _characterStatusOriginal.nowHp;
         _characterStatus.offensePower = _characterStatusOriginal.offensePower;
         _characterStatus.maxBattery = _characterStatusOriginal.maxBattery;
+    }
+
+    public virtual void IsDeath()
+    {
+        if (DeathEffect)
+        {
+            DeathEffect.SetActive(true);
+        }
     }
 }

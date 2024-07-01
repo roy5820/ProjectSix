@@ -16,9 +16,9 @@ MonoBehaviour:
   itemType: 0
   itemImg: {fileID: 21300000, guid: 90b4b32c23793434a84c61f12b6621f9, type: 3}
   state: 9
-  price: 1400
+  price: 1250
   offense: 1.5
-  useCost: 3
+  useCost: 2
   effectDescription: "\uC804\uBC29(1\uCE78)\uC73C\uB85C \uC774\uB3D9\uD558\uBA70
     \uC801\uC744 \uACF5\uACA9\uD55C\uB2E4. "
-  storeDescription: "\uB370\uBBF8\uC9C0\uAC00 50% \uC99D\uAC00 \uD55C\uB2E4"
+  storeDescription: "\uB370\uBBF8\uC9C0\uAC00 30% \uC99D\uAC00 \uD55C\uB2E4"
