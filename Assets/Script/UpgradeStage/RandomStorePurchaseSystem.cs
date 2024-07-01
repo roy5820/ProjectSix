@@ -30,6 +30,9 @@ public class RandomStorePurchaseSystem : MonoBehaviour
 
     public GameObject rerollBtn;//리롤 버튼 오브젝트
     private bool isReroll = true;//리롤 가능 여부
+
+    public AudioClip buyItemSfx = null;
+    public AudioClip rerollItemSfx = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -125,6 +128,8 @@ public class RandomStorePurchaseSystem : MonoBehaviour
     {
         if (haveMoney >= expense && isReroll)
         {
+            if(rerollItemSfx)
+                SoundManger.Instance.PlaySFX(rerollItemSfx);
             _gameManager.moneyHeld -= expense;//비용 지불
             DisableReroll();
             SetItems();//리롤
@@ -144,6 +149,8 @@ public class RandomStorePurchaseSystem : MonoBehaviour
             //돈지불 여부 체크
             if (price <= haveMoney)
             {
+                if (buyItemSfx)
+                    SoundManger.Instance.PlaySFX(buyItemSfx);
                 _gameManager.moneyHeld -= price;//돈 지불
                 //아이템 획득 구현
                 _gameManager.PlayerGetItem
