@@ -93,7 +93,7 @@ public class RandomStorePurchaseSystem : MonoBehaviour
                 {
                     itemImg = item.itemImg;//아이템 이미지 변경
                     itemName = item.itemName;//아이템 명 변경
-                    itemLv = getRandItems[nowGetListIndex].itemLevel.ToString();//아이템 레벨;
+                    itemLv = (getRandItems[nowGetListIndex].itemLevel+1).ToString();//아이템 레벨;
                     itemPrice = item.price.ToString();//아이템 가격 변경
                     itemCoast = item.useCost.ToString();//아이템 코스트
                     //아이템 타입에 따른 계수구분명 변경

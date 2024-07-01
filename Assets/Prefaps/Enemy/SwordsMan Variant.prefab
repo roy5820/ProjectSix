@@ -48,7 +48,7 @@ MonoBehaviour:
   sateDelayTime: 0.2
   _soundManger: {fileID: 0}
   stateSound: {fileID: 8300000, guid: 05354ff67c1fe3343ac86c937b274ad8, type: 3}
-  powerCoefficient: 1.5
+  powerCoefficient: 1.25
   dashSpeed: 60
   dashRange: 1
   rushDelay: 0
@@ -172,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: dropMoney
-      value: 650
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 7035493264269367590, guid: 491b8e1269cfee943adbc6b30acfdf59, type: 3}
       propertyPath: _stateList.Array.size
