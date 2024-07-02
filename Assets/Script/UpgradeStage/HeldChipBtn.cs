@@ -5,6 +5,7 @@ using UnityEngine;
 public class HeldChipBtn : ChipBtnBase
 {
     public int chipIndex = -1;//수정할 칩 인덱스 값
+    public AudioClip chipSound = null;
 
     protected override void Update()
     {
@@ -24,6 +25,9 @@ public class HeldChipBtn : ChipBtnBase
         //해당 칩을 칩인벤토리에서 제거
         _gameManager.cheepInventory[chipIndex] = -1;
         chipInfo = null;
+
+        if(chipSound)
+            SoundManger.Instance.PlaySFX(chipSound);
 
         base.OnChipEvent();
     }

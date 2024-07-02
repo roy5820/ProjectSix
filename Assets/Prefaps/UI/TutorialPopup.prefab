@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 62528c05fafae4147bd0d747fde5c8e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dcbbeac0ef44ccd40b76c71e4ac29a8a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -394,11 +394,18 @@ MonoBehaviour:
   RBtn: {fileID: 7236490269879869992}
   chageImg: {fileID: 4420562585486466376}
   tutorialImgs:
-  - {fileID: 21300000, guid: 62528c05fafae4147bd0d747fde5c8e1, type: 3}
-  - {fileID: 21300000, guid: a70de1c807b8d604a8f2650422c0ac61, type: 3}
-  - {fileID: 21300000, guid: 099abc7d0364c544c965c625c85912e6, type: 3}
-  - {fileID: 21300000, guid: 35b2fdb8e2b7af0448b7d40172cdd710, type: 3}
-  - {fileID: 21300000, guid: 5b4ba564e2e8ee84a873fb6d9095d15c, type: 3}
+  - {fileID: 21300000, guid: dcbbeac0ef44ccd40b76c71e4ac29a8a, type: 3}
+  - {fileID: 21300000, guid: 4e6144bd5e4804b4fabec2053c9ad96d, type: 3}
+  - {fileID: 21300000, guid: d54271986df12894b8458b752cdcdec2, type: 3}
+  - {fileID: 21300000, guid: b302b44840bf3fd4b9c1a69bfaf0824e, type: 3}
+  - {fileID: 21300000, guid: 5871476de0b33cb4eb9ac641bd4dd25a, type: 3}
+  - {fileID: 21300000, guid: 296c2e68071f4414ca636d1a8c6bc3f3, type: 3}
+  - {fileID: 21300000, guid: 0e98f863fa265a847a2185df22f70e9e, type: 3}
+  - {fileID: 21300000, guid: f62ab005e25762c4ba48302c1abb3a18, type: 3}
+  - {fileID: 21300000, guid: 4eee899b74804254aa0e506696dcc21b, type: 3}
+  - {fileID: 21300000, guid: 8a9838abaa61092429bc7d6a28b1968b, type: 3}
+  - {fileID: 21300000, guid: d313e2d6d47a1e443ad2d2b17e2e39bc, type: 3}
+  - {fileID: 21300000, guid: bfbc5e38e82c0a74d956e832e97df3b2, type: 3}
 --- !u!1 &5515539886553446408
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,4 +908,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 

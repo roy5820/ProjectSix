@@ -4,6 +4,7 @@ using UnityEngine;
 //칩 삽입 버튼 구현
 public class InsertChipBtn : ChipBtnBase
 {
+    public AudioClip chipSound = null;
     //칩삽입 이벤트 구현 부분
     public override void OnChipEvent()
     {
@@ -15,7 +16,8 @@ public class InsertChipBtn : ChipBtnBase
             return;
 
         _gameManager.cheepInventory[insertIndex] = chipInfo.CheepID;//칩 장비
-
+        if (chipSound)
+            SoundManger.Instance.PlaySFX(chipSound);
         base.OnChipEvent();
     }
 }

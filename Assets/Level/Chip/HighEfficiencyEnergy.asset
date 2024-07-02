@@ -15,6 +15,7 @@ MonoBehaviour:
   CheepID: 103
   CheepName: "\uACE0\uD6A8\uC728 \uC5D0\uB108\uC9C0"
   CheepEffectExplanationTxt: "\uB9E4\uD134 \uBC30\uD130\uB9AC \uD68C\uBCF5\uB7C9
-    \uC99D\uAC00, \uCD5C\uB300 \uBC30\uD130\uB9AC\uB7C9 \uAC10\uC18C"
+    1\uC99D\uAC00\uD558\uC9C0\uB9CC, \uCD5C\uB300 \uBC30\uD130\uB9AC\uB7C9\uC774
+    \uC808\uBC18(4)\uC774 \uB41C\uB2E4."
   CheepIcon: {fileID: 21300000, guid: 8cf4539ed7be78e42b21164568d05ee2, type: 3}
   cheepType: 2

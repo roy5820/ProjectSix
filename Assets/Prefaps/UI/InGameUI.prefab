@@ -4661,6 +4661,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6473143805684915981, guid: 7b2208ea8c369654e89c40183ed54249, type: 3}
+      propertyPath: tutorialImgs.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473143805684915981, guid: 7b2208ea8c369654e89c40183ed54249, type: 3}
+      propertyPath: tutorialImgs.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5871476de0b33cb4eb9ac641bd4dd25a, type: 3}
+    - target: {fileID: 6473143805684915981, guid: 7b2208ea8c369654e89c40183ed54249, type: 3}
+      propertyPath: tutorialImgs.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 296c2e68071f4414ca636d1a8c6bc3f3, type: 3}
+    - target: {fileID: 6473143805684915981, guid: 7b2208ea8c369654e89c40183ed54249, type: 3}
+      propertyPath: tutorialImgs.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0e98f863fa265a847a2185df22f70e9e, type: 3}
+    - target: {fileID: 6473143805684915981, guid: 7b2208ea8c369654e89c40183ed54249, type: 3}
+      propertyPath: tutorialImgs.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: f62ab005e25762c4ba48302c1abb3a18, type: 3}
+    - target: {fileID: 6473143805684915981, guid: 7b2208ea8c369654e89c40183ed54249, type: 3}
+      propertyPath: tutorialImgs.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4eee899b74804254aa0e506696dcc21b, type: 3}
+    - target: {fileID: 6473143805684915981, guid: 7b2208ea8c369654e89c40183ed54249, type: 3}
+      propertyPath: tutorialImgs.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8a9838abaa61092429bc7d6a28b1968b, type: 3}
+    - target: {fileID: 6473143805684915981, guid: 7b2208ea8c369654e89c40183ed54249, type: 3}
+      propertyPath: tutorialImgs.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: d313e2d6d47a1e443ad2d2b17e2e39bc, type: 3}
+    - target: {fileID: 6473143805684915981, guid: 7b2208ea8c369654e89c40183ed54249, type: 3}
+      propertyPath: tutorialImgs.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: bfbc5e38e82c0a74d956e832e97df3b2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
