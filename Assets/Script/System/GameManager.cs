@@ -38,10 +38,10 @@ public class GameManager : Singleton<GameManager>
 
     private void Update()
     {
-        if (Input.GetKeyUp(reseKey))
+        /*if (Input.GetKeyUp(reseKey))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+        }*/
     }
 
     //스테이지 클리어 이벤트 처리
