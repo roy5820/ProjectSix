@@ -1,0 +1,830 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="캐릭터의 각 행동(죽음, 이동, 공격, 스킬) &#xD;&#xA;기능 구현을 위한 상태 패턴">
+    <Position X="17.442" Y="3.902" Height="0.985" Width="2.755" />
+  </Comment>
+  <Comment CommentText="캐릭터 상태 전환을 위한 콘택스트 객체">
+    <Position X="7.701" Y="2.865" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="싱글톤 패턴 구현을 위한 제네릭 클래스">
+    <Position X="15.5" Y="19" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="카메라 컨트롤러">
+    <Position X="9.978" Y="22.045" Height="0.308" Width="1.7" />
+  </Comment>
+  <Comment CommentText="상태 타입">
+    <Position X="11.939" Y="5.297" Height="0.382" Width="1.7" />
+  </Comment>
+  <Comment CommentText="상태 호출을 위한 인터페이스">
+    <Position X="11.897" Y="2.873" Height="0.56" Width="1.7" />
+  </Comment>
+  <Comment CommentText="상태별 기능 구현을 위한 베이스 클래스">
+    <Position X="14.997" Y="1.554" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="사운드 크기 조절 구현">
+    <Position X="6.491" Y="22.664" Height="0.53" Width="1.643" />
+  </Comment>
+  <Comment CommentText="사운드 관리를 위한 열거형 객체">
+    <Position X="6.252" Y="25.927" Height="0.348" Width="2.285" />
+  </Comment>
+  <Comment CommentText="턴 이벤트 관리를 위한 열거형 객체">
+    <Position X="4.261" Y="25.514" Height="0.625" Width="1.7" />
+  </Comment>
+  <Comment CommentText="턴 관리를 위한 이벤트 버스">
+    <Position X="4.133" Y="22.783" Height="0.433" Width="1.908" />
+  </Comment>
+  <Comment CommentText="총알 기능 구현을 위한 베이스 클래스">
+    <Position X="30.383" Y="7.3" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="보스 패시브 스킬 구현&#xD;&#xA;-플레이어가 일정 시간안에 턴을 안넘기면 턴을 뺐음">
+    <Position X="24.1" Y="1.387" Height="0.801" Width="2.374" />
+  </Comment>
+  <Comment CommentText="캐릭터 기능 구현 및 상태 관리를 위한 컨트롤러">
+    <Position X="27.931" Y="22.602" Height="0.75" Width="2.022" />
+  </Comment>
+  <Comment CommentText="캐릭터 방향 관리를 위한 열거형 객체">
+    <Position X="30.372" Y="23.919" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="캐릭터 상태값(체력, 공격력, 베터리 수치) 관리를 위한 Scriptable오브젝트">
+    <Position X="30.35" Y="26.169" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="적 캐릭터 기능 구현&#xD;&#xA;-SelectSate메서드를 통해서 행동할 상태(State)를 조건(우선순위, 쿨타임, 사거리)에 따라 골라 실행하는 방식으로 AI구현">
+    <Position X="25.979" Y="29.405" Height="1.235" Width="1.987" />
+  </Comment>
+  <Comment CommentText="플레이어 캐릭터 기능 구현&#xD;&#xA;">
+    <Position X="30.118" Y="29.702" Height="0.849" Width="1.799" />
+  </Comment>
+  <Comment CommentText="캐릭터 이동 구현 객체">
+    <Position X="25.9" Y="25.158" Height="0.458" Width="1.7" />
+  </Comment>
+  <Comment CommentText="스테이지 별 몬스터 스폰 관리를 위한 객체들">
+    <Position X="13.067" Y="29.475" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="스테이지 정보(총 획득 톤, 현제 턴 수 등)를 UII에 표시하는 객체">
+    <Position X="17.723" Y="32.131" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="플레이어 사망 시 이벤트 처리 객체">
+    <Position X="11.123" Y="32.354" Height="0.561" Width="1.7" />
+  </Comment>
+  <Comment CommentText="게임 클리어 시 이벤트 처리 객체">
+    <Position X="13.14" Y="32.383" Height="0.546" Width="1.7" />
+  </Comment>
+  <Comment CommentText="스테이지 클리어 시 결산 처리&#xD;&#xA;결산: 클리어 시 턴 경과 정도에 따른 보상(돈) 지급">
+    <Position X="14.99" Y="32.354" Height="0.794" Width="2.225" />
+  </Comment>
+  <Comment CommentText="플렛폼에 들어오거나 나가는 적에 대한 정보 처리하는 객체">
+    <Position X="20.375" Y="31.09" Height="0.517" Width="2.268" />
+  </Comment>
+  <Comment CommentText="칩 관련 객체들">
+    <Position X="44.267" Y="20.408" Height="0.371" Width="1.992" />
+  </Comment>
+  <Comment CommentText="보스 패시브 스킬(턴 뺐기)의 대한 시각적인 카운트 다운을 UI에 표현하기 위한 객체">
+    <Position X="26.623" Y="1.429" Height="0.75" Width="2.327" />
+  </Comment>
+  <Comment CommentText="플레이어 입력 처리">
+    <Position X="32.4" Y="30.16" Height="0.386" Width="1.7" />
+  </Comment>
+  <Comment CommentText="현재 창작 중인 칩에 따른 상태(State) 변경&#xD;&#xA;예) 받는 데미지 2배 칩의 경우&#xD;&#xA;     적용 전: 상태타입:Hit &#xD;&#xA;	   =&gt; HitState&#xD;&#xA;     변경 후: 상태타입:Hit &#xD;&#xA;	   =&gt;DoubleDamageHitState">
+    <Position X="32.733" Y="25.047" Height="1.231" Width="3.07" />
+  </Comment>
+  <Comment CommentText="적 캐릭터 상태값(HP, 다음에 사용할 행동)를&#xD;&#xA;UI에 표기하는 객체">
+    <Position X="23.797" Y="29.574" Height="0.725" Width="1.7" />
+  </Comment>
+  <Comment CommentText="플레이어 hp값을 UI에 표기하는 객체">
+    <Position X="34.68" Y="30.118" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="플레이어 베터리 수치를&#xD;&#xA;UI에 표현하는 객체">
+    <Position X="34.936" Y="34.134" Height="0.539" Width="1.7" />
+  </Comment>
+  <Comment CommentText="업그레이드 스테이지에서 플레이어의 체력을 회복 시키는 객체">
+    <Position X="8.859" Y="32.165" Height="0.735" Width="1.919" />
+  </Comment>
+  <Comment CommentText="보스 캐릭터의 HP값을 UI에 표현하는 객체">
+    <Position X="23.88" Y="34.71" Height="0.517" Width="1.7" />
+  </Comment>
+  <Comment CommentText="아이템 관련 객체들&#xD;&#xA;사용 시 기능 구현은 상태패턴을 통해 구현">
+    <Position X="40.793" Y="8.181" Height="0.75" Width="2.144" />
+  </Comment>
+  <Comment CommentText="칩 기능 구현을 위한 베이스 객체">
+    <Position X="42.905" Y="25.945" Height="0.463" Width="1.7" />
+  </Comment>
+  <Comment CommentText="버서커 칩 기능 구현&#xD;&#xA;기능: 이동 시 데미지 부여 적 처치 시 체력 회복">
+    <Position X="39.633" Y="28.57" Height="0.651" Width="1.7" />
+  </Comment>
+  <Comment CommentText="유리대포 칩 기능 구현&#xD;&#xA;기능: 받는 데미지 2배">
+    <Position X="41.824" Y="28.772" Height="0.497" Width="1.7" />
+  </Comment>
+  <Comment CommentText="고효율 베터리 칩 기능 구현&#xD;&#xA;기능: 베터리 최대 수치 Dwon&#xD;&#xA;베터리 회복량 UP">
+    <Position X="43.99" Y="28.559" Height="0.75" Width="2.02" />
+  </Comment>
+  <Comment CommentText="서브하트 칩 기능 구현&#xD;&#xA;기능: 죽을 시 1회 부활">
+    <Position X="46.471" Y="28.684" Height="0.596" Width="1.59" />
+  </Comment>
+  <Comment CommentText="버튼에 쓰이는 기능들을 모아놓은 객체&#xD;&#xA;OnCloseGame: 게임종료&#xD;&#xA;OnClosePopupPanel: 팝업창 닫기(비활성화)&#xD;&#xA;OnOpenPopupPanel: 팝업창 열기(활성화)&#xD;&#xA;OnDownPopupPanel: 팝업창 내리기&#xD;&#xA;OnUpPopupPanel: 팝업창 올리기&#xD;&#xA;OnSceneMove: 씬이동&#xD;&#xA;OnPlaySFX: 버튼 클릭시 효과음 재생&#xD;&#xA;OnRemoveGamemanger:게임 메니저 제거">
+    <Position X="5.886" Y="31.03" Height="2.183" Width="2.835" />
+  </Comment>
+  <Comment CommentText="장착중인 칩을 표시 및 제거하는 버튼 구현">
+    <Position X="39.17" Y="23.495" Height="0.645" Width="1.7" />
+  </Comment>
+  <Comment CommentText="미보유 칩 장착 버튼 구현">
+    <Position X="41.382" Y="23.76" Height="0.434" Width="1.799" />
+  </Comment>
+  <Comment CommentText="상태 교체를 위한 정보를 갖는 객체">
+    <Position X="43.377" Y="22.875" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="칩 인벤토리 구현을 위한 객체">
+    <Position X="46.021" Y="21.271" Height="0.625" Width="1.7" />
+  </Comment>
+  <Comment CommentText="전투 스테이지에서 장착 중인 칩을 표현 하는 객체">
+    <Position X="47.964" Y="23.494" Height="0.662" Width="1.822" />
+  </Comment>
+  <Comment CommentText="칩 종류">
+    <Position X="47.938" Y="21.14" Height="0.474" Width="1.7" />
+  </Comment>
+  <Comment CommentText="칩정보를 관리하기 위한 ScriptableObject객체">
+    <Position X="50.188" Y="21.03" Height="0.574" Width="1.7" />
+  </Comment>
+  <Comment CommentText="캐릭터 칩 적용을 위한 데이터 타입">
+    <Position X="36.313" Y="25.68" Height="0.596" Width="1.7" />
+  </Comment>
+  <Comment CommentText="특정 키 입력 시 인게임 옵션 팝업을 띄우는 객체">
+    <Position X="9.095" Y="28.567" Height="0.75" Width="1.968" />
+  </Comment>
+  <Comment CommentText="게임 메니저&#xD;&#xA;-칩, 아이템의 데이터 베이스 및 인벤토리 관리&#xD;&#xA;-스테이지별 난이도 조절&#xD;&#xA;-플레이어의 상태값(현재 체력, 보유 돈 등) 저장">
+    <Position X="12.651" Y="21.225" Height="1.114" Width="1.7" />
+  </Comment>
+  <Comment CommentText="게임 내 사운드(BGM, SFX) 관리">
+    <Position X="15.43" Y="22.247" Height="0.552" Width="1.7" />
+  </Comment>
+  <Comment CommentText="배경 변화를 주기위한 객체">
+    <Position X="18.049" Y="21.842" Height="0.375" Width="1.865" />
+  </Comment>
+  <Comment CommentText="배틀 메니저&#xD;&#xA;-몬스터 스폰&#xD;&#xA;-스테이지 패배, 승리, 클리어 여부 체크 및 이벤트 처리&#xD;&#xA;-턴 관리&#xD;&#xA;-전투시 필요한 다양한 메서드 지원&#xD;&#xA;ex: -특정 오브젝트가 속해 있는 플랫폼 위치 탐색&#xD;&#xA;    - 특정 플렛폼의 데미지 부여&#xD;&#xA;    - 등 지원">
+    <Position X="20.574" Y="20.084" Height="1.986" Width="2.582" />
+  </Comment>
+  <Comment CommentText="플레이어 보유 아이템 정보를 관리하는 객체">
+    <Position X="40.849" Y="9.627" Height="0.539" Width="1.7" />
+  </Comment>
+  <Comment CommentText="아이템 인벤토리 정보를 바탕으로 아이템 사용 버튼 생성">
+    <Position X="38.406" Y="9.193" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="아이템 정보 관리를 위한 ScriptableObject 객체">
+    <Position X="43.146" Y="9.625" Height="0.539" Width="1.7" />
+  </Comment>
+  <Comment CommentText="ItemDatabase에서 아이템 정보를 관리하기 위한 객체">
+    <Position X="45.023" Y="9.443" Height="0.75" Width="2.055" />
+  </Comment>
+  <Comment CommentText="아이템 사용 처리">
+    <Position X="44.003" Y="13.107" Height="0.587" Width="1.508" />
+  </Comment>
+  <Comment CommentText="아이템 상점에서 랜덤으로 아이템을 뿌리는 객체">
+    <Position X="40.935" Y="12.953" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="전투 스테이지에서 아이템 세부 정보를 표기하는 객체">
+    <Position X="37.964" Y="13.145" Height="0.75" Width="1.997" />
+  </Comment>
+  <Class Name="CameraController">
+    <Position X="10" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAhAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Assets\Script\Camera\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterController">
+    <Position X="28" Y="23.5" Width="2" />
+    <NestedTypes>
+      <Class Name="CharacterController.StateInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Script\character\CharacterController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EkAEAiAAAAYAIAgAACAAAAIkEAAAQBAgAAAAACCAAEg=</HashCode>
+      <FileName>Assets\Script\character\CharacterController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterMovement">
+    <Position X="25.75" Y="25.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAACAAAAAAAAAAAAIAAACAAAACIAABAAAAAAA=</HashCode>
+      <FileName>Assets\Script\character\CharacterMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyController">
+    <Position X="26.25" Y="30.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="EnemyController.StateCondition" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Script\character\Enemy\EnemyController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EAABAAAAJCAAAAAEAAIAAAAgAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Script\character\Enemy\EnemyController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerController">
+    <Position X="30" Y="30.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAABAAAAACAAAAAAAABAAAAgAAAAAAAIAABAAACICIA=</HashCode>
+      <FileName>Assets\Script\character\Player\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerInputHandler">
+    <Position X="32.25" Y="30.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAhACCAAAAAEAwAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\character\Player\PlayerInputHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChangeStateInfo">
+    <Position X="43.5" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Chip\ChangeStateInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CheepBase">
+    <Position X="43" Y="26.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Chip\CheepBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BerserkerCheep">
+    <Position X="39.75" Y="29.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAIAAAAIAAAA=</HashCode>
+      <FileName>Assets\Script\Chip\Cheeps\BerserkerCheep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlassCannonCheep">
+    <Position X="42" Y="29.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Chip\Cheeps\GlassCannonCheep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HighEfficiencyEnergyCheep">
+    <Position X="44.25" Y="29.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAABAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Chip\Cheeps\HighEfficiencyEnergyCheep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServeHartCheep">
+    <Position X="46.5" Y="29.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Chip\Cheeps\ServeHartCheep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SetCheepForCharacter">
+    <Position X="33" Y="26.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACCCAAAAAAAAABAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Script\Chip\SetCheepForCharacter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletBase">
+    <Position X="30.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAoAAAiAAgAQAEQAAAAAAAEAAAQgAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\DamageObject\BulletBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LaserBullet">
+    <Position X="28.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAQAAAAAQAAAEAAAEAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\DamageObject\LaserBullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StunBullet">
+    <Position X="32.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\DamageObject\StunBullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TurnEventBus">
+    <Position X="4.25" Y="23.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAgACAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\EventBus\TurnEventBus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemData">
+    <Position X="45.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\ItemData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerHaveItemData">
+    <Position X="41" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAACAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Item\PlayerHaveItemData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UseItem" BaseTypeListCollapsed="true">
+    <Position X="44" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACAEAAAEQAAgAABACEAgAAAAEAAAAQAAEAA=</HashCode>
+      <FileName>Assets\Script\Item\UseItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlayerTurnSteal">
+    <Position X="24.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAIAAIAAAAAAEIAAAAAAAAIBIAAAAAACAA=</HashCode>
+      <FileName>Assets\Script\PassiveSkill\PlayerTurnSteal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterStatus">
+    <Position X="30.5" Y="27" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAgAAgAAAAA=</HashCode>
+      <FileName>Assets\Script\ScriptableObject\CharacterStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CheepInfo">
+    <Position X="50" Y="21.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAUAAAAA=</HashCode>
+      <FileName>Assets\Script\ScriptableObject\CheepInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemInfo">
+    <Position X="43.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABQAAABAAEAAAAAAAgAAAAAAAAAAAEEAACAAAAEAA=</HashCode>
+      <FileName>Assets\Script\ScriptableObject\ItemInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Singleton&lt;T&gt;">
+    <Position X="15.5" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Script\SingletonPatten\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterStateContext">
+    <Position X="7.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAABAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\CharacterStateContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppearsState">
+    <Position X="10.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\AppearsState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletFireState">
+    <Position X="7.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAIAAAACAAAAQAACAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\BulletFireState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DamageWhenMovingState">
+    <Position X="9.5" Y="15" Width="1.5" />
+    <InheritanceLine Type="MoveState" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.25" Y="13.828" />
+        <Point X="12.25" Y="14.625" />
+        <Point X="10.312" Y="14.625" />
+        <Point X="10.312" Y="15" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\DamageWhenMovingState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DefenseState">
+    <Position X="16.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAGAgAAAAAAAQAAAAAAAAAAAAAKAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\DefenseState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DieState">
+    <Position X="20" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\DieState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoubleDamageHitState">
+    <Position X="4" Y="14.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\DoubleDamageHitState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyReadyToState">
+    <Position X="26" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\Enemy\EnemyReadyToState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RecoveHPWhenKillState">
+    <Position X="19" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\Enemy\RecoveHPWhenKillState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeleportAndAttack">
+    <Position X="4" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAIAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\Enemy\TeleportAndAttack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrackPlayerState">
+    <Position X="6.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\Enemy\TrackPlayerState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HitAndRunState">
+    <Position X="13.5" Y="14.75" Width="1.5" />
+    <InheritanceLine Type="MoveState" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.25" Y="13.828" />
+        <Point X="12.25" Y="14.625" />
+        <Point X="14.25" Y="14.625" />
+        <Point X="14.25" Y="14.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAIAAAIAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\HitAndRunState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HitState">
+    <Position X="4" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAABAAAAAAAAAAAACRCAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\HitState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoveState">
+    <Position X="11.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAADAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\MoveState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NockbackAttack">
+    <Position X="19" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAgAABAAIAQAAAAAAAEIAAAACBCEAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\NockbackAttack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NormalAttackState">
+    <Position X="24.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\NormalAttackState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NervousBreakdownState">
+    <Position X="22.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAIAAABAAAKAABAAAAECAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\Player\NervousBreakdownState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RushAttackState">
+    <Position X="26.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABQAAAACAAAAAAAAABA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\RushAttackState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServeHartState">
+    <Position X="21.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAICAAAQCAAAAAABAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\ServeHartState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrongAttackState">
+    <Position X="22.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\StrongAttackState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StunState">
+    <Position X="8.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAACAAAAIAAAAAAQBAACIAAAAAAAAKAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\StunState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TurnaboutState">
+    <Position X="13" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\State\TurnaboutState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateBase">
+    <Position X="15" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAIAAgAABAICIAACAAIAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\StateBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BackgroundEffectController">
+    <Position X="17.75" Y="23" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Assets\Script\System\BackgroundEffectController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleManager">
+    <Position X="20.75" Y="23" Width="2" />
+    <InheritanceLine Type="Singleton&lt;T&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="16.25" Y="22.078" />
+        <Point X="16.25" Y="22.625" />
+        <Point X="21.75" Y="22.625" />
+        <Point X="21.75" Y="23" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>EEUACAAIBiBAgAAQAAIAAEAwAAABAAAJAAAAACCgigQ=</HashCode>
+      <FileName>Assets\Script\System\BattleSystem\BattleManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpawnEnemyInfo">
+    <Position X="15" Y="30.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\System\BattleSystem\SpawnEnemyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StageInfo">
+    <Position X="11.5" Y="30.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAACAAAAAAAAAAAAABAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Script\System\BattleSystem\StageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaveInfo">
+    <Position X="13.25" Y="30.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\System\BattleSystem\WaveInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager">
+    <Position X="12.75" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQQAAAAECABAIAAAABAIBAAAAAAABBIAAAAABAgSgA=</HashCode>
+      <FileName>Assets\Script\System\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformInfoManagement">
+    <Position X="20.5" Y="31.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAATAAABAAAAAAAAAAAgAAEAIAAAAAAAAAAAIEAA=</HashCode>
+      <FileName>Assets\Script\System\PlatformInfoManagement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundManger">
+    <Position X="15.5" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAUAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Script\System\Sound\SoundManger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="tmp">
+    <Position X="6.5" Y="23.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACCCAAAAACAAAAAgAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\Script\System\Sound\tmp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ButtonController">
+    <Position X="3.5" Y="30.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAAQCAAAAAQAgAAAAUAAAAAAAAAAAAAAAECAAAAUA=</HashCode>
+      <FileName>Assets\Script\UI\ButtonController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BossHUDController">
+    <Position X="23.75" Y="35.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAIAAiAAAAAAAAAACCAAgAAQAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\HUD\BossHUDController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CreateItemBtn">
+    <Position X="38.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAACCAAIACAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\HUD\CreateItemBtn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyHUDController">
+    <Position X="23.75" Y="30.5" Width="1.75" />
+    <NestedTypes>
+      <Class Name="EnemyHUDController.ActionInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Script\UI\InGameUI\HUD\EnemyHUDController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ABQAAAIAAjAACAAAAAAAACAAgAAQAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\HUD\EnemyHUDController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerBatteryGauge">
+    <Position X="34.75" Y="34.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAYAAUAIAAAAAAgBAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\HUD\PlayerBatteryGauge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerHUDController">
+    <Position X="34.75" Y="31" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAIAAiAAAAAAAAAACCAAgAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\HUD\PlayerHUDController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShowChipInventory">
+    <Position X="48" Y="24.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAACCAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\HUD\ShowChipInventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StageHUD">
+    <Position X="17.75" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAAAKAAAAAAAAIAAAIAgAAAAAAAAiAAABAAAAA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\HUD\StageHUD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TurnSteelTImer">
+    <Position X="27" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAgIAQAAACEAAAAAAAAAAIAEQAAAAACAA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\HUD\TurnSteelTImer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemInspectorPopup">
+    <Position X="38" Y="14" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAABCAABAAABAEAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\ItemInspectorPopup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoseSystem">
+    <Position X="11.25" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAABAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\LoseSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Settlement">
+    <Position X="15.25" Y="33.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAIAAEAAAgAAAAAIEAAAABAACAQ=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\SettlementSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinSystem">
+    <Position X="13.25" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\WinSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenIngameOption">
+    <Position X="9" Y="29.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQIABAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UI\OpenIngameOption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChipBtnBase" Collapsed="true">
+    <Position X="40.5" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACgAACCAAAAAAAAAAAAAIAAAAAAAAAAIAAQAAAAA=</HashCode>
+      <FileName>Assets\Script\UpgradeStage\ChipBtnBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ChipInventorySystem">
+    <Position X="46" Y="22" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IIAAAAAACCAAQAgAAIAAAAABAAIAAQAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UpgradeStage\ChipInventorySystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeldChipBtn" Collapsed="true">
+    <Position X="39.25" Y="24.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UpgradeStage\HeldChipBtn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsertChipBtn" Collapsed="true">
+    <Position X="41.5" Y="24.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UpgradeStage\InsertChipBtn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RandomStorePurchaseSystem">
+    <Position X="40.75" Y="13.75" Width="2.25" />
+    <NestedTypes>
+      <Class Name="RandomStorePurchaseSystem.sellItemInfoDisplay" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Script\UpgradeStage\RandomStorePurchaseSystem.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQCCAEQAQAAQAACAAEAEQAACgAAABABgAAAAA=</HashCode>
+      <FileName>Assets\Script\UpgradeStage\RandomStorePurchaseSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RelaxationSystem">
+    <Position X="9" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACCAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UpgradeStage\RelaxationSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="CheepPair">
+    <Position X="36.25" Y="26.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Chip\CheepPair.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="CharacterState">
+    <Position X="12" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\StatePattern\CharacterState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="CharacterDirection">
+    <Position X="30.5" Y="24.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\character\CharacterDirection.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CheepType">
+    <Position X="48" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAIA=</HashCode>
+      <FileName>Assets\Script\Chip\CheepType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TurnEventType">
+    <Position X="4.25" Y="26.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAQAAAAAAAAAAAAEAAAAAgAAAAAAABAAAAABAgAAA=</HashCode>
+      <FileName>Assets\Script\EventBus\TurnEventType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="StateEnum" Collapsed="true">
+    <Position X="12" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAEMAAAAAgEAIAAAIAAAABQAAAAIQBBgAAAYQ=</HashCode>
+      <FileName>Assets\Script\StatePattern\StateEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sound">
+    <Position X="6.5" Y="26.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAgAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\System\Sound\Sound.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

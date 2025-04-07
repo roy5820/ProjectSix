@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="칩 관련 객체들">
+    <Position X="5.597" Y="0.5" Height="0.371" Width="1.992" />
+  </Comment>
+  <Comment CommentText="칩 기능 구현을 위한 베이스 객체">
+    <Position X="4.235" Y="5.95" Height="0.463" Width="1.7" />
+  </Comment>
+  <Comment CommentText="버서커 칩 기능 구현&#xD;&#xA;기능: 이동 시 데미지 부여 적 처치 시 체력 회복">
+    <Position X="0.963" Y="8.575" Height="0.651" Width="1.7" />
+  </Comment>
+  <Comment CommentText="유리대포 칩 기능 구현&#xD;&#xA;기능: 받는 데미지 2배">
+    <Position X="3.154" Y="8.777" Height="0.497" Width="1.7" />
+  </Comment>
+  <Comment CommentText="고효율 베터리 칩 기능 구현&#xD;&#xA;기능: 베터리 최대 수치 Dwon&#xD;&#xA;베터리 회복량 UP">
+    <Position X="5.32" Y="8.564" Height="0.75" Width="2.02" />
+  </Comment>
+  <Comment CommentText="서브하트 칩 기능 구현&#xD;&#xA;기능: 죽을 시 1회 부활">
+    <Position X="7.801" Y="8.689" Height="0.596" Width="1.59" />
+  </Comment>
+  <Comment CommentText="장착중인 칩을 표시 및 제거하는 버튼 구현">
+    <Position X="0.5" Y="3.5" Height="0.645" Width="1.7" />
+  </Comment>
+  <Comment CommentText="미보유 칩 장착 버튼 구현">
+    <Position X="2.712" Y="3.765" Height="0.434" Width="1.799" />
+  </Comment>
+  <Comment CommentText="상태 교체를 위한 정보를 갖는 객체">
+    <Position X="4.707" Y="2.88" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="칩 인벤토리 구현을 위한 객체">
+    <Position X="7.351" Y="1.276" Height="0.625" Width="1.7" />
+  </Comment>
+  <Comment CommentText="전투 스테이지에서 장착 중인 칩을 표현 하는 객체">
+    <Position X="9.295" Y="3.499" Height="0.662" Width="1.822" />
+  </Comment>
+  <Comment CommentText="칩 종류">
+    <Position X="9.268" Y="1.145" Height="0.474" Width="1.7" />
+  </Comment>
+  <Comment CommentText="칩정보를 관리하기 위한 ScriptableObject객체">
+    <Position X="11.518" Y="1.035" Height="0.574" Width="1.7" />
+  </Comment>
+  <Class Name="ChangeStateInfo">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Chip\ChangeStateInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CheepBase">
+    <Position X="4.25" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Chip\CheepBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BerserkerCheep">
+    <Position X="1" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAIAAAAIAAAA=</HashCode>
+      <FileName>Assets\Script\Chip\Cheeps\BerserkerCheep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlassCannonCheep">
+    <Position X="3.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Chip\Cheeps\GlassCannonCheep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HighEfficiencyEnergyCheep">
+    <Position X="5.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAABAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Chip\Cheeps\HighEfficiencyEnergyCheep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServeHartCheep">
+    <Position X="7.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Chip\Cheeps\ServeHartCheep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CheepInfo">
+    <Position X="11.25" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAUAAAAA=</HashCode>
+      <FileName>Assets\Script\ScriptableObject\CheepInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShowChipInventory">
+    <Position X="9.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAACCAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UI\InGameUI\HUD\ShowChipInventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChipBtnBase" Collapsed="true">
+    <Position X="1.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACgAACCAAAAAAAAAAAAAIAAAAAAAAAAIAAQAAAAA=</HashCode>
+      <FileName>Assets\Script\UpgradeStage\ChipBtnBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ChipInventorySystem">
+    <Position X="7.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IIAAAAAACCAAQAgAAIAAAAABAAIAAQAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UpgradeStage\ChipInventorySystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeldChipBtn" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UpgradeStage\HeldChipBtn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsertChipBtn" Collapsed="true">
+    <Position X="2.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\UpgradeStage\InsertChipBtn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="CheepType">
+    <Position X="9.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAIA=</HashCode>
+      <FileName>Assets\Script\Chip\CheepType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
