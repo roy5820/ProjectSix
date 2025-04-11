@@ -6,12 +6,19 @@
 - 타이틀 화면
 ![제목 없음](https://github.com/user-attachments/assets/688aa14f-fe2f-4e18-8aff-e7227aa4f13f)
 - 업그레이드 스테이지(칩 장착, 스킬 구매)
+![00000303030](https://github.com/user-attachments/assets/72b33464-cc94-40d0-b5e2-1afc597283c6)
 
 - 배틀 스테이지 일반공격 장면
+![VideoCapture_20250411-220427](https://github.com/user-attachments/assets/7e1d560e-1e04-45b0-a9fe-9d68cd92cb5e)
 
 - 배틀 스테이지 스킬사용 장면(로켓암, 테이저건, 신경계 폭주기)
+![VideoCapture_20250411-220818](https://github.com/user-attachments/assets/f4057bbb-f2df-4224-a0bb-59309196d1e1)
+![VideoCapture_20250411-221013](https://github.com/user-attachments/assets/45391478-2ed9-41c2-b17e-989d99ba68b7)
+![VideoCapture_20250411-220857](https://github.com/user-attachments/assets/19757d0b-91c0-4984-b6b4-43e027a390a0)
 
 - 보스 스테이지 장면(내려찍는 공격, 레이저 공격)
+![VideoCapture_20250411-221038](https://github.com/user-attachments/assets/5baf355e-5f85-4d75-8aef-9ce5621fc54a)
+![VideoCapture_20250411-220945](https://github.com/user-attachments/assets/8ef054b1-6b76-4ae0-b67d-17cbd768f1e2)
 
 
 
