@@ -23,7 +23,7 @@
 
 
 🕹️ 게임 콘텐츠 흐름
-
+https://drive.google.com/file/d/1iIGf8CdqdzyXlOJh0dwWowDxjmDMlOtJ/view?usp=sharing
 
 
 🎮 게임 특징
