@@ -23,7 +23,7 @@
 
 
 🕹️ 게임 콘텐츠 흐름
-https://drive.google.com/file/d/1iIGf8CdqdzyXlOJh0dwWowDxjmDMlOtJ/view?usp=sharing
+![HexTec플로우차트-메인 drawio](https://github.com/user-attachments/assets/fd278d3b-a723-4d57-a6e7-1a8fa74ec5f6)
 
 
 🎮 게임 특징
