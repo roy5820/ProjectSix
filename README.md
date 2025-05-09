@@ -1,8 +1,6 @@
 📌 HexTec_Entropy
  - 2024년도 1학기 서강대학교 게임교육원 프로젝트
 
-[![Watch HEXTEC: Entropy Trailer](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
-
 
 🖼️ 게임 프리뷰
 - 타이틀 화면
