@@ -44,7 +44,7 @@
 
 ✅ 최소사양
 - 운영체제: Windows 7 SP1 / Windows 10 64bit
-- Cpu: Intel Core i3 (2세데 이상) 또는 AMD 동급
+- Cpu: Intel Core i3 (2세대 이상) 또는 AMD 동급
 - RAM: 4GB
 - GPU: 내장그래픽 (Intel HD 4000 이상) or NVIDIA GT 710 이상
 - 저장공간: 500MB 이상의 여유공간
@@ -69,9 +69,10 @@
 
 🙋 팀 소개 / 개발자 정보
 project six
- - 기획: 신민철
- - 프로그램: 임한균
- - 그래픽: 차성민, 이예원, 박예진
+ - 기획: 신민철 (Email: upandmu@gmail.com)
+ - 프로그램: 임한균 (Email: troy5830@gmail.com)
+ - 그래픽: 차성민 (Email: cheshengqp@gmail.com), 이예원 (Email: yewoni423@gmail.com), 
+          박예진 (Email: yejinpark02@gmail.com)
 
 
 📄라이선스
