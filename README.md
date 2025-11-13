@@ -70,9 +70,22 @@
 🙋 팀 소개 / 개발자 정보
 project six
  - 기획: 신민철 (Email: upandmu@gmail.com)
+ 
  - 프로그램: 임한균 (Email: troy5830@gmail.com)
- - 그래픽: 차성민 (Email: cheshengqp@gmail.com), 이예원 (Email: yewoni423@gmail.com), 
-          박예진 (Email: yejinpark02@gmail.com)
+             작업자의 다른 작업물:
+   - https://github.com/SogangGameTeamProject/AsheInGreen_Project
+   - https://github.com/SogangGameTeamProject/ProjectNewvia
+   - https://github.com/roy5820/unity-ProjectScalett
+
+   
+ - 그래픽: Player, Slyer, Highkicker, Boss 도트와 애니메이팅 담당: 차성민 (Email: cheshengqp@gmail.com)
+   - 작업자의 다름 작업물: https://www.instagram.com/issa_7758/?igsh=MXNkY3F2Z2p0Ymhveg%3D%3D&utm_source=qr#
+   
+ - UI담당: 이예원 (Email: yewoni423@gmail.com)
+   - 작업자의 다른 작업물:
+   
+ - 타이틀, 배경, 스킬 이펙트 담당: 박예진 (Email: yejinpark02@gmail.com)
+   - 작업자의 다른 작업물: 
 
 
 📄라이선스
